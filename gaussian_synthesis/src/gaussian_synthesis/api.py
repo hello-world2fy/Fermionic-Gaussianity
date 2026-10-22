@@ -11,6 +11,7 @@ from .sampling import HaarFourModeSampler
 from .solver import ResourceBudget, ResourceLimitError, SolveResult, peak_memory_mib, projected_sgd
 from .theory import dimension, gamma_factor
 from .validation import ValidationReport, validate
+from .extent import ExtentConfig, ExtentResult, estimate_extent
 
 
 @dataclass(frozen=True)
