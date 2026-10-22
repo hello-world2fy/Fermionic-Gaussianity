@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "status": "certified",
+  "error": null,
+  "basis": {
+    "n": 4,
+    "parity": "even",
+    "occupation_bitmasks": [
+      0,
+      3,
+      5,
+      6,
+      9,
+      10,
+      12,
+      15
+    ],
+    "convention": "mode j is bit j; creation operators in ascending j"
+  },
+  "config": {
+    "orders": [
+      2
+    ],
+    "seed": 290992511154653055,
+    "iterations": 8000,
+    "training_batch": 2048,
+    "validation_batch": 8192,
+    "diagnostic_samples": 16384,
+    "k1_mass_samples": 65536,
+    "solver_mode": "continuation",
+    "tolerance": 0.05,
+    "total_failure_probability": 0.005555555555555556,
+    "max_validation_samples": 12000000,
+    "max_seconds": 180.0,
+    "max_memory_mib": 512.0
+  },
+  "elapsed_seconds": 22.39989220901043,
+  "peak_memory_mib": 147.421875,
+  "numpy_version": "2.5.4",
+  "rng_algorithm": "PCG64",
+  "joint_reconstruction_confidence": 0.9944444444444445,
+  "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+  "stages": [
+    {
+      "k": 2,
+      "d_nk": 35,
+      "finite_order_gamma": 5.916079783099615,
+      "solver_status": "completed",
+      "solver_error": null,
+      "iterations": 8000,
+      "search_radius": 1.2228428349315195,
+      "u_norm": 1.0269983177483477,
+      "rng_spawn_keys": {
+        "training": [
+          0,
+          0
+        ],
+        "diagnostic": [
+          0,
+          1
+        ],
+        "validation": [
+          0,
+          2
+        ]
+      },
+      "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+      "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+      "validation": {
+        "status": "certified",
+        "samples": 3695975,
+        "requested_samples": 3695975,
+        "delta": 0.005555555555555556,
+        "tolerance": 0.05,
+        "candidate_sha256": "a0d54a1c38439ce2f610d4f7aadf7ce2fc5c87418fe01bc5b7559a4081a7c3da",
+        "residual_estimate": 0.0009258367854188577,
+        "statistical_radius": 0.024999997758385774,
+        "upper_bound": 0.02592583454380463,
+        "original_pdf_radius": 0.26457510738344403,
+        "mass_estimate": 2.0836541783926372,
+        "mass_standard_error": 0.001281206746340068,
+        "q_target_estimate": 0.9375659664656784,
+        "second_moment_bound": 12.833244226402861,
+        "error": null,
+        "passed": true,
+        "mass_standard_error_is_confidence_interval": false
+      },
+      "history": [
+        {
+          "iteration": 1,
+          "step_size": 0.03333333333333333,
+          "training_objective_estimate": -0.7671046727270878,
+          "diagnostic_objective_estimate": -0.7693602427272344,
+          "diagnostic_residual_estimate": 0.08926389722416375,
+          "candidate_norm": 1.0022832694322577,
+          "elapsed_seconds": 16.805201250012033
+        },
+        {
+          "iteration": 1000,
+          "step_size": 0.011381650168808837,
+          "training_objective_estimate": -0.7734207349161514,
+          "diagnostic_objective_estimate": -0.7670418038141711,
+          "diagnostic_residual_estimate": 0.024008412142497042,
+          "candidate_norm": 1.025126653563021,
+          "elapsed_seconds": 17.3802939169982
+        },
+        {
+          "iteration": 2000,
+          "step_size": 0.007909729017030612,
+          "training_objective_estimate": -0.7611932755010113,
+          "diagnostic_objective_estimate": -0.7729320742844754,
+          "diagnostic_residual_estimate": 0.03096931093607927,
+          "candidate_norm": 1.0276766845259822,
+          "elapsed_seconds": 17.95183916701353
+        },
+        {
+          "iteration": 3000,
+          "step_size": 0.006316670143479503,
+          "training_objective_estimate": -0.7605747146206475,
+          "diagnostic_objective_estimate": -0.7649984552460941,
+          "diagnostic_residual_estimate": 0.01898624562231306,
+          "candidate_norm": 1.0239943885231055,
+          "elapsed_seconds": 18.523635999998078
+        },
+        {
+          "iteration": 4000,
+          "step_size": 0.005365487876415571,
+          "training_objective_estimate": -0.7721296068280805,
+          "diagnostic_objective_estimate": -0.7692501560069962,
+          "diagnostic_residual_estimate": 0.024507177907166066,
+          "candidate_norm": 1.0266610520270338,
+          "elapsed_seconds": 19.09423433401389
+        },
+        {
+          "iteration": 5000,
+          "step_size": 0.004720031013433529,
+          "training_objective_estimate": -0.7582615553702283,
+          "diagnostic_objective_estimate": -0.7610554337009834,
+          "diagnostic_residual_estimate": 0.035882739839502534,
+          "candidate_norm": 1.0268822659601042,
+          "elapsed_seconds": 19.66597054200247
+        },
+        {
+          "iteration": 6000,
+          "step_size": 0.004247210254198617,
+          "training_objective_estimate": -0.7735670122862214,
+          "diagnostic_objective_estimate": -0.7678802140252171,
+          "diagnostic_residual_estimate": 0.019751012450043775,
+          "candidate_norm": 1.026815959605592,
+          "elapsed_seconds": 20.236778958991636
+        },
+        {
+          "iteration": 7000,
+          "step_size": 0.0038826964490900596,
+          "training_objective_estimate": -0.7768815629461212,
+          "diagnostic_objective_estimate": -0.7689047244780468,
+          "diagnostic_residual_estimate": 0.02001570009997614,
+          "candidate_norm": 1.0269157860945872,
+          "elapsed_seconds": 20.807696667005075
+        },
+        {
+          "iteration": 8000,
+          "step_size": 0.003591205113892236,
+          "training_objective_estimate": -0.7787788728238805,
+          "diagnostic_objective_estimate": -0.7689473004996357,
+          "diagnostic_residual_estimate": 0.01830903858464392,
+          "candidate_norm": 1.0269983177483477,
+          "elapsed_seconds": 21.38834741699975
+        }
+      ]
+    }
+  ]
+}
