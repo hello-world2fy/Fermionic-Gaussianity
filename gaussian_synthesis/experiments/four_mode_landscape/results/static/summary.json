@@ -1,0 +1,184 @@
+{
+  "kind": "static",
+  "status": "completed",
+  "acceptance_passed": true,
+  "checks": [
+    {
+      "name": "exact_stationary_residual",
+      "passed": true,
+      "maximum_error": 9.758779906005692e-11,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "independent_witness_reference",
+      "passed": true,
+      "maximum_error": 6.007953168722359e-11,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "Gaussianity_defect",
+      "passed": true,
+      "maximum_error": 1.1102230246251565e-16,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "direct_p_trace",
+      "passed": true,
+      "maximum_error": 1.5543122345013762e-15,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "direct_p_hermitian",
+      "passed": true,
+      "maximum_error": 7.589415207398531e-19,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "direct_p_PSD_and_purity_bounds",
+      "passed": true
+    },
+    {
+      "name": "direct_hist_n_p_normalization",
+      "passed": true,
+      "maximum_error": 1.1102230246251565e-15,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "direct_hist_xy_p_normalization",
+      "passed": true,
+      "maximum_error": 9.992007221626409e-16,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "direct_h_trace",
+      "passed": true,
+      "maximum_error": 1.3322676296118334e-15,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "direct_h_hermitian",
+      "passed": true,
+      "maximum_error": 7.589415207398531e-19,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "direct_h_PSD_and_purity_bounds",
+      "passed": true
+    },
+    {
+      "name": "direct_hist_n_h_normalization",
+      "passed": true,
+      "maximum_error": 9.992007221626409e-16,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "direct_hist_xy_h_normalization",
+      "passed": true,
+      "maximum_error": 8.881784197001252e-16,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "magic_purity",
+      "passed": true,
+      "maximum_error": 0.00012670928099922651,
+      "minimum_tolerance": 0.002,
+      "maximum_tolerance": 0.002,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "p_equals_h_at_special_points",
+      "passed": true,
+      "maximum_error": 4.443260277537925e-16,
+      "minimum_tolerance": 1e-10,
+      "maximum_tolerance": 1e-10,
+      "is_statistical_certificate": false
+    },
+    {
+      "name": "r_point_one_density_ratio",
+      "passed": true,
+      "maximum_error": 7.105427357601002e-15,
+      "minimum_tolerance": 1e-08,
+      "maximum_tolerance": 1e-08,
+      "is_statistical_certificate": false
+    }
+  ],
+  "anchors": [
+    {
+      "parameter": 0.0,
+      "r": 0.0,
+      "seed": 15452146857048384090,
+      "witness_error": 0.0009734002369479219,
+      "exact_residual": 0.0010130307435896383,
+      "reconstruction_upper_bound": 0.02733422250086641,
+      "validation_samples": 3147649,
+      "status": "certified",
+      "passed": true
+    },
+    {
+      "parameter": 0.1,
+      "r": 0.1,
+      "seed": 14208670249980573741,
+      "witness_error": 0.0010642797936325048,
+      "exact_residual": 0.001055389747520271,
+      "reconstruction_upper_bound": 0.026963818079585804,
+      "validation_samples": 3559781,
+      "status": "certified",
+      "passed": true
+    },
+    {
+      "parameter": 0.25,
+      "r": 0.25,
+      "seed": 10540563412165126033,
+      "witness_error": 0.000917934009531866,
+      "exact_residual": 0.0013887554749476274,
+      "reconstruction_upper_bound": 0.026912088397235363,
+      "validation_samples": 3906604,
+      "status": "certified",
+      "passed": true
+    },
+    {
+      "parameter": 0.5,
+      "r": 0.5,
+      "seed": 16195884204361289294,
+      "witness_error": 0.0007241980026650436,
+      "exact_residual": 0.0009155366142717474,
+      "reconstruction_upper_bound": 0.026176833290016892,
+      "validation_samples": 4110973,
+      "status": "certified",
+      "passed": true
+    }
+  ],
+  "completed_stages": [
+    "exact_scan",
+    "observations",
+    "SGD_anchors"
+  ],
+  "error": null,
+  "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+  "joint_anchor_confidence_lower_bound": 0.9777777777777777,
+  "both_experiments_joint_confidence_if_all_nine_certified": 0.95,
+  "elapsed_seconds": 15.700923124997644,
+  "peak_memory_mib": 99.921875
+}

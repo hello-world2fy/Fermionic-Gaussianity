@@ -52,4 +52,17 @@ python examples/four_mode_extent.py --full --output results/my_extent
 - [extent 解析对照数据](gaussian_synthesis/results/magic_extent/comparison.csv)
 - [本次单元测试结果](gaussian_synthesis/results/unit_tests_extent.json)
 
+## 四模构型分布实验
+
+静态 asymmetric cat 与四模相互作用动力学的代码、独立测试及保存结果位于
+[`gaussian_synthesis/experiments/four_mode_landscape/`](gaussian_synthesis/experiments/four_mode_landscape/)。
+实验单向调用通用库，不修改主算法；完整运行与绘图均通过独立入口显式执行。
+
+51 个静态点、81 个动力学点和九个 SGD 独立重构验收已完成，附有 PNG/PDF 图及 CSV/NPZ 数据。
+静态完整验收通过；动力学保留 `failed_acceptance`：求解、重构和不变量检查通过，
+但 7/6480 个占据直方图区间比较超过预设阈值。事后诊断与原始结果一起保存，不追认通过。
+
+- [结果与分析](gaussian_synthesis/experiments/four_mode_landscape/RESULTS.md)
+- [实验结构、数学约定与复现方法](gaussian_synthesis/experiments/four_mode_landscape/README.md)
+
 仓库包含实现代码和可复现实验结果；研究论文原稿、算法 PDF、压缩包及本机缓存不随代码分发。

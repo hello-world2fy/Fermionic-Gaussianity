@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+"""Experiment two: static asymmetric cat states."""
+from common import main
+
+if __name__ == "__main__":
+    raise SystemExit(main("static"))

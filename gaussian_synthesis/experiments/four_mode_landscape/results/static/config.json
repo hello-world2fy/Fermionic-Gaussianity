@@ -1,0 +1,172 @@
+{
+  "kind": "static",
+  "seed": 20261022,
+  "repeats": 4,
+  "samples_per_repeat": 65536,
+  "batch_size": 8192,
+  "exact_tolerance": 1e-10,
+  "sgd_iterations": 8000,
+  "sgd_batch": 2048,
+  "total_anchor_count": 9,
+  "total_failure_probability": 0.05,
+  "max_validation_samples": 12000000,
+  "max_seconds": 180.0,
+  "max_memory_mib": 512.0,
+  "python_version": "3.12.14",
+  "numpy_version": "2.5.4",
+  "platform": "macOS-26.4.1-arm64-arm-64bit",
+  "rng_algorithm": "PCG64",
+  "source_sha256": {
+    "_bootstrap.py": "931f3e7f29c2a56dc848023d6d25c67e76d14a7d0898f52b6075cf722aee88f8",
+    "common.py": "427d141cf7ddbc477b727f6f656b6cf8943f464a4a7fe0983adb3279a7c2c092",
+    "exact_solver.py": "03ec40f3e8eaeda0edbda02ce28cda5d88da38c335142d23a79cbf4d01a1fc71",
+    "interaction_quench.py": "a90fb22d172e64daf12fa1adf45276f9f5484331a8b1f347ea9d589254e279ed",
+    "observables.py": "2a26a6ba8725512863ad92268e2979766b6150185d16666b67c0596c66dd2650",
+    "plotting.py": "d203183bfe5b014c99c858d2e716a7bb7c5cac141cea30481f069de7f9ae387b",
+    "reference.py": "a79a282a8d405be7d17de28af5424b992a4d396230ae6d1a554a729663ae1608",
+    "run_tests.py": "2d414b42ee17df13d109ce56ba0ec0f00e8c460667e03c738986ad4d227aa6cf",
+    "static_cat.py": "bad2984c6264772732fbc8e488883e89db95298ef978786cc463c1e8dfef9419"
+  },
+  "rng_streams": {
+    "observations": [
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          0,
+          3
+        ]
+      }
+    ],
+    "reference": [
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          1,
+          3
+        ]
+      }
+    ],
+    "control": [
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          2,
+          0
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          2,
+          3
+        ]
+      }
+    ],
+    "anchors": [
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          3,
+          0
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          3,
+          1
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          3,
+          2
+        ]
+      },
+      {
+        "entropy": 20261022,
+        "spawn_key": [
+          0,
+          3,
+          3
+        ]
+      }
+    ]
+  },
+  "histograms_are_bin_probability_mass": true,
+  "observations_uncertainty": "standard error across four independent self-normalized replicates; not a rigorous confidence interval",
+  "reconstruction_delta_per_anchor": 0.005555555555555556,
+  "expected_anchor_count_across_both_experiments": 9
+}
