@@ -1,0 +1,95 @@
+{
+  "summary": {
+    "config": {
+      "method": "branch_omp",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 4,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "interaction": 4.0,
+    "dt": 0.05,
+    "final_time": 0.6,
+    "impurity_energy": 0.0,
+    "total_seconds": 0.0005457499937620014,
+    "setup_seconds": 0.000133916997583583,
+    "timing_components": {
+      "propagation": 0.00010087605915032327,
+      "solve": 0.0,
+      "sampling": 0.0,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.0001674159721005708,
+      "observables_and_recording": 0.00011475305655039847
+    },
+    "peak_branch_atoms": 32,
+    "final_atoms": 2,
+    "final_coefficient_cost": 1.8843128116550925,
+    "original_solver_calls": 0,
+    "sample_proposals": 0,
+    "mass_samples": 0,
+    "training_samples": 0,
+    "diagnostic_samples": 0,
+    "validation_samples": 0,
+    "final_gaussian_defect": 3.147658495756123e-15,
+    "final_cumulative_residual": 2.996407166367801e-15,
+    "max_atoms_after_compression": 2,
+    "final": {
+      "step": 12,
+      "time": 0.6000000000000001,
+      "norm": 0.9999999999999989,
+      "double": 0.0902976312969396,
+      "density": 0.9999999999999997,
+      "cumulative_residual": 2.996407166367801e-15,
+      "atoms": 2,
+      "coefficient_cost": 1.8843128116550925,
+      "infidelity": 2.2204434013683993e-07,
+      "compression_distance": 2.36221188213965e-15,
+      "double_error": 1.2981542460557827e-05,
+      "density_error": 5.551115123125783e-16,
+      "trotter_distance": 0.0006133501116609642,
+      "exact_double": 0.09028464975447904
+    },
+    "max_infidelity": 2.2204434013683993e-07,
+    "max_double_error": 1.586579819048972e-05,
+    "max_density_error": 7.771561172376096e-16,
+    "max_compression_distance": 2.36221188213965e-15,
+    "max_coefficient_cost": 2.2547866238180196,
+    "mean_postcompression_cost": 1.6550648024417594,
+    "max_postcompression_cost": 1.8843128116550925
+  },
+  "events": [
+    {
+      "step": 4,
+      "input_atoms": 16,
+      "refit_residual": 2.754662226278516e-16,
+      "selected_atoms": 2,
+      "dictionary_atoms": 16,
+      "local_residual": 2.754662226278516e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.386057159273561
+    },
+    {
+      "step": 8,
+      "input_atoms": 32,
+      "refit_residual": 9.074842391027969e-16,
+      "selected_atoms": 2,
+      "dictionary_atoms": 32,
+      "local_residual": 9.125634816017134e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.694824436396624
+    },
+    {
+      "step": 12,
+      "input_atoms": 32,
+      "refit_residual": 1.7275476959616659e-15,
+      "selected_atoms": 2,
+      "dictionary_atoms": 32,
+      "local_residual": 1.808377462138236e-15,
+      "output_atoms": 2,
+      "coefficient_cost": 1.8843128116550925
+    }
+  ]
+}

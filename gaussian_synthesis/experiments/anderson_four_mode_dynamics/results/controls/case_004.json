@@ -1,0 +1,1815 @@
+{
+  "summary": {
+    "config": {
+      "method": "measure",
+      "backend": "api_polished",
+      "discretization": "two_node",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "interaction": 4.0,
+    "dt": 0.05,
+    "final_time": 2.0,
+    "impurity_energy": 0.4,
+    "total_seconds": 1.5218580829969142,
+    "setup_seconds": 0.000180957984412089,
+    "timing_components": {
+      "propagation": 0.0004094139439985156,
+      "solve": 1.51988529090886,
+      "sampling": 0.0,
+      "moment_compression": 0.0005193770339246839,
+      "symmetry": 0.0,
+      "refit": 1.1625961633399129e-05,
+      "observables_and_recording": 0.00039141703746281564
+    },
+    "peak_branch_atoms": 32,
+    "final_atoms": 2,
+    "final_coefficient_cost": 1.1660994076672506,
+    "original_solver_calls": 10,
+    "sample_proposals": 0,
+    "mass_samples": 0,
+    "training_samples": 2048000,
+    "diagnostic_samples": 10240,
+    "validation_samples": 1020107,
+    "final_gaussian_defect": 2.355138688025663e-16,
+    "final_cumulative_residual": 4.020656977290756e-15,
+    "max_atoms_after_compression": 2,
+    "final": {
+      "step": 40,
+      "time": 2.0,
+      "norm": 0.9999999999999727,
+      "double": 0.21701255236618022,
+      "density": 0.987217182343262,
+      "cumulative_residual": 4.020656977290756e-15,
+      "atoms": 2,
+      "coefficient_cost": 1.1660994076672506,
+      "infidelity": 3.039231870616277e-07,
+      "compression_distance": 3.2317389429550344e-15,
+      "double_error": 0.00010172350594520041,
+      "density_error": 0.0002973536907128205,
+      "trotter_distance": 0.000771855879864023,
+      "exact_double": 0.21691082886023502
+    },
+    "max_infidelity": 5.56052053735101e-07,
+    "max_double_error": 0.0001776419403650975,
+    "max_density_error": 0.0002973536907128205,
+    "max_compression_distance": 3.2317389429550344e-15,
+    "max_coefficient_cost": 2.5393971153173407,
+    "mean_postcompression_cost": 1.6705836167821992,
+    "max_postcompression_cost": 1.908753688394361
+  },
+  "events": [
+    {
+      "step": 4,
+      "input_atoms": 16,
+      "backend": "api_polished",
+      "seed": 20265059,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20265059,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.1563509580155369,
+        "peak_memory_mib": 43.71875,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.2228428349315186,
+            "u_norm": 1.0092349789181232,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 92462,
+              "requested_samples": 92462,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "b377f5235ce99c246ad2b52b2d48c763f0958510d785f483995ca90f80a2f951",
+              "residual_estimate": 0.013202159040309979,
+              "statistical_radius": 0.04999991568609145,
+              "upper_bound": 0.06320207472640144,
+              "original_pdf_radius": 0.5291493699183817,
+              "mass_estimate": 2.007687153348056,
+              "mass_standard_error": 0.008528268675019397,
+              "q_target_estimate": 0.9756844247763024,
+              "second_moment_bound": 11.557711020869819,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.7657381596832183,
+                "diagnostic_objective_estimate": -0.7681636596085795,
+                "diagnostic_residual_estimate": 0.1500713345878815,
+                "candidate_norm": 1.0021140363627712,
+                "elapsed_seconds": 0.000554916012333706
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.8082114278302577,
+                "diagnostic_objective_estimate": -0.7472772722678805,
+                "diagnostic_residual_estimate": 0.14872773538052889,
+                "candidate_norm": 1.0092349789181232,
+                "elapsed_seconds": 0.13014575000852346
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 92462,
+      "residual_before_polish": 0.008826310465271808,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.15706745799980126,
+      "continuous_residual": 1.2757358885279337e-16,
+      "witness": [
+        [
+          1.9096736230978444e-19,
+          -3.5917950295611794e-19
+        ],
+        [
+          2.9048329045693125e-19,
+          -4.860823472091298e-20
+        ],
+        [
+          0.3195943478859826,
+          -0.04156406457650762
+        ],
+        [
+          -0.46659326406864043,
+          -0.19861083036377722
+        ],
+        [
+          -0.4665932640686415,
+          -0.19861083036377744
+        ],
+        [
+          0.6294900219475411,
+          -0.03413239584566045
+        ],
+        [
+          2.220745490700009e-19,
+          -6.157525759002261e-19
+        ],
+        [
+          -2.7080523237096585e-19,
+          -2.6974147810322266e-19
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 6.183399818837643e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.8839215091725304e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.986965303053387e-16,
+      "local_residual": 2.986965303053387e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.347110495380124
+    },
+    {
+      "step": 8,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20269095,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20269095,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.14672929199878126,
+        "peak_memory_mib": 43.734375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.2228428349315175,
+            "u_norm": 1.0225864867490624,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 100048,
+              "requested_samples": 100048,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "5ec37ca880ae9b33b7bfb64ba59fcd860a1eebe75c6157c2773bd12d70e2486a",
+              "residual_estimate": 0.01465187284114078,
+              "statistical_radius": 0.04999999640978958,
+              "upper_bound": 0.06465186925093036,
+              "original_pdf_radius": 0.5291502242177024,
+              "mass_estimate": 2.086454211300595,
+              "mass_standard_error": 0.007944335268860698,
+              "q_target_estimate": 0.9609928125672796,
+              "second_moment_bound": 12.505998204033222,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.7866211641388784,
+                "diagnostic_objective_estimate": -0.788397001289855,
+                "diagnostic_residual_estimate": 0.16320423863287245,
+                "candidate_norm": 1.004893807423034,
+                "elapsed_seconds": 0.0005014999769628048
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.7609975249640788,
+                "diagnostic_objective_estimate": -0.7553843713783646,
+                "diagnostic_residual_estimate": 0.1175971395757514,
+                "candidate_norm": 1.0225864867490624,
+                "elapsed_seconds": 0.11851704199216329
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 100048,
+      "residual_before_polish": 0.009733538117521841,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.1473560830054339,
+      "continuous_residual": 2.8415811173128306e-16,
+      "witness": [
+        [
+          1.426280000620424e-19,
+          2.305135749262376e-19
+        ],
+        [
+          3.0113639446963684e-20,
+          3.1097513916928397e-19
+        ],
+        [
+          0.2594444973230302,
+          -0.0510203670717948
+        ],
+        [
+          -0.44346002315227334,
+          -0.36843313472339534
+        ],
+        [
+          -0.44346002315227545,
+          -0.3684331347233964
+        ],
+        [
+          0.5541560851784085,
+          -0.05019350118756543
+        ],
+        [
+          1.180653887601631e-19,
+          7.821034050719504e-20
+        ],
+        [
+          -1.4955588326141837e-19,
+          -3.823310216811642e-19
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.9959024181589484e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.06962738014153e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 5.417683481607875e-16,
+      "local_residual": 5.417683481607875e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.622970467586266
+    },
+    {
+      "step": 12,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20273131,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20273131,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.14919625001493841,
+        "peak_memory_mib": 43.734375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.2228428349315166,
+            "u_norm": 1.033662769978085,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 106729,
+              "requested_samples": 106729,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "2a8e7f04725c03205c5e2d3616cf1008cacceeb09b4ec8fe39f1b9c052d169b3",
+              "residual_estimate": 0.008804242327748464,
+              "statistical_radius": 0.04999993429853567,
+              "upper_bound": 0.058804176626284135,
+              "original_pdf_radius": 0.5291495668939763,
+              "mass_estimate": 2.105678356702052,
+              "mass_standard_error": 0.0074172785942768155,
+              "q_target_estimate": 0.9182770940352184,
+              "second_moment_bound": 13.34108993876509,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.786101820967897,
+                "diagnostic_objective_estimate": -0.7475403371873247,
+                "diagnostic_residual_estimate": 0.13733963530233048,
+                "candidate_norm": 1.0048181703180117,
+                "elapsed_seconds": 0.0004661249986384064
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.7498948725107619,
+                "diagnostic_objective_estimate": -0.7885432158666388,
+                "diagnostic_residual_estimate": 0.09785030667832595,
+                "candidate_norm": 1.033662769978085,
+                "elapsed_seconds": 0.11901925000711344
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 106729,
+      "residual_before_polish": 0.009777645665590853,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.14981537498533726,
+      "continuous_residual": 9.616854057791009e-17,
+      "witness": [
+        [
+          9.51798060171132e-19,
+          9.779597666934413e-19
+        ],
+        [
+          2.294994773446417e-19,
+          -9.53491815872911e-19
+        ],
+        [
+          0.17254298803728385,
+          -0.022680148016163228
+        ],
+        [
+          -0.40259152996198116,
+          -0.5051637260345889
+        ],
+        [
+          -0.40259152996198394,
+          -0.5051637260345908
+        ],
+        [
+          0.4451727004222309,
+          -0.04782896253382266
+        ],
+        [
+          3.8680195874140747e-19,
+          3.85030163718713e-19
+        ],
+        [
+          1.8768759118101169e-19,
+          -4.651465093029892e-19
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.891699063591659e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 4.817411735555328e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 4.785363046326462e-16,
+      "local_residual": 4.785363046326462e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.7905808479917928
+    },
+    {
+      "step": 16,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20277167,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20277167,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.15145962499082088,
+        "peak_memory_mib": 43.734375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.222842834931515,
+            "u_norm": 1.035521790043671,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 107886,
+              "requested_samples": 107886,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "9ba84b18115a6d9113e7b354d35cc9b078c654866c2c3a7e2774eb2d315ac33b",
+              "residual_estimate": 0.010241248356948686,
+              "statistical_radius": 0.049999908679536124,
+              "upper_bound": 0.06024115703648481,
+              "original_pdf_radius": 0.5291492957679701,
+              "mass_estimate": 2.1236662066838723,
+              "mass_standard_error": 0.007290980524468321,
+              "q_target_estimate": 0.9130778520659539,
+              "second_moment_bound": 13.48570073904718,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.7685490867350688,
+                "diagnostic_objective_estimate": -0.7684634338333973,
+                "diagnostic_residual_estimate": 0.14821831749953238,
+                "candidate_norm": 1.0024963630290846,
+                "elapsed_seconds": 0.0004667499742936343
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.7883125188975725,
+                "diagnostic_objective_estimate": -0.7887640930880782,
+                "diagnostic_residual_estimate": 0.12097178777894346,
+                "candidate_norm": 1.035521790043671,
+                "elapsed_seconds": 0.12023970898007974
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 107886,
+      "residual_before_polish": 0.0056159702975049144,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.1520944589865394,
+      "continuous_residual": 1.2509269102390094e-16,
+      "witness": [
+        [
+          1.1300886663360397e-18,
+          8.120700648638211e-19
+        ],
+        [
+          3.332792501308609e-19,
+          -9.066168831956403e-19
+        ],
+        [
+          0.06849500819381521,
+          0.03821184406542065
+        ],
+        [
+          -0.3395913715608858,
+          -0.6088995183704332
+        ],
+        [
+          -0.33959137156088903,
+          -0.6088995183704364
+        ],
+        [
+          0.3091257167644986,
+          -0.03397892035231909
+        ],
+        [
+          3.23167448587366e-19,
+          4.2242263389579963e-19
+        ],
+        [
+          1.2187240351890745e-19,
+          -5.534072396555456e-19
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.733301466330886e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 2.6376925378252274e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.3551386996906837e-16,
+      "local_residual": 2.3551386996906837e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.8648860646145788
+    },
+    {
+      "step": 20,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20281203,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20281203,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.15208358300151303,
+        "peak_memory_mib": 43.734375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.2228428349315135,
+            "u_norm": 1.03530735674554,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 107752,
+              "requested_samples": 107752,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "135e3b56f8fd2531fa17792917c9bd31f971bf69b2250277fae132d0d441d33b",
+              "residual_estimate": 0.018189627268205694,
+              "statistical_radius": 0.04999991442750547,
+              "upper_bound": 0.06818954169571116,
+              "original_pdf_radius": 0.5291493565987594,
+              "mass_estimate": 2.101065040679599,
+              "mass_standard_error": 0.0071287352036789675,
+              "q_target_estimate": 0.8958390847049519,
+              "second_moment_bound": 13.468953897002285,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.7583090355554504,
+                "diagnostic_objective_estimate": -0.7591843064290307,
+                "diagnostic_residual_estimate": 0.12594634939083474,
+                "candidate_norm": 1.0011286867786733,
+                "elapsed_seconds": 0.00048541699652560055
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.7232216582362632,
+                "diagnostic_objective_estimate": -0.7827390155153702,
+                "diagnostic_residual_estimate": 0.13257063409937714,
+                "candidate_norm": 1.03530735674554,
+                "elapsed_seconds": 0.12176170799648389
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 107752,
+      "residual_before_polish": 0.01329223271836753,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.15271900000516325,
+      "continuous_residual": 1.2841868843438939e-16,
+      "witness": [
+        [
+          -1.4763592985125802e-18,
+          -3.2033459474250257e-18
+        ],
+        [
+          -8.262704864045509e-18,
+          -1.6841697900033518e-18
+        ],
+        [
+          -0.041435433233380746,
+          0.1208131753566098
+        ],
+        [
+          -0.25314523863455396,
+          -0.6746895356006779
+        ],
+        [
+          -0.2531452386345577,
+          -0.6746895356006823
+        ],
+        [
+          0.1544921251146348,
+          -0.016616468154461335
+        ],
+        [
+          -3.767934248812762e-18,
+          8.202244165122477e-18
+        ],
+        [
+          3.767036344257835e-18,
+          1.944032844586919e-18
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 5.2624993259087205e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 5.133169584009638e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 4.361827363686108e-16,
+      "local_residual": 4.361827363686108e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.8950897701410825
+    },
+    {
+      "step": 24,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20285239,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20285239,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.14873675000853837,
+        "peak_memory_mib": 43.734375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.2228428349315121,
+            "u_norm": 1.0369594318464108,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 108788,
+              "requested_samples": 108788,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "a0b288040d3ef8d9c1a9413a2a03378e68dae40567a209fc4af4d1688d398121",
+              "residual_estimate": 0.015970709486738573,
+              "statistical_radius": 0.04999986514784147,
+              "upper_bound": 0.06597057463458005,
+              "original_pdf_radius": 0.5291488350718169,
+              "mass_estimate": 2.1187621333163413,
+              "mass_standard_error": 0.007108666049895698,
+              "q_target_estimate": 0.8975517422411083,
+              "second_moment_bound": 13.598426648615794,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.804000488124124,
+                "diagnostic_objective_estimate": -0.7711460761153686,
+                "diagnostic_residual_estimate": 0.16441855169710143,
+                "candidate_norm": 1.0072075759233559,
+                "elapsed_seconds": 0.0004940830112900585
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.7898253153608239,
+                "diagnostic_objective_estimate": -0.7538160407454642,
+                "diagnostic_residual_estimate": 0.19135258522876628,
+                "candidate_norm": 1.0369594318464108,
+                "elapsed_seconds": 0.11814120798953809
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 108788,
+      "residual_before_polish": 0.01127466958081768,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.14935304198297672,
+      "continuous_residual": 1.1474069899930668e-16,
+      "witness": [
+        [
+          -2.949403670720354e-18,
+          -9.995946239159774e-19
+        ],
+        [
+          -7.237665440704364e-18,
+          -2.960809845132607e-18
+        ],
+        [
+          -0.14150165458941732,
+          0.2101675843037816
+        ],
+        [
+          -0.1490036198482676,
+          -0.6972241575710687
+        ],
+        [
+          -0.14900361984827118,
+          -0.6972241575710745
+        ],
+        [
+          -0.003654989521951372,
+          -0.0004499491656685663
+        ],
+        [
+          -3.972437025979693e-18,
+          6.473610186020132e-18
+        ],
+        [
+          3.747652258406753e-18,
+          1.173256178739022e-18
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.729200736619532e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 4.936987659741081e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 5.769174010104682e-16,
+      "local_residual": 5.769174010104682e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.908753688394361
+    },
+    {
+      "step": 28,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20289275,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20289275,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.14999487498425879,
+        "peak_memory_mib": 43.734375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.222842834931511,
+            "u_norm": 1.0383253708034927,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 109651,
+              "requested_samples": 109651,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "9a41e267f570a81e8d840ee696df9314ee9c5d21b47c7f8740b07fbac8b646d5",
+              "residual_estimate": 0.011427975600730306,
+              "statistical_radius": 0.0499997842118968,
+              "upper_bound": 0.0614277598126271,
+              "original_pdf_radius": 0.5291479785262901,
+              "mass_estimate": 2.131458150072371,
+              "mass_standard_error": 0.0072254989854754524,
+              "q_target_estimate": 0.905268724269584,
+              "second_moment_bound": 13.706256693348788,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.7960194459270931,
+                "diagnostic_objective_estimate": -0.7548029491962006,
+                "diagnostic_residual_estimate": 0.1381923086194288,
+                "candidate_norm": 1.0061475889843234,
+                "elapsed_seconds": 0.0004746670019812882
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.7809623133611865,
+                "diagnostic_objective_estimate": -0.7971105476569594,
+                "diagnostic_residual_estimate": 0.12088909158443399,
+                "candidate_norm": 1.0383253708034927,
+                "elapsed_seconds": 0.11871520898421295
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 109651,
+      "residual_before_polish": 0.007590791957703684,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.15067658299813047,
+      "continuous_residual": 1.3615101611611792e-16,
+      "witness": [
+        [
+          -2.9032835565079095e-18,
+          -6.191878085165448e-20
+        ],
+        [
+          -6.893913237450924e-18,
+          -3.8951653803713805e-18
+        ],
+        [
+          -0.21507533153750882,
+          0.2934646090089206
+        ],
+        [
+          -0.03571429658798658,
+          -0.6777883075250629
+        ],
+        [
+          -0.03571429658798958,
+          -0.67778830752507
+        ],
+        [
+          -0.14988116644267513,
+          0.01596638612281112
+        ],
+        [
+          -4.663617255107697e-18,
+          6.007842069873855e-18
+        ],
+        [
+          3.739975647506046e-18,
+          -4.2902123135671986e-19
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 5.1709008403122425e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.777079038496342e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.896105532483034e-16,
+      "local_residual": 2.896105532483034e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.8755839909544687
+    },
+    {
+      "step": 32,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20293311,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20293311,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.16176012498908676,
+        "peak_memory_mib": 43.734375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.22284283493151,
+            "u_norm": 1.0291267549807195,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 103950,
+              "requested_samples": 103950,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "7e37edc1b4021fb4e6414f2923278d23af983605929cc708f7c0274740842a2b",
+              "residual_estimate": 0.009540158461419479,
+              "statistical_radius": 0.04999981426910318,
+              "upper_bound": 0.05953997273052266,
+              "original_pdf_radius": 0.5291482966218629,
+              "mass_estimate": 2.087863841158122,
+              "mass_standard_error": 0.007600026528144606,
+              "q_target_estimate": 0.9293103947121879,
+              "second_moment_bound": 12.993653466545688,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.7724464876466037,
+                "diagnostic_objective_estimate": -0.7650419821927714,
+                "diagnostic_residual_estimate": 0.10567996518234768,
+                "candidate_norm": 1.003005802214187,
+                "elapsed_seconds": 0.0005047909799031913
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.7852748103641439,
+                "diagnostic_objective_estimate": -0.774691575854338,
+                "diagnostic_residual_estimate": 0.1327381140052485,
+                "candidate_norm": 1.0291267549807195,
+                "elapsed_seconds": 0.13191066597937606
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 103950,
+      "residual_before_polish": 0.006711155286537959,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.16245716597768478,
+      "continuous_residual": 2.8066089072420764e-16,
+      "witness": [
+        [
+          -2.974097562209353e-18,
+          8.590154694518722e-19
+        ],
+        [
+          -6.511893394007619e-18,
+          -4.887370780488376e-18
+        ],
+        [
+          -0.2502653646734267,
+          0.362508514672294
+        ],
+        [
+          0.0831272744266509,
+          -0.6219875238599348
+        ],
+        [
+          0.08312727442664888,
+          -0.6219875238599433
+        ],
+        [
+          -0.2760156206834995,
+          0.03753293282267993
+        ],
+        [
+          -5.543817034920141e-18,
+          5.4940009436370775e-18
+        ],
+        [
+          3.3790714293519023e-18,
+          -2.0013924886299296e-18
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 5.8707984862849116e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 4.1494353474686035e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 1.8977589630063395e-16,
+      "local_residual": 1.8977589630063395e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.7431528302706987
+    },
+    {
+      "step": 36,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20297347,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20297347,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.1467056249966845,
+        "peak_memory_mib": 46.59375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.2228428349315092,
+            "u_norm": 1.013617283312805,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 94897,
+              "requested_samples": 94897,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "57ceb9ad9f94b7549def4eb9a7981d14b38986cd25d584a0121710d38cb3cc4f",
+              "residual_estimate": 0.01048555504164554,
+              "statistical_radius": 0.04999997770572374,
+              "upper_bound": 0.06048553274736928,
+              "original_pdf_radius": 0.5291500262724751,
+              "mass_estimate": 2.0312731122826295,
+              "mass_standard_error": 0.00825825909497961,
+              "q_target_estimate": 0.968755223267599,
+              "second_moment_bound": 11.862114421702673,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.7411998291926264,
+                "diagnostic_objective_estimate": -0.7420688411583853,
+                "diagnostic_residual_estimate": 0.11149153720502815,
+                "candidate_norm": 0.998839812601916,
+                "elapsed_seconds": 0.0005450420139823109
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.7036506164481955,
+                "diagnostic_objective_estimate": -0.7967913549032166,
+                "diagnostic_residual_estimate": 0.17787384212480278,
+                "candidate_norm": 1.013617283312805,
+                "elapsed_seconds": 0.12023125000996515
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 94897,
+      "residual_before_polish": 0.005943025350181376,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.14731145798577927,
+      "continuous_residual": 5.721961395079986e-17,
+      "witness": [
+        [
+          -3.0462947867628083e-18,
+          1.6183795308507235e-18
+        ],
+        [
+          -6.1491140785738526e-18,
+          -5.995641052441121e-18
+        ],
+        [
+          -0.23921438662649291,
+          0.4095055131308019
+        ],
+        [
+          0.20955218504933906,
+          -0.5328071764002588
+        ],
+        [
+          0.2095521850493387,
+          -0.5328071764002688
+        ],
+        [
+          -0.3797452908070752,
+          0.06874457316731215
+        ],
+        [
+          -6.578165272609558e-18,
+          5.033891511900139e-18
+        ],
+        [
+          2.6280775035583113e-18,
+          -3.3139492106323772e-18
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.775001434609294e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 2.7476618026966064e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.8744112080464876e-16,
+      "local_residual": 2.8744112080464876e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.491608604821369
+    },
+    {
+      "step": 40,
+      "input_atoms": 32,
+      "backend": "api_polished",
+      "seed": 20301383,
+      "orders": [
+        2
+      ],
+      "api_status": "certified",
+      "api_summary": {
+        "schema_version": 1,
+        "status": "certified",
+        "error": null,
+        "basis": {
+          "n": 4,
+          "parity": "even",
+          "occupation_bitmasks": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10,
+            12,
+            15
+          ],
+          "convention": "mode j is bit j; creation operators in ascending j"
+        },
+        "config": {
+          "orders": [
+            2
+          ],
+          "seed": 20301383,
+          "iterations": 800,
+          "training_batch": 256,
+          "validation_batch": 4096,
+          "diagnostic_samples": 512,
+          "k1_mass_samples": 1024,
+          "solver_mode": "continuation",
+          "tolerance": 0.1,
+          "total_failure_probability": 0.05,
+          "max_validation_samples": 1000000,
+          "max_seconds": 180.0,
+          "max_memory_mib": 512.0
+        },
+        "elapsed_seconds": 0.15032387498649769,
+        "peak_memory_mib": 46.59375,
+        "numpy_version": "2.3.5",
+        "rng_algorithm": "PCG64",
+        "joint_reconstruction_confidence": 0.95,
+        "confidence_assumptions": "independent ideal Haar sampling; floating-point rounding is not interval-certified",
+        "stages": [
+          {
+            "k": 2,
+            "d_nk": 35,
+            "finite_order_gamma": 5.916079783099615,
+            "solver_status": "completed",
+            "solver_error": null,
+            "iterations": 800,
+            "search_radius": 1.2228428349315086,
+            "u_norm": 1.000842597805741,
+            "rng_spawn_keys": {
+              "training": [
+                0,
+                0
+              ],
+              "diagnostic": [
+                0,
+                1
+              ],
+              "validation": [
+                0,
+                2
+              ]
+            },
+            "reference_measure": "normalized invariant four-mode even Gaussian-ray Haar measure",
+            "reconstructed_state": "C_k(u); close to psi only to the reported certified precision",
+            "validation": {
+              "status": "certified",
+              "samples": 87944,
+              "requested_samples": 87944,
+              "delta": 0.05,
+              "tolerance": 0.1,
+              "candidate_sha256": "d8b2d9cfdff5121d96b683721fb7f951e94d94a14079aa88836f9be9315f287d",
+              "residual_estimate": 0.014266457063804555,
+              "statistical_radius": 0.04999980008049841,
+              "upper_bound": 0.06426625714430297,
+              "original_pdf_radius": 0.5291481464637843,
+              "mass_estimate": 1.9795878763836132,
+              "mass_standard_error": 0.008809601364397884,
+              "q_target_estimate": 0.9909199001065624,
+              "second_moment_bound": 10.992912091572514,
+              "error": null,
+              "passed": true,
+              "mass_standard_error_is_confidence_interval": false
+            },
+            "history": [
+              {
+                "iteration": 1,
+                "step_size": 0.03333333333333333,
+                "training_objective_estimate": -0.7498552032363731,
+                "diagnostic_objective_estimate": -0.7370231017665243,
+                "diagnostic_residual_estimate": 0.1440059963353302,
+                "candidate_norm": 0.9999946884414278,
+                "elapsed_seconds": 0.0004641669802367687
+              },
+              {
+                "iteration": 800,
+                "step_size": 0.012698646970837548,
+                "training_objective_estimate": -0.77500630683227,
+                "diagnostic_objective_estimate": -0.736340747640462,
+                "diagnostic_residual_estimate": 0.10075215186680758,
+                "candidate_norm": 1.000842597805741,
+                "elapsed_seconds": 0.12372691699420102
+              }
+            ]
+          }
+        ]
+      },
+      "source_function": "gaussian_synthesis.api.synthesize",
+      "iterations": 800,
+      "training_samples": 204800,
+      "diagnostic_samples": 1024,
+      "validation_samples": 87944,
+      "residual_before_polish": 0.007568280881467766,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.15103466698201373,
+      "continuous_residual": 3.858425381056137e-16,
+      "witness": [
+        [
+          -3.120495459723532e-18,
+          2.126995557490808e-18
+        ],
+        [
+          -5.92599922386777e-18,
+          -7.109551216293663e-18
+        ],
+        [
+          -0.17701470666759164,
+          0.4220014931989206
+        ],
+        [
+          0.34355628702856145,
+          -0.4099815552779074
+        ],
+        [
+          0.34355628702856317,
+          -0.40998155527791885
+        ],
+        [
+          -0.4586275310434716,
+          0.10852096583022182
+        ],
+        [
+          -7.476957935170416e-18,
+          4.472241343123494e-18
+        ],
+        [
+          1.4728769715313085e-18,
+          -4.144219508370972e-18
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 5.324999801814556e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.5652682413747997e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 6.8621421649025e-16,
+      "local_residual": 6.8621421649025e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.1660994076672506
+    }
+  ]
+}

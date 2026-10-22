@@ -1,0 +1,675 @@
+{
+  "summary": {
+    "config": {
+      "method": "measure",
+      "backend": "newton",
+      "discretization": "two_node",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "interaction": 4.0,
+    "dt": 0.05,
+    "final_time": 2.0,
+    "impurity_energy": 0.4,
+    "total_seconds": 0.007725916017079726,
+    "setup_seconds": 0.00016145801055245101,
+    "timing_components": {
+      "propagation": 0.00033057696418836713,
+      "solve": 0.0062195830105338246,
+      "sampling": 0.0,
+      "moment_compression": 0.0003442500892560929,
+      "symmetry": 0.0,
+      "refit": 1.0709045454859734e-05,
+      "observables_and_recording": 0.00034599893842823803
+    },
+    "peak_branch_atoms": 32,
+    "final_atoms": 2,
+    "final_coefficient_cost": 1.1660994076566495,
+    "original_solver_calls": 10,
+    "sample_proposals": 0,
+    "mass_samples": 0,
+    "training_samples": 0,
+    "diagnostic_samples": 0,
+    "validation_samples": 0,
+    "final_gaussian_defect": 1.0007415106216804e-16,
+    "final_cumulative_residual": 1.0479812656164215e-11,
+    "max_atoms_after_compression": 2,
+    "final": {
+      "step": 40,
+      "time": 2.0,
+      "norm": 1.0000000000083782,
+      "double": 0.2170125523673068,
+      "density": 0.987217182344177,
+      "cumulative_residual": 1.0479812656164215e-11,
+      "atoms": 2,
+      "coefficient_cost": 1.1660994076566495,
+      "infidelity": 3.0392318173255717e-07,
+      "compression_distance": 1.04695759052079e-11,
+      "double_error": 0.00010172350707177147,
+      "density_error": 0.0002973536916278663,
+      "trotter_distance": 0.000771855879864023,
+      "exact_double": 0.21691082886023502
+    },
+    "max_infidelity": 5.560520501823873e-07,
+    "max_double_error": 0.00017764193694558283,
+    "max_density_error": 0.0002973536916278663,
+    "max_compression_distance": 1.04695759052079e-11,
+    "max_coefficient_cost": 2.539397115315271,
+    "mean_postcompression_cost": 1.6705836167815904,
+    "max_postcompression_cost": 1.9087536883928036
+  },
+  "events": [
+    {
+      "step": 4,
+      "input_atoms": 16,
+      "backend": "newton",
+      "seed": 20265059,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 3,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0005474589997902513,
+      "continuous_residual": 1.0466832109064322e-11,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.3195943478866471,
+          -0.041564064581698035
+        ],
+        [
+          -0.4665932640697339,
+          -0.19861083036773866
+        ],
+        [
+          -0.4665932640697349,
+          -0.19861083036773886
+        ],
+        [
+          0.6294900219478966,
+          -0.034132395848271053
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.67080099042505e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 5.326363842908145e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 1.0466396926833579e-11,
+      "local_residual": 1.0466396926833579e-11,
+      "output_atoms": 2,
+      "coefficient_cost": 1.347110495391847
+    },
+    {
+      "step": 8,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20269095,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 4,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0006488329963758588,
+      "continuous_residual": 2.082824332422744e-16,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.2594444973213326,
+          -0.05102036707586894
+        ],
+        [
+          -0.4434600231539556,
+          -0.36843313472690675
+        ],
+        [
+          -0.44346002315395744,
+          -0.3684331347269077
+        ],
+        [
+          0.5541560851775553,
+          -0.05019350118933389
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.6667013773694634e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.967324346521807e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.435541875787129e-16,
+      "local_residual": 2.435541875787129e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.622970467595305
+    },
+    {
+      "step": 12,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20273131,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 4,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0006340830004774034,
+      "continuous_residual": 2.9439233600320783e-16,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.17254298803377546,
+          -0.022680148018561285
+        ],
+        [
+          -0.4025915299639396,
+          -0.5051637260376183
+        ],
+        [
+          -0.402591529963942,
+          -0.5051637260376203
+        ],
+        [
+          0.44517270042039064,
+          -0.047828962534614855
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.362499410286546e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 6.069846772046872e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 3.447170978769293e-16,
+      "local_residual": 3.447170978769293e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.7905808479967915
+    },
+    {
+      "step": 16,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20277167,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 4,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0006671670125797391,
+      "continuous_residual": 2.0086869426297516e-16,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.06849500818912345,
+          0.038211844065011734
+        ],
+        [
+          -0.33959137156271,
+          -0.6088995183729444
+        ],
+        [
+          -0.3395913715627128,
+          -0.6088995183729473
+        ],
+        [
+          0.309125716761745,
+          -0.033978920352230504
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.3750024158507586e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.023001420131561e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 4.81141122037335e-16,
+      "local_residual": 4.81141122037335e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.8648860646160497
+    },
+    {
+      "step": 20,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20281203,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 4,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0006611249991692603,
+      "continuous_residual": 2.220513810852149e-16,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.041435433238484275,
+          0.12081317535821598
+        ],
+        [
+          -0.2531452386359196,
+          -0.6746895356024852
+        ],
+        [
+          -0.25314523863592253,
+          -0.6746895356024896
+        ],
+        [
+          0.15449212511119223,
+          -0.016616468153714977
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.312501939944923e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.6361806878608475e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.8744111503786724e-16,
+      "local_residual": 2.8744111503786724e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.895089770140654
+    },
+    {
+      "step": 24,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20285239,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 4,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0006311250035651028,
+      "continuous_residual": 6.834017936133213e-17,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.14150165459402142,
+          0.2101675843071356
+        ],
+        [
+          -0.14900361984905366,
+          -0.697224157572014
+        ],
+        [
+          -0.14900361984905658,
+          -0.6972241575720194
+        ],
+        [
+          -0.0036549895255933718,
+          -0.00044994916444830355
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.1625007977709174e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 1.7444108782428046e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.243098744975721e-16,
+      "local_residual": 2.243098744975721e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.9087536883928036
+    },
+    {
+      "step": 28,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20289275,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 4,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0006360000115819275,
+      "continuous_residual": 1.14701826195555e-16,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.21507533154077021,
+          0.2934646090136118
+        ],
+        [
+          -0.03571429658812417,
+          -0.677788307525181
+        ],
+        [
+          -0.03571429658812658,
+          -0.6777883075251876
+        ],
+        [
+          -0.14988116644600677,
+          0.01596638612447897
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.320799442008138e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.440180156366751e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 4.048563638248832e-16,
+      "local_residual": 4.048563638248832e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.8755839909508638
+    },
+    {
+      "step": 32,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20293311,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 4,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0006441249861381948,
+      "continuous_residual": 3.925231146709438e-17,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.25026536467471167,
+          0.36250851467779815
+        ],
+        [
+          0.08312727442737128,
+          -0.6219875238593414
+        ],
+        [
+          0.08312727442736982,
+          -0.6219875238593496
+        ],
+        [
+          -0.27601562068619867,
+          0.03753293282487056
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.14170029014349e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 5.941573518910461e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 5.876386976949624e-16,
+      "local_residual": 5.876386976949624e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.7431528302638126
+    },
+    {
+      "step": 36,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20297347,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 4,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0006452910020016134,
+      "continuous_residual": 3.754704674526955e-16,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.23921438662531727,
+          0.40950551313634587
+        ],
+        [
+          0.20955218505124348,
+          -0.5328071763989861
+        ],
+        [
+          0.20955218505124348,
+          -0.5328071763989957
+        ],
+        [
+          -0.37974529080895786,
+          0.06874457317010106
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.195801400579512e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 2.6766507790745728e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.8031757299712627e-16,
+      "local_residual": 2.8031757299712627e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.4916086048111266
+    },
+    {
+      "step": 40,
+      "input_atoms": 32,
+      "backend": "newton",
+      "seed": 20301383,
+      "orders": [
+        2
+      ],
+      "source_function": "four_mode_landscape.exact_solver.solve_exact",
+      "iterations": 3,
+      "solver_status": "converged",
+      "training_samples": 0,
+      "diagnostic_samples": 0,
+      "solve_seconds": 0.0005043749988544732,
+      "continuous_residual": 1.1039463999348576e-14,
+      "witness": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.17701470666380656,
+          0.42200149320329655
+        ],
+        [
+          0.34355628703171687,
+          -0.4099815552760394
+        ],
+        [
+          0.3435562870317187,
+          -0.4099815552760501
+        ],
+        [
+          -0.4586275310443962,
+          0.10852096583334736
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.2167008612304926e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 5.613217783960923e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 1.056175329909227e-14,
+      "local_residual": 1.056175329909227e-14,
+      "output_atoms": 2,
+      "coefficient_cost": 1.1660994076566495
+    }
+  ]
+}

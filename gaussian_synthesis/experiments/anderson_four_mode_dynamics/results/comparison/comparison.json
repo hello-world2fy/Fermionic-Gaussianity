@@ -1,0 +1,992 @@
+[
+  {
+    "label": "exact",
+    "config": {
+      "method": "exact",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      0,
+      1,
+      2
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.00036137501592747867,
+    "time_range": [
+      0.0003302499826531857,
+      0.0004149590095039457
+    ],
+    "max_infidelity_all_seeds": 1.3322676295501878e-15,
+    "max_double_error_all_seeds": 1.4988010832439613e-15,
+    "final_atoms": [
+      0,
+      0,
+      0
+    ],
+    "peak_branch_atoms": 1,
+    "final_coefficient_cost": [
+      null,
+      null,
+      null
+    ],
+    "max_coefficient_cost": [
+      null,
+      null,
+      null
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 4.93330298922956e-05,
+      "solve": 0.0,
+      "sampling": 0.0,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.0,
+      "observables_and_recording": 0.0001513809838797897
+    }
+  },
+  {
+    "label": "strang",
+    "config": {
+      "method": "strang",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      3,
+      4,
+      5
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.0003749579773284495,
+    "time_range": [
+      0.000368500011973083,
+      0.00043766701128333807
+    ],
+    "max_infidelity_all_seeds": 6.149027468316248e-07,
+    "max_double_error_all_seeds": 0.0001742449727839962,
+    "final_atoms": [
+      0,
+      0,
+      0
+    ],
+    "peak_branch_atoms": 1,
+    "final_coefficient_cost": [
+      null,
+      null,
+      null
+    ],
+    "max_coefficient_cost": [
+      null,
+      null,
+      null
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 3.299993113614619e-05,
+      "solve": 0.0,
+      "sampling": 0.0,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.0,
+      "observables_and_recording": 0.00014554100926034153
+    }
+  },
+  {
+    "label": "schmidt",
+    "config": {
+      "method": "schmidt",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      6,
+      7,
+      8
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.001016082998830825,
+    "time_range": [
+      0.0009769999887794256,
+      0.0016707080067135394
+    ],
+    "max_infidelity_all_seeds": 6.149027468316248e-07,
+    "max_double_error_all_seeds": 0.00017424497278364925,
+    "final_atoms": [
+      2,
+      2,
+      2
+    ],
+    "peak_branch_atoms": 32,
+    "final_coefficient_cost": [
+      1.0233982220006972,
+      1.0233982220006972,
+      1.0233982220006972
+    ],
+    "max_coefficient_cost": [
+      2.6393015651494074,
+      2.6393015651494074,
+      2.6393015651494074
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 0.0003032500098925084,
+      "solve": 0.0,
+      "sampling": 0.0,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.00018678896594792604,
+      "observables_and_recording": 0.0003251259622629732
+    }
+  },
+  {
+    "label": "branch_omp",
+    "config": {
+      "method": "branch_omp",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 4,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      9,
+      10,
+      11
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.001425708003807813,
+    "time_range": [
+      0.001299499999731779,
+      0.0015195420128293335
+    ],
+    "max_infidelity_all_seeds": 6.149027470536694e-07,
+    "max_double_error_all_seeds": 0.00017424497278370477,
+    "final_atoms": [
+      2,
+      2,
+      2
+    ],
+    "peak_branch_atoms": 32,
+    "final_coefficient_cost": [
+      1.0233982220006834,
+      1.0233982220006834,
+      1.0233982220006834
+    ],
+    "max_coefficient_cost": [
+      2.639301565149391,
+      2.639301565149391,
+      2.639301565149391
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 0.00032566499430686235,
+      "solve": 0.0,
+      "sampling": 0.0,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.0004784600459970534,
+      "observables_and_recording": 0.00034791501821018755
+    }
+  },
+  {
+    "label": "weight",
+    "config": {
+      "method": "weight",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 4,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      12,
+      13,
+      14
+    ],
+    "matched_error_pass_all_seeds": false,
+    "median_total_seconds": 0.0010674590012058616,
+    "time_range": [
+      0.0010181249817833304,
+      0.0011759999906644225
+    ],
+    "max_infidelity_all_seeds": 0.35939065673852855,
+    "max_double_error_all_seeds": 0.20045229895404615,
+    "final_atoms": [
+      4,
+      4,
+      4
+    ],
+    "peak_branch_atoms": 64,
+    "final_coefficient_cost": [
+      1.29850559774752,
+      1.29850559774752,
+      1.29850559774752
+    ],
+    "max_coefficient_cost": [
+      1.7275258663244615,
+      1.7275258663244615,
+      1.7275258663244615
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 0.00035149988252669573,
+      "solve": 0.0,
+      "sampling": 0.0,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 8.22109286673367e-05,
+      "observables_and_recording": 0.0003472961252555251
+    }
+  },
+  {
+    "label": "haar:sample_refit",
+    "config": {
+      "method": "haar",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      15,
+      16,
+      17
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.004496416979236528,
+    "time_range": [
+      0.0044907910050824285,
+      0.02475512499222532
+    ],
+    "max_infidelity_all_seeds": 6.149027470536694e-07,
+    "max_double_error_all_seeds": 0.00017424497278385742,
+    "final_atoms": [
+      8,
+      8,
+      8
+    ],
+    "peak_branch_atoms": 128,
+    "final_coefficient_cost": [
+      6.466516489081154,
+      3.4003276224884367,
+      5.3772844854831785
+    ],
+    "max_coefficient_cost": [
+      8.588014699013497,
+      9.691738080753588,
+      11.943820299392904
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 0.00042786888661794364,
+      "solve": 0.0,
+      "sampling": 0.0010127500572707504,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.0023096220393199474,
+      "observables_and_recording": 0.00039033597568050027
+    }
+  },
+  {
+    "label": "api:sample_refit",
+    "config": {
+      "method": "measure",
+      "backend": "api",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      18,
+      19,
+      20
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 1.542130875022849,
+    "time_range": [
+      1.5336538339906838,
+      1.5584188750071917
+    ],
+    "max_infidelity_all_seeds": 6.149027470536694e-07,
+    "max_double_error_all_seeds": 0.0001742449727841766,
+    "final_atoms": [
+      8,
+      8,
+      8
+    ],
+    "peak_branch_atoms": 128,
+    "final_coefficient_cost": [
+      3.2993930792694224,
+      3.0144592336162863,
+      2.506922131190174
+    ],
+    "max_coefficient_cost": [
+      6.357543438190819,
+      6.288423683132468,
+      6.128987746989893
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.0005374578468035907,
+      "solve": 1.525232748070266,
+      "sampling": 0.012000623974017799,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.003002042038133368,
+      "observables_and_recording": 0.0004478379269130528
+    }
+  },
+  {
+    "label": "sgd:sample_refit",
+    "config": {
+      "method": "measure",
+      "backend": "sgd",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      21,
+      22,
+      23
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.3408168330206536,
+    "time_range": [
+      0.33763100000214763,
+      0.34162329201353714
+    ],
+    "max_infidelity_all_seeds": 6.149027470536694e-07,
+    "max_double_error_all_seeds": 0.0001742449727844264,
+    "final_atoms": [
+      8,
+      8,
+      8
+    ],
+    "peak_branch_atoms": 128,
+    "final_coefficient_cost": [
+      3.3894747266900978,
+      3.01445923361629,
+      2.506922131190167
+    ],
+    "max_coefficient_cost": [
+      6.35754343819082,
+      7.4459355725702245,
+      6.128987746989892
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.0004924990935251117,
+      "solve": 0.324767747981241,
+      "sampling": 0.011648583051282912,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.002722207980696112,
+      "observables_and_recording": 0.00041699985740706325
+    }
+  },
+  {
+    "label": "newton:sample_refit",
+    "config": {
+      "method": "measure",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      24,
+      25,
+      26
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.02109958400251344,
+    "time_range": [
+      0.02100133302155882,
+      0.021600083011435345
+    ],
+    "max_infidelity_all_seeds": 6.14902747275714e-07,
+    "max_double_error_all_seeds": 0.0001742449727840517,
+    "final_atoms": [
+      8,
+      8,
+      8
+    ],
+    "peak_branch_atoms": 128,
+    "final_coefficient_cost": [
+      3.299393079269406,
+      3.0144592336162894,
+      2.506922131190174
+    ],
+    "max_coefficient_cost": [
+      6.357543438190822,
+      7.445935572570234,
+      6.128987746989899
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.00043375202221795917,
+      "solve": 0.006283709954004735,
+      "sampling": 0.01139629099634476,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.0022530420392286032,
+      "observables_and_recording": 0.000393498019548133
+    }
+  },
+  {
+    "label": "newton:sample_raw",
+    "config": {
+      "method": "measure",
+      "backend": "newton",
+      "discretization": "sample_raw",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      27,
+      28,
+      29
+    ],
+    "matched_error_pass_all_seeds": false,
+    "median_total_seconds": 0.02077129200915806,
+    "time_range": [
+      0.020646167016820982,
+      0.021584250003797933
+    ],
+    "max_infidelity_all_seeds": 0.2489445744482638,
+    "max_double_error_all_seeds": 0.16806867620081434,
+    "final_atoms": [
+      128,
+      128,
+      128
+    ],
+    "peak_branch_atoms": 2048,
+    "final_coefficient_cost": [
+      4.357810301306318,
+      3.8499497669226086,
+      4.125599099551288
+    ],
+    "max_coefficient_cost": [
+      5.903161682625819,
+      6.100396658128322,
+      6.145123206809841
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.0012122509360779077,
+      "solve": 0.006617584964260459,
+      "sampling": 0.011907332052942365,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 2.2124004317447543e-05,
+      "observables_and_recording": 0.0004785461351275444
+    }
+  },
+  {
+    "label": "sgd:two_node",
+    "config": {
+      "method": "measure",
+      "backend": "sgd",
+      "discretization": "two_node",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      30,
+      31,
+      32
+    ],
+    "matched_error_pass_all_seeds": false,
+    "median_total_seconds": 0.3462165829841979,
+    "time_range": [
+      0.32860483301919885,
+      0.40833862498402596
+    ],
+    "max_infidelity_all_seeds": 0.005373343682343434,
+    "max_double_error_all_seeds": 0.015244805768936526,
+    "final_atoms": [
+      2,
+      2,
+      2
+    ],
+    "peak_branch_atoms": 32,
+    "final_coefficient_cost": [
+      1.0210303282806894,
+      1.080947328756256,
+      1.0752516978860707
+    ],
+    "max_coefficient_cost": [
+      2.6351522991543272,
+      2.6354269623022875,
+      2.625257473509567
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.0004128710424993187,
+      "solve": 0.34357308299513534,
+      "sampling": 0.0,
+      "moment_compression": 0.0006227099802345037,
+      "symmetry": 0.0,
+      "refit": 1.2083008186891675e-05,
+      "observables_and_recording": 0.0004013780562672764
+    }
+  },
+  {
+    "label": "newton:two_node",
+    "config": {
+      "method": "measure",
+      "backend": "newton",
+      "discretization": "two_node",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      33,
+      34,
+      35
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.007274333009263501,
+    "time_range": [
+      0.007089416001690552,
+      0.00850987501326017
+    ],
+    "max_infidelity_all_seeds": 6.149027375057514e-07,
+    "max_double_error_all_seeds": 0.00017424496586068705,
+    "final_atoms": [
+      2,
+      2,
+      2
+    ],
+    "peak_branch_atoms": 32,
+    "final_coefficient_cost": [
+      1.0233982220257793,
+      1.0233982220257793,
+      1.0233982220257793
+    ],
+    "max_coefficient_cost": [
+      2.639301565151386,
+      2.639301565151386,
+      2.639301565151386
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.000324452092172578,
+      "solve": 0.005809583002701402,
+      "sampling": 0.0,
+      "moment_compression": 0.00033841494587250054,
+      "symmetry": 0.0,
+      "refit": 1.000400516204536e-05,
+      "observables_and_recording": 0.0003332519845571369
+    }
+  },
+  {
+    "label": "newton:symmetry_refit",
+    "config": {
+      "method": "measure",
+      "backend": "newton",
+      "discretization": "symmetry_refit",
+      "samples": 64,
+      "cap": 4,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      36,
+      37,
+      38
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.026706333010224625,
+    "time_range": [
+      0.02665254200110212,
+      0.035035291977692395
+    ],
+    "max_infidelity_all_seeds": 6.149027470536694e-07,
+    "max_double_error_all_seeds": 0.0001742449727841905,
+    "final_atoms": [
+      4,
+      4,
+      4
+    ],
+    "peak_branch_atoms": 64,
+    "final_coefficient_cost": [
+      1.9649368779046714,
+      1.2086759274382146,
+      1.3855207143150066
+    ],
+    "max_coefficient_cost": [
+      3.6370926814002744,
+      3.4490896801793176,
+      3.6447753489411188
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.00037632702151313424,
+      "solve": 0.006105583976022899,
+      "sampling": 0.008397542056627572,
+      "moment_compression": 0.0,
+      "symmetry": 0.009831873030634597,
+      "refit": 0.0011982879659626633,
+      "observables_and_recording": 0.0003579581098165363
+    }
+  },
+  {
+    "label": "haar:symmetry_refit",
+    "config": {
+      "method": "haar",
+      "backend": "newton",
+      "discretization": "symmetry_refit",
+      "samples": 64,
+      "cap": 4,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      39,
+      40,
+      41
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.012898499990114942,
+    "time_range": [
+      0.012665542017202824,
+      0.012931415985804051
+    ],
+    "max_infidelity_all_seeds": 6.149027470536694e-07,
+    "max_double_error_all_seeds": 0.0001742449727851203,
+    "final_atoms": [
+      4,
+      4,
+      4
+    ],
+    "peak_branch_atoms": 64,
+    "final_coefficient_cost": [
+      2.0569205356050753,
+      2.2741252088980013,
+      1.8157375239655202
+    ],
+    "max_coefficient_cost": [
+      3.9787398950693103,
+      3.8020787222941643,
+      3.59906476171953
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 0.0003689150034915656,
+      "solve": 0.0,
+      "sampling": 0.0008526260207872838,
+      "moment_compression": 0.0,
+      "symmetry": 0.009863335959380493,
+      "refit": 0.0011152070364914834,
+      "observables_and_recording": 0.0003530798712745309
+    }
+  },
+  {
+    "label": "unoptimized:sample_refit",
+    "config": {
+      "method": "unoptimized",
+      "backend": "newton",
+      "discretization": "sample_refit",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      42,
+      43,
+      44
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.01490795801510103,
+    "time_range": [
+      0.014713792013935745,
+      0.015085874998476356
+    ],
+    "max_infidelity_all_seeds": 6.149027470536694e-07,
+    "max_double_error_all_seeds": 0.00017424497278432927,
+    "final_atoms": [
+      8,
+      8,
+      8
+    ],
+    "peak_branch_atoms": 128,
+    "final_coefficient_cost": [
+      3.2993930792694086,
+      3.0144592336162863,
+      2.5069221311901795
+    ],
+    "max_coefficient_cost": [
+      6.357543438190823,
+      7.445935572570234,
+      6.149963646338274
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 0.0004349940281827003,
+      "solve": 0.0,
+      "sampling": 0.011395498004276305,
+      "moment_compression": 0.0,
+      "symmetry": 0.0,
+      "refit": 0.0023326280061155558,
+      "observables_and_recording": 0.0003877509443555027
+    }
+  },
+  {
+    "label": "direct_quadric",
+    "config": {
+      "method": "direct_quadric",
+      "backend": "newton",
+      "discretization": "two_node",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      45,
+      46,
+      47
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.0017982499848585576,
+    "time_range": [
+      0.0017383749946020544,
+      0.0019360409933142364
+    ],
+    "max_infidelity_all_seeds": 6.149027468316248e-07,
+    "max_double_error_all_seeds": 0.00017424497278389905,
+    "final_atoms": [
+      2,
+      2,
+      2
+    ],
+    "peak_branch_atoms": 32,
+    "final_coefficient_cost": [
+      1.0233982220006992,
+      1.0233982220006992,
+      1.0233982220006992
+    ],
+    "max_coefficient_cost": [
+      2.639301565149406,
+      2.639301565149406,
+      2.639301565149406
+    ],
+    "solver_calls_each": [
+      0,
+      0,
+      0
+    ],
+    "median_timing_components": {
+      "propagation": 0.00032050185836851597,
+      "solve": 0.0,
+      "sampling": 0.0,
+      "moment_compression": 0.0003539999888744205,
+      "symmetry": 0.0,
+      "refit": 1.0206946171820164e-05,
+      "observables_and_recording": 0.00033970907679758966
+    }
+  },
+  {
+    "label": "sgd_polished:two_node",
+    "config": {
+      "method": "measure",
+      "backend": "sgd_polished",
+      "discretization": "two_node",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      48,
+      49,
+      50
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 0.3308487909962423,
+    "time_range": [
+      0.33008533300017007,
+      0.34164749999763444
+    ],
+    "max_infidelity_all_seeds": 6.149027468316248e-07,
+    "max_double_error_all_seeds": 0.0001742449727853146,
+    "final_atoms": [
+      2,
+      2,
+      2
+    ],
+    "peak_branch_atoms": 32,
+    "final_coefficient_cost": [
+      1.023398222000698,
+      1.0233982220006979,
+      1.0233982220006972
+    ],
+    "max_coefficient_cost": [
+      2.6393015651494056,
+      2.639301565149405,
+      2.6393015651494065
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.00039891188498586416,
+      "solve": 0.3289195000252221,
+      "sampling": 0.0,
+      "moment_compression": 0.0005058739916421473,
+      "symmetry": 0.0,
+      "refit": 1.224904553964734e-05,
+      "observables_and_recording": 0.0003822939470410347
+    }
+  },
+  {
+    "label": "api_polished:two_node",
+    "config": {
+      "method": "measure",
+      "backend": "api_polished",
+      "discretization": "two_node",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261023
+    },
+    "case_indices": [
+      51,
+      52,
+      53
+    ],
+    "matched_error_pass_all_seeds": true,
+    "median_total_seconds": 1.5325105829979293,
+    "time_range": [
+      1.5281894999789074,
+      1.5424782499903813
+    ],
+    "max_infidelity_all_seeds": 6.149027468316248e-07,
+    "max_double_error_all_seeds": 0.00017424497278378803,
+    "final_atoms": [
+      2,
+      2,
+      2
+    ],
+    "peak_branch_atoms": 32,
+    "final_coefficient_cost": [
+      1.023398222000699,
+      1.0233982220006994,
+      1.023398222000699
+    ],
+    "max_coefficient_cost": [
+      2.6393015651494074,
+      2.6393015651494065,
+      2.639301565149407
+    ],
+    "solver_calls_each": [
+      10,
+      10,
+      10
+    ],
+    "median_timing_components": {
+      "propagation": 0.0004222519346512854,
+      "solve": 1.5305072070623282,
+      "sampling": 0.0,
+      "moment_compression": 0.0005364999524317682,
+      "symmetry": 0.0,
+      "refit": 1.2332020560279489e-05,
+      "observables_and_recording": 0.0003950030659325421
+    }
+  }
+]

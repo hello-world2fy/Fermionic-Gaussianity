@@ -1,0 +1,706 @@
+{
+  "summary": {
+    "config": {
+      "method": "measure",
+      "backend": "sgd_polished",
+      "discretization": "two_node",
+      "samples": 128,
+      "cap": 8,
+      "block_steps": 4,
+      "seed": 20261025
+    },
+    "interaction": 4.0,
+    "dt": 0.05,
+    "final_time": 2.0,
+    "impurity_energy": 0.0,
+    "total_seconds": 0.3268940410052892,
+    "setup_seconds": 0.0001678749977145344,
+    "timing_components": {
+      "propagation": 0.0003857960400637239,
+      "solve": 0.32508591897203587,
+      "sampling": 0.0,
+      "moment_compression": 0.00045312795555219054,
+      "symmetry": 0.0,
+      "refit": 1.1874886695295572e-05,
+      "observables_and_recording": 0.000374372088117525,
+      "other_loop_overhead": 0.0004150760651100427
+    },
+    "peak_branch_atoms": 32,
+    "final_atoms": 2,
+    "final_coefficient_cost": 1.0233982220006972,
+    "original_solver_calls": 10,
+    "sample_proposals": 0,
+    "mass_samples": 0,
+    "training_samples": 327680,
+    "diagnostic_samples": 5120,
+    "validation_samples": 0,
+    "final_gaussian_defect": 2.775557561562801e-17,
+    "final_cumulative_residual": 1.0745117669114916e-14,
+    "max_atoms_after_compression": 2,
+    "final": {
+      "step": 40,
+      "time": 2.0,
+      "norm": 1.000000000000001,
+      "double": 0.24991798492319056,
+      "density": 0.9999999999999993,
+      "cumulative_residual": 1.0745117669114916e-14,
+      "atoms": 2,
+      "coefficient_cost": 1.0233982220006972,
+      "infidelity": 2.519569474168648e-07,
+      "compression_distance": 1.1711472041461022e-14,
+      "double_error": 6.777473164631953e-06,
+      "density_error": 2.220446049250313e-16,
+      "trotter_distance": 0.000768731577267075,
+      "exact_double": 0.2499247623963552
+    },
+    "max_infidelity": 6.149027468316248e-07,
+    "max_double_error": 0.0001742449727834272,
+    "max_density_error": 1.9984014443252818e-15,
+    "max_compression_distance": 1.1711472041461022e-14,
+    "max_coefficient_cost": 2.6393015651494065,
+    "mean_postcompression_cost": 1.691338051492874,
+    "max_postcompression_cost": 1.9838474915469801
+  },
+  "events": [
+    {
+      "step": 4,
+      "input_atoms": 16,
+      "backend": "sgd_polished",
+      "seed": 20265061,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.019683195884170505,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.0331920419994276,
+      "continuous_residual": 1.4934219766125478e-15,
+      "witness": [
+        [
+          -3.1920668393285946e-16,
+          8.537621732068019e-17
+        ],
+        [
+          -1.6117571635794198e-17,
+          2.536837405770375e-16
+        ],
+        [
+          0.47434441385171117,
+          -0.008580914663736635
+        ],
+        [
+          -0.4743444138517099,
+          -0.24377444190383665
+        ],
+        [
+          -0.4743444138517111,
+          -0.24377444190383704
+        ],
+        [
+          0.4743444138517119,
+          -0.008580914663736477
+        ],
+        [
+          1.5359901822528084e-16,
+          -4.0659112910392497e-16
+        ],
+        [
+          2.1023845425521623e-17,
+          -7.155545043291025e-18
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 5.1749986596405506e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 4.552252871008668e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 1.1710441686941708e-15,
+      "local_residual": 1.1710441686941708e-15,
+      "output_atoms": 2,
+      "coefficient_cost": 1.3860571592735638
+    },
+    {
+      "step": 8,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20269097,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.023167100241632772,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03250875000958331,
+      "continuous_residual": 1.8846010436284013e-15,
+      "witness": [
+        [
+          -1.4153633847819048e-16,
+          -4.436795469973345e-16
+        ],
+        [
+          -5.712558246296248e-16,
+          -7.011336396721152e-17
+        ],
+        [
+          0.40424144998645306,
+          0.0006209194878568797
+        ],
+        [
+          -0.40424144998645084,
+          -0.44691015571380543
+        ],
+        [
+          -0.4042414499864525,
+          -0.44691015571380643
+        ],
+        [
+          0.404241449986454,
+          0.0006209194878570004
+        ],
+        [
+          1.0445516792771783e-16,
+          -2.946328928714112e-16
+        ],
+        [
+          -8.912470744842398e-18,
+          2.7330896043342453e-16
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.4957996578887105e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.0938441821792777e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 1.6486315600278993e-15,
+      "local_residual": 1.6486315600278993e-15,
+      "output_atoms": 2,
+      "coefficient_cost": 1.6948244363966278
+    },
+    {
+      "step": 12,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20273133,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.021558866879487968,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03211066700168885,
+      "continuous_residual": 2.4818623126738634e-15,
+      "witness": [
+        [
+          -5.321350256255337e-16,
+          -1.6938409841000475e-16
+        ],
+        [
+          -4.2362763636171964e-16,
+          -4.317236992807166e-16
+        ],
+        [
+          0.2979389722400298,
+          0.02183346066649675
+        ],
+        [
+          -0.2979389722400272,
+          -0.6006568184820901
+        ],
+        [
+          -0.2979389722400289,
+          -0.6006568184820914
+        ],
+        [
+          0.2979389722400307,
+          0.021833460666496572
+        ],
+        [
+          -1.4597279099908186e-16,
+          -8.627231142539981e-16
+        ],
+        [
+          2.5890954177798617e-16,
+          1.4504222190894644e-16
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 5.00839960295707e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 2.0253964504621835e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.5846120411076645e-15,
+      "local_residual": 2.5846120411076645e-15,
+      "output_atoms": 2,
+      "coefficient_cost": 1.8843128116550973
+    },
+    {
+      "step": 16,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20277169,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.015932609678159196,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03292245898046531,
+      "continuous_residual": 1.6820500054682575e-16,
+      "witness": [
+        [
+          -5.597965545278281e-16,
+          -3.2296884859689966e-17
+        ],
+        [
+          -3.50727541442667e-16,
+          -4.745838782588751e-16
+        ],
+        [
+          0.1611477028635752,
+          0.04273055509197609
+        ],
+        [
+          -0.1611477028635712,
+          -0.7003253733547355
+        ],
+        [
+          -0.161147702863573,
+          -0.7003253733547374
+        ],
+        [
+          0.16114770286357627,
+          0.04273055509197572
+        ],
+        [
+          4.4159190029556705e-18,
+          -8.484101078484307e-16
+        ],
+        [
+          1.9925418259061317e-16,
+          5.2983333394614924e-17
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 5.1624985644593835e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 1.1714201148076235e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 1.0306558576559285e-16,
+      "local_residual": 1.0306558576559285e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.9653644740599174
+    },
+    {
+      "step": 20,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20281205,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.01579676803944549,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03257379200658761,
+      "continuous_residual": 6.899507501888211e-17,
+      "witness": [
+        [
+          -5.622818494907215e-16,
+          1.2173756682350792e-16
+        ],
+        [
+          -2.4717649490086547e-16,
+          -5.30338255642002e-16
+        ],
+        [
+          0.004688822228575586,
+          0.051806518351000065
+        ],
+        [
+          -0.004688822228570076,
+          -0.736705371045744
+        ],
+        [
+          -0.004688822228571595,
+          -0.7367053710457463
+        ],
+        [
+          0.00468882222857669,
+          0.051806518350999343
+        ],
+        [
+          1.8554694556983189e-16,
+          -8.546049478282628e-16
+        ],
+        [
+          2.1500763221589367e-16,
+          -4.463605699020593e-17
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.0166982216760516e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 2.6803863544177573e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.7452177290537974e-16,
+      "local_residual": 2.7452177290537974e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.9838474915469801
+    },
+    {
+      "step": 24,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20285241,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.014641054266178713,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03209304201300256,
+      "continuous_residual": 3.3097667863511085e-16,
+      "witness": [
+        [
+          -5.421246566509093e-16,
+          2.5663106122602967e-16
+        ],
+        [
+          -1.2823243472409005e-16,
+          -5.653332059636735e-16
+        ],
+        [
+          -0.15239017922738227,
+          0.04368110023259311
+        ],
+        [
+          0.15239017922738934,
+          -0.7042880141727786
+        ],
+        [
+          0.15239017922738854,
+          -0.7042880141727809
+        ],
+        [
+          -0.15239017922738124,
+          0.04368110023259232
+        ],
+        [
+          3.5272996527688675e-16,
+          -8.127841901525631e-16
+        ],
+        [
+          2.2113473235911106e-16,
+          -1.2876774858661165e-16
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 3.904200275428593e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 5.103272251504558e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.1366524259992057e-16,
+      "local_residual": 2.1366524259992057e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.967691602663388
+    },
+    {
+      "step": 28,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20289277,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.018243378077210607,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03209933399921283,
+      "continuous_residual": 4.979190751604008e-16,
+      "witness": [
+        [
+          -5.697628996951773e-16,
+          3.557977253617712e-16
+        ],
+        [
+          -1.2111069399334405e-16,
+          -5.755683269791584e-16
+        ],
+        [
+          -0.29071432356147714,
+          0.023186494346634487
+        ],
+        [
+          0.29071432356148624,
+          -0.608048235237809
+        ],
+        [
+          0.2907143235614863,
+          -0.6080482352378115
+        ],
+        [
+          -0.2907143235614763,
+          0.023186494346633717
+        ],
+        [
+          4.1959481034303627e-16,
+          -7.207440198049155e-16
+        ],
+        [
+          2.898340322582353e-16,
+          -2.1545829034657506e-16
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.5666994992643595e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 2.5776846797341143e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 3.603663411275412e-16,
+      "local_residual": 3.603663411275412e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.8916780937657054
+    },
+    {
+      "step": 32,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20293313,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.01767323763880351,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03237820797949098,
+      "continuous_residual": 2.966694551130936e-16,
+      "witness": [
+        [
+          -6.152714301669127e-16,
+          4.885176166667202e-16
+        ],
+        [
+          3.498327342655444e-18,
+          -5.724709011472793e-16
+        ],
+        [
+          -0.39896818598273265,
+          0.0016445824011063306
+        ],
+        [
+          0.39896818598274386,
+          -0.45728018046588437
+        ],
+        [
+          0.3989681859827449,
+          -0.4572801804658866
+        ],
+        [
+          -0.39896818598273215,
+          0.0016445824011054318
+        ],
+        [
+          5.657354585188841e-16,
+          -7.103849326948461e-16
+        ],
+        [
+          2.755554675854231e-16,
+          -1.8755040741232283e-16
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.4459011405706406e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.150135558742708e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 2.270782715267389e-16,
+      "local_residual": 2.270782715267389e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.7093360961989466
+    },
+    {
+      "step": 36,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20297349,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.02169938921916754,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03314079099800438,
+      "continuous_residual": 3.706058906103366e-15,
+      "witness": [
+        [
+          -1.4591511334932976e-16,
+          1.0827008231301084e-15
+        ],
+        [
+          -1.7475572576268224e-16,
+          -1.3432833062641198e-15
+        ],
+        [
+          -0.4713639736134119,
+          -0.008556631493450463
+        ],
+        [
+          0.47136397361342475,
+          -0.2569562984372571
+        ],
+        [
+          0.4713639736134279,
+          -0.2569562984372583
+        ],
+        [
+          -0.47136397361341215,
+          -0.008556631493451924
+        ],
+        [
+          1.48626135272118e-15,
+          -7.20832730479516e-16
+        ],
+        [
+          7.627486542507141e-16,
+          -7.45173699149852e-17
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.4958986109122634e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 3.925844416168177e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 3.3764200255112305e-15,
+      "local_residual": 3.3764200255112305e-15,
+      "output_atoms": 2,
+      "coefficient_cost": 1.4068701273678175
+    },
+    {
+      "step": 40,
+      "input_atoms": 32,
+      "backend": "sgd_polished",
+      "seed": 20301385,
+      "orders": [
+        2
+      ],
+      "source_function": "gaussian_synthesis.solver.projected_sgd",
+      "iterations": 256,
+      "solver_status": "completed",
+      "training_samples": 32768,
+      "diagnostic_samples": 512,
+      "residual_before_polish": 0.018580365664026745,
+      "polish_newton_steps": 3,
+      "polish_source": "original exact_k2 and exact_hessian; initialized at original SGD witness",
+      "solve_seconds": 0.03206683398457244,
+      "continuous_residual": 1.0136991140138886e-15,
+      "witness": [
+        [
+          -2.6828426503736096e-17,
+          8.692996707895632e-16
+        ],
+        [
+          -4.882542753435103e-18,
+          -1.330642289543283e-15
+        ],
+        [
+          -0.49990903777340195,
+          -0.0007889340254867533
+        ],
+        [
+          0.49990903777341583,
+          -0.014808497953038497
+        ],
+        [
+          0.4999090377734195,
+          -0.014808497953039122
+        ],
+        [
+          -0.4999090377734026,
+          -0.0007889340254877878
+        ],
+        [
+          1.6391838844435415e-15,
+          -6.501584904941083e-16
+        ],
+        [
+          6.378827211630085e-16,
+          -9.456317182177637e-17
+        ]
+      ],
+      "sampling_seconds": 0.0,
+      "moment_compression_seconds": 4.0417013224214315e-05,
+      "proposal_samples": 0,
+      "mass_samples": 0,
+      "accepted_samples": 0,
+      "moment_preservation_residual": 2.87179921818186e-16,
+      "preserves": "first vector moment C_2(u); NOT total mass or full measure",
+      "raw_discretization_error": 7.857126598487775e-16,
+      "local_residual": 7.857126598487775e-16,
+      "output_atoms": 2,
+      "coefficient_cost": 1.0233982220006972
+    }
+  ]
+}
