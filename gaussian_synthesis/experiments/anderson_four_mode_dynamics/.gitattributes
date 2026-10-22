@@ -1,0 +1,7 @@
+# Keep historical artifact bytes stable across checkouts.
+results/**/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+results/**/*.npz -text
+figures/*.png -text
+figures/*.pdf -text
+# These are provenance snapshots, including original source formatting.
+results/source_snapshot/** -text -whitespace

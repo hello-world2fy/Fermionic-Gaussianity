@@ -53,3 +53,15 @@ python examples/four_mode_extent.py --full --output results/my_extent
 - [本次单元测试结果](gaussian_synthesis/results/unit_tests_extent.json)
 
 仓库包含实现代码和可复现实验结果；研究论文原稿、算法 PDF、压缩包及本机缓存不随代码分发。
+
+## 四模 Anderson 含时演化闭环实验
+
+独立实验位于 [`gaussian_synthesis/experiments/anderson_four_mode_dynamics/`](gaussian_synthesis/experiments/anderson_four_mode_dynamics/)。
+它实际调用原 Gaussian decomposition，将连续测度离散化并反馈到后续演化，比较同误差下的总耗时、分支数和系数成本，包含求解与采样开销。
+
+四模结果显示内部流程可显著改善，但尚未超过 Schmidt 等强基线；失败方案和未优化采样对照均保留。
+实验不会进入主库测试或自动触发完整数值运行。
+
+- [实验报告](gaussian_synthesis/experiments/anderson_four_mode_dynamics/REPORT.md)
+- [数学推导与误差口径](gaussian_synthesis/experiments/anderson_four_mode_dynamics/METHOD.md)
+- [复现说明及完整数据入口](gaussian_synthesis/experiments/anderson_four_mode_dynamics/README.md)
