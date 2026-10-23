@@ -4,6 +4,8 @@
 
 代码位于 [`gaussian_synthesis/`](gaussian_synthesis/)。第一版使用 NumPy 和标准库 unittest，支持四模偶 parity，以及阶数 `k=1,2,4`。
 
+本轮 BCS 配对实验的代码、复现方法和 L=4 结果见 [`gaussian_synthesis/experiments/bcs_pairing/`](gaussian_synthesis/experiments/bcs_pairing/README.md)。
+
 ## 快速开始
 
 ```bash

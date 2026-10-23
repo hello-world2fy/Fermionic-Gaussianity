@@ -5,6 +5,35 @@ import numpy as np
 
 
 @dataclass(frozen=True)
+class FermionSpace:
+    """Parity-space metadata only: construction never enumerates Fock states."""
+
+    n: int
+    parity: str = "even"
+
+    def __post_init__(self):
+        if isinstance(self.n, (bool, np.bool_)) or not isinstance(self.n, (int, np.integer)) or self.n < 1:
+            raise ValueError("n must be a positive integer")
+        if self.parity not in ("even", "odd"):
+            raise ValueError("parity must be 'even' or 'odd'")
+        object.__setattr__(self, "n", int(self.n))
+
+    @property
+    def ambient_dimension(self):
+        return 1 << (self.n - 1)
+
+    def validate_occupation(self, mask):
+        if isinstance(mask, (bool, np.bool_)) or not isinstance(mask, (int, np.integer)):
+            raise ValueError("Occupation must be an integer bitmask")
+        mask = int(mask)
+        if mask < 0 or mask.bit_length() > self.n:
+            raise ValueError("Occupation is outside the physical modes")
+        if mask.bit_count() % 2 != int(self.parity == "odd"):
+            raise ValueError("Occupation has the wrong parity")
+        return mask
+
+
+@dataclass(frozen=True)
 class FockBasis:
     n: int = 4
     parity: str = "even"
@@ -25,6 +54,18 @@ class FockBasis:
     @property
     def dimension(self):
         return 1 << (self.n - 1)
+
+    @property
+    def space(self):
+        return FermionSpace(self.n, self.parity)
+
+    @property
+    def coordinate_dimension(self):
+        return self.dimension
+
+    @property
+    def ambient_dimension(self):
+        return self.dimension
 
     def index(self, occupation):
         try:

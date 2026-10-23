@@ -54,6 +54,27 @@ bit j 对应模式 j，Fock ket 的产生算符按模式编号升序排列。四
 
 基础 Fock 容器允许 2–12 模，防止误建巨大 dense 基底；第一版 GaussianState、Haar sampler 和 synthesis 明确只支持四模偶 parity。默认及可配置阶数是 `(1,2,4)` 的递增子集。不构造任何 replica Hilbert 空间或四拷贝投影算符。
 
+### 通用空间与子空间坐标
+
+新增的 `FermionSpace(n, parity)` 只保存物理空间元数据，不枚举 Fock 态。
+`OccupationSector(space, masks)` 保存指定正交 Fock 坐标；`NumberSector(space, N_f)` 保存完整固定电子数基底，并在枚举前检查容量。
+`coordinate_dimension` 与 `ambient_dimension` 分别表示存储维数和完整 parity 维数。
+
+```python
+from gaussian_synthesis import FermionSpace, OccupationSector, NumberSector
+
+space = FermionSpace(8)
+number = NumberSector(space, 4)  # 70 个构型，包含未配对占据
+pair = OccupationSector(space, (15, 51, 60, 195, 204, 240))  # 6 个坐标
+psi = pair.ket(15)
+full = pair.embed(psi, max_dimension=128)
+assert pair.coordinate_dimension == 6 and pair.ambient_dimension == 128
+```
+
+投影/嵌入保留原振幅，不自动归一化。`fidelity(a,b)` 比较归一化后的平方重叠；`phase_aligned_distance(a,b)` 比较去除公共相位后的距离，零态和维数不一致被拒绝。
+这些坐标工具不扩大现有四模合成后端的支持范围；任意子空间也不自动成为有效的对称性降维。
+BCS 小规模验证、物理模型和结果独立保存于 [`experiments/bcs_pairing/`](experiments/bcs_pairing/)。
+
 ### Gaussian 采样约定
 
 设 J 的非零互补配对为 `(0,7,+1)`、`(1,6,-1)`、`(2,5,+1)`、`(3,4,-1)`，则 Gaussian quadric 条件为
