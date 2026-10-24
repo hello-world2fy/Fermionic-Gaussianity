@@ -1,0 +1,97 @@
+{
+  "objective": "Energy-resolved continuous Gaussian synthesis: distribution discovery, universal necessity, independent gain, cross-model validation",
+  "spec_sha256": "27bc38bc70323758fa7262a05d32095f4e573041c28de9084ad087b93facd910",
+  "base_commit": "8c6e5b705ecd5ee0349f980bf6ed4c4882807e07",
+  "created_utc": "2026-10-24T16:04:28.688584+00:00",
+  "objective_complete": false,
+  "milestones": {
+    "M1": {
+      "status": "numerical_integration_verified",
+      "passed": true,
+      "scientific_discovery_claimed": false,
+      "evidence": [
+        "results/m1_unweighted_n1048576_s5_02/summary.json",
+        "results/m1_rare_n32768_s5_01/summary.json",
+        "results/m1_verification_01/verification.json"
+      ],
+      "scope": "20 independent million-particle runs and 40 IID rare-region runs; coherent reconstruction and negligible absolute tail contributions checked. Conditional rare shapes are unresolved."
+    },
+    "M2": {
+      "status": "global_nonzero_certificate_verified_precision_validation_running",
+      "passed": false,
+      "evidence": [
+        "results/m2_k8_support_01/verification.json",
+        "results/composition_analytic_control_01/summary.json",
+        "results/weighted_large_rhs_regression_01/verification.json"
+      ],
+      "issue": "Current replica-derived bounds are weaker than the strong analytic control. Corrected million-particle validation, full parameter grid, conditional tails and independent gain still pending."
+    },
+    "M3": {
+      "status": "not_started",
+      "passed": false
+    },
+    "M4": {
+      "status": "not_started",
+      "passed": false
+    }
+  },
+  "gates": {
+    "G1": {
+      "status": "unproven",
+      "passed": false
+    },
+    "G2": {
+      "status": "unproven",
+      "passed": false
+    },
+    "G3": {
+      "status": "unproven",
+      "passed": false
+    }
+  },
+  "open_requirements": [
+    "M1 full reconstruction and conditional sampling accuracy",
+    "M2 weighted synthesis, global weighted support certificate and nontrivial composition bound",
+    "M3 automatic directions and fair discovery/certification/computation controls",
+    "M4 pairing and preregistered held-out model validation"
+  ],
+  "active_processes": [
+    {
+      "session": 4920,
+      "run": "m2_k8_lambda1_validation_n1048576_02",
+      "status": "running_at_last_poll",
+      "log": "results/m2_k8_lambda1_validation_n1048576_02.log"
+    }
+  ],
+  "scientific_success_not_implied_by_execution": true,
+  "updated_utc": "2026-10-24T16:50:53.821584+00:00",
+  "analytic_reference_status": "24 physical window/budget cases with rigorous global supports and independent 120-digit/rational checks; not G1/G3 evidence",
+  "known_failures": [
+    {
+      "run": "m1_smoke_01",
+      "reason": "Small-sample reconstruction error and no low-window hits; no physics success claimed."
+    },
+    {
+      "run": "m1_unweighted_n131072_s5_01",
+      "reason": "Some individual reconstruction residuals >1e-3; conditional low-window ESS zero. Full initial records preserved."
+    },
+    {
+      "run": "m2_k2_lambda025_pilot_01",
+      "reason": "Small-sample independent reconstruction residuals up to 0.00645, above 1e-3; global weighted certificates valid but composition-energy bound zero."
+    },
+    {
+      "run": "m2_k8_lambda1_validation_n1048576_01",
+      "reason": "Unchunked GPU CSR multiplication returned zeros at million-column RHS; invalid score and residual ~0.44. Process explicitly terminated. Fixed with chunked sparse RHS and independent CPU score checks; original artifacts quarantined by INVALIDATED.json."
+    }
+  ],
+  "last_goal_turn_classification": "progress",
+  "next_actions": [
+    "Poll existing session 4920 or inspect its live process; do not restart merely on an observation timeout.",
+    "Complete independent weighted reconstruction and conditional-integral validation. If direction bias remains, retrain and use new validation streams.",
+    "Run the original k/lambda grid with five independent streams and explicit storage/timing ledgers, gated by validated numerical accuracy.",
+    "Compare every weighted certificate against the strong analytic control and direct-dual optimization, without claiming G3 from a nonzero bound alone.",
+    "Implement phase-conditioned direction discovery with no e4/e8 input; freeze before analytic comparison. Complete all discovery and R/B baselines, counterfactuals and input-permission modes.",
+    "Run pairing and the preregistered held-out g=.37 through the same blind discovery pipeline.",
+    "Audit every item in REQUIREMENTS.json and the full original specification; goal remains active."
+  ]
+}

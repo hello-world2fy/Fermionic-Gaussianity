@@ -1,0 +1,71 @@
+{
+  "fk_primary": [
+    11,
+    20
+  ],
+  "fk_expansion_after_mechanism": [
+    9,
+    10.9225
+  ],
+  "k": [
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "k_optional": 64,
+  "lambda": [
+    0,
+    0.25,
+    0.5,
+    1,
+    2,
+    4,
+    8
+  ],
+  "window_correlation_fractions": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "cost_factors": [
+    1,
+    1.1,
+    1.25
+  ],
+  "ranks": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "seeds": [
+    25101,
+    25102,
+    25103,
+    25104,
+    25105
+  ],
+  "reconstruction_threshold": 0.001,
+  "minimum_tail_particle_ess": 256,
+  "phase_amplitude_absolute_95_halfwidth_threshold": 0.002,
+  "computational_gain_initial_threshold": 0.1,
+  "required_gain_parameter_regions": 2,
+  "held_out_pairing_coupling": 0.37,
+  "held_out_choice_before_any_new_distribution_runs": true,
+  "known_state_all_baselines_may_access_target": true,
+  "hamiltonian_only_test_target_for_evaluation_only": true,
+  "baselines": [
+    "scalar_resource",
+    "local_physics",
+    "Husimi",
+    "physical_prior",
+    "direct_dual",
+    "adaptive_columns",
+    "cost_constrained_adaptive_columns"
+  ],
+  "separate_offline_online_full_cost": true,
+  "phase_discovery_cannot_receive_e4_or_e8": true
+}

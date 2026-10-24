@@ -1,0 +1,69 @@
+{
+  "stage": "train",
+  "t": 11.0,
+  "k": 2,
+  "penalty": 0.25,
+  "seed": 25101,
+  "iteration": 1,
+  "sampler": {
+    "method": "weighted_smc_reversible_gaussian_rotation_MH",
+    "penalty": 0.25,
+    "count": 32768,
+    "moves_per_temperature": 48,
+    "planes_per_move": 8,
+    "max_norm_error": 5.329070518200751e-15,
+    "ladder": [
+      {
+        "beta": 0.43444288330567815,
+        "log_z": -2.9532932626939,
+        "incremental_ess": 26214.400000000893,
+        "unique_initial_ancestors": 26286,
+        "mh_acceptance": 0.8704687754313151,
+        "angle_scale": 0.1836881121531728,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 0.5191943375393748
+      },
+      {
+        "beta": 0.9461922340532084,
+        "log_z": -6.149331219009874,
+        "incremental_ess": 26214.40000000036,
+        "unique_initial_ancestors": 22217,
+        "mh_acceptance": 0.8006051381429037,
+        "angle_scale": 0.1576993172930844,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 1.0086814565584064
+      },
+      {
+        "beta": 1.5319761219637924,
+        "log_z": -9.539409055331522,
+        "incremental_ess": 26214.40000000026,
+        "unique_initial_ancestors": 19304,
+        "mh_acceptance": 0.7616227467854818,
+        "angle_scale": 0.13825883018273752,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 1.5009600268676877
+      },
+      {
+        "beta": 2.0,
+        "log_z": -12.08565363551623,
+        "incremental_ess": 29031.98055783956,
+        "unique_initial_ancestors": 17857,
+        "mh_acceptance": 0.7434037526448568,
+        "angle_scale": 0.1270170592217177,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 1.9667139174416661
+      }
+    ],
+    "elapsed_seconds": 2.0343577032908797,
+    "device": 0,
+    "iid_particles": false,
+    "global_support_certified": false,
+    "strictly_certified": false
+  },
+  "elapsed_seconds": 2.254015567712486,
+  "quadrature_file": "t11_k2_lambda0.25_train1_seed25101.npz"
+}

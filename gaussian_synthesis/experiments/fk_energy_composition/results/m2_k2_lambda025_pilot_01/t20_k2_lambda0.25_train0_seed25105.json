@@ -1,0 +1,80 @@
+{
+  "stage": "train",
+  "t": 20.0,
+  "k": 2,
+  "penalty": 0.25,
+  "seed": 25105,
+  "iteration": 0,
+  "sampler": {
+    "method": "weighted_smc_reversible_gaussian_rotation_MH",
+    "penalty": 0.25,
+    "count": 32768,
+    "moves_per_temperature": 48,
+    "planes_per_move": 8,
+    "max_norm_error": 6.106226635438361e-15,
+    "ladder": [
+      {
+        "beta": 0.3767445853084723,
+        "log_z": -3.549633906758496,
+        "incremental_ess": 26214.40000000011,
+        "unique_initial_ancestors": 26379,
+        "mh_acceptance": 0.8792247772216797,
+        "angle_scale": 0.18749772054663447,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 0.5125811221078038
+      },
+      {
+        "beta": 0.8077176407999118,
+        "log_z": -7.341490810697941,
+        "incremental_ess": 26214.40000000052,
+        "unique_initial_ancestors": 22407,
+        "mh_acceptance": 0.8088951110839844,
+        "angle_scale": 0.16362790981790098,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 1.0026103537529707
+      },
+      {
+        "beta": 1.2787531453458265,
+        "log_z": -11.228296877821663,
+        "incremental_ess": 26214.400000000456,
+        "unique_initial_ancestors": 19570,
+        "mh_acceptance": 0.7661705017089844,
+        "angle_scale": 0.1457384144241948,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 1.496697099879384
+      },
+      {
+        "beta": 1.7919620380423857,
+        "log_z": -15.206600682038617,
+        "incremental_ess": 26214.400000000252,
+        "unique_initial_ancestors": 17343,
+        "mh_acceptance": 0.7379277547200521,
+        "angle_scale": 0.1316642672031432,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 1.9864088268950582
+      },
+      {
+        "beta": 2.0,
+        "log_z": -16.75311067845336,
+        "incremental_ess": 31667.030409632436,
+        "unique_initial_ancestors": 16657,
+        "mh_acceptance": 0.7322343190511068,
+        "angle_scale": 0.1270170592217177,
+        "moves": 48,
+        "planes_per_move": 8,
+        "elapsed_seconds": 2.45424815826118
+      }
+    ],
+    "elapsed_seconds": 2.5230891732499003,
+    "device": 1,
+    "iid_particles": false,
+    "global_support_certified": false,
+    "strictly_certified": false
+  },
+  "elapsed_seconds": 2.747527716681361,
+  "quadrature_file": "t20_k2_lambda0.25_train0_seed25105.npz"
+}

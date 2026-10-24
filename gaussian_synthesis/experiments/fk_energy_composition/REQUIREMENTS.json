@@ -1,0 +1,132 @@
+{
+  "spec": "EXPERIMENT_SPEC.txt",
+  "scope_not_redefined": true,
+  "requirements": [
+    {
+      "id": "M1.1",
+      "requirement": "Canonical energy-resolved coherent amplitudes at four physical windows",
+      "status": "verified",
+      "evidence": "results/m1_verification_01/verification.json"
+    },
+    {
+      "id": "M1.2",
+      "requirement": "Full reconstruction, five repeats, raw Gaussian purity and phase storage",
+      "status": "verified",
+      "evidence": "results/m1_verification_01/verification.json"
+    },
+    {
+      "id": "M1.3",
+      "requirement": "Conditional tail uncertainty, no zero-hit inference",
+      "status": "verified_absolute_contribution_only",
+      "evidence": "results/m1_rare_n32768_s5_01/summary.json"
+    },
+    {
+      "id": "E1.reference",
+      "requirement": "Independently certify predicted high-energy mass and physical error references",
+      "status": "verified",
+      "evidence": "results/analytic_reference_02/verification.json"
+    },
+    {
+      "id": "E1.discovery",
+      "requirement": "Automatic directions with no e4/e8 input and independent global support",
+      "status": "not_started",
+      "evidence": null
+    },
+    {
+      "id": "M2.theory",
+      "requirement": "Weighted strict convexity, reconstruction, envelope response, zero-penalty regression",
+      "status": "derived_and_regression_passed",
+      "evidence": "results/weighted_sampler_validation_01/verification.json"
+    },
+    {
+      "id": "M2.scan",
+      "requirement": "k=2,4,8,16,32 and lambda=0,.25,.5,1,2,4,8 with five repeats",
+      "status": "incomplete",
+      "evidence": null
+    },
+    {
+      "id": "M2.certificate",
+      "requirement": "A rigorous weighted witness produces L_lambda>U",
+      "status": "verified_nonzero_but_weaker_than_analytic_control",
+      "evidence": "results/m2_k8_support_01/verification.json"
+    },
+    {
+      "id": "M2.physics",
+      "requirement": "Accurate fixed-target cost/energy tradeoff and coherent redistribution",
+      "status": "incomplete",
+      "evidence": null
+    },
+    {
+      "id": "M2.increment",
+      "requirement": "Beyond fixed witnesses, ordinary low-order moments or simple energy statistics",
+      "status": "not_started",
+      "evidence": null
+    },
+    {
+      "id": "E3.kernels",
+      "requirement": "All two/four-point energy-region kernels and nonlinear Wick recombination",
+      "status": "verified_unweighted_only",
+      "evidence": "results/m1_verification_01/verification.json"
+    },
+    {
+      "id": "E3.counterfactuals",
+      "requirement": "Delete high region then reoptimize; phase changes; dephasing; unrestricted adaptive dictionary",
+      "status": "incomplete",
+      "evidence": null
+    },
+    {
+      "id": "E3.universal",
+      "requirement": "Universal restricted-budget fidelity or energy errors at natural windows",
+      "status": "analytic_reference_only",
+      "evidence": "results/analytic_reference_02/verification.json"
+    },
+    {
+      "id": "E4.discovery",
+      "requirement": "Fair known-state scalar/local/Husimi/prior/direct-dual/column comparisons",
+      "status": "not_started",
+      "evidence": null
+    },
+    {
+      "id": "E4.RB",
+      "requirement": "R=8,16,32,64; B=U,1.1U,1.25U; five matched streams; actual kets/costs",
+      "status": "not_started",
+      "evidence": null
+    },
+    {
+      "id": "E4.permissions",
+      "requirement": "Separate known-state and Hamiltonian-only inputs; include offline/online costs",
+      "status": "not_started",
+      "evidence": null
+    },
+    {
+      "id": "E4.pathA",
+      "requirement": "Autodiscovered certification beats preregistered strongest analytic reference",
+      "status": "unproven",
+      "evidence": null
+    },
+    {
+      "id": "E4.pathB",
+      "requirement": "Two predeclared regions with meaningful Pareto gains and statistical intervals",
+      "status": "unproven",
+      "evidence": null
+    },
+    {
+      "id": "M4.pairing",
+      "requirement": "Automatic discovery and certification in existing pairing model",
+      "status": "not_started",
+      "evidence": null
+    },
+    {
+      "id": "M4.heldout",
+      "requirement": "Preregistered g=.37 without excitation-answer input",
+      "status": "not_started",
+      "evidence": null
+    },
+    {
+      "id": "DELIVERY",
+      "requirement": "Full report, raw artifacts, failures, frozen sources and requirement audit",
+      "status": "in_progress",
+      "evidence": null
+    }
+  ]
+}
