@@ -1,0 +1,64 @@
+{
+  "seed": 26103,
+  "B_ratio": 9.932353274816398,
+  "B_forward_diagnostic": 9.951668557260067,
+  "rho_MC_raw": 0.050055171036319714,
+  "rho_MC_RB": 0.007182281181491917,
+  "P": {
+    "feature_names": [
+      "mass_a_squared",
+      "mass_b_squared",
+      "mass_dot",
+      "eta"
+    ],
+    "count": 32768,
+    "max_purity_error_all_particles": 1.5515366769136563e-14,
+    "feature_means": [
+      0.12658295990826934,
+      0.12671669268578734,
+      -0.004645998035706725,
+      0.5328697540168139
+    ],
+    "samples_are_independent": false,
+    "distribution_kind": "equal-weight resampled SMC approximation to canonical P_k"
+  },
+  "sampling": {
+    "method": "adaptive_tempered_smc_exact_plane_heatbath",
+    "count": 32768,
+    "sweeps_per_temperature": 2,
+    "ess_fraction": 0.8,
+    "ladder": [
+      {
+        "beta": 0.45648550876448724,
+        "log_z": -2.3437991813354415,
+        "incremental_ess": 26214.40000000017,
+        "unique_initial_ancestors": 26206,
+        "log_r_mean": -4.85988772351804,
+        "log_r_std": 1.0261653849961134,
+        "elapsed_seconds": 5.1915255123749375,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 328.3360900878906,
+        "exact_conditional_updates": true
+      },
+      {
+        "beta": 0.5,
+        "log_z": -2.554290032611224,
+        "incremental_ess": 32705.074939601094,
+        "unique_initial_ancestors": 25906,
+        "log_r_mean": -4.81297515712942,
+        "log_r_std": 1.0013526658947092,
+        "elapsed_seconds": 5.525622708722949,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 336.3771057128906,
+        "exact_conditional_updates": true
+      }
+    ],
+    "max_norm_error": 3.774758283725532e-15,
+    "elapsed_seconds": 5.548200098797679,
+    "analytic_log_z_anchors": {
+      "1.0": -4.852030263919617
+    },
+    "iid_particles": false,
+    "strictly_certified": false
+  }
+}

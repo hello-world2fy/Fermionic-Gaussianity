@@ -1,0 +1,36 @@
+verified 0 / 7500
+verified 250 / 7500
+verified 500 / 7500
+verified 750 / 7500
+verified 1000 / 7500
+verified 1250 / 7500
+verified 1500 / 7500
+verified 1750 / 7500
+verified 2000 / 7500
+verified 2250 / 7500
+verified 2500 / 7500
+verified 2750 / 7500
+verified 3000 / 7500
+verified 3250 / 7500
+verified 3500 / 7500
+verified 3750 / 7500
+verified 4000 / 7500
+verified 4250 / 7500
+verified 4500 / 7500
+verified 4750 / 7500
+verified 5000 / 7500
+verified 5250 / 7500
+verified 5500 / 7500
+verified 5750 / 7500
+verified 6000 / 7500
+verified 6250 / 7500
+Traceback (most recent call last):
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/scripts/verify_frozen_predictions.py", line 144, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/scripts/verify_frozen_predictions.py", line 126, in main
+    check('parts',np.array([total-part['total'],diagonal-part['diagonal'],total-diagonal-part['off_diagonal']]))
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/scripts/verify_frozen_predictions.py", line 71, in check
+    if value>tolerance:raise ArithmeticError(f'{name} verification error {value}')
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ArithmeticError: parts verification error 1.8102582544088364e-08

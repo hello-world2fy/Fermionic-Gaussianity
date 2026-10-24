@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "completed_utc": "2026-10-24T10:47:01.816880+00:00",
+  "declared_experiment_plan_executed": true,
+  "all_hoped_for_scientific_claims_proved": false,
+  "E0_analytic_checks": [
+    {
+      "run": "results/e0_gpu_householder_magic4_n131072_01",
+      "checks_passed": 16,
+      "maximum_relative_repeat_halfwidth": 0.006472689253895477
+    },
+    {
+      "run": "results/e0_gpu_householder_gaussian4_n131072_01",
+      "checks_passed": 16,
+      "maximum_relative_repeat_halfwidth": 0.00624478925381504
+    },
+    {
+      "run": "results/e0_gpu_householder_gaussian8_n524288_01",
+      "checks_passed": 16,
+      "maximum_relative_repeat_halfwidth": 0.005126304348434083
+    }
+  ],
+  "E1_physical_order_points": 55,
+  "E1_all_empirical_gates_pass": true,
+  "E2_independent_column_runs": 45,
+  "E2_t0_exact_global_support_and_necessity": true,
+  "E2_conservative_global_dual_and_constructive_upper_certificates": true,
+  "E3_fixed_reference_points": [
+    0,
+    9,
+    11,
+    20
+  ],
+  "E3_fixed_geometry_maximum_k": 128,
+  "E3_energy_window_constructions": 336,
+  "E3_high_order_window_certificate_rows": 1008,
+  "E3_analytic_endpoint_transfer_window_certificates": 84,
+  "E4_E5_predictions": 10650,
+  "E4_E5_complete_replica_comparison_matrix": true,
+  "empirical_reconstruction_threshold": 0.001,
+  "empirical_relative_B_repeat_threshold": 0.01,
+  "scientific_limitations": [
+    "High-order canonical L, numeric radial scales and B integration errors remain empirical, not interval certified; separate conservative exact-block witnesses and exact-Gaussian repaired U are certified.",
+    "Nonzero-t global optimal contact manifolds and tight optimality gaps are unresolved. Local Hessians/geometry fits are qualified; no contact transition at t=10 is claimed.",
+    "HFB uses32 starts of a local complete-manifold optimizer, not a global certificate; incoherent comparison uses normalized |c|\u00b2 weights, not optimized mixture weights.",
+    "Cold runtime sums recorded source-run walltimes with shared dependencies counted once; not an equal-time hardware benchmark. Interpreter startup and unrecorded setup remain outside timing.",
+    "The t0 asymptotic coefficient22 is proved from the normal Hessian, but no explicit finite-k remainder bound is provided.",
+    "The optional second physical model and optional extra nonzero-t k128 scans were not required and were not run."
+  ],
+  "dependency_sha256": {
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/finalize_scan_01_state.json": "76e7f5e70145b5014bdd31cfd75b469ef8af8e4b51731743907888d3a5805756",
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/transfer_pipeline_01_state.json": "4e45b81db19a2aad1dced9b38876eae4fdb1ad3b10b2b6b15f8f5d708903764c",
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/hierarchy_final_01/observations.json": "03c33207eff81cea1cb4e391b25b65b32e6edc589e5c48aeb60cf75fe71daa7c",
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/frozen_predictions_k2_k8_k16_k32_01/verification.json": "5751dc9a56c67898f3d1da72ec912315632d41937ee9780d35cf5a620f637fef",
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/frozen_predictions_k2_k8_k16_k32_01/comparison_coverage.json": "f2f7cdc4321ed565bd5330ee3e803a76e7dcee87bcde54319b9a7c5273a6ff97",
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/frozen_predictions_k2_k8_k16_k32_01/cost_audit.json": "185af5e6f4ef40427e8368cb4e7cd0f3c05aaadd473c416a0e0e45065ad98134",
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/all_tests_final_01.log": "6f91ea82c2e08b1c6889936d125db81e5f416cc45d0824209f77c62641321855",
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/product_witness_transfer_01/summary.json": "73c78a5817ea46697d7ebd0ae3d225a3652cb08c20617077d05329bef570efdb",
+    "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_replica_hierarchy/results/product_witness_transfer_01/verification.json": "12f006d52e1c6086612781b15aa6adb89ededbb8c912c874158922e9cc601269"
+  }
+}

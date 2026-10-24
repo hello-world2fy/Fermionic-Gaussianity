@@ -1,0 +1,77 @@
+{
+  "status": "complete",
+  "config": "results/transfer_pipeline_01_config.json",
+  "completed_commands": [
+    [
+      "scripts/assemble_verified_runs.py",
+      "--runs",
+      "results/fk_k8_radial_t9_fresh_n2097152_01",
+      "results/fk_k8_radial_t10_fresh_n2097152_01",
+      "results/fk_k8_radial_t10.9225_fresh_n2097152_01",
+      "results/fk_k8_radial_t11_n524288_01",
+      "results/fk_k8_radial_t12_n524288_01",
+      "results/fk_k8_radial_t20_n524288_01",
+      "--output",
+      "results/fk_k8_all_transfer_index_01"
+    ],
+    [
+      "scripts/assemble_verified_runs.py",
+      "--runs",
+      "results/fk_k16_radial_t9_n524288_01",
+      "results/fk_k16_radial_t10_n524288_01",
+      "results/fk_k16_radial_t10.9225_n524288_01",
+      "results/fk_k16_radial_t11_n524288_01",
+      "results/fk_k16_radial_t12_n524288_01",
+      "results/fk_k16_radial_t20_n524288_01",
+      "--output",
+      "results/fk_k16_all_transfer_index_01"
+    ],
+    [
+      "scripts/assemble_verified_runs.py",
+      "--runs",
+      "results/fk_k32_radial_t9_n524288_01",
+      "results/fk_k32_radial_t10_n524288_01",
+      "results/fk_k32_radial_t10.9225_n524288_01",
+      "results/fk_k32_radial_t11_n524288_01",
+      "results/fk_k32_radial_t12_n524288_01",
+      "results/fk_k32_radial_t20_n524288_01",
+      "--output",
+      "results/fk_k32_all_transfer_index_01"
+    ],
+    [
+      "scripts/freeze_dictionaries.py",
+      "--output",
+      "results/frozen_dictionaries_k2_k8_k16_k32_01",
+      "--columns",
+      "results/columns_n32_s5_01",
+      "--replica-runs",
+      "results/fk_k2_exact_n32768_01",
+      "results/fk_k8_all_transfer_index_01",
+      "results/fk_k16_all_transfer_index_01",
+      "results/fk_k32_all_transfer_index_01"
+    ],
+    [
+      "scripts/run_frozen_predictions.py",
+      "--frozen",
+      "results/frozen_dictionaries_k2_k8_k16_k32_01",
+      "--output",
+      "results/frozen_predictions_k2_k8_k16_k32_01"
+    ],
+    [
+      "scripts/verify_frozen_predictions.py",
+      "results/frozen_predictions_k2_k8_k16_k32_01"
+    ],
+    [
+      "scripts/report_frozen_predictions.py",
+      "results/frozen_predictions_k2_k8_k16_k32_01"
+    ],
+    [
+      "scripts/audit_prediction_costs.py",
+      "results/frozen_predictions_k2_k8_k16_k32_01",
+      "--prior-benchmark",
+      "results/analytic_prior_cost_01"
+    ]
+  ],
+  "frozen": "results/frozen_dictionaries_k2_k8_k16_k32_01",
+  "predictions": "results/frozen_predictions_k2_k8_k16_k32_01"
+}

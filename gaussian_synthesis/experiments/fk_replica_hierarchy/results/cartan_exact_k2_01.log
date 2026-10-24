@@ -1,0 +1,23 @@
+/home/tiger/Fermionic-Gaussianity-fk-two-cluster/.venv/lib/python3.11/site-packages/numba/parfors/parfor.py:2479: NumbaPerformanceWarning: 
+prange or pndindex loop will not be executed in parallel due to there being more than one entry to or exit from the loop (e.g., an assertion).
+
+File "fk4/cartan_sparse.py", line 97:
+def _build_columns(codes, tuples, masks, mask_to_index, indptr, row, value, integer=False):
+    for source in prange(len(codes)):
+    ^
+
+  warnings.warn(
+/home/tiger/Fermionic-Gaussianity-fk-two-cluster/.venv/lib/python3.11/site-packages/numba/core/typed_passes.py:338: NumbaPerformanceWarning: 
+The keyword argument 'parallel=True' was specified but no transformation for parallel execution was possible.
+
+To find out why, try turning on parallel diagnostics, see https://numba.readthedocs.io/en/stable/user/parallel.html#diagnostics for help.
+
+File "fk4/cartan_sparse.py", line 96:
+@njit(cache=True, parallel=True)
+def _build_columns(codes, tuples, masks, mask_to_index, indptr, row, value, integer=False):
+^
+
+  warnings.warn(errors.NumbaPerformanceWarning(msg,
+construction {'k': 2, 'allowed_weight_sectors': 129, 'symmetric_basis_size': 528, 'ambient_symmetric_dimension': 8256, 'nnz': 3648, 'max_absolute_row_sum': 256, 'exact_weighted_symmetry_verified': True} roots [256, 144, 64, 16] denominator digits 8
+prime 2147483647 CRT digits 10 required 11 seconds 2.9882536130025983
+prime 2147483629 CRT digits 19 required 11 seconds 2.989718255586922
