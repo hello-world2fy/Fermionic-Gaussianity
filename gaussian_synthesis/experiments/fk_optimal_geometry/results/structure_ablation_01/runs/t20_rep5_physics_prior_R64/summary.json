@@ -1,0 +1,261 @@
+{
+  "t": 20,
+  "method": "physics_prior",
+  "replicate": 5,
+  "R": 64,
+  "actual_atoms": 64,
+  "budget": 1.2974186897452176,
+  "retained_rank": 24,
+  "metrics": {
+    "unconstrained_fidelity": {
+      "entropy": 3.8020823437415294,
+      "schmidt_l1": 3.885297617315839,
+      "mass_correlation": -8.842055162630876,
+      "wick_prediction": -6.227429068964036,
+      "wick_deviation": -2.61462609366684,
+      "eta": 0.8896327241377197,
+      "wick_symmetric_formula_error": 1.7763568394002505e-15,
+      "mass_a": 2.668035182045818e-32,
+      "mass_b": 6.906030901097206e-33,
+      "mass_dot": 3.6215689702511406e-33,
+      "fidelity": 1.0,
+      "energy": -96.74110469574369,
+      "coefficient_cost": 1.6804882826584864,
+      "norm": 0.9999999999999999,
+      "active_terms_above_1e_9": 64,
+      "energy_error": 4.263256414560601e-14
+    },
+    "unconstrained_energy": {
+      "entropy": 3.802082343741537,
+      "schmidt_l1": 3.8852976173158438,
+      "mass_correlation": -8.842055162630865,
+      "wick_prediction": -6.227429068964061,
+      "wick_deviation": -2.6146260936668044,
+      "eta": 0.8896327241377233,
+      "wick_symmetric_formula_error": 2.6645352591003757e-15,
+      "mass_a": 1.3599481052196783e-28,
+      "mass_b": 1.3986069112550757e-28,
+      "mass_dot": -1.3790124644377424e-28,
+      "fidelity": 1.0000000000000004,
+      "energy": -96.74110469574373,
+      "coefficient_cost": 1.68048828265846,
+      "norm": 1.0,
+      "active_terms_above_1e_9": 64,
+      "energy_error": 0.0
+    },
+    "budget_fidelity": {
+      "entropy": 3.8043049196076337,
+      "schmidt_l1": 3.886858518847846,
+      "mass_correlation": -8.850153359854408,
+      "wick_prediction": -6.234208062522915,
+      "wick_deviation": -2.6159452973314936,
+      "eta": 0.8906011517889878,
+      "wick_symmetric_formula_error": 0.0,
+      "mass_a": 1.1494661022517173e-20,
+      "mass_b": 1.1494625970876796e-20,
+      "mass_dot": -1.1494643496674514e-20,
+      "fidelity": 0.9999558787921164,
+      "energy": -96.73415392499825,
+      "coefficient_cost": 1.2974176875000847,
+      "norm": 1.0,
+      "active_terms_above_1e_9": 24,
+      "energy_error": 0.00695077074547612
+    },
+    "budget_energy": {
+      "entropy": 3.809678929232257,
+      "schmidt_l1": 3.889765076163108,
+      "mass_correlation": -8.835831395876516,
+      "wick_prediction": -6.253492716172094,
+      "wick_deviation": -2.5823386797044225,
+      "eta": 0.8933561023102987,
+      "wick_symmetric_formula_error": 2.6645352591003757e-15,
+      "mass_a": 3.9434331617443475e-17,
+      "mass_b": 3.943433079562955e-17,
+      "mass_dot": -3.9434331206536485e-17,
+      "fidelity": 0.9999457272402613,
+      "energy": -96.73470851466347,
+      "coefficient_cost": 1.2974176897444871,
+      "norm": 1.0,
+      "active_terms_above_1e_9": 24,
+      "energy_error": 0.006396181080262409
+    }
+  },
+  "normalized_budget_solver": {
+    "t": 20,
+    "coefficient_budget": 1.2974186897452176,
+    "fidelity_optimized": 0.9999558787921167,
+    "fidelity_solution_cost": 1.297417687500085,
+    "fidelity_solution_norm": 1.0000000000000002,
+    "fidelity_solution_energy": -96.73415392499831,
+    "fidelity_relaxation_overlap": 0.9999779391526389,
+    "fidelity_relaxation_norm": 0.9999999999999211,
+    "fidelity_convex_solver_status": "optimal_inaccurate",
+    "energy_optimized": -96.73470851466347,
+    "energy_error_optimized": 0.006396181080049246,
+    "energy_solution_fidelity": 0.9999457272402613,
+    "energy_solution_cost": 1.2974176897444871,
+    "energy_solution_norm": 1.0,
+    "energy_selected_start": 1,
+    "energy_multistart_histories": [
+      [
+        {
+          "iteration": 0,
+          "energy": -96.73470736997783,
+          "cost": 1.2974113568605854,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -96.73470851421914,
+          "cost": 1.2974176872863148,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -96.73470851465979,
+          "cost": 1.2974176897263174,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -96.71192301462463,
+          "cost": 1.2625450771292852,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -96.73466798332483,
+          "cost": 1.2971943014758938,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -96.73470849661877,
+          "cost": 1.2974175917007473,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -96.73470851465446,
+          "cost": 1.2974176896967298,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -96.73470851466347,
+          "cost": 1.2974176897444871,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -76.53449678851123,
+          "cost": 1.0361575638729883,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -93.99787144254836,
+          "cost": 1.1037422376639348,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -96.69780662146714,
+          "cost": 1.2587770601093893,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -96.73463040975884,
+          "cost": 1.2970000213331307,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -96.73470846643285,
+          "cost": 1.2974174393792515,
+          "status": "optimal"
+        },
+        {
+          "iteration": 5,
+          "energy": -96.73470851462363,
+          "cost": 1.2974176895411478,
+          "status": "optimal"
+        },
+        {
+          "iteration": 6,
+          "energy": -96.7347085146616,
+          "cost": 1.2974176897362917,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -84.04630287795754,
+          "cost": 1.034855548277776,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -95.57305240323697,
+          "cost": 1.151224248025748,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -96.73107844230748,
+          "cost": 1.2805095570694003,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -96.73470528639007,
+          "cost": 1.2974007838141006,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -96.73470851218306,
+          "cost": 1.2974176772930732,
+          "status": "optimal"
+        },
+        {
+          "iteration": 5,
+          "energy": -96.73470851466122,
+          "cost": 1.2974176897335568,
+          "status": "optimal"
+        },
+        {
+          "iteration": 6,
+          "energy": -96.73470851466325,
+          "cost": 1.2974176897431489,
+          "status": "optimal"
+        }
+      ]
+    ],
+    "energy_global_optimum_claimed": false,
+    "numerical_variational_results_not_interval_certificates": true,
+    "elapsed_seconds": 6.9972134148702025
+  },
+  "reference_metrics": {
+    "entropy": 3.802082343741531,
+    "schmidt_l1": 3.885297617315841,
+    "mass_correlation": -8.842055162630878,
+    "wick_prediction": -6.227429068964039,
+    "wick_deviation": -2.614626093666839,
+    "eta": 0.8896327241377201,
+    "wick_symmetric_formula_error": 1.7763568394002505e-15,
+    "mass_a": 3.009265538105056e-34,
+    "mass_b": 1.925929944387236e-34,
+    "mass_dot": 2.407412430484045e-34,
+    "energy": -96.74110469574373
+  },
+  "elapsed_seconds": 7.035276249982417,
+  "exact_global_energy_optimum_claimed": false,
+  "deletion_scope": "Specific finite dictionary; only separately proved orbit/window support bounds imply universal exclusions"
+}

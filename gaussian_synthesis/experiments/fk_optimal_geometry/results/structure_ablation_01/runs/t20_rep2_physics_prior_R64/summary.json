@@ -1,0 +1,261 @@
+{
+  "t": 20,
+  "method": "physics_prior",
+  "replicate": 2,
+  "R": 64,
+  "actual_atoms": 64,
+  "budget": 1.2974186897452176,
+  "retained_rank": 24,
+  "metrics": {
+    "unconstrained_fidelity": {
+      "entropy": 3.802082343741529,
+      "schmidt_l1": 3.8852976173158393,
+      "mass_correlation": -8.842055162630883,
+      "wick_prediction": -6.227429068964035,
+      "wick_deviation": -2.614626093666848,
+      "eta": 0.8896327241377193,
+      "wick_symmetric_formula_error": 0.0,
+      "mass_a": 5.158853950364011e-32,
+      "mass_b": 1.0849138859101503e-31,
+      "mass_dot": -5.900187037129349e-32,
+      "fidelity": 1.0000000000000004,
+      "energy": -96.74110469574373,
+      "coefficient_cost": 1.6804882826584873,
+      "norm": 1.0,
+      "active_terms_above_1e_9": 64,
+      "energy_error": 0.0
+    },
+    "unconstrained_energy": {
+      "entropy": 3.802082343741531,
+      "schmidt_l1": 3.8852976173158407,
+      "mass_correlation": -8.84205516263088,
+      "wick_prediction": -6.227429068964038,
+      "wick_deviation": -2.6146260936668417,
+      "eta": 0.8896327241377199,
+      "wick_symmetric_formula_error": 8.881784197001252e-16,
+      "mass_a": 4.32843756012964e-29,
+      "mass_b": 4.31965341341993e-29,
+      "mass_dot": -4.321133741228597e-29,
+      "fidelity": 1.0000000000000009,
+      "energy": -96.74110469574376,
+      "coefficient_cost": 1.6804882826585057,
+      "norm": 1.0000000000000002,
+      "active_terms_above_1e_9": 64,
+      "energy_error": -2.842170943040401e-14
+    },
+    "budget_fidelity": {
+      "entropy": 3.804304904126207,
+      "schmidt_l1": 3.8868585104800983,
+      "mass_correlation": -8.85015340036471,
+      "wick_prediction": -6.234208007059014,
+      "wick_deviation": -2.6159453933056973,
+      "eta": 0.8906011438655732,
+      "wick_symmetric_formula_error": 8.881784197001252e-16,
+      "mass_a": 4.0274734777348094e-24,
+      "mass_b": 4.026902160671274e-24,
+      "mass_dot": -4.0271878029831675e-24,
+      "fidelity": 0.9999558787925457,
+      "energy": -96.73415392189726,
+      "coefficient_cost": 1.2974176878464723,
+      "norm": 1.0000000000000002,
+      "active_terms_above_1e_9": 24,
+      "energy_error": 0.00695077384646936
+    },
+    "budget_energy": {
+      "entropy": 3.809678929232078,
+      "schmidt_l1": 3.8897650761630054,
+      "mass_correlation": -8.835831395876767,
+      "wick_prediction": -6.253492716171477,
+      "wick_deviation": -2.5823386797052894,
+      "eta": 0.8933561023102112,
+      "wick_symmetric_formula_error": 1.7763568394002505e-15,
+      "mass_a": 3.9980156398389335e-17,
+      "mass_b": 3.998015721034442e-17,
+      "mass_dot": -3.998015680436686e-17,
+      "fidelity": 0.9999457272402638,
+      "energy": -96.73470851466372,
+      "coefficient_cost": 1.2974176897462446,
+      "norm": 1.0,
+      "active_terms_above_1e_9": 24,
+      "energy_error": 0.006396181080006613
+    }
+  },
+  "normalized_budget_solver": {
+    "t": 20,
+    "coefficient_budget": 1.2974186897452176,
+    "fidelity_optimized": 0.9999558787925452,
+    "fidelity_solution_cost": 1.297417687846472,
+    "fidelity_solution_norm": 0.9999999999999999,
+    "fidelity_solution_energy": -96.73415392189722,
+    "fidelity_relaxation_overlap": 0.9999779391527678,
+    "fidelity_relaxation_norm": 0.9999999999998355,
+    "fidelity_convex_solver_status": "optimal",
+    "energy_optimized": -96.73470851466367,
+    "energy_error_optimized": 0.006396181079850294,
+    "energy_solution_fidelity": 0.9999457272402633,
+    "energy_solution_cost": 1.2974176897462444,
+    "energy_solution_norm": 0.9999999999999999,
+    "energy_selected_start": 2,
+    "energy_multistart_histories": [
+      [
+        {
+          "iteration": 0,
+          "energy": -96.73470736997147,
+          "cost": 1.297411356825441,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -96.73470851421891,
+          "cost": 1.297417687285548,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -96.73470851466318,
+          "cost": 1.297417689743197,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -84.04630289098074,
+          "cost": 1.034855548422011,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -95.57305240549282,
+          "cost": 1.1512242480973067,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -96.73107844232192,
+          "cost": 1.2805095570994975,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -96.73470528638815,
+          "cost": 1.297400783801013,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -96.73470851218619,
+          "cost": 1.2974176773144237,
+          "status": "optimal"
+        },
+        {
+          "iteration": 5,
+          "energy": -96.73470851466126,
+          "cost": 1.297417689733718,
+          "status": "optimal"
+        },
+        {
+          "iteration": 6,
+          "energy": -96.73470851465889,
+          "cost": 1.297417689721965,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -96.7119230145301,
+          "cost": 1.2625450770835447,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -96.73466798332453,
+          "cost": 1.2971943014744423,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -96.73470849661874,
+          "cost": 1.2974175917001964,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -96.7347085146545,
+          "cost": 1.2974176896972849,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -96.73470851466367,
+          "cost": 1.2974176897462444,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -84.04630287975868,
+          "cost": 1.034855548269719,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -95.5730524031467,
+          "cost": 1.1512242479868757,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -96.73107844230779,
+          "cost": 1.2805095570686054,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -96.73470528638828,
+          "cost": 1.2974007838020238,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -96.7347085121829,
+          "cost": 1.2974176772924502,
+          "status": "optimal"
+        },
+        {
+          "iteration": 5,
+          "energy": -96.73470851466121,
+          "cost": 1.2974176897334084,
+          "status": "optimal"
+        },
+        {
+          "iteration": 6,
+          "energy": -96.73470851466348,
+          "cost": 1.2974176897445966,
+          "status": "optimal"
+        }
+      ]
+    ],
+    "energy_global_optimum_claimed": false,
+    "numerical_variational_results_not_interval_certificates": true,
+    "elapsed_seconds": 6.9828299600631
+  },
+  "reference_metrics": {
+    "entropy": 3.802082343741531,
+    "schmidt_l1": 3.885297617315841,
+    "mass_correlation": -8.842055162630878,
+    "wick_prediction": -6.227429068964039,
+    "wick_deviation": -2.614626093666839,
+    "eta": 0.8896327241377201,
+    "wick_symmetric_formula_error": 1.7763568394002505e-15,
+    "mass_a": 3.009265538105056e-34,
+    "mass_b": 1.925929944387236e-34,
+    "mass_dot": 2.407412430484045e-34,
+    "energy": -96.74110469574373
+  },
+  "elapsed_seconds": 7.020388955250382,
+  "exact_global_energy_optimum_claimed": false,
+  "deletion_scope": "Specific finite dictionary; only separately proved orbit/window support bounds imply universal exclusions"
+}

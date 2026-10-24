@@ -89,7 +89,7 @@ def solve_budgets(model,atoms,t,budgets,max_iterations=30):
         if c.value is None:raise ArithmeticError('Fidelity SOCP did not return a solution')
         relaxation_norm=float(np.linalg.norm(G@c.value));relaxation_value=float(fidelity.value)
         cf=normalize_feasible(c.value,G,B);psif=G@cf
-        starts=[cf,np.eye(len(atoms),dtype=complex)[0],np.eye(len(atoms),dtype=complex)[8],np.eye(len(atoms),dtype=complex)[-1]]
+        starts=[cf,np.eye(len(atoms),dtype=complex)[0],np.eye(len(atoms),dtype=complex)[min(8,len(atoms)-1)],np.eye(len(atoms),dtype=complex)[-1]]
         candidates=[]
         for start_number,start in enumerate(starts):
             current=normalize_feasible(start,G,B);history=[];old=float(np.vdot(G@current,h@(G@current)).real)

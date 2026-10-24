@@ -1,0 +1,88 @@
+{
+  "status": "prepared",
+  "three_cluster_candidate": [
+    {
+      "t": 1,
+      "complex_modes": 12,
+      "full_dimension": 4096,
+      "even_dimension": 2048,
+      "nnz": 22016,
+      "sparse_Hermitian_and_parity_checks": true,
+      "ED_performed": false
+    },
+    {
+      "t": 9,
+      "complex_modes": 12,
+      "full_dimension": 4096,
+      "even_dimension": 2048,
+      "nnz": 22016,
+      "sparse_Hermitian_and_parity_checks": true,
+      "ED_performed": false
+    },
+    {
+      "t": 20,
+      "complex_modes": 12,
+      "full_dimension": 4096,
+      "even_dimension": 2048,
+      "nnz": 22016,
+      "sparse_Hermitian_and_parity_checks": true,
+      "ED_performed": false
+    }
+  ],
+  "pairing_candidate": [
+    {
+      "g": 0.05,
+      "complex_modes": 8,
+      "full_dimension": 256,
+      "physical_particle_number": 4,
+      "seniority_zero_dimension": 6,
+      "reference_Gaussian_energy": -8,
+      "interaction_operator_norm_upper": 0.2,
+      "full_ground_gap_lower": 0.8,
+      "Gaussian_energy_coercivity_lower": 0.775,
+      "Gaussian_energy_growth_upper": 3.225,
+      "expected_exact_cost_exponent": 2,
+      "proposed_finite_Gaussian_terms": 18,
+      "all_parameter_theory_requires_independent_check": true,
+      "ED_performed": false
+    },
+    {
+      "g": 0.1,
+      "complex_modes": 8,
+      "full_dimension": 256,
+      "physical_particle_number": 4,
+      "seniority_zero_dimension": 6,
+      "reference_Gaussian_energy": -8,
+      "interaction_operator_norm_upper": 0.4,
+      "full_ground_gap_lower": 0.6,
+      "Gaussian_energy_coercivity_lower": 0.55,
+      "Gaussian_energy_growth_upper": 3.45,
+      "expected_exact_cost_exponent": 2,
+      "proposed_finite_Gaussian_terms": 18,
+      "all_parameter_theory_requires_independent_check": true,
+      "ED_performed": false
+    },
+    {
+      "g": 0.2,
+      "complex_modes": 8,
+      "full_dimension": 256,
+      "physical_particle_number": 4,
+      "seniority_zero_dimension": 6,
+      "reference_Gaussian_energy": -8,
+      "interaction_operator_norm_upper": 0.8,
+      "full_ground_gap_lower": 0.19999999999999996,
+      "Gaussian_energy_coercivity_lower": 0.09999999999999998,
+      "Gaussian_energy_growth_upper": 3.9,
+      "expected_exact_cost_exponent": 2,
+      "proposed_finite_Gaussian_terms": 18,
+      "all_parameter_theory_requires_independent_check": true,
+      "ED_performed": false
+    }
+  ],
+  "selected_model": "number_conserving_pairing",
+  "selection_before_new_ED": true,
+  "go_reason": "A global Gaussian coercivity bound and required 4/8-quasiparticle amplitudes offer an explicit independent test of the energy-curvature/excitation-order theorem, including a possible approximation-error crossover.",
+  "three_cluster_no_go_for_full_scan": "The 4096-dimensional sparse model is prepared, but no global Gaussian energy-window coercivity or support bound is presently available. A larger ED scan alone would not test the new theorem.",
+  "next": "Independently prove the covariance coercivity inequality; isolate exact ground state; certify nonzero eighth-excitation amplitude and 18-term Gaussian constructions at four windows.",
+  "no_assumption_of_efficient_global_Gaussian_rank_with_cluster_number": true
+}

@@ -1,0 +1,849 @@
+{
+  "t": 20,
+  "method": "canonical_Lambda_k16",
+  "replicate": 2,
+  "R": 64,
+  "actual_atoms": 64,
+  "budget": 1.2974186897452176,
+  "retained_rank": 64,
+  "metrics": {
+    "unconstrained_fidelity": {
+      "entropy": 3.719576821327245,
+      "schmidt_l1": 3.8339075656534036,
+      "mass_correlation": -8.78870240479209,
+      "wick_prediction": -5.795791162119558,
+      "wick_deviation": -2.992911242672532,
+      "eta": 0.8291531288360469,
+      "wick_symmetric_formula_error": 0.008280739732770215,
+      "mass_a": 0.0002548067928648506,
+      "mass_b": 0.00047111329071343363,
+      "mass_dot": -0.00025291748759590264,
+      "fidelity": 0.9803279401252188,
+      "energy": -95.10037945155423,
+      "coefficient_cost": 2.7967596181978127,
+      "norm": 1.0,
+      "active_terms_above_1e_9": 64,
+      "energy_error": 1.6407252441894968
+    },
+    "unconstrained_energy": {
+      "entropy": 3.70150314935257,
+      "schmidt_l1": 3.824121159233714,
+      "mass_correlation": -8.804559264669937,
+      "wick_prediction": -5.769282933137684,
+      "wick_deviation": -3.035276331532253,
+      "eta": 0.8262591707945832,
+      "wick_symmetric_formula_error": 0.014531262424398506,
+      "mass_a": 0.0010320208090817283,
+      "mass_b": 0.0015826030652745843,
+      "mass_dot": -0.001188800716783193,
+      "fidelity": 0.9786131451320759,
+      "energy": -95.20795110593781,
+      "coefficient_cost": 2.713521706940066,
+      "norm": 1.0,
+      "active_terms_above_1e_9": 64,
+      "energy_error": 1.53315358980592
+    },
+    "budget_fidelity": {
+      "entropy": 3.1560635978928553,
+      "schmidt_l1": 3.34947139594392,
+      "mass_correlation": -4.105364622900953,
+      "wick_prediction": -3.205359669215801,
+      "wick_deviation": -0.9000049536851518,
+      "eta": 0.5651227603317268,
+      "wick_symmetric_formula_error": 0.7504996531062864,
+      "mass_a": 0.05455148881818477,
+      "mass_b": 0.050820770418591475,
+      "mass_dot": -0.04447963508572527,
+      "fidelity": 0.47731514354418303,
+      "energy": -66.58600937826427,
+      "coefficient_cost": 1.297417697528623,
+      "norm": 1.0,
+      "active_terms_above_1e_9": 5,
+      "energy_error": 30.155095317479464
+    },
+    "budget_energy": {
+      "entropy": 3.121254695883832,
+      "schmidt_l1": 3.331444869861801,
+      "mass_correlation": -4.090206976257177,
+      "wick_prediction": -3.6513897897806333,
+      "wick_deviation": -0.43881718647654333,
+      "eta": 0.6847269115587726,
+      "wick_symmetric_formula_error": 1.1416985911307749,
+      "mass_a": 0.10131181882635046,
+      "mass_b": 0.08903924894352386,
+      "mass_dot": -0.07456059687542474,
+      "fidelity": 0.44357700771205066,
+      "energy": -67.44276376541251,
+      "coefficient_cost": 1.2973797136160672,
+      "norm": 1.0000000000000002,
+      "active_terms_above_1e_9": 6,
+      "energy_error": 29.29834093033122
+    }
+  },
+  "normalized_budget_solver": {
+    "t": 20,
+    "coefficient_budget": 1.2974186897452176,
+    "fidelity_optimized": 0.4773151435441833,
+    "fidelity_solution_cost": 1.2974176975286231,
+    "fidelity_solution_norm": 1.0000000000000002,
+    "fidelity_solution_energy": -66.5860093782643,
+    "fidelity_relaxation_overlap": 0.6908799740276661,
+    "fidelity_relaxation_norm": 0.9999999947291484,
+    "fidelity_convex_solver_status": "optimal",
+    "energy_optimized": -67.44276376541247,
+    "energy_error_optimized": 29.29834093033105,
+    "energy_solution_fidelity": 0.44357700771205055,
+    "energy_solution_cost": 1.297379713616067,
+    "energy_solution_norm": 0.9999999999999999,
+    "energy_selected_start": 1,
+    "energy_multistart_histories": [
+      [
+        {
+          "iteration": 0,
+          "energy": -66.60001665190396,
+          "cost": 1.2973326063909494,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -66.61416186552296,
+          "cost": 1.2973416788854029,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -66.62768690906896,
+          "cost": 1.2973410895835982,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -66.64066902114504,
+          "cost": 1.297349759857024,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -66.65290691410816,
+          "cost": 1.297346416021165,
+          "status": "optimal"
+        },
+        {
+          "iteration": 5,
+          "energy": -66.66644739835726,
+          "cost": 1.2973374272898728,
+          "status": "optimal"
+        },
+        {
+          "iteration": 6,
+          "energy": -66.68166985991292,
+          "cost": 1.2973274355690945,
+          "status": "optimal"
+        },
+        {
+          "iteration": 7,
+          "energy": -66.69872715784561,
+          "cost": 1.2973166348134098,
+          "status": "optimal"
+        },
+        {
+          "iteration": 8,
+          "energy": -66.71773729766021,
+          "cost": 1.2973052160039829,
+          "status": "optimal"
+        },
+        {
+          "iteration": 9,
+          "energy": -66.73878217090171,
+          "cost": 1.2972933762205308,
+          "status": "optimal"
+        },
+        {
+          "iteration": 10,
+          "energy": -66.76189878636679,
+          "cost": 1.2972813972989317,
+          "status": "optimal"
+        },
+        {
+          "iteration": 11,
+          "energy": -66.78706745626644,
+          "cost": 1.297269620192286,
+          "status": "optimal"
+        },
+        {
+          "iteration": 12,
+          "energy": -66.81420085308554,
+          "cost": 1.297258451789765,
+          "status": "optimal"
+        },
+        {
+          "iteration": 13,
+          "energy": -66.8431351351136,
+          "cost": 1.2972483426925068,
+          "status": "optimal"
+        },
+        {
+          "iteration": 14,
+          "energy": -66.87362542898612,
+          "cost": 1.29723976321235,
+          "status": "optimal"
+        },
+        {
+          "iteration": 15,
+          "energy": -66.9053468584027,
+          "cost": 1.2972331719369936,
+          "status": "optimal"
+        },
+        {
+          "iteration": 16,
+          "energy": -66.93790316727575,
+          "cost": 1.297228961479642,
+          "status": "optimal"
+        },
+        {
+          "iteration": 17,
+          "energy": -66.97084781895322,
+          "cost": 1.2972273340559695,
+          "status": "optimal"
+        },
+        {
+          "iteration": 18,
+          "energy": -67.00385129468123,
+          "cost": 1.2972269640401026,
+          "status": "optimal"
+        },
+        {
+          "iteration": 19,
+          "energy": -67.03677021932259,
+          "cost": 1.2972273123119484,
+          "status": "optimal"
+        },
+        {
+          "iteration": 20,
+          "energy": -67.06946597201465,
+          "cost": 1.2972285063151314,
+          "status": "optimal"
+        },
+        {
+          "iteration": 21,
+          "energy": -67.10178146864723,
+          "cost": 1.2972306528448356,
+          "status": "optimal"
+        },
+        {
+          "iteration": 22,
+          "energy": -67.1335457464202,
+          "cost": 1.2972338294915475,
+          "status": "optimal"
+        },
+        {
+          "iteration": 23,
+          "energy": -67.16457967445011,
+          "cost": 1.2972380790606157,
+          "status": "optimal"
+        },
+        {
+          "iteration": 24,
+          "energy": -67.19470254512066,
+          "cost": 1.2972434047016717,
+          "status": "optimal"
+        },
+        {
+          "iteration": 25,
+          "energy": -67.22373924813681,
+          "cost": 1.2972497674497712,
+          "status": "optimal"
+        },
+        {
+          "iteration": 26,
+          "energy": -67.25152779365102,
+          "cost": 1.2972570884408958,
+          "status": "optimal"
+        },
+        {
+          "iteration": 27,
+          "energy": -67.27793109555176,
+          "cost": 1.2972652035578593,
+          "status": "optimal"
+        },
+        {
+          "iteration": 28,
+          "energy": -67.30283903202482,
+          "cost": 1.2972739496624628,
+          "status": "optimal"
+        },
+        {
+          "iteration": 29,
+          "energy": -67.32616907814639,
+          "cost": 1.2972831650557597,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -64.05377699498565,
+          "cost": 1.2740807763414796,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -65.32557009310649,
+          "cost": 1.2939885075858872,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -65.75864871780294,
+          "cost": 1.2951505699513697,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -66.09100509478253,
+          "cost": 1.2955998494962953,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -66.36234765454186,
+          "cost": 1.295906452008336,
+          "status": "optimal"
+        },
+        {
+          "iteration": 5,
+          "energy": -66.5736326063678,
+          "cost": 1.2962711342340714,
+          "status": "optimal"
+        },
+        {
+          "iteration": 6,
+          "energy": -66.74126589131453,
+          "cost": 1.2964965543108298,
+          "status": "optimal"
+        },
+        {
+          "iteration": 7,
+          "energy": -66.87463516431347,
+          "cost": 1.296693959376069,
+          "status": "optimal"
+        },
+        {
+          "iteration": 8,
+          "energy": -66.97526531698796,
+          "cost": 1.2968761936681639,
+          "status": "optimal"
+        },
+        {
+          "iteration": 9,
+          "energy": -67.05368360432875,
+          "cost": 1.2969882577741274,
+          "status": "optimal"
+        },
+        {
+          "iteration": 10,
+          "energy": -67.1160428047128,
+          "cost": 1.297074385553695,
+          "status": "optimal"
+        },
+        {
+          "iteration": 11,
+          "energy": -67.16609570887431,
+          "cost": 1.297140546145321,
+          "status": "optimal"
+        },
+        {
+          "iteration": 12,
+          "energy": -67.20670819374476,
+          "cost": 1.2971914351416596,
+          "status": "optimal"
+        },
+        {
+          "iteration": 13,
+          "energy": -67.2400575539867,
+          "cost": 1.29723070838312,
+          "status": "optimal"
+        },
+        {
+          "iteration": 14,
+          "energy": -67.26779332533087,
+          "cost": 1.2972611680567554,
+          "status": "optimal"
+        },
+        {
+          "iteration": 15,
+          "energy": -67.2911654447139,
+          "cost": 1.2972849279872372,
+          "status": "optimal"
+        },
+        {
+          "iteration": 16,
+          "energy": -67.3111222517152,
+          "cost": 1.2973036001597866,
+          "status": "optimal"
+        },
+        {
+          "iteration": 17,
+          "energy": -67.32838537700556,
+          "cost": 1.2973183883252355,
+          "status": "optimal"
+        },
+        {
+          "iteration": 18,
+          "energy": -67.34350653482602,
+          "cost": 1.2973301972404585,
+          "status": "optimal"
+        },
+        {
+          "iteration": 19,
+          "energy": -67.35690950326672,
+          "cost": 1.2973397121424568,
+          "status": "optimal"
+        },
+        {
+          "iteration": 20,
+          "energy": -67.36892149701394,
+          "cost": 1.297347449745259,
+          "status": "optimal"
+        },
+        {
+          "iteration": 21,
+          "energy": -67.37979652374125,
+          "cost": 1.2973538042697348,
+          "status": "optimal"
+        },
+        {
+          "iteration": 22,
+          "energy": -67.38973300383147,
+          "cost": 1.2973590747384187,
+          "status": "optimal"
+        },
+        {
+          "iteration": 23,
+          "energy": -67.39888674497995,
+          "cost": 1.2973634914431984,
+          "status": "optimal"
+        },
+        {
+          "iteration": 24,
+          "energy": -67.4073807796309,
+          "cost": 1.2973672322170602,
+          "status": "optimal"
+        },
+        {
+          "iteration": 25,
+          "energy": -67.4153127471829,
+          "cost": 1.2973704353383766,
+          "status": "optimal"
+        },
+        {
+          "iteration": 26,
+          "energy": -67.42276051303696,
+          "cost": 1.297373208638498,
+          "status": "optimal"
+        },
+        {
+          "iteration": 27,
+          "energy": -67.42978647592881,
+          "cost": 1.2973756366051867,
+          "status": "optimal"
+        },
+        {
+          "iteration": 28,
+          "energy": -67.43644074583018,
+          "cost": 1.2973777873006003,
+          "status": "optimal"
+        },
+        {
+          "iteration": 29,
+          "energy": -67.44276376541247,
+          "cost": 1.297379713616067,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -49.13052283841233,
+          "cost": 1.2759968577977148,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -50.32210578320682,
+          "cost": 1.2947641055287906,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -50.66500860343533,
+          "cost": 1.2960364464803715,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -50.978102086205,
+          "cost": 1.295917456344782,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -51.298452418545615,
+          "cost": 1.2960629930789374,
+          "status": "optimal"
+        },
+        {
+          "iteration": 5,
+          "energy": -51.608311011739886,
+          "cost": 1.2958202486917196,
+          "status": "optimal"
+        },
+        {
+          "iteration": 6,
+          "energy": -52.07063341228387,
+          "cost": 1.2950043017689867,
+          "status": "optimal"
+        },
+        {
+          "iteration": 7,
+          "energy": -52.64221524977984,
+          "cost": 1.2944864836487602,
+          "status": "optimal"
+        },
+        {
+          "iteration": 8,
+          "energy": -52.82430942928221,
+          "cost": 1.2973688514277164,
+          "status": "optimal"
+        },
+        {
+          "iteration": 9,
+          "energy": -52.82845441694687,
+          "cost": 1.2974139360714512,
+          "status": "optimal"
+        },
+        {
+          "iteration": 10,
+          "energy": -52.82923092857145,
+          "cost": 1.2974149426482398,
+          "status": "optimal"
+        },
+        {
+          "iteration": 11,
+          "energy": -52.83010373131886,
+          "cost": 1.2974136083497336,
+          "status": "optimal"
+        },
+        {
+          "iteration": 12,
+          "energy": -52.83150412532085,
+          "cost": 1.2974109196621397,
+          "status": "optimal"
+        },
+        {
+          "iteration": 13,
+          "energy": -52.83384359145136,
+          "cost": 1.2974063464545358,
+          "status": "optimal"
+        },
+        {
+          "iteration": 14,
+          "energy": -52.83776207278933,
+          "cost": 1.2973986903778347,
+          "status": "optimal"
+        },
+        {
+          "iteration": 15,
+          "energy": -52.84431555149337,
+          "cost": 1.2973859253886666,
+          "status": "optimal"
+        },
+        {
+          "iteration": 16,
+          "energy": -52.85524790543394,
+          "cost": 1.2973647255219949,
+          "status": "optimal"
+        },
+        {
+          "iteration": 17,
+          "energy": -52.87341912538635,
+          "cost": 1.297329702769827,
+          "status": "optimal"
+        },
+        {
+          "iteration": 18,
+          "energy": -52.90346924490784,
+          "cost": 1.2972722700057822,
+          "status": "optimal"
+        },
+        {
+          "iteration": 19,
+          "energy": -52.952807392239066,
+          "cost": 1.2971790720388368,
+          "status": "optimal"
+        },
+        {
+          "iteration": 20,
+          "energy": -53.03298835370731,
+          "cost": 1.2970300869732483,
+          "status": "optimal"
+        },
+        {
+          "iteration": 21,
+          "energy": -53.161405400074365,
+          "cost": 1.2967969691908496,
+          "status": "optimal"
+        },
+        {
+          "iteration": 22,
+          "energy": -53.36286437782253,
+          "cost": 1.2964432164010158,
+          "status": "optimal"
+        },
+        {
+          "iteration": 23,
+          "energy": -53.66987226000954,
+          "cost": 1.2959293134542385,
+          "status": "optimal"
+        },
+        {
+          "iteration": 24,
+          "energy": -54.11941721873741,
+          "cost": 1.295227642614415,
+          "status": "optimal"
+        },
+        {
+          "iteration": 25,
+          "energy": -54.743302990954156,
+          "cost": 1.2943514155177969,
+          "status": "optimal"
+        },
+        {
+          "iteration": 26,
+          "energy": -55.55039502386337,
+          "cost": 1.293395714021847,
+          "status": "optimal"
+        },
+        {
+          "iteration": 27,
+          "energy": -56.50451995311202,
+          "cost": 1.2925725600952624,
+          "status": "optimal"
+        },
+        {
+          "iteration": 28,
+          "energy": -57.51118885264037,
+          "cost": 1.2922798805216162,
+          "status": "optimal"
+        },
+        {
+          "iteration": 29,
+          "energy": -58.48710332686698,
+          "cost": 1.2924720690067606,
+          "status": "optimal"
+        }
+      ],
+      [
+        {
+          "iteration": 0,
+          "energy": -51.510973383028784,
+          "cost": 1.2762833525143331,
+          "status": "optimal"
+        },
+        {
+          "iteration": 1,
+          "energy": -52.60730729445204,
+          "cost": 1.29523639553309,
+          "status": "optimal"
+        },
+        {
+          "iteration": 2,
+          "energy": -52.92082297000178,
+          "cost": 1.2961582776413225,
+          "status": "optimal"
+        },
+        {
+          "iteration": 3,
+          "energy": -53.12162017198559,
+          "cost": 1.2965957439066798,
+          "status": "optimal"
+        },
+        {
+          "iteration": 4,
+          "energy": -53.30750150725817,
+          "cost": 1.2964610530582035,
+          "status": "optimal"
+        },
+        {
+          "iteration": 5,
+          "energy": -53.48935045236993,
+          "cost": 1.2965413820152394,
+          "status": "optimal"
+        },
+        {
+          "iteration": 6,
+          "energy": -53.70319909583014,
+          "cost": 1.2963208078166177,
+          "status": "optimal"
+        },
+        {
+          "iteration": 7,
+          "energy": -53.923555628405666,
+          "cost": 1.296323002637907,
+          "status": "optimal"
+        },
+        {
+          "iteration": 8,
+          "energy": -54.17972771908222,
+          "cost": 1.2961411902069486,
+          "status": "optimal"
+        },
+        {
+          "iteration": 9,
+          "energy": -54.46847250192247,
+          "cost": 1.2959497002776748,
+          "status": "optimal"
+        },
+        {
+          "iteration": 10,
+          "energy": -54.80771927527769,
+          "cost": 1.295681878572208,
+          "status": "optimal"
+        },
+        {
+          "iteration": 11,
+          "energy": -55.192431383975986,
+          "cost": 1.2954612015597688,
+          "status": "optimal"
+        },
+        {
+          "iteration": 12,
+          "energy": -55.59933670880779,
+          "cost": 1.295414179105837,
+          "status": "optimal"
+        },
+        {
+          "iteration": 13,
+          "energy": -55.99496930626266,
+          "cost": 1.2954701576956271,
+          "status": "optimal"
+        },
+        {
+          "iteration": 14,
+          "energy": -56.37710600000195,
+          "cost": 1.295528173447,
+          "status": "optimal"
+        },
+        {
+          "iteration": 15,
+          "energy": -56.73671398936331,
+          "cost": 1.2956274607963256,
+          "status": "optimal"
+        },
+        {
+          "iteration": 16,
+          "energy": -57.08050211151896,
+          "cost": 1.2956753458187205,
+          "status": "optimal"
+        },
+        {
+          "iteration": 17,
+          "energy": -57.41796083237415,
+          "cost": 1.2957033634871484,
+          "status": "optimal"
+        },
+        {
+          "iteration": 18,
+          "energy": -57.75448687224038,
+          "cost": 1.2956861048804809,
+          "status": "optimal"
+        },
+        {
+          "iteration": 19,
+          "energy": -58.101997495835924,
+          "cost": 1.2956025558957718,
+          "status": "optimal"
+        },
+        {
+          "iteration": 20,
+          "energy": -58.47334965195142,
+          "cost": 1.2954490697382273,
+          "status": "optimal"
+        },
+        {
+          "iteration": 21,
+          "energy": -58.883260925913575,
+          "cost": 1.295211969264101,
+          "status": "optimal"
+        },
+        {
+          "iteration": 22,
+          "energy": -59.35102324006371,
+          "cost": 1.2948571981842183,
+          "status": "optimal"
+        },
+        {
+          "iteration": 23,
+          "energy": -59.90405653289558,
+          "cost": 1.2943364127466908,
+          "status": "optimal"
+        },
+        {
+          "iteration": 24,
+          "energy": -60.57653017339443,
+          "cost": 1.2936088510019104,
+          "status": "optimal"
+        },
+        {
+          "iteration": 25,
+          "energy": -61.40545285256321,
+          "cost": 1.292657448278789,
+          "status": "optimal"
+        },
+        {
+          "iteration": 26,
+          "energy": -62.188535242416854,
+          "cost": 1.2945737234248067,
+          "status": "optimal"
+        },
+        {
+          "iteration": 27,
+          "energy": -62.51035392208213,
+          "cost": 1.2960819589515635,
+          "status": "optimal"
+        },
+        {
+          "iteration": 28,
+          "energy": -62.75916211601246,
+          "cost": 1.2962244470999116,
+          "status": "optimal"
+        },
+        {
+          "iteration": 29,
+          "energy": -63.03344510809795,
+          "cost": 1.2958568259160268,
+          "status": "optimal"
+        }
+      ]
+    ],
+    "energy_global_optimum_claimed": false,
+    "numerical_variational_results_not_interval_certificates": true,
+    "elapsed_seconds": 28.008402246050537
+  },
+  "reference_metrics": {
+    "entropy": 3.802082343741531,
+    "schmidt_l1": 3.885297617315841,
+    "mass_correlation": -8.842055162630878,
+    "wick_prediction": -6.227429068964039,
+    "wick_deviation": -2.614626093666839,
+    "eta": 0.8896327241377201,
+    "wick_symmetric_formula_error": 1.7763568394002505e-15,
+    "mass_a": 3.009265538105056e-34,
+    "mass_b": 1.925929944387236e-34,
+    "mass_dot": 2.407412430484045e-34,
+    "energy": -96.74110469574373
+  },
+  "elapsed_seconds": 28.048823108896613,
+  "exact_global_energy_optimum_claimed": false,
+  "deletion_scope": "Specific finite dictionary; only separately proved orbit/window support bounds imply universal exclusions"
+}

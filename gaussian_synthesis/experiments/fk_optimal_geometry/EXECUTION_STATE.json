@@ -1,7 +1,7 @@
 {
   "created_utc": "2026-10-24T12:24:13.825763+00:00",
   "base_commit": "1616c2c5d7bfee600d72e6ee2a43196ffe9b4300",
-  "objective_complete": false,
+  "objective_complete": true,
   "items": [
     {
       "id": "A1",
@@ -11,18 +11,22 @@
         "results/initial_certificates_02/summary.json",
         "results/initial_certificates_02/verification.json",
         "JOINT_WITNESS_THEORY.md"
-      ]
+      ],
+      "execution_audit_status": "complete"
     },
     {
       "id": "A2",
       "requirement": "Reproduce and certify actual16-term two-orbit t20 construction; primal/dual full singlet support investigation; report matching or bounded unsuccessful search honestly.",
-      "status": "partial",
+      "status": "completed_bounded_study",
       "evidence": [
         "TWO_ORBIT_CONSTRUCTION.md",
         "results/two_orbit_02/summary.json",
-        "results/two_orbit_02/verification.json"
+        "results/two_orbit_02/verification.json",
+        "results/matching_candidate_support_02/summary.json",
+        "results/matching_candidate_support_02/verification.json"
       ],
-      "notes": "Exact 16-term, two-orbit physical-target construction independently verified. Matching dual passed local searches, but global support feasibility remains unproved."
+      "notes": "Actual 16-term certificate, 128-start discovery and conservative global support attempt complete; matching support 1 not proved.",
+      "execution_audit_status": "bounded_study_complete_ideal_open"
     },
     {
       "id": "B1",
@@ -33,19 +37,21 @@
         "results/contact_comparison_01/summary.json",
         "results/contact_comparison_01/verification.json",
         "results/contact_comparison_01/atoms.csv"
-      ]
+      ],
+      "execution_audit_status": "complete"
     },
     {
       "id": "B2",
       "requirement": "Certified all-decomposition eta mean interval and concentration; test saturation and investigate quotient-distance stability.",
-      "status": "partial",
+      "status": "completed_first_stage",
       "evidence": [
         "JOINT_WITNESS_THEORY.md",
         "JOINT_CONTACT_THEORY.md",
         "results/contact_comparison_01/summary.json",
         "results/contact_comparison_01/verification.json"
       ],
-      "remaining": "Updated strict eta mean/concentration bounds and finite-construction slack checked. No explicit globally valid quotient-distance stability constant/neighborhood radius yet."
+      "execution_audit_status": "first_stage_complete_strengthening_open",
+      "notes": "All-decomposition eta mean/tail bounds and saturation slack verified; global orbit-distance c and radius remain explicitly unproved."
     },
     {
       "id": "C1",
@@ -59,100 +65,141 @@
         "results/soft_curvatures_01/verification.json",
         "CONTACT_ASYMPTOTICS.md"
       ],
-      "notes": "225 checkpoints, 25 independent seeded GPU runs; exact soft-eigenvalue formula with 720 polynomial identities and directed bounds. Softness is certified for frozen candidates, not the unknown optimal witnesses."
+      "notes": "225 checkpoints, 25 independent seeded GPU runs; exact soft-eigenvalue formula with 720 polynomial identities and directed bounds. Softness is certified for frozen candidates, not the unknown optimal witnesses.",
+      "execution_audit_status": "complete"
     },
     {
       "id": "C2",
       "requirement": "Contact component dimensions/weights/drift and a known-optimum toy state; determine applicability of multicomponent asymptotics.",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
         "CONTACT_ASYMPTOTICS.md",
         "TWO_CONTACT_TOY.md",
         "results/two_contact_toy_01/REPORT.md",
         "results/two_contact_toy_01/verification.json",
         "results/fixed_gpu_n65536_s5_01/analysis.json",
-        "results/high_order_direction_certificates_01/summary.json"
+        "results/high_order_direction_certificates_01/summary.json",
+        "results/high_order_direction_certificates_01/REPORT.md",
+        "results/high_order_direction_certificates_01/verification.json"
       ],
-      "remaining": "FK moving-direction height and coefficient-mass analysis generated; independent verification pending. Matching-candidate global completeness remains unproved."
+      "notes": "Known-optimum toy drift and FK finite-order height/mass diagnostics independently verified. FK candidate global completeness remains a conditional hypothesis, not a proved classification.",
+      "execution_audit_status": "complete_with_conditional_FK_limit"
     },
     {
       "id": "C3",
       "requirement": "Investigate deterministic moment and direct support certification; targeted t11/20 directions k8,16,32,64 with no-improvement stopping rule.",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
         "results/canonical_k64_t11_n131072_01/summary.json",
-        "results/high_order_direction_certificates_01/summary.json"
+        "results/high_order_direction_certificates_01/summary.json",
+        "results/high_order_direction_certificates_01/REPORT.md",
+        "results/high_order_direction_certificates_01/verification.json"
       ],
-      "remaining": "All eight frozen directions and missing t11 k64 run produced. Support certificates, exclusions and stopping-rule results await independent verification; high-order moment estimates are not exact certified moments."
+      "notes": "Bounded two-route certification study complete: eight directions, deterministic moment envelopes, six strict no-improvement exclusions. Accurate high-order moments and t11 k32/k64 improved global support certificates remain open; no unconditional k increase.",
+      "execution_audit_status": "bounded_study_complete_no_improvement"
     },
     {
       "id": "D1_D2",
       "requirement": "48 directed fidelity/energy bounds:3t x4Delta x4budgets; certified full spectral gap; cost-constrained normalized Gaussian variational tests and sharpness analysis.",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
         "RESTRICTED_ERROR_THEORY.md",
         "results/initial_certificates_02/verification.json",
         "NORMALIZED_WINDOW_BOUNDS.md",
         "results/window_variational_01/summary.json",
-        "results/window_sharp_bounds_02/summary.json"
+        "results/window_sharp_bounds_02/summary.json",
+        "results/window_sharp_bounds_02/verification.json",
+        "results/window_variational_01/verification.json",
+        "results/window_variational_01/REPORT.md"
       ],
-      "remaining": "Original 48 strict bounds independently verified. All 48 normalized restricted optimizations and stronger bounds generated; independent verification pending. Energy optimization is local; numerical solver warnings retained. Budgets use original plan reference U."
+      "notes": "48 global stronger bounds independently checked at 110 digits and by exact rational spectral minors; 1164 atoms and 96 normalized trial states audited. Budget uses original reference U. Local energy optimization and solver precision warnings retained.",
+      "execution_audit_status": "complete"
     },
     {
       "id": "D3",
       "requirement": "General energy-curvature/excitation-order theorem with explicit assumptions, error dependence and matching Gaussian constructions where possible.",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
         "ENERGY_EXPONENT_THEORY.md",
-        "results/energy_exponents_01/summary.json"
+        "results/energy_exponents_01/summary.json",
+        "results/energy_exponents_01/verification.json"
       ],
-      "remaining": "General assumptions and finite FK 17-term and toy 5-term constructions produced; independent verification pending. Positive-error FK approximants are not assumed normalized."
+      "notes": "General uniform all-minima theorem plus 36 finite FK and four five-Gaussian toy constructions independently checked. Positive-error FK approximants need not be normalized.",
+      "execution_audit_status": "complete"
     },
     {
       "id": "E1",
       "requirement": "Four t x R2,4,8,16,32,64; contacts, orbit deletion,low-energy,prior,canonical k8/16/32; costs,F,energy,mass,Wick.",
-      "status": "not_started",
-      "evidence": []
+      "status": "complete",
+      "evidence": [
+        "results/structure_ablation_01/REPORT.md",
+        "results/structure_ablation_01/verification.json",
+        "results/structure_ablation_01/metrics.csv"
+      ],
+      "notes": "720 configurations, 2880 states, four t values and six R values; exact distinct-ray counts and normalized cost budgets. Five repeats for prior/column/canonical. Two-orbit exact cost exceeds reference U at t9/10.9225/11, unlike t20.",
+      "execution_audit_status": "complete"
     },
     {
       "id": "E2",
       "requirement": "Finite certified expansions; within/between-orbit coherent kernels; combine two/four-point functions correctly and link to necessity bounds.",
-      "status": "not_started",
-      "evidence": []
+      "status": "complete",
+      "evidence": [
+        "results/coherent_orbits_01/REPORT.md",
+        "results/coherent_orbits_01/verification.json"
+      ],
+      "notes": "7760 two/four-point kernels, 12 whole-orbit deletion bounds and 12 positive-density comparisons independently checked. Wick deviations recombined nonlinearly.",
+      "execution_audit_status": "complete"
     },
     {
       "id": "F1",
       "requirement": "Conditional on M1–M3 evidence: preregister new hopping and anisotropic-interaction perturbations, frozen candidates,ED only afterward,strong baselines and costs.",
-      "status": "not_started",
-      "evidence": []
+      "status": "complete",
+      "evidence": [
+        "results/new_perturbations_01/preregistration.json",
+        "results/new_perturbations_01/PREREGISTRATION.md",
+        "results/new_perturbations_01/ED_ACCESS_BARRIER.json",
+        "results/new_perturbations_01/evaluation/REPORT.md",
+        "results/new_perturbations_01/evaluation/verification.json"
+      ],
+      "notes": "Both genuinely new perturbations, all frozen parameters, target-free predictions, full ED barrier, HFB and strong adaptive energy-column controls, actual costs/time ledgers.",
+      "execution_audit_status": "complete_no_end_to_end_advantage_claim"
     },
     {
       "id": "F2",
       "requirement": "Prepare two candidate models; conditional selection of one theory-relevant extension; explicit go/no-go evidence.",
-      "status": "not_started",
-      "evidence": []
+      "status": "complete",
+      "evidence": [
+        "PAIRING_EXTENSION_PLAN.md",
+        "results/extension_candidates_01/selection.json",
+        "results/pairing_extension_02/REPORT.md",
+        "results/pairing_extension_02/verification.json"
+      ],
+      "execution_audit_status": "complete",
+      "notes": "Both sparse models prepared; pairing selected before ED; global Gaussian coercivity, full spectral separation and finite exact/approximate exponent-matching constructions verified."
     },
     {
       "id": "DELIVERY",
       "requirement": "Source/version/raw data/failures/seeds preserved; full requirement-by-requirement report distinguishing proved,empirical,conditional,unresolved.",
-      "status": "partial",
+      "status": "complete",
       "evidence": [
         "REPORT.md",
-        "EXECUTION_STATE.json"
+        "EXECUTION_STATE.json",
+        "COMPLETION_AUDIT.md",
+        "results/final_requirement_audit.json"
       ],
-      "remaining": "Full A–F execution and final requirement audit remain."
+      "execution_audit_status": "complete"
     }
   ],
   "active_processes": [],
-  "updated_utc": "2026-10-24T14:15:16.268350+00:00",
+  "updated_utc": "2026-10-24T15:02:00.141222+00:00",
   "latest_results": {
     "t20_relative_gap_upper": 0.006283009173291182,
     "t20_all_decompositions_mean_eta_interval": [
       0.5354372734460443,
       0.5526179389316378
     ],
-    "t11_delta01_budgetU_fidelity_upper": 0.8902621,
-    "t11_delta01_budgetU_energy_error_lower": 1.880396,
+    "t11_delta01_budgetU_fidelity_upper": 0.6414123527341199,
+    "t11_delta01_budgetU_energy_error_lower": 8.32755796514894,
     "t20_two_orbit_cost_upper": 1.2955704206606014,
     "t20_certified_cost_interval": [
       1.287430339822946,
@@ -175,7 +222,18 @@
     "t20_joint_with_old_upper_interval": [
       1.287430339822946,
       1.2974186897452176
-    ]
+    ],
+    "normalized_window_bounds_independently_verified": 48,
+    "normalized_window_trial_states_verified": 96,
+    "structure_ablation_configurations_verified": 720,
+    "structure_ablation_states_verified": 2880,
+    "coherent_two_four_point_kernels_verified": 7760,
+    "new_perturbed_Hamiltonians_validated": 160,
+    "frozen_predictions_validated": 2400,
+    "pairing_model_ground_states_certified": 3,
+    "pairing_model_finite_window_constructions_verified": 12,
+    "pairing_model_exact_cost_exponent": 2,
+    "pairing_model_error_q8_cost_exponent": 1
   },
   "known_failures": [
     {
@@ -193,7 +251,23 @@
     {
       "run": "soft_hessian_identity_failed_01",
       "reason": "Used a stationarity-substituted second-derivative vector before witness contraction; corrected exact projection and all 720 generalized eigenvector identities verified."
+    },
+    {
+      "run": "structure_ablation_smoke_01",
+      "reason": "Old prior candidate pool contained duplicate Gaussian rays. Deduplicated all raw candidate pools before QR; 64 distinct rays retained, no numerical resource inflation."
+    },
+    {
+      "run": "structure_ablation_01_verify_01_02",
+      "reason": "Verifier initially required bit-identical budget despite outward-rounded D budget, then compared energy Ritz rank against the finer fidelity-SVD threshold. Corrected scope-specific comparisons; producer results unchanged."
     }
   ],
-  "publication_note": "Code, theory notes, experiment structure and available result summaries published without rerunning experiments; newly produced C2/C3/D1-D3 results still await independent verification."
+  "publication_note": "This publication includes all subsequent A-F experiment code, result summaries, figures, verification records and completion reports after commit 3301a29. Raw arrays, source snapshots and caches remain local under the existing .gitignore.",
+  "all_ideal_research_results_achieved": false,
+  "open_ideal_results": [
+    "Nonzero-FK exact primal-dual matching",
+    "Explicit global quotient-distance stability c and radius",
+    "High-order FK direction with certified improvement over joint witness",
+    "End-to-end computational advantage over adaptive energy columns"
+  ],
+  "completion_scope": "Original experiment plan executed, including bounded unsuccessful investigations and conditional second-model selection; ideal open theorems are not claimed as solved."
 }

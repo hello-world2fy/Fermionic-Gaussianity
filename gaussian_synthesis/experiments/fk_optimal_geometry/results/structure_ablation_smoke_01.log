@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_optimal_geometry/scripts/run_structure_ablation.py", line 29, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_optimal_geometry/scripts/run_structure_ablation.py", line 20, in main
+    tick=time.monotonic();tasks=prepare(args.output,args.t,args.replicates);rows=[]
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_optimal_geometry/fk5/structure_ablation.py", line 71, in prepare
+    key=f't{t:g}_rep{replicate}_{name}';row=save_pool(output,key,t,replicate,name,atoms,metadata,budget,model)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_optimal_geometry/fk5/structure_ablation.py", line 82, in save_pool
+    assert np.max(gram)<1-1e-10,(key,'duplicate rays')
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('t20_rep1_physics_prior', 'duplicate rays')
