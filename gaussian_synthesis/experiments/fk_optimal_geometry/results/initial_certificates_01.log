@@ -1,0 +1,17 @@
+joint 5 L 1.95794714015251 U 1.9937385983310587 gap 0.017951806712048008
+Traceback (most recent call last):
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_optimal_geometry/scripts/run_initial_certificates.py", line 61, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_optimal_geometry/scripts/run_initial_certificates.py", line 32, in main
+    row,arrays=certify_joint(model,t,U,Fraction(4713,1000) if t==20 else None)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_optimal_geometry/fk5/joint_dual_certificates.py", line 68, in certify_joint
+    raw=omega+float(l)*np.array([complex(float(a.mid),float(b.mid)) for a,b in w0])
+              ^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/.venv/lib/python3.11/site-packages/mpmath/ctx_iv.py", line 56, in __float__
+    return self.cast(float, libmp.to_float)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/.venv/lib/python3.11/site-packages/mpmath/ctx_iv.py", line 50, in cast
+    raise ValueError
+ValueError

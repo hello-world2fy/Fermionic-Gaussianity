@@ -1,0 +1,130 @@
+{
+  "created_utc": "2026-10-24T12:24:13.825763+00:00",
+  "base_commit": "1616c2c5d7bfee600d72e6ee2a43196ffe9b4300",
+  "objective_complete": false,
+  "items": [
+    {
+      "id": "A1",
+      "requirement": "Directed joint Schmidt–magic certificates at t=5,9,10,10.9225,11,12,20; rational4713/1000 at20; independent polar/order/phase verification; certified t20 gap<1%.",
+      "status": "complete",
+      "evidence": [
+        "results/initial_certificates_02/summary.json",
+        "results/initial_certificates_02/verification.json",
+        "JOINT_WITNESS_THEORY.md"
+      ]
+    },
+    {
+      "id": "A2",
+      "requirement": "Reproduce and certify actual16-term two-orbit t20 construction; primal/dual full singlet support investigation; report matching or bounded unsuccessful search honestly.",
+      "status": "partial",
+      "evidence": [
+        "TWO_ORBIT_CONSTRUCTION.md",
+        "results/two_orbit_02/summary.json",
+        "results/two_orbit_02/verification.json"
+      ],
+      "notes": "Exact 16-term, two-orbit physical-target construction independently verified. Matching dual passed local searches, but global support feasibility remains unproved."
+    },
+    {
+      "id": "B1",
+      "requirement": "Compare joint contacts,16-term construction and active columns; complete features, symmetry equivalence and contact-only representability.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "B2",
+      "requirement": "Certified all-decomposition eta mean interval and concentration; test saturation and investigate quotient-distance stability.",
+      "status": "partial",
+      "evidence": [
+        "JOINT_WITNESS_THEORY.md",
+        "results/initial_certificates_02/summary.json"
+      ],
+      "remaining": "Scalar eta mean and concentration proved; quotient-distance stability and saturation studies remain."
+    },
+    {
+      "id": "C1",
+      "requirement": "Fixed-witness k8..128 scan at0,20,11,9; high-precision stationary Hessian; distinguish certified contacts and local candidates.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "C2",
+      "requirement": "Contact component dimensions/weights/drift and a known-optimum toy state; determine applicability of multicomponent asymptotics.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "C3",
+      "requirement": "Investigate deterministic moment and direct support certification; targeted t11/20 directions k8,16,32,64 with no-improvement stopping rule.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "D1_D2",
+      "requirement": "48 directed fidelity/energy bounds:3t x4Delta x4budgets; certified full spectral gap; cost-constrained normalized Gaussian variational tests and sharpness analysis.",
+      "status": "partial",
+      "evidence": [
+        "RESTRICTED_ERROR_THEORY.md",
+        "results/initial_certificates_02/verification.json"
+      ],
+      "remaining": "48 strict bounds independently verified; restricted normalized cost-constrained optimization and sharpness tests remain."
+    },
+    {
+      "id": "D3",
+      "requirement": "General energy-curvature/excitation-order theorem with explicit assumptions, error dependence and matching Gaussian constructions where possible.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "E1",
+      "requirement": "Four t x R2,4,8,16,32,64; contacts, orbit deletion,low-energy,prior,canonical k8/16/32; costs,F,energy,mass,Wick.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "E2",
+      "requirement": "Finite certified expansions; within/between-orbit coherent kernels; combine two/four-point functions correctly and link to necessity bounds.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "F1",
+      "requirement": "Conditional on M1–M3 evidence: preregister new hopping and anisotropic-interaction perturbations, frozen candidates,ED only afterward,strong baselines and costs.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "F2",
+      "requirement": "Prepare two candidate models; conditional selection of one theory-relevant extension; explicit go/no-go evidence.",
+      "status": "not_started",
+      "evidence": []
+    },
+    {
+      "id": "DELIVERY",
+      "requirement": "Source/version/raw data/failures/seeds preserved; full requirement-by-requirement report distinguishing proved,empirical,conditional,unresolved.",
+      "status": "not_started",
+      "evidence": []
+    }
+  ],
+  "active_processes": [],
+  "updated_utc": "2026-10-24T12:53:43.225735+00:00",
+  "latest_results": {
+    "t20_joint_interval": [
+      1.287430339822946,
+      1.2974186897452176
+    ],
+    "t20_relative_gap_upper": 0.006283009173291182,
+    "t20_all_decompositions_mean_eta_interval": [
+      0.5336329707183939,
+      0.5546798419535729
+    ],
+    "t11_delta01_budgetU_fidelity_upper": 0.8902621,
+    "t11_delta01_budgetU_energy_error_lower": 1.880396,
+    "t20_two_orbit_cost_upper": 1.2955704206606014
+  },
+  "known_failures": [
+    {
+      "run": "initial_certificates_01",
+      "reason": "Display-only conversion of nonpoint interval lambda to float; corrected Fraction conversion. Original partial source/log preserved."
+    }
+  ]
+}
