@@ -78,3 +78,36 @@ def discover(conditional_vectors,low_reference,window_atoms,budget,max_direction
         empirical_support_is_global_upper=False,solver_status=problem.status,
         uses_explicit_target_wavefunction=False,uses_hand_excitation_directions=False,
         elapsed_seconds=time.monotonic()-started)
+
+
+def direct_dual_krylov(H,target,reference,window_atoms,budget,remove_reference=False):
+    """Known-state control using HFB Krylov vectors and the exact same oracle.
+
+    Its physical subspace comes from H and the HFB ray, without distribution
+    samples or an excitation basis. A finite oracle is not a certificate.
+    """
+    started=time.monotonic();ref=reference/np.linalg.norm(reference)
+    shifted=H-np.vdot(ref,H@ref).real*np.eye(len(ref))
+    shifted/=np.linalg.norm(shifted)
+    vectors=[ref,target];current=ref
+    for _ in range(6):
+        current=shifted@current;vectors.append(current)
+    matrix=np.array(vectors).T
+    if remove_reference:matrix-=ref[:,None]*(ref.conj()@matrix)[None,:]
+    U,s,_=svd(matrix,full_matrices=False)
+    rank=int(np.sum(s>max(1e-9,s[0]*1e-8)));basis=U[:,:rank]
+    variable=cp.Variable(rank,complex=True);support=cp.Variable(nonneg=True)
+    objective=cp.real((basis.conj().T@target).conj()@variable)-budget*support
+    problem=cp.Problem(cp.Maximize(objective),[
+        cp.norm(variable)<=1,cp.abs(window_atoms.conj()@basis@variable)<=support])
+    problem.solve(solver='CLARABEL',max_iter=300,tol_gap_abs=1e-10,tol_feas=1e-10,tol_gap_rel=1e-10)
+    if variable.value is None:raise ArithmeticError('Direct dual control failed')
+    ell=basis@variable.value;ell/=np.linalg.norm(ell)
+    ell*=np.exp(1j*np.angle(np.vdot(ell,target)))
+    return ell,dict(method='direct_dual_HFB_Krylov_finite_oracle',retained_rank=rank,
+        reference_removed=remove_reference,
+        krylov_singular_values=s,uses_exact_target_wavefunction=True,
+        uses_distribution_samples=False,uses_hand_excitation_directions=False,
+        empirical_support=float(np.max(abs(window_atoms.conj()@ell))),
+        empirical_support_is_global_upper=False,solver_status=problem.status,
+        elapsed_seconds=time.monotonic()-started)

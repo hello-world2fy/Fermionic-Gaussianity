@@ -1,0 +1,30 @@
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/concurrent/futures/process.py", line 256, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/scripts/run_finite_known.py", line 27, in worker
+    atoms=take_rows(source,'kets',indices);phase=take_rows(source,'aligned_phases',indices)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/fk6/finite_benchmarks.py", line 24, in take_rows
+    shape,fortran,dtype=np.lib.format._read_array_header(stream,version)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'numpy.lib.format' has no attribute '_read_array_header'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/scripts/run_finite_known.py", line 114, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/scripts/run_finite_known.py", line 108, in main
+    rows.extend(future.result());write_json(args.output/'partial_summary.json',dict(status='running',rows=rows))
+                ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+AttributeError: module 'numpy.lib.format' has no attribute '_read_array_header'

@@ -1,0 +1,1324 @@
+{
+  "witness_sha256": "edb11f2f44ade060496367a63bc664c1528a955d58103cee94dd94f7ca486ec3",
+  "training": [
+    {
+      "optimizer": {
+        "status": "converged",
+        "converged": true,
+        "gradient_norm": 5.198227341289593e-15,
+        "iterations": 4,
+        "history": [
+          {
+            "iteration": 0,
+            "objective": -24.43241301227311,
+            "gradient_norm": 0.002606176056350082
+          },
+          {
+            "iteration": 1,
+            "objective": -24.43258113943167,
+            "gradient_norm": 1.03290825128518e-05
+          },
+          {
+            "iteration": 2,
+            "objective": -24.432581140181387,
+            "gradient_norm": 4.7811514081447017e-11
+          },
+          {
+            "iteration": 3,
+            "objective": -24.432581140181384,
+            "gradient_norm": 5.198227341289593e-15
+          }
+        ]
+      },
+      "sampling": [
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25101,
+          "iteration": 0,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 7.993605777301127e-15,
+            "ladder": [
+              {
+                "beta": 0.380706002942361,
+                "log_z": -4.060041560493827,
+                "incremental_ess": 104857.60000000309,
+                "unique_initial_ancestors": 105283,
+                "mh_acceptance": 0.8768405914306641,
+                "angle_scale": 0.18722855017075182,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.5948376348242164
+              },
+              {
+                "beta": 0.809654687689636,
+                "log_z": -8.365853166203756,
+                "incremental_ess": 104857.60000000447,
+                "unique_initial_ancestors": 89362,
+                "mh_acceptance": 0.806725025177002,
+                "angle_scale": 0.16354031305201572,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.108279208652675
+              },
+              {
+                "beta": 1.2819836951664205,
+                "log_z": -12.849758457588722,
+                "incremental_ess": 104857.60000000145,
+                "unique_initial_ancestors": 78223,
+                "mh_acceptance": 0.764854907989502,
+                "angle_scale": 0.1456352186918846,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.630599860101938
+              },
+              {
+                "beta": 1.7923307180479338,
+                "log_z": -17.444998405742027,
+                "incremental_ess": 104857.60000000036,
+                "unique_initial_ancestors": 69884,
+                "mh_acceptance": 0.7381673653920492,
+                "angle_scale": 0.13165557489731394,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.130155876278877
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.250621361599745,
+                "incremental_ess": 126595.80779995084,
+                "unique_initial_ancestors": 67295,
+                "mh_acceptance": 0.7253291606903076,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.553364175371826
+              }
+            ],
+            "elapsed_seconds": 17.8044959558174,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.61302244476974,
+          "quadrature_file": "t20_k2_lambda0.5_train0_seed25101.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25102,
+          "iteration": 0,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.326672684688674e-15,
+            "ladder": [
+              {
+                "beta": 0.3791564308939428,
+                "log_z": -4.04327475495699,
+                "incremental_ess": 104857.60000000328,
+                "unique_initial_ancestors": 105441,
+                "mh_acceptance": 0.8774000008900961,
+                "angle_scale": 0.18733370237608754,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.6144681302830577
+              },
+              {
+                "beta": 0.8090271790182106,
+                "log_z": -8.360790616918473,
+                "incremental_ess": 104857.6000000006,
+                "unique_initial_ancestors": 89412,
+                "mh_acceptance": 0.8058447043100992,
+                "angle_scale": 0.1635686747228442,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.137810364365578
+              },
+              {
+                "beta": 1.2822105573875566,
+                "log_z": -12.853156979641149,
+                "incremental_ess": 104857.60000000236,
+                "unique_initial_ancestors": 78202,
+                "mh_acceptance": 0.765018622080485,
+                "angle_scale": 0.14562798010686834,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.649978837929666
+              },
+              {
+                "beta": 1.7932043900133374,
+                "log_z": -17.45521899854308,
+                "incremental_ess": 104857.6000000001,
+                "unique_initial_ancestors": 69806,
+                "mh_acceptance": 0.7375269730885824,
+                "angle_scale": 0.13163498335358034,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.1705825580284
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.254145651234623,
+                "incremental_ess": 126619.99917206698,
+                "unique_initial_ancestors": 67292,
+                "mh_acceptance": 0.727985699971517,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.589583459310234
+              }
+            ],
+            "elapsed_seconds": 17.841883440501988,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.647120781242847,
+          "quadrature_file": "t20_k2_lambda0.5_train0_seed25102.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25103,
+          "iteration": 0,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.215650382226158e-15,
+            "ladder": [
+              {
+                "beta": 0.37865264761552453,
+                "log_z": -4.039463120573711,
+                "incremental_ess": 104857.60000000492,
+                "unique_initial_ancestors": 105473,
+                "mh_acceptance": 0.8773260911305746,
+                "angle_scale": 0.1873679267207278,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.592039654031396
+              },
+              {
+                "beta": 0.8084182157197864,
+                "log_z": -8.356231376599034,
+                "incremental_ess": 104857.60000000268,
+                "unique_initial_ancestors": 89431,
+                "mh_acceptance": 0.8068097432454427,
+                "angle_scale": 0.16359621230647092,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.107539691962302
+              },
+              {
+                "beta": 1.2803351352877437,
+                "log_z": -12.838536959767978,
+                "incremental_ess": 104857.60000000175,
+                "unique_initial_ancestors": 78220,
+                "mh_acceptance": 0.7650880018870035,
+                "angle_scale": 0.14568785240297147,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.621084093116224
+              },
+              {
+                "beta": 1.7912980204752968,
+                "log_z": -17.440270427476367,
+                "incremental_ess": 104857.60000000101,
+                "unique_initial_ancestors": 69741,
+                "mh_acceptance": 0.7364158630371094,
+                "angle_scale": 0.1316799269762786,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.147199392318726
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.2548834081953,
+                "incremental_ess": 126557.89706525346,
+                "unique_initial_ancestors": 67191,
+                "mh_acceptance": 0.7268505096435547,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.56816412229091
+              }
+            ],
+            "elapsed_seconds": 17.817845131270587,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.628647645935416,
+          "quadrature_file": "t20_k2_lambda0.5_train0_seed25103.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25104,
+          "iteration": 0,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.104628079763643e-15,
+            "ladder": [
+              {
+                "beta": 0.3786007602305972,
+                "log_z": -4.0356098191145815,
+                "incremental_ess": 104857.60000000456,
+                "unique_initial_ancestors": 105341,
+                "mh_acceptance": 0.877733071645101,
+                "angle_scale": 0.18737145273802744,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.5980139560997486
+              },
+              {
+                "beta": 0.8075695070167292,
+                "log_z": -8.342353131769357,
+                "incremental_ess": 104857.60000000393,
+                "unique_initial_ancestors": 89372,
+                "mh_acceptance": 0.8071740468343099,
+                "angle_scale": 0.16363461449084368,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.123905453830957
+              },
+              {
+                "beta": 1.2822726981802246,
+                "log_z": -12.851689658893196,
+                "incremental_ess": 104857.6000000021,
+                "unique_initial_ancestors": 78243,
+                "mh_acceptance": 0.76375945409139,
+                "angle_scale": 0.14562599754367048,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.646018953062594
+              },
+              {
+                "beta": 1.792752212922387,
+                "log_z": -17.4510723862332,
+                "incremental_ess": 104857.60000000149,
+                "unique_initial_ancestors": 69843,
+                "mh_acceptance": 0.7357868353525797,
+                "angle_scale": 0.13164563949314603,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.173654234036803
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.25335739390146,
+                "incremental_ess": 126596.4639437853,
+                "unique_initial_ancestors": 67314,
+                "mh_acceptance": 0.7265152136484782,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.597113855183125
+              }
+            ],
+            "elapsed_seconds": 17.847476517781615,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.651248280890286,
+          "quadrature_file": "t20_k2_lambda0.5_train0_seed25104.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25105,
+          "iteration": 0,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.215650382226158e-15,
+            "ladder": [
+              {
+                "beta": 0.3787553556068133,
+                "log_z": -4.038696650085546,
+                "incremental_ess": 104857.60000000254,
+                "unique_initial_ancestors": 105420,
+                "mh_acceptance": 0.8776551087697347,
+                "angle_scale": 0.1873609477662269,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.5993759091943502
+              },
+              {
+                "beta": 0.8071606996431981,
+                "log_z": -8.342940628333162,
+                "incremental_ess": 104857.600000003,
+                "unique_initial_ancestors": 89261,
+                "mh_acceptance": 0.8078343073527018,
+                "angle_scale": 0.16365312176975913,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.132419539615512
+              },
+              {
+                "beta": 1.2798565895086607,
+                "log_z": -12.834340371549791,
+                "incremental_ess": 104857.6000000027,
+                "unique_initial_ancestors": 78180,
+                "mh_acceptance": 0.7644780476888021,
+                "angle_scale": 0.14570314166481318,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.64863309636712
+              },
+              {
+                "beta": 1.7933464674599513,
+                "log_z": -17.461143311468003,
+                "incremental_ess": 104857.60000000181,
+                "unique_initial_ancestors": 69825,
+                "mh_acceptance": 0.7342029412587484,
+                "angle_scale": 0.1316316356485324,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.166769093833864
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.257622386187975,
+                "incremental_ess": 126624.06759550443,
+                "unique_initial_ancestors": 67317,
+                "mh_acceptance": 0.7275216579437256,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.596968479454517
+              }
+            ],
+            "elapsed_seconds": 17.847979637794197,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.654349169693887,
+          "quadrature_file": "t20_k2_lambda0.5_train0_seed25105.npz"
+        }
+      ]
+    },
+    {
+      "optimizer": {
+        "status": "converged",
+        "converged": true,
+        "gradient_norm": 3.753203193729734e-12,
+        "iterations": 3,
+        "history": [
+          {
+            "iteration": 0,
+            "objective": -24.442377757679466,
+            "gradient_norm": 0.0014343121462257985
+          },
+          {
+            "iteration": 1,
+            "objective": -24.442427869151686,
+            "gradient_norm": 3.0583689722755245e-06
+          },
+          {
+            "iteration": 2,
+            "objective": -24.44242786921173,
+            "gradient_norm": 3.753203193729734e-12
+          }
+        ]
+      },
+      "sampling": [
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25101,
+          "iteration": 1,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.215650382226158e-15,
+            "ladder": [
+              {
+                "beta": 0.37835455216844593,
+                "log_z": -4.031742316337663,
+                "incremental_ess": 104857.60000000395,
+                "unique_initial_ancestors": 105336,
+                "mh_acceptance": 0.8769270579020182,
+                "angle_scale": 0.18738818656833928,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.592278376221657
+              },
+              {
+                "beta": 0.8101166748959616,
+                "log_z": -8.366570837793303,
+                "incremental_ess": 104857.60000000469,
+                "unique_initial_ancestors": 89333,
+                "mh_acceptance": 0.8069760799407959,
+                "angle_scale": 0.16351944192398263,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.108418402262032
+              },
+              {
+                "beta": 1.284481633416624,
+                "log_z": -12.870905704854824,
+                "incremental_ess": 104857.60000000203,
+                "unique_initial_ancestors": 78119,
+                "mh_acceptance": 0.766085147857666,
+                "angle_scale": 0.14555557539835892,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.62651250232011
+              },
+              {
+                "beta": 1.7938109441882788,
+                "log_z": -17.45801891540064,
+                "incremental_ess": 104857.6000000006,
+                "unique_initial_ancestors": 69866,
+                "mh_acceptance": 0.7367885112762451,
+                "angle_scale": 0.13162069318068859,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.129566732794046
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.25096716681389,
+                "incremental_ess": 126643.57109185164,
+                "unique_initial_ancestors": 67267,
+                "mh_acceptance": 0.7291175524393717,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.569018743000925
+              }
+            ],
+            "elapsed_seconds": 17.820529862307012,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.626889230683446,
+          "quadrature_file": "t20_k2_lambda0.5_train1_seed25101.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25102,
+          "iteration": 1,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 7.993605777301127e-15,
+            "ladder": [
+              {
+                "beta": 0.3784622138484224,
+                "log_z": -4.036228456516444,
+                "incremental_ess": 104857.60000000238,
+                "unique_initial_ancestors": 105442,
+                "mh_acceptance": 0.8779559135437012,
+                "angle_scale": 0.1873808686597641,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.622504597529769
+              },
+              {
+                "beta": 0.809163141558573,
+                "log_z": -8.361772501906067,
+                "incremental_ess": 104857.60000000178,
+                "unique_initial_ancestors": 89394,
+                "mh_acceptance": 0.8063700199127197,
+                "angle_scale": 0.16356252833674026,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.153320833109319
+              },
+              {
+                "beta": 1.2820317046602645,
+                "log_z": -12.854357605869456,
+                "incremental_ess": 104857.6000000016,
+                "unique_initial_ancestors": 78216,
+                "mh_acceptance": 0.7637677192687988,
+                "angle_scale": 0.14563368674342497,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.67456045653671
+              },
+              {
+                "beta": 1.7949318015631275,
+                "log_z": -17.476370169228275,
+                "incremental_ess": 104857.60000000052,
+                "unique_initial_ancestors": 69695,
+                "mh_acceptance": 0.7377487023671468,
+                "angle_scale": 0.1315942984725267,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.20254372805357
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.25937686872054,
+                "incremental_ess": 126706.75340228825,
+                "unique_initial_ancestors": 67232,
+                "mh_acceptance": 0.7284181912740072,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.64497480355203
+              }
+            ],
+            "elapsed_seconds": 17.89395146071911,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.69956971798092,
+          "quadrature_file": "t20_k2_lambda0.5_train1_seed25102.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25103,
+          "iteration": 1,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.43769498715119e-15,
+            "ladder": [
+              {
+                "beta": 0.37836991977832213,
+                "log_z": -4.034733764043098,
+                "incremental_ess": 104857.60000000254,
+                "unique_initial_ancestors": 105422,
+                "mh_acceptance": 0.8780445257822672,
+                "angle_scale": 0.18738714195885822,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.5838088551536202
+              },
+              {
+                "beta": 0.8069295956992678,
+                "log_z": -8.339175994476644,
+                "incremental_ess": 104857.60000000104,
+                "unique_initial_ancestors": 89379,
+                "mh_acceptance": 0.8077536424001058,
+                "angle_scale": 0.1636635869458054,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.092536918818951
+              },
+              {
+                "beta": 1.2808368501208727,
+                "log_z": -12.83973266407109,
+                "incremental_ess": 104857.60000000223,
+                "unique_initial_ancestors": 78197,
+                "mh_acceptance": 0.7652135690053304,
+                "angle_scale": 0.14567182807036805,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.61968221142888
+              },
+              {
+                "beta": 1.7904981590777758,
+                "log_z": -17.43539581620423,
+                "incremental_ess": 104857.60000000011,
+                "unique_initial_ancestors": 69815,
+                "mh_acceptance": 0.7376666069030762,
+                "angle_scale": 0.13169879782619884,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.136337658390403
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.25862488651499,
+                "incremental_ess": 126545.38144508813,
+                "unique_initial_ancestors": 67229,
+                "mh_acceptance": 0.7279079755147299,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.572366564534605
+              }
+            ],
+            "elapsed_seconds": 17.822028723545372,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.63035513740033,
+          "quadrature_file": "t20_k2_lambda0.5_train1_seed25103.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25104,
+          "iteration": 1,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.548717289613705e-15,
+            "ladder": [
+              {
+                "beta": 0.3799250182291871,
+                "log_z": -4.0491508764236235,
+                "incremental_ess": 104857.60000000475,
+                "unique_initial_ancestors": 105556,
+                "mh_acceptance": 0.8775192896525065,
+                "angle_scale": 0.1872815247709552,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.6004880350083113
+              },
+              {
+                "beta": 0.8094632533193988,
+                "log_z": -8.364595778681238,
+                "incremental_ess": 104857.6000000043,
+                "unique_initial_ancestors": 89340,
+                "mh_acceptance": 0.8069780667622884,
+                "angle_scale": 0.16354896379658793,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.101543846540153
+              },
+              {
+                "beta": 1.2835071816254375,
+                "log_z": -12.867753515299553,
+                "incremental_ess": 104857.60000000223,
+                "unique_initial_ancestors": 78137,
+                "mh_acceptance": 0.7655976613362631,
+                "angle_scale": 0.1455866288944573,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.6059730919078
+              },
+              {
+                "beta": 1.7968393695846254,
+                "log_z": -17.49369095658801,
+                "incremental_ess": 104857.60000000098,
+                "unique_initial_ancestors": 69805,
+                "mh_acceptance": 0.7366422812143961,
+                "angle_scale": 0.13154941425510275,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.126208204776049
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.261046511001652,
+                "incremental_ess": 126782.38007048953,
+                "unique_initial_ancestors": 67312,
+                "mh_acceptance": 0.7259196440378824,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.54791407007724
+              }
+            ],
+            "elapsed_seconds": 17.797062736935914,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.60360939335078,
+          "quadrature_file": "t20_k2_lambda0.5_train1_seed25104.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25105,
+          "iteration": 1,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 9.103828801926284e-15,
+            "ladder": [
+              {
+                "beta": 0.37740192316772436,
+                "log_z": -4.0242525215841916,
+                "incremental_ess": 104857.6000000019,
+                "unique_initial_ancestors": 105458,
+                "mh_acceptance": 0.8776696523030599,
+                "angle_scale": 0.18745297541587247,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.6072225281968713
+              },
+              {
+                "beta": 0.8090754768190466,
+                "log_z": -8.359386687376878,
+                "incremental_ess": 104857.6000000015,
+                "unique_initial_ancestors": 89468,
+                "mh_acceptance": 0.807166337966919,
+                "angle_scale": 0.16356649127054926,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.122175793163478
+              },
+              {
+                "beta": 1.282971234674192,
+                "log_z": -12.86006212158082,
+                "incremental_ess": 104857.60000000254,
+                "unique_initial_ancestors": 78178,
+                "mh_acceptance": 0.7642120520273844,
+                "angle_scale": 0.14560371674249759,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.634718511253595
+              },
+              {
+                "beta": 1.793278731541799,
+                "log_z": -17.458773731210485,
+                "incremental_ess": 104857.60000000142,
+                "unique_initial_ancestors": 69755,
+                "mh_acceptance": 0.7364941438039144,
+                "angle_scale": 0.13163323164673066,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.153821448795497
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.25666055072663,
+                "incremental_ess": 126627.49061280303,
+                "unique_initial_ancestors": 67242,
+                "mh_acceptance": 0.7268190383911133,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.57528928667307
+              }
+            ],
+            "elapsed_seconds": 17.824871531687677,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.629527904093266,
+          "quadrature_file": "t20_k2_lambda0.5_train1_seed25105.npz"
+        }
+      ]
+    },
+    {
+      "optimizer": {
+        "status": "converged",
+        "converged": true,
+        "gradient_norm": 8.849778823195546e-13,
+        "iterations": 3,
+        "history": [
+          {
+            "iteration": 0,
+            "objective": -24.448514185280494,
+            "gradient_norm": 0.00097347914706429
+          },
+          {
+            "iteration": 1,
+            "objective": -24.44853846716805,
+            "gradient_norm": 1.4819793713475772e-06
+          },
+          {
+            "iteration": 2,
+            "objective": -24.448538467182196,
+            "gradient_norm": 8.849778823195546e-13
+          }
+        ]
+      },
+      "sampling": [
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25101,
+          "iteration": 2,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.215650382226158e-15,
+            "ladder": [
+              {
+                "beta": 0.37856232791193634,
+                "log_z": -4.039482343184689,
+                "incremental_ess": 104857.60000000191,
+                "unique_initial_ancestors": 105452,
+                "mh_acceptance": 0.8771530787150065,
+                "angle_scale": 0.18737406454202254,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.6210721991956234
+              },
+              {
+                "beta": 0.8092730487815497,
+                "log_z": -8.36359576055062,
+                "incremental_ess": 104857.60000000015,
+                "unique_initial_ancestors": 89435,
+                "mh_acceptance": 0.8058592478434244,
+                "angle_scale": 0.1635575603258867,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.139742131344974
+              },
+              {
+                "beta": 1.283138461523562,
+                "log_z": -12.867027123697449,
+                "incremental_ess": 104857.60000000052,
+                "unique_initial_ancestors": 78289,
+                "mh_acceptance": 0.7653513749440511,
+                "angle_scale": 0.14559838432462463,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.6468636225909
+              },
+              {
+                "beta": 1.7955434989459338,
+                "log_z": -17.485472378875535,
+                "incremental_ess": 104857.60000000101,
+                "unique_initial_ancestors": 70039,
+                "mh_acceptance": 0.7348217169443766,
+                "angle_scale": 0.13157990050450388,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.161897357553244
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.263981306614255,
+                "incremental_ess": 126722.74697040343,
+                "unique_initial_ancestors": 67553,
+                "mh_acceptance": 0.7308331330617269,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.57755274232477
+              }
+            ],
+            "elapsed_seconds": 17.826825299300253,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.635373000986874,
+          "quadrature_file": "t20_k2_lambda0.5_train2_seed25101.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25102,
+          "iteration": 2,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 7.771561172376096e-15,
+            "ladder": [
+              {
+                "beta": 0.37842239642588993,
+                "log_z": -4.034750715175423,
+                "incremental_ess": 104857.60000000082,
+                "unique_initial_ancestors": 105273,
+                "mh_acceptance": 0.8773933251698812,
+                "angle_scale": 0.18738357500339356,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.6126485094428062
+              },
+              {
+                "beta": 0.8076270923694677,
+                "log_z": -8.344530889709844,
+                "incremental_ess": 104857.60000000324,
+                "unique_initial_ancestors": 89335,
+                "mh_acceptance": 0.806763490041097,
+                "angle_scale": 0.1636320080262462,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.164761357940733
+              },
+              {
+                "beta": 1.2820867450901208,
+                "log_z": -12.852719026770153,
+                "incremental_ess": 104857.60000000003,
+                "unique_initial_ancestors": 78333,
+                "mh_acceptance": 0.7647659778594971,
+                "angle_scale": 0.14563193050232906,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.685250157490373
+              },
+              {
+                "beta": 1.7951654685578262,
+                "log_z": -17.47707353961662,
+                "incremental_ess": 104857.60000000127,
+                "unique_initial_ancestors": 70040,
+                "mh_acceptance": 0.7361088593800863,
+                "angle_scale": 0.13158879792394537,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.201563975773752
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.25864617380177,
+                "incremental_ess": 126725.63202240343,
+                "unique_initial_ancestors": 67521,
+                "mh_acceptance": 0.7270922660827637,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.620300378650427
+              }
+            ],
+            "elapsed_seconds": 17.870728934183717,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.67617965489626,
+          "quadrature_file": "t20_k2_lambda0.5_train2_seed25102.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25103,
+          "iteration": 2,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 9.2148511043888e-15,
+            "ladder": [
+              {
+                "beta": 0.37787810238529573,
+                "log_z": -4.026342352929145,
+                "incremental_ess": 104857.60000000393,
+                "unique_initial_ancestors": 105390,
+                "mh_acceptance": 0.8785098393758138,
+                "angle_scale": 0.18742058179401952,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.5957675259560347
+              },
+              {
+                "beta": 0.8095920719257008,
+                "log_z": -8.360989378088224,
+                "incremental_ess": 104857.60000000242,
+                "unique_initial_ancestors": 89464,
+                "mh_acceptance": 0.8083416620890299,
+                "angle_scale": 0.16354314245020252,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.1197705920785666
+              },
+              {
+                "beta": 1.2842812961279844,
+                "log_z": -12.871554515985007,
+                "incremental_ess": 104857.60000000248,
+                "unique_initial_ancestors": 78236,
+                "mh_acceptance": 0.7643200556437174,
+                "angle_scale": 0.14556195805579325,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.629054697230458
+              },
+              {
+                "beta": 1.7980140139144833,
+                "log_z": -17.49861023119414,
+                "incremental_ess": 104857.60000000127,
+                "unique_initial_ancestors": 69713,
+                "mh_acceptance": 0.7369101842244467,
+                "angle_scale": 0.1315217982399608,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.130003633908927
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.25511266224139,
+                "incremental_ess": 126825.8427055354,
+                "unique_initial_ancestors": 67314,
+                "mh_acceptance": 0.7272032101949056,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.57096660975367
+              }
+            ],
+            "elapsed_seconds": 17.819378165528178,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.62330167647451,
+          "quadrature_file": "t20_k2_lambda0.5_train2_seed25103.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25104,
+          "iteration": 2,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 8.548717289613705e-15,
+            "ladder": [
+              {
+                "beta": 0.37981989454573295,
+                "log_z": -4.048979390021497,
+                "incremental_ess": 104857.60000000175,
+                "unique_initial_ancestors": 105463,
+                "mh_acceptance": 0.8768519560496012,
+                "angle_scale": 0.1872886587994013,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.5862076710909605
+              },
+              {
+                "beta": 0.8095514018139938,
+                "log_z": -8.366098690160472,
+                "incremental_ess": 104857.60000000132,
+                "unique_initial_ancestors": 89444,
+                "mh_acceptance": 0.8065156936645508,
+                "angle_scale": 0.16354498027600112,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.122602744027972
+              },
+              {
+                "beta": 1.283376325719089,
+                "log_z": -12.866372555311129,
+                "incremental_ess": 104857.60000000047,
+                "unique_initial_ancestors": 78254,
+                "mh_acceptance": 0.7659722169240316,
+                "angle_scale": 0.14559080047956294,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.635829444043338
+              },
+              {
+                "beta": 1.7957547618414966,
+                "log_z": -17.481493565851743,
+                "incremental_ess": 104857.60000000038,
+                "unique_initial_ancestors": 69880,
+                "mh_acceptance": 0.7340242862701416,
+                "angle_scale": 0.13157492895329345,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.154254299588501
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.25782463896327,
+                "incremental_ess": 126755.42851299504,
+                "unique_initial_ancestors": 67303,
+                "mh_acceptance": 0.7274309794108073,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.591154823079705
+              }
+            ],
+            "elapsed_seconds": 17.84161937329918,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.64637442212552,
+          "quadrature_file": "t20_k2_lambda0.5_train2_seed25104.npz"
+        },
+        {
+          "stage": "train",
+          "t": 20.0,
+          "k": 2,
+          "penalty": 0.5,
+          "seed": 25105,
+          "iteration": 2,
+          "sampler": {
+            "method": "weighted_smc_reversible_gaussian_rotation_MH",
+            "penalty": 0.5,
+            "count": 131072,
+            "moves_per_temperature": 96,
+            "planes_per_move": 8,
+            "max_norm_error": 7.549516567451064e-15,
+            "ladder": [
+              {
+                "beta": 0.38022419808265795,
+                "log_z": -4.054874556848798,
+                "incremental_ess": 104857.60000000223,
+                "unique_initial_ancestors": 105361,
+                "mh_acceptance": 0.8776113986968994,
+                "angle_scale": 0.1872612259325915,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 3.600839141756296
+              },
+              {
+                "beta": 0.8119498831963555,
+                "log_z": -8.388569626813357,
+                "incremental_ess": 104857.60000000174,
+                "unique_initial_ancestors": 89254,
+                "mh_acceptance": 0.8081687291463217,
+                "angle_scale": 0.16343670203699476,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 7.117508745752275
+              },
+              {
+                "beta": 1.285484377595001,
+                "log_z": -12.886030624507704,
+                "incremental_ess": 104857.6000000009,
+                "unique_initial_ancestors": 78014,
+                "mh_acceptance": 0.7633511225382487,
+                "angle_scale": 0.14552364102592313,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 10.635031190700829
+              },
+              {
+                "beta": 1.7976918140395162,
+                "log_z": -17.500830269352583,
+                "incremental_ess": 104857.6000000017,
+                "unique_initial_ancestors": 69713,
+                "mh_acceptance": 0.7356754144032797,
+                "angle_scale": 0.13152937146277346,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 14.144791586324573
+              },
+              {
+                "beta": 2.0,
+                "log_z": -19.26006291058352,
+                "incremental_ess": 126833.10945163698,
+                "unique_initial_ancestors": 67229,
+                "mh_acceptance": 0.7266261577606201,
+                "angle_scale": 0.1270170592217177,
+                "moves": 96,
+                "planes_per_move": 8,
+                "elapsed_seconds": 17.56691554095596
+              }
+            ],
+            "elapsed_seconds": 17.816628044471145,
+            "device": 6,
+            "iid_particles": false,
+            "global_support_certified": false,
+            "strictly_certified": false,
+            "sparse_RHS_chunk_size": 131072,
+            "independent_CPU_endpoint_scores_checked": true
+          },
+          "elapsed_seconds": 18.628492216579616,
+          "quadrature_file": "t20_k2_lambda0.5_train2_seed25105.npz"
+        }
+      ]
+    }
+  ],
+  "validation_has_not_started": true,
+  "previous_frozen_source": null,
+  "exact_zero_penalty_source": null
+}

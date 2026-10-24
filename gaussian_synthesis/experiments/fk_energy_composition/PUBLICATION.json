@@ -1,17 +1,41 @@
 {
-  "snapshot_utc": "2026-10-24T17:04:47.694198+00:00",
+  "snapshot_utc": "2026-10-24T17:33:29.562096+00:00",
   "branch": "codex/fk-two-cluster-experiments-20261024",
-  "base_commit": "8c6e5b705ecd5ee0349f980bf6ed4c4882807e07",
+  "base_commit": "30ed8a52288b224342b7ee82da50649eb90207e3",
   "included": "Source, experiment configuration, reports, JSON results, logs, plots, frozen parameters, coherent energy-bin vectors, kernels and small sampler-validation arrays.",
   "excluded": "Large raw sampling arrays, Python caches and duplicate source snapshots remain local under existing repository policy.",
   "new_validation_run_for_publication": false,
   "objective_complete": false,
   "summary_status_at_publication": {
+    "analytic_reference_01": "complete",
+    "analytic_reference_02": "complete",
+    "composition_analytic_control_01": "complete",
+    "m1_overview_01": "unspecified",
+    "m1_rare_n32768_s5_01": "complete",
+    "m1_rare_smoke_01": "complete",
+    "m1_smoke_01": "complete",
+    "m1_unweighted_n1048576_s5_02": "complete",
+    "m1_unweighted_n131072_s5_01": "complete",
+    "m2_k2_lambda025_pilot_01": "complete",
+    "m2_k2_support_01": "complete",
+    "m2_k8_lambda1_pilot_01": "complete",
+    "m2_k8_lambda1_validation_n1048576_01": "running",
     "m2_k8_lambda1_validation_n1048576_02": "complete",
+    "m2_k8_support_01": "complete",
+    "m2_scan_t11_k16_01": "interrupted_by_user",
+    "m2_scan_t11_k2_01": "interrupted_by_user",
+    "m2_scan_t11_k4_01": "interrupted_by_user",
+    "m2_scan_t11_k8_01": "interrupted_by_user",
+    "m2_scan_t20_k16_01": "interrupted_by_user",
+    "m2_scan_t20_k2_01": "interrupted_by_user",
+    "m2_scan_t20_k4_01": "interrupted_by_user",
+    "m2_scan_t20_k8_01": "interrupted_by_user",
+    "m3_blind_certificates_02": "complete_pending_independent_audit",
     "m3_blind_directions_01": "frozen_before_global_certification",
-    "m2_scan_t11_k2_01": "running",
-    "m2_scan_t20_k2_01": "running",
-    "m2_scan_t11_k4_01": "running"
+    "m3_control_certificates_01": "complete_pending_independent_audit",
+    "m3_control_certificates_02": "complete_pending_independent_audit",
+    "m3_discovery_controls_01": "frozen_before_global_certification",
+    "m3_discovery_controls_02": "frozen_before_global_certification"
   },
   "excluded_raw_array_bytes": 65061048429,
   "excluded_raw_arrays": [
@@ -931,5 +955,12 @@
       "path": "results/m2_scan_t20_k2_01/t20_k2_lambda0_validation0_seed25105.npz",
       "bytes": 70371130
     }
-  ]
+  ],
+  "status": "paused_by_user",
+  "frozen_control_bundle": {
+    "path": "results/m3_discovery_controls_frozen_20261025.tar.xz",
+    "files": 280,
+    "bytes": 10292236,
+    "sha256": "0792ff328263dbfd08a2f6a04285539319bc7ca7de36395f2b8e76fe526d1774"
+  }
 }

@@ -1,0 +1,133 @@
+{
+  "stage": "validation",
+  "t": 20.0,
+  "k": 2,
+  "penalty": 0.25,
+  "seed": 25105,
+  "count": 262144,
+  "rho_gradient_raw": 0.013089094427775736,
+  "rho_gradient_rb": 0.0003380531423531545,
+  "implicit_exact_radial_normalization": true,
+  "numeric_radial_scale_certified": false,
+  "weighted_support_bound_certified": false,
+  "L_from_MC_claimed": false,
+  "sampler": {
+    "method": "weighted_smc_reversible_gaussian_rotation_MH",
+    "penalty": 0.25,
+    "count": 262144,
+    "moves_per_temperature": 96,
+    "planes_per_move": 8,
+    "max_norm_error": 8.43769498715119e-15,
+    "ladder": [
+      {
+        "beta": 0.3815230218039858,
+        "log_z": -3.588693085799477,
+        "incremental_ess": 209715.20000000857,
+        "unique_initial_ancestors": 210634,
+        "mh_acceptance": 0.8776753346125284,
+        "angle_scale": 0.1871731794395658,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 7.245675316080451
+      },
+      {
+        "beta": 0.815645732728494,
+        "log_z": -7.402471414974521,
+        "incremental_ess": 209715.20000000007,
+        "unique_initial_ancestors": 178800,
+        "mh_acceptance": 0.806570808092753,
+        "angle_scale": 0.16327027497768076,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 14.307815933600068
+      },
+      {
+        "beta": 1.2949005254031924,
+        "log_z": -11.356385585858142,
+        "incremental_ess": 209715.20000000167,
+        "unique_initial_ancestors": 156276,
+        "mh_acceptance": 0.7666091521581014,
+        "angle_scale": 0.14522478698596328,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 21.36748798005283
+      },
+      {
+        "beta": 1.5,
+        "log_z": -12.978064282954417,
+        "incremental_ess": 252395.04902155904,
+        "unique_initial_ancestors": 149531,
+        "mh_acceptance": 0.7537116209665934,
+        "angle_scale": 0.13914021704740867,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 28.222824011929333
+      },
+      {
+        "beta": 2.0,
+        "log_z": -16.77819347647847,
+        "incremental_ess": 215716.21186060138,
+        "unique_initial_ancestors": 135459,
+        "mh_acceptance": 0.7311110496520996,
+        "angle_scale": 0.1270170592217177,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 43.0369852501899
+      }
+    ],
+    "elapsed_seconds": 43.53698262013495,
+    "device": 6,
+    "iid_particles": false,
+    "global_support_certified": false,
+    "strictly_certified": false,
+    "sparse_RHS_chunk_size": 131072,
+    "independent_CPU_endpoint_scores_checked": true
+  },
+  "elapsed_seconds": 43.94503482617438,
+  "B_weighted": 44.330354665020934,
+  "B_plain": 5.996056497350816,
+  "composition_energy": 153.3371926706804,
+  "cost_identity_error": 2.1316282072803006e-14,
+  "rho_P_raw": 0.011587401168911432,
+  "rho_P_rb": 0.0018868662820109023,
+  "low_group_counts": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "weighted_low_probabilities": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "plain_low_probabilities": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "mean_weighted_e": 25.835802832825813,
+  "mean_plain_e": 25.573006648357634,
+  "quality": {
+    "feature_names": [
+      "mass_a_squared",
+      "mass_b_squared",
+      "mass_dot",
+      "eta"
+    ],
+    "count": 262144,
+    "max_purity_error_all_particles": 3.1002977962657496e-14,
+    "feature_means": [
+      0.1279736569406355,
+      0.12781697041944798,
+      -0.018488499289872135,
+      0.5365078438218558
+    ],
+    "samples_are_independent": false,
+    "distribution_kind": "equal-weight resampled SMC approximation to canonical P_k"
+  },
+  "stored_actual_P_gaussian_count": 8192,
+  "full_P_kets_saved": false
+}

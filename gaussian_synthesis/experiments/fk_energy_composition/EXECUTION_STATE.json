@@ -17,7 +17,7 @@
       "scope": "20 independent million-particle runs and 40 IID rare-region runs; coherent reconstruction and negligible absolute tail contributions checked. Conditional rare shapes are unresolved."
     },
     "M2": {
-      "status": "global_nonzero_certificate_verified_precision_validation_running",
+      "status": "paused_incomplete_scan_t11_pilot_reconstruction_pass_t20_fail",
       "passed": false,
       "evidence": [
         "results/m2_k8_support_01/verification.json",
@@ -27,8 +27,12 @@
       "issue": "Current replica-derived bounds are weaker than the strong analytic control. Corrected million-particle validation, full parameter grid, conditional tails and independent gain still pending."
     },
     "M3": {
-      "status": "not_started",
-      "passed": false
+      "status": "automatic_witnesses_and_controls_certified_finite_comparison_incomplete",
+      "passed": false,
+      "evidence": [
+        "results/m3_blind_certificates_02/verification.json",
+        "results/m3_control_certificates_02/verification.json"
+      ]
     },
     "M4": {
       "status": "not_started",
@@ -55,16 +59,9 @@
     "M3 automatic directions and fair discovery/certification/computation controls",
     "M4 pairing and preregistered held-out model validation"
   ],
-  "active_processes": [
-    {
-      "session": 4920,
-      "run": "m2_k8_lambda1_validation_n1048576_02",
-      "status": "running_at_last_poll",
-      "log": "results/m2_k8_lambda1_validation_n1048576_02.log"
-    }
-  ],
+  "active_processes": [],
   "scientific_success_not_implied_by_execution": true,
-  "updated_utc": "2026-10-24T16:50:53.821584+00:00",
+  "updated_utc": "2026-10-24T17:33:29.562096+00:00",
   "analytic_reference_status": "24 physical window/budget cases with rigorous global supports and independent 120-digit/rational checks; not G1/G3 evidence",
   "known_failures": [
     {
@@ -86,12 +83,7 @@
   ],
   "last_goal_turn_classification": "progress",
   "next_actions": [
-    "Poll existing session 4920 or inspect its live process; do not restart merely on an observation timeout.",
-    "Complete independent weighted reconstruction and conditional-integral validation. If direction bias remains, retrain and use new validation streams.",
-    "Run the original k/lambda grid with five independent streams and explicit storage/timing ledgers, gated by validated numerical accuracy.",
-    "Compare every weighted certificate against the strong analytic control and direct-dual optimization, without claiming G3 from a nonzero bound alone.",
-    "Implement phase-conditioned direction discovery with no e4/e8 input; freeze before analytic comparison. Complete all discovery and R/B baselines, counterfactuals and input-permission modes.",
-    "Run pairing and the preregistered held-out g=.37 through the same blind discovery pipeline.",
-    "Audit every item in REQUIREMENTS.json and the full original specification; goal remains active."
-  ]
+    "Resume research only after the user requests it; current request is publication of this paused snapshot."
+  ],
+  "status": "paused_by_user"
 }

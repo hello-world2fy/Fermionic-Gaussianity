@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/scripts/certify_discovered.py", line 49, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/scripts/certify_discovered.py", line 27, in main
+    row=certify(ell,t,source['delta'],source['budget'],spectrum,args.steps)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/fk6/restricted_certificate.py", line 33, in certify
+    z=[sum(_complex(D[i,j]).conjugate()*exact_ell[i] for i in range(128)) /
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/fk6/restricted_certificate.py", line 33, in <listcomp>
+    z=[sum(_complex(D[i,j]).conjugate()*exact_ell[i] for i in range(128)) /
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_energy_composition/fk6/restricted_certificate.py", line 33, in <genexpr>
+    z=[sum(_complex(D[i,j]).conjugate()*exact_ell[i] for i in range(128)) /
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/.venv/lib/python3.11/site-packages/mpmath/ctx_iv.py", line 208, in conjugate
+    return s.ctx.make_mpc((a, mpf_neg(b)))
+                              ^^^^^^^^^^
+  File "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/.venv/lib/python3.11/site-packages/mpmath/libmp/libmpf.py", line 576, in mpf_neg
+    sign, man, exp, bc = s
+    ^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 4, got 2)

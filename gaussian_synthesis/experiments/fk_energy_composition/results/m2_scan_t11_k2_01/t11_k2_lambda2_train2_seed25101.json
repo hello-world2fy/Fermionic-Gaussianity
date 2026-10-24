@@ -1,0 +1,71 @@
+{
+  "stage": "train",
+  "t": 11.0,
+  "k": 2,
+  "penalty": 2.0,
+  "seed": 25101,
+  "iteration": 2,
+  "sampler": {
+    "method": "weighted_smc_reversible_gaussian_rotation_MH",
+    "penalty": 2.0,
+    "count": 131072,
+    "moves_per_temperature": 96,
+    "planes_per_move": 8,
+    "max_norm_error": 8.104628079763643e-15,
+    "ladder": [
+      {
+        "beta": 0.4206105100446962,
+        "log_z": -4.203266933110138,
+        "incremental_ess": 104857.60000000458,
+        "unique_initial_ancestors": 105230,
+        "mh_acceptance": 0.8710879484812418,
+        "angle_scale": 0.18458022418747663,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 3.615277608856559
+      },
+      {
+        "beta": 0.9090305001209131,
+        "log_z": -8.807113207034757,
+        "incremental_ess": 104857.60000000328,
+        "unique_initial_ancestors": 89193,
+        "mh_acceptance": 0.7999410629272461,
+        "angle_scale": 0.1592268293910585,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 7.1590783186256886
+      },
+      {
+        "beta": 1.4520700319938449,
+        "log_z": -13.663587791829404,
+        "incremental_ess": 104857.60000000111,
+        "unique_initial_ancestors": 78159,
+        "mh_acceptance": 0.7590980529785156,
+        "angle_scale": 0.1404935045765571,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 10.698407418094575
+      },
+      {
+        "beta": 2.0,
+        "log_z": -18.3373035415476,
+        "incremental_ess": 107619.0438660226,
+        "unique_initial_ancestors": 70396,
+        "mh_acceptance": 0.7321594556172689,
+        "angle_scale": 0.1270170592217177,
+        "moves": 96,
+        "planes_per_move": 8,
+        "elapsed_seconds": 14.13618713710457
+      }
+    ],
+    "elapsed_seconds": 14.38680842332542,
+    "device": 5,
+    "iid_particles": false,
+    "global_support_certified": false,
+    "strictly_certified": false,
+    "sparse_RHS_chunk_size": 131072,
+    "independent_CPU_endpoint_scores_checked": true
+  },
+  "elapsed_seconds": 15.192156345583498,
+  "quadrature_file": "t11_k2_lambda2_train2_seed25101.npz"
+}
