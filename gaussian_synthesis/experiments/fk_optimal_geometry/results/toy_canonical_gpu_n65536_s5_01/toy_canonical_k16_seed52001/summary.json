@@ -1,0 +1,276 @@
+{
+  "status": "complete",
+  "witness": {
+    "name": "toy_canonical_k16",
+    "t": 0,
+    "orders": [
+      16
+    ],
+    "reference_support": 1.0,
+    "support_is_exact": true,
+    "support_status": "Exact max(|alpha|,|beta|) for the full Gaussian dictionary.",
+    "anchors": {
+      "1.0": -4.196371412149065
+    },
+    "source": "/home/tiger/Fermionic-Gaussianity-fk-two-cluster/gaussian_synthesis/experiments/fk_optimal_geometry/results/two_contact_toy_01/k16.json",
+    "source_sha256": "85f706fa3f71643b02f7d9fada07f83f16d0f6b51194468d470fd9ff9b2c770b"
+  },
+  "seed": 52001,
+  "observations": [
+    {
+      "k": 16,
+      "log_q": 0.48063724718873857,
+      "log_q_minus_2k_logh": 0.48063724718873857,
+      "overlap_log_deficit_mean": 1.2805740710547324,
+      "overlap_width_rms": 1.1316245274183183,
+      "particles_exceeding_reference": 0,
+      "P_features": {
+        "feature_names": [
+          "mass_a_squared",
+          "mass_b_squared",
+          "mass_dot",
+          "eta"
+        ],
+        "count": 65536,
+        "max_purity_error_all_particles": 3.784407683060653e-14,
+        "feature_means": [
+          0.14868671809662085,
+          0.1487324786003282,
+          0.06722917227277131,
+          0.4052671331850624
+        ],
+        "samples_are_independent": false,
+        "distribution_kind": "SMC approximation to P_k of a frozen direction; not the FK canonical witness w_k"
+      },
+      "Lambda_feature_means": [
+        0.14744164738760485,
+        0.14746469959270708,
+        0.06488673112446294,
+        0.4102916686621646
+      ],
+      "heuristic_eta_gt_08_P_mass": 0.0,
+      "heuristic_eta_gt_08_Lambda_mass": 0.0,
+      "component_classifier_is_not_certified": true,
+      "moment_anchor_used": false,
+      "full_contact_P_mass": 0.23455810546875,
+      "full_contact_Lambda_mass": 0.24264052874156244
+    }
+  ],
+  "sampling": {
+    "method": "adaptive_tempered_smc_exact_plane_heatbath",
+    "backend": "cuda_complex128_philox",
+    "device": 1,
+    "initial_haar_method": "recursive_sphere_householder_pin_lift",
+    "count": 65536,
+    "sweeps_per_temperature": 2,
+    "ess_fraction": 0.8,
+    "ladder": [
+      {
+        "beta": 0.48158206624052013,
+        "log_z": -2.1397640875472526,
+        "incremental_ess": 52428.800000000985,
+        "unique_initial_ancestors": 52229,
+        "log_r_mean": -4.170918659601103,
+        "log_r_std": 0.9576723754610571,
+        "elapsed_seconds": 5.28509606141597,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 332.9821472167969,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 1.0,
+        "log_z": -4.196371412149065,
+        "incremental_ess": 55244.51393296572,
+        "unique_initial_ancestors": 45212,
+        "log_r_mean": -3.7847288839582447,
+        "log_r_std": 0.7969944037886749,
+        "elapsed_seconds": 5.908251320011914,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 421.7770233154297,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox",
+        "log_z_before_analytic_anchor": -4.194309869722645,
+        "analytic_anchor_log_z": -4.196371412149065
+      },
+      {
+        "beta": 1.7135910149227698,
+        "log_z": -6.756310434628619,
+        "incremental_ess": 52428.80000000115,
+        "unique_initial_ancestors": 39449,
+        "log_r_mean": -3.414960058603322,
+        "log_r_std": 0.6584656754364837,
+        "elapsed_seconds": 6.673674315214157,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 389.75047302246094,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 2.5482810191486704,
+        "log_z": -9.471617527708364,
+        "incremental_ess": 52428.8000000062,
+        "unique_initial_ancestors": 35188,
+        "log_r_mean": -3.1071537569738394,
+        "log_r_std": 0.5611364003067482,
+        "elapsed_seconds": 7.416681880131364,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 384.71095275878906,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 3.5037933782753634,
+        "log_z": -12.309655385690052,
+        "incremental_ess": 52428.80000000693,
+        "unique_initial_ancestors": 31899,
+        "log_r_mean": -2.848980360699167,
+        "log_r_std": 0.49199980184062864,
+        "elapsed_seconds": 8.16194384265691,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 382.63270568847656,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 4.563820903761123,
+        "log_z": -15.20332149941746,
+        "incremental_ess": 52428.800000000105,
+        "unique_initial_ancestors": 29222,
+        "log_r_mean": -2.6203032367930033,
+        "log_r_std": 0.4410075272925284,
+        "elapsed_seconds": 8.911430885083973,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 381.58258056640625,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 5.714236207609254,
+        "log_z": -18.095784390341905,
+        "incremental_ess": 52428.80000000067,
+        "unique_initial_ancestors": 27037,
+        "log_r_mean": -2.4114970338001833,
+        "log_r_std": 0.41160119966099484,
+        "elapsed_seconds": 9.658893832936883,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 380.7480926513672,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 6.923483404707997,
+        "log_z": -20.89264782319743,
+        "incremental_ess": 52428.80000000242,
+        "unique_initial_ancestors": 25274,
+        "log_r_mean": -2.220628446369844,
+        "log_r_std": 0.38857077450063227,
+        "elapsed_seconds": 10.404873912222683,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 380.1334533691406,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 8.19739903002214,
+        "log_z": -23.602830630306272,
+        "incremental_ess": 52428.80000000361,
+        "unique_initial_ancestors": 23648,
+        "log_r_mean": -2.034245448830398,
+        "log_r_std": 0.37133048983266187,
+        "elapsed_seconds": 11.152847371064126,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 379.3308868408203,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 9.544928029066341,
+        "log_z": -26.223407052966728,
+        "incremental_ess": 52428.80000000307,
+        "unique_initial_ancestors": 22275,
+        "log_r_mean": -1.8579698096157018,
+        "log_r_std": 0.3509952214146112,
+        "elapsed_seconds": 11.898707430809736,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 378.7824401855469,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 10.994013273201226,
+        "log_z": -28.79222846587863,
+        "incremental_ess": 52428.80000000102,
+        "unique_initial_ancestors": 21091,
+        "log_r_mean": -1.6904354700922555,
+        "log_r_std": 0.3273779498841908,
+        "elapsed_seconds": 12.64838526211679,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 378.0537872314453,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 12.56888734238122,
+        "log_z": -31.328804767930258,
+        "incremental_ess": 52428.80000000132,
+        "unique_initial_ancestors": 19963,
+        "log_r_mean": -1.5370649896257014,
+        "log_r_std": 0.297980441309537,
+        "elapsed_seconds": 13.391050062142313,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 377.46983337402344,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 14.32028966347482,
+        "log_z": -33.8934905549869,
+        "incremental_ess": 52428.8000000011,
+        "unique_initial_ancestors": 18889,
+        "log_r_mean": -1.3948968925640903,
+        "log_r_std": 0.27091897031485596,
+        "elapsed_seconds": 14.133790688589215,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 376.81275939941406,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      },
+      {
+        "beta": 16.0,
+        "log_z": -36.139109693801856,
+        "incremental_ess": 55089.88060411361,
+        "unique_initial_ancestors": 18074,
+        "log_r_mean": -1.2805740710547324,
+        "log_r_std": 0.24764292660392448,
+        "elapsed_seconds": 14.832042215391994,
+        "planes_per_particle": 240,
+        "angle_trials_mean": 376.368408203125,
+        "angle_proposal": "uniform_or_proved_truncated_normal_envelope",
+        "exact_conditional_updates": true,
+        "backend": "cuda_complex128_philox"
+      }
+    ],
+    "max_norm_error": 9.103828801926284e-15,
+    "initial_haar_seconds": 4.429523942992091,
+    "elapsed_seconds": 16.20357843581587,
+    "analytic_log_z_anchors": {
+      "1.0": -4.196371412149065
+    },
+    "iid_particles": false,
+    "strictly_certified": false
+  }
+}

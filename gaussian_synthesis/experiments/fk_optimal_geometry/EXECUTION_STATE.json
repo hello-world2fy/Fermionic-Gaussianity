@@ -27,8 +27,13 @@
     {
       "id": "B1",
       "requirement": "Compare joint contacts,16-term construction and active columns; complete features, symmetry equivalence and contact-only representability.",
-      "status": "not_started",
-      "evidence": []
+      "status": "complete",
+      "evidence": [
+        "JOINT_CONTACT_THEORY.md",
+        "results/contact_comparison_01/summary.json",
+        "results/contact_comparison_01/verification.json",
+        "results/contact_comparison_01/atoms.csv"
+      ]
     },
     {
       "id": "B2",
@@ -36,27 +41,49 @@
       "status": "partial",
       "evidence": [
         "JOINT_WITNESS_THEORY.md",
-        "results/initial_certificates_02/summary.json"
+        "JOINT_CONTACT_THEORY.md",
+        "results/contact_comparison_01/summary.json",
+        "results/contact_comparison_01/verification.json"
       ],
-      "remaining": "Scalar eta mean and concentration proved; quotient-distance stability and saturation studies remain."
+      "remaining": "Updated strict eta mean/concentration bounds and finite-construction slack checked. No explicit globally valid quotient-distance stability constant/neighborhood radius yet."
     },
     {
       "id": "C1",
       "requirement": "Fixed-witness k8..128 scan at0,20,11,9; high-precision stationary Hessian; distinguish certified contacts and local candidates.",
-      "status": "not_started",
-      "evidence": []
+      "status": "complete",
+      "evidence": [
+        "results/fixed_gpu_n65536_s5_01/REPORT.md",
+        "results/fixed_gpu_n65536_s5_01/verification.json",
+        "results/precision_contacts_01/summary.json",
+        "results/soft_curvatures_01/summary.json",
+        "results/soft_curvatures_01/verification.json",
+        "CONTACT_ASYMPTOTICS.md"
+      ],
+      "notes": "225 checkpoints, 25 independent seeded GPU runs; exact soft-eigenvalue formula with 720 polynomial identities and directed bounds. Softness is certified for frozen candidates, not the unknown optimal witnesses."
     },
     {
       "id": "C2",
       "requirement": "Contact component dimensions/weights/drift and a known-optimum toy state; determine applicability of multicomponent asymptotics.",
-      "status": "not_started",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        "CONTACT_ASYMPTOTICS.md",
+        "TWO_CONTACT_TOY.md",
+        "results/two_contact_toy_01/REPORT.md",
+        "results/two_contact_toy_01/verification.json",
+        "results/fixed_gpu_n65536_s5_01/analysis.json",
+        "results/high_order_direction_certificates_01/summary.json"
+      ],
+      "remaining": "FK moving-direction height and coefficient-mass analysis generated; independent verification pending. Matching-candidate global completeness remains unproved."
     },
     {
       "id": "C3",
       "requirement": "Investigate deterministic moment and direct support certification; targeted t11/20 directions k8,16,32,64 with no-improvement stopping rule.",
-      "status": "not_started",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        "results/canonical_k64_t11_n131072_01/summary.json",
+        "results/high_order_direction_certificates_01/summary.json"
+      ],
+      "remaining": "All eight frozen directions and missing t11 k64 run produced. Support certificates, exclusions and stopping-rule results await independent verification; high-order moment estimates are not exact certified moments."
     },
     {
       "id": "D1_D2",
@@ -64,15 +91,22 @@
       "status": "partial",
       "evidence": [
         "RESTRICTED_ERROR_THEORY.md",
-        "results/initial_certificates_02/verification.json"
+        "results/initial_certificates_02/verification.json",
+        "NORMALIZED_WINDOW_BOUNDS.md",
+        "results/window_variational_01/summary.json",
+        "results/window_sharp_bounds_02/summary.json"
       ],
-      "remaining": "48 strict bounds independently verified; restricted normalized cost-constrained optimization and sharpness tests remain."
+      "remaining": "Original 48 strict bounds independently verified. All 48 normalized restricted optimizations and stronger bounds generated; independent verification pending. Energy optimization is local; numerical solver warnings retained. Budgets use original plan reference U."
     },
     {
       "id": "D3",
       "requirement": "General energy-curvature/excitation-order theorem with explicit assumptions, error dependence and matching Gaussian constructions where possible.",
-      "status": "not_started",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        "ENERGY_EXPONENT_THEORY.md",
+        "results/energy_exponents_01/summary.json"
+      ],
+      "remaining": "General assumptions and finite FK 17-term and toy 5-term constructions produced; independent verification pending. Positive-error FK approximants are not assumed normalized."
     },
     {
       "id": "E1",
@@ -101,30 +135,65 @@
     {
       "id": "DELIVERY",
       "requirement": "Source/version/raw data/failures/seeds preserved; full requirement-by-requirement report distinguishing proved,empirical,conditional,unresolved.",
-      "status": "not_started",
-      "evidence": []
+      "status": "partial",
+      "evidence": [
+        "REPORT.md",
+        "EXECUTION_STATE.json"
+      ],
+      "remaining": "Full A–F execution and final requirement audit remain."
     }
   ],
   "active_processes": [],
-  "updated_utc": "2026-10-24T12:53:43.225735+00:00",
+  "updated_utc": "2026-10-24T14:15:16.268350+00:00",
   "latest_results": {
-    "t20_joint_interval": [
-      1.287430339822946,
-      1.2974186897452176
-    ],
     "t20_relative_gap_upper": 0.006283009173291182,
     "t20_all_decompositions_mean_eta_interval": [
-      0.5336329707183939,
-      0.5546798419535729
+      0.5354372734460443,
+      0.5526179389316378
     ],
     "t11_delta01_budgetU_fidelity_upper": 0.8902621,
     "t11_delta01_budgetU_energy_error_lower": 1.880396,
-    "t20_two_orbit_cost_upper": 1.2955704206606014
+    "t20_two_orbit_cost_upper": 1.2955704206606014,
+    "t20_certified_cost_interval": [
+      1.287430339822946,
+      1.2955704206606014
+    ],
+    "t20_contact_only_fidelity_ceiling_interval": [
+      0.9999631721460547,
+      0.9999631721460556
+    ],
+    "fixed_witness_GPU_checkpoints_verified": 225,
+    "toy_GPU_checkpoints_verified": 70,
+    "t9_soft_curvature_interval": [
+      7.119525185127767e-06,
+      7.1195251851277685e-06
+    ],
+    "t11_soft_curvature_interval": [
+      6.668687019103957e-06,
+      6.668687019103959e-06
+    ],
+    "t20_joint_with_old_upper_interval": [
+      1.287430339822946,
+      1.2974186897452176
+    ]
   },
   "known_failures": [
     {
       "run": "initial_certificates_01",
       "reason": "Display-only conversion of nonpoint interval lambda to float; corrected Fraction conversion. Original partial source/log preserved."
+    },
+    {
+      "run": "two_orbit_01",
+      "reason": "Endpoint-only secondary-orbit witness violated by a maximally-entangled Gaussian; replaced by genuine two-orbit construction, failed candidate preserved."
+    },
+    {
+      "run": "two_orbit_02_verify_failed_01",
+      "reason": "Independent rotation-average verifier initially omitted hopping-ket normalization 1/4; producer unchanged; corrected verifier passed."
+    },
+    {
+      "run": "soft_hessian_identity_failed_01",
+      "reason": "Used a stationarity-substituted second-derivative vector before witness contraction; corrected exact projection and all 720 generalized eigenvector identities verified."
     }
-  ]
+  ],
+  "publication_note": "Code, theory notes, experiment structure and available result summaries published without rerunning experiments; newly produced C2/C3/D1-D3 results still await independent verification."
 }
