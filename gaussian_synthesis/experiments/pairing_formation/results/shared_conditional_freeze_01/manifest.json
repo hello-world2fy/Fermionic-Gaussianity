@@ -1,0 +1,43 @@
+{
+  "L": 12,
+  "train_time": 1.0,
+  "train_G": 2.0,
+  "holdout_G": [
+    1.55,
+    2.45,
+    -1.9
+  ],
+  "kicks": {
+    "none": 0.0,
+    "spectral_plus": 0.25,
+    "spectral_minus": -0.25
+  },
+  "elapsed": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "records": [
+    {
+      "name": "shared_common",
+      "file": "shared_common.npz",
+      "type": "tdvp",
+      "conditioned": false,
+      "sha256": "585e3fc1d88bc08bb0f392be563d2656004e389d9f168b3c16347ebce666b15c",
+      "initial_fidelity": 0.9990035066000836
+    },
+    {
+      "name": "shared_conditioned",
+      "file": "shared_conditioned.npz",
+      "type": "tdvp",
+      "conditioned": true,
+      "sha256": "02b259cc2807df6db0d2297d4512655ba5ce28aab0886444b4c40b6b4338be5a",
+      "initial_fidelity": 0.9990035066000836
+    }
+  ],
+  "protocol": "Both manifolds start in the identical approximate physical state; only permission for count-dependent orbital motion differs; fresh parameter/kick values",
+  "initial_state_difference": 0.0
+}

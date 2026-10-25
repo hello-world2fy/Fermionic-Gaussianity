@@ -1,0 +1,106 @@
+{
+  "scope": "Strong nonlinear controls for the existing finite angular-channel mechanism; not a canonical forecast or a new phase claim.",
+  "cases": [
+    [
+      10,
+      1.0
+    ],
+    [
+      14,
+      1.0
+    ],
+    [
+      18,
+      1.0
+    ],
+    [
+      14,
+      0.85
+    ]
+  ],
+  "G": 4.0,
+  "times": [
+    0.0,
+    0.05,
+    0.1,
+    0.15000000000000002,
+    0.2,
+    0.25,
+    0.30000000000000004,
+    0.35000000000000003,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6000000000000001,
+    0.65,
+    0.7000000000000001,
+    0.75,
+    0.8,
+    0.8500000000000001,
+    0.9,
+    0.9500000000000001,
+    1.0,
+    1.05,
+    1.1,
+    1.1500000000000001,
+    1.2000000000000002,
+    1.25,
+    1.3,
+    1.35,
+    1.4000000000000001,
+    1.4500000000000002,
+    1.5,
+    1.55,
+    1.6,
+    1.6500000000000001,
+    1.7000000000000002,
+    1.75,
+    1.8,
+    1.85,
+    1.9000000000000001,
+    1.9500000000000002,
+    2.0,
+    2.0500000000000003,
+    2.1,
+    2.15,
+    2.2,
+    2.25,
+    2.3000000000000003,
+    2.35,
+    2.4000000000000004,
+    2.45,
+    2.5
+  ],
+  "primary_time": 2.0,
+  "prior_information": "Even grids and short-time odd-grid coefficients are known. A full-CC L10 eta1 pilot has been inspected before this protocol; no new-condition exact late states have been read.",
+  "same_initial_state": "All deterministic models start from the identical exact Fermi sea.",
+  "methods": [
+    "Hermitian Dirac-Frenkel full pair-CC",
+    "same TDVP with T confined to the two source orbitals",
+    "finite-size corrected Riccati lift",
+    "Gaussian-seeded spin mean field",
+    "discrete TWA"
+  ],
+  "stochastic_samples_per_run": 262144,
+  "seeds": [
+    2026,
+    2027
+  ],
+  "dt": [
+    0.004,
+    0.002
+  ],
+  "stochastic_observables": [
+    "mean transferred pairs",
+    "operator-symbol count variance",
+    "upper pair occupation in source and third-angular-harmonic subspaces"
+  ],
+  "unavailable_stochastic_observables": [
+    "pure-state echo",
+    "postselected coherent m1 amplitude"
+  ],
+  "causal_test": "Deleting all non-source directions in the full nonlinear CC manifold while holding the initial state fixed.",
+  "failure_rule": "If conventional nonlinear CC generates the cubic new direction, that direction alone cannot establish canonical-specific discovery. A late deviation requires further physical interpretation and stronger alternatives.",
+  "reference_policy": "Save all deterministic and stochastic predictions, then hash them before any new exact reference calculation."
+}

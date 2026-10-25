@@ -1,0 +1,123 @@
+{
+  "scope": "After frozen prediction evaluation, diagnose known-condition ansatz capacity and Hamiltonian tangent error. All target fits are retrospective; they must never be counted as predictions or global optima.",
+  "times": [
+    1.35,
+    2.0,
+    2.5
+  ],
+  "starts_per_fit": 6,
+  "endpoint_controls": [
+    {
+      "method": "canonical",
+      "tangent_error": 0.021518880407319828,
+      "current_continuity_L1": 0.007705022267153484,
+      "mean_transfer_rate_error": 0.0014838420201675282,
+      "normal_dark_squared_fraction": 0.04071644059137501,
+      "normal_sector_squared_weights": [
+        3.166466174052025e-09,
+        3.219776206912904e-06,
+        8.417260682965932e-05,
+        0.00012728874365885924,
+        9.533714549886618e-05,
+        4.967076747259486e-05,
+        2.376736278906404e-05,
+        7.960264506240254e-05
+      ]
+    },
+    {
+      "method": "direct",
+      "tangent_error": 0.10288924525484174,
+      "current_continuity_L1": 0.08842658205891886,
+      "mean_transfer_rate_error": 0.1126033452779313,
+      "normal_dark_squared_fraction": 0.04714871247619546,
+      "normal_sector_squared_weights": [
+        2.382789529977868e-09,
+        0.0003422531265244363,
+        0.0020780702052316698,
+        0.003563840933766548,
+        0.0022951547488268614,
+        0.0014866256442330104,
+        0.000644533368928219,
+        0.00017571637881069814
+      ]
+    },
+    {
+      "method": "Hamiltonian",
+      "tangent_error": 0.12652855871074833,
+      "current_continuity_L1": 0.1251739870784742,
+      "mean_transfer_rate_error": 0.16935462565718684,
+      "normal_dark_squared_fraction": 0.033206687774670375,
+      "normal_sector_squared_weights": [
+        1.723454153840809e-08,
+        0.0005160206157404661,
+        0.0027629329568709332,
+        0.0038526269574902052,
+        0.00437378679000014,
+        0.002769376281943848,
+        0.001514520071705984,
+        0.00022019526112617305
+      ]
+    },
+    {
+      "method": "common",
+      "tangent_error": 2.801123901085605,
+      "current_continuity_L1": 2.756124262368701,
+      "mean_transfer_rate_error": 3.6712570939344302,
+      "normal_dark_squared_fraction": 0.023153786644479726,
+      "normal_sector_squared_weights": [
+        0.00010646517409596694,
+        0.32486781880373095,
+        2.44024031503968,
+        1.6413321055528656,
+        1.8716425147368465,
+        1.2268362023778794,
+        0.3194034359318011,
+        0.021866251616139733
+      ]
+    }
+  ],
+  "numerical_refinements": [
+    {
+      "method": "canonical",
+      "start": "Fermi",
+      "max_phase_aligned_state_change": 3.0571094729687055e-12
+    },
+    {
+      "method": "canonical",
+      "start": "restart",
+      "max_phase_aligned_state_change": 1.3928274758707241e-12
+    },
+    {
+      "method": "direct",
+      "start": "Fermi",
+      "max_phase_aligned_state_change": 3.153777625383776e-12
+    },
+    {
+      "method": "direct",
+      "start": "restart",
+      "max_phase_aligned_state_change": 1.4345905192621635e-12
+    },
+    {
+      "method": "Hamiltonian",
+      "start": "Fermi",
+      "max_phase_aligned_state_change": 5.1221743694995945e-12
+    },
+    {
+      "method": "Hamiltonian",
+      "start": "restart",
+      "max_phase_aligned_state_change": 8.273629579459722e-13
+    },
+    {
+      "method": "common",
+      "start": "Fermi",
+      "max_phase_aligned_state_change": 3.5263517919027086e-14
+    },
+    {
+      "method": "common",
+      "start": "restart",
+      "max_phase_aligned_state_change": 4.3966827238503936e-15
+    }
+  ],
+  "source_bases_sha256": "9f9b706c8492f3356b933c6cbd3849cfd4305e8f13a0b3d8b45ab7d7c54e78f3",
+  "source_tensors_sha256": "a8a5a82ee93dd9a36eaac9d2c5b81b633dbf525a84597ff4bf356db9f21dbdd5"
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "Bounded stage-I exploratory extension after repeated uniform-BCS strong-baseline null results. Retain the original goal; this is not a completed replacement objective.",
+  "model": "H=2 sum eps s_z - sum J_ij s_i^+ s_j^-; J=(G/L)(fx fx^T + eta fy fy^T), fx=sqrt(2) cos(2theta), fy=sqrt(2) sin(2theta), theta=pi j/r in each of two shells eps=+/-0.5.",
+  "L": [
+    8,
+    12,
+    16
+  ],
+  "G": 4.0,
+  "relative_strengths": [
+    0.0,
+    0.85,
+    1.0
+  ],
+  "times": [
+    0.0,
+    4.0,
+    81
+  ],
+  "linear_probe_times": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    4.0
+  ],
+  "diagnostics": [
+    "count moments",
+    "relative-phase fourth pair moment on the upper shell",
+    "chirality moments with symmetry-forced zero mean",
+    "pair-density spectrum",
+    "bare two-channel span fidelity"
+  ],
+  "controls": [
+    "rank-one channel",
+    "15-percent coupling splitting (eta=.85)",
+    "L8 disjoint channel supports",
+    "finite-size corrected Riccati lift"
+  ],
+  "failure_rules": [
+    "Negative relative-phase correlator alone does not establish a chiral cat or new phase.",
+    "Eigenvector Neff is basis dependent at a degenerate instability; report the whole unstable-subspace participation.",
+    "No expensive synthesis or claim of novelty before an actual discrepancy beyond strong baselines is identified."
+  ]
+}

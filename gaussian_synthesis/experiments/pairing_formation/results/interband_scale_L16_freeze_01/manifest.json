@@ -1,0 +1,89 @@
+{
+  "L": 16,
+  "train_time": 1.0,
+  "train_G": 2.0,
+  "holdout_G": [
+    1.35,
+    2.65,
+    -1.65
+  ],
+  "kicks": {
+    "none": 0.0
+  },
+  "elapsed": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "records": [
+    {
+      "name": "target_two_orbits",
+      "file": "target_two_orbits.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "initial_fidelity": 0.9999433930661796,
+      "sha256": "ae6c1430b1be3f493c473faea370f9e84cabad5beb794c56e973060e3fc74809"
+    },
+    {
+      "name": "fit_conditioned",
+      "file": "fit_conditioned.npz",
+      "type": "conditional",
+      "conditioned": true,
+      "sha256": "2c8299ec4ba5dcf1db72dc866b962134ac621aa6c376efed0e87df91fce19419"
+    }
+  ],
+  "primary_time": 1.0,
+  "protocol": "Size replication of training-only orbital extraction and fixed energy filters; L16 has no canonical-witness comparison",
+  "filters": {
+    "target": {
+      "particle": [
+        0,
+        7
+      ],
+      "hole": [
+        0,
+        7
+      ],
+      "score": 0.0012284230459140232,
+      "selection": "training-state success probability times conditional negativity",
+      "training_observables": {
+        "success_probability": 0.017005209053656534,
+        "negativity": 0.07223804435676034,
+        "weighted_negativity": 0.0012284230459140234,
+        "PT_min_eigenvalue": -0.07223804435676034,
+        "tomographic_CHSH_max": 2.020765538314584,
+        "pauli_moments": [
+          [
+            1.0,
+            0.6542517765196589,
+            0.6909886708249766,
+            -0.2713225561991578
+          ],
+          [
+            0.6542517765196603,
+            0.5079813899674921,
+            0.4231035744986951,
+            -0.1088898525217597
+          ],
+          [
+            -0.6909886708249746,
+            -0.4231035744986929,
+            -0.4865386001571648,
+            0.2874060528624228
+          ],
+          [
+            0.27132255619915946,
+            0.10888985252176014,
+            0.28740605286242427,
+            -0.005480009875343028
+          ]
+        ],
+        "CHSH_is_loophole_free_experiment": false
+      }
+    }
+  }
+}

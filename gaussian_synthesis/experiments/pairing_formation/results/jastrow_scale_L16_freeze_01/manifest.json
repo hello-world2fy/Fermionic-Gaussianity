@@ -1,0 +1,85 @@
+{
+  "L": 16,
+  "train_time": 1.0,
+  "train_G": 2.0,
+  "holdout_G": [
+    1.45,
+    2.55,
+    -1.7
+  ],
+  "kicks": {
+    "none": 0.0
+  },
+  "elapsed": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "records": [
+    {
+      "name": "shared_collective_0",
+      "file": "shared_collective_0.npz",
+      "type": "jastrow",
+      "jastrow_family": "collective_0",
+      "complex_cone_dimension": 23,
+      "initial_fidelity": 0.9990535403330508,
+      "shared_initial_state_difference": 1.0227455141739945e-14,
+      "sha256": "02884f86122a38d5ccca4f01f154da3e348227dfb7eea3e789808e677fda4255"
+    },
+    {
+      "name": "shared_collective_1",
+      "file": "shared_collective_1.npz",
+      "type": "jastrow",
+      "jastrow_family": "collective_1",
+      "complex_cone_dimension": 37,
+      "initial_fidelity": 0.9990535403330508,
+      "shared_initial_state_difference": 9.96536638402166e-15,
+      "sha256": "66460112c461b51de894230c5209266fdd89f348dfd95febd1cec18bf50a5479"
+    },
+    {
+      "name": "shared_collective_3",
+      "file": "shared_collective_3.npz",
+      "type": "jastrow",
+      "jastrow_family": "collective_3",
+      "complex_cone_dimension": 65,
+      "initial_fidelity": 0.999053540333051,
+      "shared_initial_state_difference": 1.0138358893583871e-14,
+      "sha256": "849c5500696ecb0d1b91bc2f6e2eb97fdf847f63380b97e6a5fb8e73be901414"
+    },
+    {
+      "name": "shared_two_body",
+      "file": "shared_two_body.npz",
+      "type": "jastrow",
+      "jastrow_family": "two_body",
+      "complex_cone_dimension": 126,
+      "initial_fidelity": 0.9990535403330508,
+      "shared_initial_state_difference": 3.333220014788074e-15,
+      "sha256": "ed9401359589037b1a5f9e17de0ec5309e143b93e135e2f181ee430275204624"
+    },
+    {
+      "name": "shared_conditional_two_body",
+      "file": "shared_conditional_two_body.npz",
+      "type": "jastrow",
+      "jastrow_family": "conditional_two_body",
+      "complex_cone_dimension": 196,
+      "initial_fidelity": 0.9990535403330513,
+      "shared_initial_state_difference": 3.333733211464158e-15,
+      "sha256": "516cbec8c52840ec54530a54a2adbf110f434ac8fb3bf8ea281122f1555997be"
+    },
+    {
+      "name": "shared_conditioned",
+      "file": "shared_conditioned.npz",
+      "type": "conditional",
+      "conditioned": true,
+      "complex_cone_dimension": 107,
+      "initial_fidelity": 0.9990535403330508,
+      "shared_initial_state_difference": 0.0,
+      "sha256": "11c83e7376aeb90838caf104d6fb685dbdd1c1392b44a181fd7e9683971a65d0"
+    }
+  ],
+  "protocol": "Size replication of the identical-initial-state control. Families share the common-orbital training approximation; no future fitting.",
+  "primary_comparison": "count TV and energy-resolved pair RMS at elapsed=1"
+}

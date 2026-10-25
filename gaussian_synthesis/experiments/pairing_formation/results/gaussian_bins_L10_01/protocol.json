@@ -1,0 +1,17 @@
+{
+  "classification": "Training-only full-Gaussian coherent-integral pilot, L10 G4 eta1 t1. No independent new-parameter forecasts yet.",
+  "source": "results/angular_canonical_pilot_01/t1.npz",
+  "source_sha256": "e4d9e15ac9f1ffb45af455b2cbf0560aaed6310b2f3bd7d16165402d5e4b123c",
+  "dictionary": "Full even pure Gaussian Haar SO(4L), full-Fock normalization; target symmetry orbit averages used only for exact variance reduction.",
+  "bin_coordinates": "Mean transferred pairs/r and absolute physical circulating-pair difference/r in the fixed-number paired projection of each Gaussian atom. These are configuration labels, not physical expectation values of the coherent target.",
+  "calibration": "Independent 4096 Haar atoms; count quartiles x absolute-circulation terciles, shared by every method.",
+  "integrands": {
+    "canonical": "d2 |<g|u>|^2 <g|u> g",
+    "husimi_moment": "d2 |<g|psi>|^2 <g|psi> g; total is C2(psi), not psi",
+    "linear_frame": "d1 <g|psi> g"
+  },
+  "symmetry_dimension": 26,
+  "bin_count": 12,
+  "stability_gate": "Assess independent half-pool component errors and subspace principal cosines before any prediction. Noisy directions cannot count as discovered physics.",
+  "physical_gate": "No important chiral cat has been established; compare the measured circulation spectrum against conventional nonlinear and generated-space controls."
+}

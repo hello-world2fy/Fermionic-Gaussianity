@@ -1,0 +1,211 @@
+{
+  "L": 12,
+  "train_time": 1.0,
+  "train_G": 2.0,
+  "holdout_G": [
+    -1.25,
+    -2.05
+  ],
+  "kicks": {
+    "none": 0.0,
+    "collective_sixth": 0.5235987755982988,
+    "collective_third": 1.0471975511965976
+  },
+  "elapsed": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "records": [
+    {
+      "name": "target_two_orbits_seed20261111",
+      "file": "target_two_orbits_seed20261111.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "source_family": "target",
+      "fit_seed": 20261111,
+      "initial_fidelity": 0.9999616935597634,
+      "sha256": "a560bea2b8e012da31d9fab0ba4cdef0a40d5788fb4c6c985329f2dc3b6dadd5"
+    },
+    {
+      "name": "target_two_orbits_seed20261112",
+      "file": "target_two_orbits_seed20261112.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "source_family": "target",
+      "fit_seed": 20261112,
+      "initial_fidelity": 0.9999616827478908,
+      "sha256": "1be1a89a11e4c3fa1ec7f3dccdf8f2231d9381949ad24acd869f28b282709125"
+    },
+    {
+      "name": "witness_two_orbits_seed20261111",
+      "file": "witness_two_orbits_seed20261111.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "source_family": "witness",
+      "fit_seed": 20261111,
+      "initial_fidelity": 0.9999442400921172,
+      "sha256": "d0408a454a1914ad70f67d81ffa908053deaaa77405aa024df73cfe096ed9159"
+    },
+    {
+      "name": "witness_two_orbits_seed20261112",
+      "file": "witness_two_orbits_seed20261112.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "source_family": "witness",
+      "fit_seed": 20261112,
+      "initial_fidelity": 0.9999442400935831,
+      "sha256": "96cba790eb8126566341217245d1d001ff1064f294106b1d33f98c03401c10ce"
+    },
+    {
+      "name": "fit_conditional_two_body",
+      "file": "fit_conditional_two_body.npz",
+      "type": "jastrow",
+      "jastrow_family": "conditional_two_body",
+      "complex_cone_dimension": 100,
+      "shared_initial_state": false,
+      "initial_fidelity": 0.9999137282466756,
+      "sha256": "8a643560d1deef796d2c38574365f1817c145bada36a1e30932df9961627cb4a"
+    },
+    {
+      "name": "fit_conditioned",
+      "file": "fit_conditioned.npz",
+      "type": "conditional",
+      "conditioned": true,
+      "complex_cone_dimension": 57,
+      "shared_initial_state": false,
+      "initial_fidelity": 0.9995731968740211,
+      "sha256": "9220fd9ad5bd9f5ec7475c5d6b37553ddf70a58bf1ad891e7bde5c28be08fefa"
+    },
+    {
+      "name": "linear_rpa_q3",
+      "file": "linear_rpa_q3.npz",
+      "type": "static",
+      "dimension": 408,
+      "initial_fidelity": 0.9999995170478447,
+      "sha256": "503c446e8b510076f07c32f68de67d0ef43d1e2cbd32b0e1b352dc4285e3a93d"
+    }
+  ],
+  "filters": {
+    "target": {
+      "particle": [
+        0,
+        5
+      ],
+      "hole": [
+        0,
+        5
+      ],
+      "score": 0.0021287071271906834,
+      "selection": "training-state success probability times conditional negativity",
+      "training_observables": {
+        "success_probability": 0.03245109604005969,
+        "negativity": 0.06559738766798114,
+        "weighted_negativity": 0.002128707127190683,
+        "PT_min_eigenvalue": -0.06559738766798114,
+        "tomographic_CHSH_max": 2.0171386358656194,
+        "pauli_moments": [
+          [
+            0.9999999999999999,
+            0.6693801856391156,
+            0.6751082650473157,
+            -0.2809749605624895
+          ],
+          [
+            0.6693801856391159,
+            0.5184459619177483,
+            0.4249086693661155,
+            -0.12628661556320536
+          ],
+          [
+            -0.6751082650473149,
+            -0.4249086693661148,
+            -0.4611314925340681,
+            0.28247762371817997
+          ],
+          [
+            0.2809749605624908,
+            0.1262866155632062,
+            0.28247762371818097,
+            -0.020422545548183735
+          ]
+        ],
+        "CHSH_is_loophole_free_experiment": false
+      }
+    },
+    "witness": {
+      "particle": [
+        0,
+        5
+      ],
+      "hole": [
+        0,
+        5
+      ],
+      "score": 0.0022754854653083867,
+      "selection": "training-state success probability times conditional negativity",
+      "training_observables": {
+        "success_probability": 0.03117055060138229,
+        "negativity": 0.07300113156190058,
+        "weighted_negativity": 0.0022754854653083876,
+        "PT_min_eigenvalue": -0.07300113156190058,
+        "tomographic_CHSH_max": 2.0212042557220897,
+        "pauli_moments": [
+          [
+            1.0,
+            0.6718633024947769,
+            0.675610492355287,
+            -0.2661456453579265
+          ],
+          [
+            0.6718633024947775,
+            0.5290499402084319,
+            0.4253238057487196,
+            -0.10919147908761373
+          ],
+          [
+            -0.6756104923552857,
+            -0.42532380574871825,
+            -0.46547656371256607,
+            0.2831915025483483
+          ],
+          [
+            0.266145645357928,
+            0.1091914790876144,
+            0.28319150254834946,
+            -0.0054734960790021325
+          ]
+        ],
+        "CHSH_is_loophole_free_experiment": false
+      }
+    },
+    "band_edges": {
+      "particle": [
+        0,
+        5
+      ],
+      "hole": [
+        0,
+        5
+      ],
+      "selection": "fixed energy extrema, independent of wavefunction"
+    }
+  },
+  "primary_time": 1.0,
+  "primary_metrics": [
+    "absolute conditional negativity error",
+    "unnormalized filtered density trace distance"
+  ],
+  "secondary_metrics": [
+    "count TV",
+    "energy-resolved pair RMS",
+    "fidelity"
+  ],
+  "hypothesis": "The modest canonical-witness advantage for filtered entanglement in the G=-1.65 pilot persists at two fresh interaction reversals and across both training-fit seeds",
+  "failure_rule": "No stable advantage if the two primary metrics disagree systematically or one fit seed reverses the ranking; do not substitute a different observable",
+  "protocol": "Follow-up motivated by an inspected pilot, but these two negative couplings and kick combinations have not been evaluated; all future predictions precede exact references"
+}

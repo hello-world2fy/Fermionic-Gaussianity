@@ -1,0 +1,66 @@
+{
+  "classification": "Retrospective pilot: L10 G4 eta1 has already been inspected. This is not an independent new-parameter prediction.",
+  "source": "results/gaussian_bins_assessment_01",
+  "source_hash": "12765c7ab5796ec0f7b02d90d3deb8d95a0ca578aafbc1700e81c08d45885475",
+  "training_hash": "a386df8df217666a939c575f7968e3370405711c7b6c31ad8cce197bbd93e895",
+  "spaces_hash": "eb03e38d468c85b91a46b70278f6d4c416caea20aadbba9646974c818a1e15df",
+  "training_time": 1.0,
+  "selection": "Only ranks passing the previously saved independent-half Monte Carlo gate. Common F, psi(t1), C2(psi(t1)) in all bin and response methods.",
+  "coherent_bins_are_single_Gaussians": false,
+  "initial_conditions": "Exact Fermi sea at t0 for all spaces; exact psi(t1) restart for every space except Fermi-only Krylov. Initial differences explicitly checked.",
+  "deletion": "Shared-only space deletes all learned bin directions while keeping precisely the same physical initial state.",
+  "controls": "Linear Haar frame, unoptimized cubic/Husimi moment, ordinary count-polynomial response, Hamiltonian response, Fermi Krylov, exact 26-dimensional symmetry closure.",
+  "primary_time": 2.0,
+  "times": "0:.05:2.5, or restart at 1:.05:2.5",
+  "geometry": {
+    "canonical": {
+      "squared_projection_on_shared_count_and_chi2_span": [
+        0.9876027823742698,
+        0.9478071272355462
+      ],
+      "cosines_with_linear_frame_count_rank2": [
+        0.9990846867322429,
+        0.9945937906888961
+      ]
+    },
+    "husimi_moment": {
+      "squared_projection_on_shared_count_and_chi2_span": [
+        0.9872620084173913,
+        0.9649752044005196
+      ],
+      "cosines_with_linear_frame_count_rank2": [
+        0.9983785077373868,
+        0.9963089743980402
+      ]
+    },
+    "linear_frame": {
+      "squared_projection_on_shared_count_and_chi2_span": [
+        0.9928857098892576,
+        0.9649718351510592
+      ],
+      "cosines_with_linear_frame_count_rank2": [
+        1.0000000000000004,
+        1.0000000000000004
+      ]
+    }
+  },
+  "dimensions": {
+    "shared": 3,
+    "canonical_count_only_q1": 4,
+    "canonical_count_only_q2": 5,
+    "canonical_count_and_circulation_q1": 4,
+    "husimi_moment_count_only_q1": 4,
+    "husimi_moment_count_only_q2": 5,
+    "husimi_moment_count_and_circulation_q1": 4,
+    "linear_frame_count_only_q1": 4,
+    "linear_frame_count_only_q2": 5,
+    "linear_frame_count_and_circulation_q1": 4,
+    "count_polynomial_q1": 4,
+    "Hamiltonian_response_q1": 4,
+    "Fermi_Krylov_dim4": 4,
+    "count_polynomial_q2": 5,
+    "Hamiltonian_response_q2": 5,
+    "Fermi_Krylov_dim5": 5,
+    "exact_symmetry_space": 26
+  }
+}

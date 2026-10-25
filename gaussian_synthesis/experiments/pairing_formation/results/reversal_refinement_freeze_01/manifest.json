@@ -1,0 +1,183 @@
+{
+  "L": 12,
+  "train_time": 1.0,
+  "train_G": 2.0,
+  "holdout_G": [
+    -1.25,
+    -2.05
+  ],
+  "kicks": {
+    "none": 0.0,
+    "collective_sixth": 0.5235987755982988,
+    "collective_third": 1.0471975511965976
+  },
+  "elapsed": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "records": [
+    {
+      "name": "target_two_orbits_seed20261111",
+      "file": "target_two_orbits_seed20261111.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "source_family": "target",
+      "fit_seed": 20261111,
+      "initial_fidelity": 0.9999616935597807,
+      "sha256": "17636568ee53858d937decb8cef3e087a6bdf817c208569494a1f301ded6bb1b"
+    },
+    {
+      "name": "target_two_orbits_seed20261112",
+      "file": "target_two_orbits_seed20261112.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "source_family": "target",
+      "fit_seed": 20261112,
+      "initial_fidelity": 0.9999616935597498,
+      "sha256": "77acc22925b6bb843bcd90148af53dee3cd230d6ded0b9143ee2b08f32936c92"
+    },
+    {
+      "name": "witness_two_orbits_seed20261111",
+      "file": "witness_two_orbits_seed20261111.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "source_family": "witness",
+      "fit_seed": 20261111,
+      "initial_fidelity": 0.9999442400321882,
+      "sha256": "edf7891e4704e7f9e6b31374ea42374f626d1d534a183532e079ad12eb3ad98d"
+    },
+    {
+      "name": "witness_two_orbits_seed20261112",
+      "file": "witness_two_orbits_seed20261112.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "source_family": "witness",
+      "fit_seed": 20261112,
+      "initial_fidelity": 0.9999442401161298,
+      "sha256": "7d041b87001fa65cbafb008d725a211f7fcf7e5928387f4c7a37d8d029de0fcc"
+    }
+  ],
+  "filters": {
+    "target": {
+      "particle": [
+        0,
+        5
+      ],
+      "hole": [
+        0,
+        5
+      ],
+      "score": 0.0021287071271906834,
+      "selection": "training-state success probability times conditional negativity",
+      "training_observables": {
+        "success_probability": 0.03245109604005969,
+        "negativity": 0.06559738766798114,
+        "weighted_negativity": 0.002128707127190683,
+        "PT_min_eigenvalue": -0.06559738766798114,
+        "tomographic_CHSH_max": 2.0171386358656194,
+        "pauli_moments": [
+          [
+            0.9999999999999999,
+            0.6693801856391156,
+            0.6751082650473157,
+            -0.2809749605624895
+          ],
+          [
+            0.6693801856391159,
+            0.5184459619177483,
+            0.4249086693661155,
+            -0.12628661556320536
+          ],
+          [
+            -0.6751082650473149,
+            -0.4249086693661148,
+            -0.4611314925340681,
+            0.28247762371817997
+          ],
+          [
+            0.2809749605624908,
+            0.1262866155632062,
+            0.28247762371818097,
+            -0.020422545548183735
+          ]
+        ],
+        "CHSH_is_loophole_free_experiment": false
+      }
+    },
+    "witness": {
+      "particle": [
+        0,
+        5
+      ],
+      "hole": [
+        0,
+        5
+      ],
+      "score": 0.0022754854653083867,
+      "selection": "training-state success probability times conditional negativity",
+      "training_observables": {
+        "success_probability": 0.03117055060138229,
+        "negativity": 0.07300113156190058,
+        "weighted_negativity": 0.0022754854653083876,
+        "PT_min_eigenvalue": -0.07300113156190058,
+        "tomographic_CHSH_max": 2.0212042557220897,
+        "pauli_moments": [
+          [
+            1.0,
+            0.6718633024947769,
+            0.675610492355287,
+            -0.2661456453579265
+          ],
+          [
+            0.6718633024947775,
+            0.5290499402084319,
+            0.4253238057487196,
+            -0.10919147908761373
+          ],
+          [
+            -0.6756104923552857,
+            -0.42532380574871825,
+            -0.46547656371256607,
+            0.2831915025483483
+          ],
+          [
+            0.266145645357928,
+            0.1091914790876144,
+            0.28319150254834946,
+            -0.0054734960790021325
+          ]
+        ],
+        "CHSH_is_loophole_free_experiment": false
+      }
+    },
+    "band_edges": {
+      "particle": [
+        0,
+        5
+      ],
+      "hole": [
+        0,
+        5
+      ],
+      "selection": "fixed energy extrema, independent of wavefunction"
+    }
+  },
+  "primary_time": 1.0,
+  "primary_metrics": [
+    "absolute conditional negativity error",
+    "unnormalized filtered density trace distance"
+  ],
+  "secondary_metrics": [
+    "count TV",
+    "energy-resolved pair RMS",
+    "fidelity"
+  ],
+  "hypothesis": "The modest canonical-witness advantage for filtered entanglement in the G=-1.65 pilot persists at two fresh interaction reversals and across both training-fit seeds",
+  "failure_rule": "No stable advantage if the two primary metrics disagree systematically or one fit seed reverses the ranking; do not substitute a different observable",
+  "protocol": "Training-only convergence refinement on the already frozen confirmation grid; this is a numerical replication, not an additional independent holdout. Both sources receive the same larger optimization budget."
+}

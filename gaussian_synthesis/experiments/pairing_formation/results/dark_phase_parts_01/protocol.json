@@ -1,0 +1,278 @@
+{
+  "classification": "Retrospective L14 t1 training and known-condition future-time pilot; not unseen physical holdouts.",
+  "source": "results/dark_gaussian_training_01",
+  "training_sha256": "fb17e76a34bf78a7b9f2c7343a274a38127f50326a1b0a0f95cdbca54d9e9160",
+  "frozen_sha256": "7aa39087171aadf905ef55b5688ef16098f60a3dc521d60e2149ddc0bc9adad3",
+  "base_dimension": 22,
+  "common": "Full source-q2 space, entire symmetry-allowed m1 sector, exact training psi(t1), and C2(psi(t1)).",
+  "actual_coherent_integrals": "A_u(P_m D u), B_u(P_m D u) obtained exactly as polynomial Cartan contractions via complex derivatives; full Gaussian dictionary retained.",
+  "labels": "Complex overlap ratios and their conjugates. Not positive subset labels, selected Gaussian atoms or iid measure samples.",
+  "primary_time": 2.0,
+  "initial": "Exact Fermi sea at t0 or exact training psi at t1; every model includes both.",
+  "gate": "Require simultaneous improvement in count TV, current and higher-transfer dark population versus both strong Hamiltonian response controls before new physical holdouts.",
+  "dimensions": {
+    "shared": 22,
+    "canonical_complex_q1": 23,
+    "canonical_complex_q2": 24,
+    "canonical_phase_pair_q1": 23,
+    "canonical_phase_pair_q2": 24,
+    "canonical_phase_pair_q4": 26,
+    "unoptimized_cubic_complex_q1": 23,
+    "unoptimized_cubic_complex_q2": 24,
+    "unoptimized_cubic_phase_pair_q1": 23,
+    "unoptimized_cubic_phase_pair_q2": 24,
+    "unoptimized_cubic_phase_pair_q4": 26,
+    "physical_dark_q1": 23,
+    "physical_dark_q2": 24,
+    "physical_dark_count_q1": 23,
+    "physical_dark_count_q2": 24,
+    "physical_dark_count_q4": 26,
+    "Hamiltonian_block_q1": 23,
+    "Hamiltonian_block_q2": 24,
+    "Hamiltonian_block_q4": 26,
+    "Hamiltonian_Krylov_q1": 23,
+    "Hamiltonian_Krylov_q2": 24,
+    "Hamiltonian_Krylov_q4": 26,
+    "exact_symmetry": 170
+  },
+  "part_diagnostics": {
+    "canonical": {
+      "sectors": [
+        {
+          "m": 2,
+          "input_norm": 0.07359669455454922,
+          "A_norm": 0.025972413784587648,
+          "B_norm": 0.0030234696651554485
+        },
+        {
+          "m": 3,
+          "input_norm": 7.763809706004702e-05,
+          "A_norm": 2.748470130263059e-05,
+          "B_norm": 1.5752465164130498e-08
+        }
+      ],
+      "partition_sum_error": 3.1738860237167098e-15
+    },
+    "unoptimized_cubic": {
+      "sectors": [
+        {
+          "m": 2,
+          "input_norm": 0.05299411908019358,
+          "A_norm": 0.011128053322082406,
+          "B_norm": 0.001208018970610929
+        },
+        {
+          "m": 3,
+          "input_norm": 7.066789127733017e-05,
+          "A_norm": 1.4966451924505671e-05,
+          "B_norm": 8.57057425699971e-09
+        }
+      ],
+      "partition_sum_error": 1.1889018999259935e-15
+    }
+  },
+  "geometry": {
+    "q1_vs_unoptimized_cubic_complex": [
+      0.9788596877010041
+    ],
+    "q1_vs_physical_dark": [
+      0.9558909696071972
+    ],
+    "q2_vs_unoptimized_cubic_complex": [
+      0.9999814320769936,
+      0.9578696370175998
+    ],
+    "q2_vs_physical_dark": [
+      0.9999491816625407,
+      0.9582003058310304
+    ]
+  },
+  "details": {
+    "canonical_complex_q1": {
+      "singular_values": [
+        1.000174644966234,
+        0.9998253245275741
+      ]
+    },
+    "canonical_complex_q2": {
+      "singular_values": [
+        1.000174644966234,
+        0.9998253245275741
+      ]
+    },
+    "canonical_phase_pair_q1": {
+      "singular_values": [
+        1.253628906358387,
+        1.0024287985146139,
+        0.9460248348039506,
+        0.727040632279503
+      ]
+    },
+    "canonical_phase_pair_q2": {
+      "singular_values": [
+        1.253628906358387,
+        1.0024287985146139,
+        0.9460248348039506,
+        0.727040632279503
+      ]
+    },
+    "canonical_phase_pair_q4": {
+      "singular_values": [
+        1.253628906358387,
+        1.0024287985146139,
+        0.9460248348039506,
+        0.727040632279503
+      ]
+    },
+    "unoptimized_cubic_complex_q1": {
+      "singular_values": [
+        1.0001885039342766,
+        0.99981146052529
+      ]
+    },
+    "unoptimized_cubic_complex_q2": {
+      "singular_values": [
+        1.0001885039342766,
+        0.99981146052529
+      ]
+    },
+    "unoptimized_cubic_phase_pair_q1": {
+      "singular_values": [
+        1.2559433603218908,
+        1.0011565088255965,
+        0.9533527940059475,
+        0.7151296180837095
+      ]
+    },
+    "unoptimized_cubic_phase_pair_q2": {
+      "singular_values": [
+        1.2559433603218908,
+        1.0011565088255965,
+        0.9533527940059475,
+        0.7151296180837095
+      ]
+    },
+    "unoptimized_cubic_phase_pair_q4": {
+      "singular_values": [
+        1.2559433603218908,
+        1.0011565088255965,
+        0.9533527940059475,
+        0.7151296180837095
+      ]
+    },
+    "physical_dark_q1": {
+      "singular_values": [
+        1.000108987561607,
+        0.9998910005588089
+      ]
+    },
+    "physical_dark_q2": {
+      "singular_values": [
+        1.000108987561607,
+        0.9998910005588089
+      ]
+    },
+    "physical_dark_count_q1": {
+      "singular_values": [
+        1.3882052576041857,
+        1.0000629515113213,
+        0.9990033682830877,
+        0.27340908165897315
+      ]
+    },
+    "physical_dark_count_q2": {
+      "singular_values": [
+        1.3882052576041857,
+        1.0000629515113213,
+        0.9990033682830877,
+        0.27340908165897315
+      ]
+    },
+    "physical_dark_count_q4": {
+      "singular_values": [
+        1.3882052576041857,
+        1.0000629515113213,
+        0.9990033682830877,
+        0.27340908165897315
+      ]
+    },
+    "Hamiltonian_block_q1": {
+      "singular_values": [
+        1.9324569197036419,
+        1.5841551751185983,
+        1.5522600430746762,
+        1.4781291033598036,
+        1.3936702459958494,
+        1.3077573949908226,
+        1.2554925757018442,
+        1.1790606606047291,
+        1.0581941466458396,
+        0.9890445266558243,
+        0.8418504347124718,
+        0.7523506502653945,
+        0.6593934817473208,
+        0.5776585415371583,
+        0.43222136085856244,
+        0.34981386746584653,
+        0.24256619884312097,
+        0.18290378457857692,
+        3.3428829738755886e-14,
+        8.58916737756686e-15,
+        5.4777078303876344e-15,
+        2.582918240769597e-15
+      ]
+    },
+    "Hamiltonian_block_q2": {
+      "singular_values": [
+        1.9324569197036419,
+        1.5841551751185983,
+        1.5522600430746762,
+        1.4781291033598036,
+        1.3936702459958494,
+        1.3077573949908226,
+        1.2554925757018442,
+        1.1790606606047291,
+        1.0581941466458396,
+        0.9890445266558243,
+        0.8418504347124718,
+        0.7523506502653945,
+        0.6593934817473208,
+        0.5776585415371583,
+        0.43222136085856244,
+        0.34981386746584653,
+        0.24256619884312097,
+        0.18290378457857692,
+        3.3428829738755886e-14,
+        8.58916737756686e-15,
+        5.4777078303876344e-15,
+        2.582918240769597e-15
+      ]
+    },
+    "Hamiltonian_block_q4": {
+      "singular_values": [
+        1.9324569197036419,
+        1.5841551751185983,
+        1.5522600430746762,
+        1.4781291033598036,
+        1.3936702459958494,
+        1.3077573949908226,
+        1.2554925757018442,
+        1.1790606606047291,
+        1.0581941466458396,
+        0.9890445266558243,
+        0.8418504347124718,
+        0.7523506502653945,
+        0.6593934817473208,
+        0.5776585415371583,
+        0.43222136085856244,
+        0.34981386746584653,
+        0.24256619884312097,
+        0.18290378457857692,
+        3.3428829738755886e-14,
+        8.58916737756686e-15,
+        5.4777078303876344e-15,
+        2.582918240769597e-15
+      ]
+    }
+  }
+}

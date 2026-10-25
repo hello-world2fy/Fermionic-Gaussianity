@@ -1,0 +1,44 @@
+{
+  "classification": "Retrospective local Gaussian-mode pilot on already inspected times. Density modes are not measure samples, their basin counts are not probabilities, and local optimization is not a global support certificate.",
+  "cases": [
+    {
+      "tag": "angular_L10_t0.5",
+      "source": "results/angular_canonical_pilot_01/t0.5.npz",
+      "source_sha256": "96610b5cba5c0e0139497cbfad08c753fb19b629b9dc9cd7ca9bd914d953ab5e",
+      "direct_witness_ray_fidelity": 0.9960328315500289
+    },
+    {
+      "tag": "angular_L10_t1",
+      "source": "results/angular_canonical_pilot_01/t1.npz",
+      "source_sha256": "e4d9e15ac9f1ffb45af455b2cbf0560aaed6310b2f3bd7d16165402d5e4b123c",
+      "direct_witness_ray_fidelity": 0.9978584159969933
+    },
+    {
+      "tag": "angular_L10_t2",
+      "source": "Exact evolution and deterministic full-Gaussian k2 solve on previously inspected condition.",
+      "source_sha256": null,
+      "direct_witness_ray_fidelity": 0.9884938002631061
+    },
+    {
+      "tag": "uniform_L12_t1",
+      "source": "results/replica2_L12_G2_01/t1.npz",
+      "source_sha256": "079f4e6e26c512b984e284dbfa21f74be3cb2e1d6f8766e7b6fdba7273f113cb",
+      "direct_witness_ray_fidelity": 0.9867598122697581
+    },
+    {
+      "tag": "uniform_L12_t2.15",
+      "source": "results/replica2_L12_G2_01/t2.15.npz",
+      "source_sha256": "ca76e120a929ccb0759eec268820292917a8c20cc8d1c50c4f622d775ce88aca",
+      "direct_witness_ray_fidelity": 0.9954964077842954
+    }
+  ],
+  "onsite_starts_per_source": 32,
+  "sources": [
+    "target",
+    "witness"
+  ],
+  "question": "Do canonical density modes require independent pairing fields, or can nonlinear spin saturation of the original fields describe their shapes? Direct-overlap and conventional-field controls mandatory.",
+  "full_dictionary_witness": true,
+  "mode_search_currently_restricted_to_onsite": true,
+  "next_gate": "Check general-Gaussian variations before making any claim about a complete-dictionary mode."
+}

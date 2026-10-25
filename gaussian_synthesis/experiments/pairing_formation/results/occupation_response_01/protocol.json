@@ -1,0 +1,511 @@
+{
+  "classification": "New response-observable selection pilot at previously studied L14 G4 eta1; no new physical parameter holdouts.",
+  "training_times": [
+    0.3,
+    0.6,
+    0.9,
+    1.35
+  ],
+  "training_sha256": "35a5908b96a422aff1bf29b3730a7f8f9a735c3e941d333c0413fcf7dfeee9dc",
+  "input_hashes": {
+    "results/temporal_cubic_01/early_states.npz": "8e9143c33771f609e46a59f0b0471d8ca1a705933ce4b02036f76baf9ebab919",
+    "results/temporal_cubic_01/synthesis_0.npz": "158fd1f52530469887a31b666ff94670cf06fc05ac14b3a4aaa756d0e8b4e7d4",
+    "results/temporal_cubic_01/synthesis_2.npz": "ace2dc8a3b1207cc02253451c7c60fc63e9f05014d32d66d2c6d747b0349d9e8",
+    "results/temporal_cubic_01/synthesis_4.npz": "aa410c2a5a510884b9863979d9edfb31c4b0f0b804ddca4715b34e5439a4c6f8",
+    "results/temporal_cubic_01/synthesis_7.npz": "0095f7c777774293e2211d140a88ea6453dfc8ed52fc5f4ba87a082f28118dad"
+  },
+  "coordinate": "Full-Fock Gaussian single-physical-mode p_i=<n_i>. Use centered first and second moments; spin-up/down moments agree after coherent contraction for these paired targets.",
+  "response": "For q=1,2,3 and particle/hole exchange parity +/-: O=sum_j sqrt(2/r) cos(2 pi q j/r) [n_upper,j-parity*n_lower,j]. Here each n is one physical spin occupation (equals pair occupation on the target sector).",
+  "initial": "Known exact psi(1.35) for the background; every response model starts from the same O psi / ||O psi||.",
+  "background": "Shared 32-dimensional ordinary H-Krylov space. All response methods use this identical background for C(tau)=<psi(tau)|O|exp(-i H tau) O psi>. Chi=2 Im C is the linear density response to exp(-i alpha O).",
+  "selection": "Endpoint moments or all four early-time moments. All columns fixed before any full response propagation. Ordinary time-history plus H responses and equal-dimension H Krylov controls.",
+  "primary_elapsed_time": 0.65,
+  "final_elapsed_time": 1.15,
+  "step": 0.025,
+  "gate": "At a given q/parity and moment family, canonical must improve primary response-state count TV, chi RMS over [0,.65], and Re C RMS over [0,.65] over both the same-family unoptimized and same-dimension H-Krylov controls by >1e-9. History also must beat matched ordinary history. Passing requires physical/numerical followup before genuinely new conditions.",
+  "deletion": "Remove all occupation-moment directions while keeping the identical response initial state. This tests a representation intervention, not a physical removal of particles.",
+  "scope": "Physical atom-coordinate coherent moments, not iid canonical draws or low-cost Gaussian propagation. All contraction and response work still uses an exponential paired state space.",
+  "frozen_sha256": "82c13ae6fe6f02f2ac2992ba0db8a5430e90f7842f56707eacc9253c69534142",
+  "models": [
+    {
+      "case": "q1_plus",
+      "q": 1,
+      "parity": 1,
+      "method": "deletion",
+      "key": "q1_plus__deletion",
+      "dimension": 1,
+      "source_variance": 0.44850782476823964,
+      "Gram_error": 4.440892098500626e-16
+    },
+    {
+      "case": "q1_plus",
+      "q": 1,
+      "parity": 1,
+      "method": "canonical_endpoint",
+      "key": "q1_plus__canonical_endpoint",
+      "dimension": 3,
+      "source_variance": 0.44850782476823964,
+      "Gram_error": 3.898569251984895e-16
+    },
+    {
+      "case": "q1_plus",
+      "q": 1,
+      "parity": 1,
+      "method": "canonical_history",
+      "key": "q1_plus__canonical_history",
+      "dimension": 9,
+      "source_variance": 0.44850782476823964,
+      "Gram_error": 1.2870404086278711e-15
+    },
+    {
+      "case": "q1_plus",
+      "q": 1,
+      "parity": 1,
+      "method": "unoptimized_endpoint",
+      "key": "q1_plus__unoptimized_endpoint",
+      "dimension": 3,
+      "source_variance": 0.44850782476823964,
+      "Gram_error": 2.4382724665887273e-16
+    },
+    {
+      "case": "q1_plus",
+      "q": 1,
+      "parity": 1,
+      "method": "unoptimized_history",
+      "key": "q1_plus__unoptimized_history",
+      "dimension": 9,
+      "source_variance": 0.44850782476823964,
+      "Gram_error": 1.074454705620279e-15
+    },
+    {
+      "case": "q1_plus",
+      "q": 1,
+      "parity": 1,
+      "method": "ordinary_history",
+      "key": "q1_plus__ordinary_history",
+      "dimension": 9,
+      "source_variance": 0.44850782476823964,
+      "Gram_error": 1.5341082591735391e-15
+    },
+    {
+      "case": "q1_plus",
+      "q": 1,
+      "parity": 1,
+      "method": "Hamiltonian_d3",
+      "key": "q1_plus__Hamiltonian_d3",
+      "dimension": 3,
+      "source_variance": 0.44850782476823964,
+      "Gram_error": 9.291643519213734e-16
+    },
+    {
+      "case": "q1_plus",
+      "q": 1,
+      "parity": 1,
+      "method": "Hamiltonian_d9",
+      "key": "q1_plus__Hamiltonian_d9",
+      "dimension": 9,
+      "source_variance": 0.44850782476823964,
+      "Gram_error": 1.3287518305091602e-15
+    },
+    {
+      "case": "q1_minus",
+      "q": 1,
+      "parity": -1,
+      "method": "deletion",
+      "key": "q1_minus__deletion",
+      "dimension": 1,
+      "source_variance": 0.39684980518969043,
+      "Gram_error": 8.881784197001252e-16
+    },
+    {
+      "case": "q1_minus",
+      "q": 1,
+      "parity": -1,
+      "method": "canonical_endpoint",
+      "key": "q1_minus__canonical_endpoint",
+      "dimension": 3,
+      "source_variance": 0.39684980518969043,
+      "Gram_error": 1.1860138513276557e-15
+    },
+    {
+      "case": "q1_minus",
+      "q": 1,
+      "parity": -1,
+      "method": "canonical_history",
+      "key": "q1_minus__canonical_history",
+      "dimension": 9,
+      "source_variance": 0.39684980518969043,
+      "Gram_error": 1.4157302268316853e-15
+    },
+    {
+      "case": "q1_minus",
+      "q": 1,
+      "parity": -1,
+      "method": "unoptimized_endpoint",
+      "key": "q1_minus__unoptimized_endpoint",
+      "dimension": 3,
+      "source_variance": 0.39684980518969043,
+      "Gram_error": 8.999469621844416e-16
+    },
+    {
+      "case": "q1_minus",
+      "q": 1,
+      "parity": -1,
+      "method": "unoptimized_history",
+      "key": "q1_minus__unoptimized_history",
+      "dimension": 9,
+      "source_variance": 0.39684980518969043,
+      "Gram_error": 1.2413531673971806e-15
+    },
+    {
+      "case": "q1_minus",
+      "q": 1,
+      "parity": -1,
+      "method": "ordinary_history",
+      "key": "q1_minus__ordinary_history",
+      "dimension": 9,
+      "source_variance": 0.39684980518969043,
+      "Gram_error": 1.407654137577644e-15
+    },
+    {
+      "case": "q1_minus",
+      "q": 1,
+      "parity": -1,
+      "method": "Hamiltonian_d3",
+      "key": "q1_minus__Hamiltonian_d3",
+      "dimension": 3,
+      "source_variance": 0.39684980518969043,
+      "Gram_error": 1.196829554600839e-15
+    },
+    {
+      "case": "q1_minus",
+      "q": 1,
+      "parity": -1,
+      "method": "Hamiltonian_d9",
+      "key": "q1_minus__Hamiltonian_d9",
+      "dimension": 9,
+      "source_variance": 0.39684980518969043,
+      "Gram_error": 1.948299921833605e-15
+    },
+    {
+      "case": "q2_plus",
+      "q": 2,
+      "parity": 1,
+      "method": "deletion",
+      "key": "q2_plus__deletion",
+      "dimension": 1,
+      "source_variance": 0.8162756361876933,
+      "Gram_error": 0.0
+    },
+    {
+      "case": "q2_plus",
+      "q": 2,
+      "parity": 1,
+      "method": "canonical_endpoint",
+      "key": "q2_plus__canonical_endpoint",
+      "dimension": 3,
+      "source_variance": 0.8162756361876933,
+      "Gram_error": 3.6328144192117907e-16
+    },
+    {
+      "case": "q2_plus",
+      "q": 2,
+      "parity": 1,
+      "method": "canonical_history",
+      "key": "q2_plus__canonical_history",
+      "dimension": 9,
+      "source_variance": 0.8162756361876933,
+      "Gram_error": 1.3944098072457035e-15
+    },
+    {
+      "case": "q2_plus",
+      "q": 2,
+      "parity": 1,
+      "method": "unoptimized_endpoint",
+      "key": "q2_plus__unoptimized_endpoint",
+      "dimension": 3,
+      "source_variance": 0.8162756361876933,
+      "Gram_error": 4.5216242244429675e-16
+    },
+    {
+      "case": "q2_plus",
+      "q": 2,
+      "parity": 1,
+      "method": "unoptimized_history",
+      "key": "q2_plus__unoptimized_history",
+      "dimension": 9,
+      "source_variance": 0.8162756361876933,
+      "Gram_error": 1.2684107375739219e-15
+    },
+    {
+      "case": "q2_plus",
+      "q": 2,
+      "parity": 1,
+      "method": "ordinary_history",
+      "key": "q2_plus__ordinary_history",
+      "dimension": 9,
+      "source_variance": 0.8162756361876933,
+      "Gram_error": 1.6755841441963227e-15
+    },
+    {
+      "case": "q2_plus",
+      "q": 2,
+      "parity": 1,
+      "method": "Hamiltonian_d3",
+      "key": "q2_plus__Hamiltonian_d3",
+      "dimension": 3,
+      "source_variance": 0.8162756361876933,
+      "Gram_error": 9.322220489567044e-16
+    },
+    {
+      "case": "q2_plus",
+      "q": 2,
+      "parity": 1,
+      "method": "Hamiltonian_d9",
+      "key": "q2_plus__Hamiltonian_d9",
+      "dimension": 9,
+      "source_variance": 0.8162756361876933,
+      "Gram_error": 1.4283517832199818e-15
+    },
+    {
+      "case": "q2_minus",
+      "q": 2,
+      "parity": -1,
+      "method": "deletion",
+      "key": "q2_minus__deletion",
+      "dimension": 1,
+      "source_variance": 0.5048379853808993,
+      "Gram_error": 0.0
+    },
+    {
+      "case": "q2_minus",
+      "q": 2,
+      "parity": -1,
+      "method": "canonical_endpoint",
+      "key": "q2_minus__canonical_endpoint",
+      "dimension": 3,
+      "source_variance": 0.5048379853808993,
+      "Gram_error": 2.782172415146116e-16
+    },
+    {
+      "case": "q2_minus",
+      "q": 2,
+      "parity": -1,
+      "method": "canonical_history",
+      "key": "q2_minus__canonical_history",
+      "dimension": 9,
+      "source_variance": 0.5048379853808993,
+      "Gram_error": 1.3297117745010906e-15
+    },
+    {
+      "case": "q2_minus",
+      "q": 2,
+      "parity": -1,
+      "method": "unoptimized_endpoint",
+      "key": "q2_minus__unoptimized_endpoint",
+      "dimension": 3,
+      "source_variance": 0.5048379853808993,
+      "Gram_error": 7.597082091489298e-16
+    },
+    {
+      "case": "q2_minus",
+      "q": 2,
+      "parity": -1,
+      "method": "unoptimized_history",
+      "key": "q2_minus__unoptimized_history",
+      "dimension": 9,
+      "source_variance": 0.5048379853808993,
+      "Gram_error": 1.619137543884706e-15
+    },
+    {
+      "case": "q2_minus",
+      "q": 2,
+      "parity": -1,
+      "method": "ordinary_history",
+      "key": "q2_minus__ordinary_history",
+      "dimension": 9,
+      "source_variance": 0.5048379853808993,
+      "Gram_error": 1.788472734406489e-15
+    },
+    {
+      "case": "q2_minus",
+      "q": 2,
+      "parity": -1,
+      "method": "Hamiltonian_d3",
+      "key": "q2_minus__Hamiltonian_d3",
+      "dimension": 3,
+      "source_variance": 0.5048379853808993,
+      "Gram_error": 4.821850932790574e-16
+    },
+    {
+      "case": "q2_minus",
+      "q": 2,
+      "parity": -1,
+      "method": "Hamiltonian_d9",
+      "key": "q2_minus__Hamiltonian_d9",
+      "dimension": 9,
+      "source_variance": 0.5048379853808993,
+      "Gram_error": 1.6192677949164273e-15
+    },
+    {
+      "case": "q3_plus",
+      "q": 3,
+      "parity": 1,
+      "method": "deletion",
+      "key": "q3_plus__deletion",
+      "dimension": 1,
+      "source_variance": 0.5117304842483819,
+      "Gram_error": 4.440892098500626e-16
+    },
+    {
+      "case": "q3_plus",
+      "q": 3,
+      "parity": 1,
+      "method": "canonical_endpoint",
+      "key": "q3_plus__canonical_endpoint",
+      "dimension": 3,
+      "source_variance": 0.5117304842483819,
+      "Gram_error": 4.509364603057521e-16
+    },
+    {
+      "case": "q3_plus",
+      "q": 3,
+      "parity": 1,
+      "method": "canonical_history",
+      "key": "q3_plus__canonical_history",
+      "dimension": 9,
+      "source_variance": 0.5117304842483819,
+      "Gram_error": 1.8256257054883034e-15
+    },
+    {
+      "case": "q3_plus",
+      "q": 3,
+      "parity": 1,
+      "method": "unoptimized_endpoint",
+      "key": "q3_plus__unoptimized_endpoint",
+      "dimension": 3,
+      "source_variance": 0.5117304842483819,
+      "Gram_error": 4.596586395006436e-16
+    },
+    {
+      "case": "q3_plus",
+      "q": 3,
+      "parity": 1,
+      "method": "unoptimized_history",
+      "key": "q3_plus__unoptimized_history",
+      "dimension": 9,
+      "source_variance": 0.5117304842483819,
+      "Gram_error": 1.6306507440395088e-15
+    },
+    {
+      "case": "q3_plus",
+      "q": 3,
+      "parity": 1,
+      "method": "ordinary_history",
+      "key": "q3_plus__ordinary_history",
+      "dimension": 9,
+      "source_variance": 0.5117304842483819,
+      "Gram_error": 1.7733468172383119e-15
+    },
+    {
+      "case": "q3_plus",
+      "q": 3,
+      "parity": 1,
+      "method": "Hamiltonian_d3",
+      "key": "q3_plus__Hamiltonian_d3",
+      "dimension": 3,
+      "source_variance": 0.5117304842483819,
+      "Gram_error": 1.4261163305704013e-15
+    },
+    {
+      "case": "q3_plus",
+      "q": 3,
+      "parity": 1,
+      "method": "Hamiltonian_d9",
+      "key": "q3_plus__Hamiltonian_d9",
+      "dimension": 9,
+      "source_variance": 0.5117304842483819,
+      "Gram_error": 1.6982323803403828e-15
+    },
+    {
+      "case": "q3_minus",
+      "q": 3,
+      "parity": -1,
+      "method": "deletion",
+      "key": "q3_minus__deletion",
+      "dimension": 1,
+      "source_variance": 0.465008583498715,
+      "Gram_error": 4.440892098500626e-16
+    },
+    {
+      "case": "q3_minus",
+      "q": 3,
+      "parity": -1,
+      "method": "canonical_endpoint",
+      "key": "q3_minus__canonical_endpoint",
+      "dimension": 3,
+      "source_variance": 0.465008583498715,
+      "Gram_error": 6.787508485081324e-16
+    },
+    {
+      "case": "q3_minus",
+      "q": 3,
+      "parity": -1,
+      "method": "canonical_history",
+      "key": "q3_minus__canonical_history",
+      "dimension": 9,
+      "source_variance": 0.465008583498715,
+      "Gram_error": 1.552185774847407e-15
+    },
+    {
+      "case": "q3_minus",
+      "q": 3,
+      "parity": -1,
+      "method": "unoptimized_endpoint",
+      "key": "q3_minus__unoptimized_endpoint",
+      "dimension": 3,
+      "source_variance": 0.465008583498715,
+      "Gram_error": 1.3240592741279007e-15
+    },
+    {
+      "case": "q3_minus",
+      "q": 3,
+      "parity": -1,
+      "method": "unoptimized_history",
+      "key": "q3_minus__unoptimized_history",
+      "dimension": 9,
+      "source_variance": 0.465008583498715,
+      "Gram_error": 1.5002128801720175e-15
+    },
+    {
+      "case": "q3_minus",
+      "q": 3,
+      "parity": -1,
+      "method": "ordinary_history",
+      "key": "q3_minus__ordinary_history",
+      "dimension": 9,
+      "source_variance": 0.465008583498715,
+      "Gram_error": 2.1972658656681473e-15
+    },
+    {
+      "case": "q3_minus",
+      "q": 3,
+      "parity": -1,
+      "method": "Hamiltonian_d3",
+      "key": "q3_minus__Hamiltonian_d3",
+      "dimension": 3,
+      "source_variance": 0.465008583498715,
+      "Gram_error": 1.0461908865894813e-15
+    },
+    {
+      "case": "q3_minus",
+      "q": 3,
+      "parity": -1,
+      "method": "Hamiltonian_d9",
+      "key": "q3_minus__Hamiltonian_d9",
+      "dimension": 9,
+      "source_variance": 0.465008583498715,
+      "Gram_error": 2.0396139083189813e-15
+    }
+  ]
+}

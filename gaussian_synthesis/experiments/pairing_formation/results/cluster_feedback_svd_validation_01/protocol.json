@@ -1,0 +1,28 @@
+{
+  "classification": "Post-pilot numerical refinement, not additional forecasts.",
+  "models": [
+    [
+      "radial_cc",
+      0
+    ],
+    [
+      "common",
+      0
+    ],
+    [
+      "direct",
+      2
+    ],
+    [
+      "witness",
+      2
+    ],
+    [
+      "Hamiltonian",
+      2
+    ]
+  ],
+  "metric_solver": "svd",
+  "changes": "Relative/absolute tolerances and metric cutoff divided by 100; maximum step divided by 2. Optional direct SVD uses the same squared-singular-value cutoff as the Gram solver.",
+  "physical_invariant": "Each transfer-count sector rate from the variational tangent should agree with the true Hamiltonian current on that same variational state."
+}

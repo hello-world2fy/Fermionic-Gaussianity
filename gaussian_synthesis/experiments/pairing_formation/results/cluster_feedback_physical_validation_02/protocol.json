@@ -1,0 +1,36 @@
+{
+  "classification": "Post-pilot numerical refinement, not additional forecasts.",
+  "models": [
+    [
+      "radial_cc",
+      0
+    ],
+    [
+      "common",
+      0
+    ],
+    [
+      "direct",
+      2
+    ],
+    [
+      "witness",
+      2
+    ],
+    [
+      "Hamiltonian",
+      2
+    ]
+  ],
+  "metric_solver": "svd",
+  "error_control": "physical",
+  "settings": {
+    "metric_cutoff": 1e-13,
+    "rtol": 3e-12,
+    "atol": 3e-14,
+    "max_step": 0.01,
+    "compare_directory": "results/cluster_feedback_physical_validation_01"
+  },
+  "changes": "See explicit settings for tolerances, cutoff and maximum step. Direct SVD uses the same squared-singular-value cutoff as the Gram solver.",
+  "physical_invariant": "Each transfer-count sector rate from the variational tangent should agree with the true Hamiltonian current on that same variational state."
+}

@@ -1,0 +1,50 @@
+{
+  "classification": "Retrospective L14 G4 eta1 two-transfer physical-coordinate pilot; no new physical parameter holdouts.",
+  "training_times": [
+    0.3,
+    0.6,
+    0.9,
+    1.35
+  ],
+  "training_sha256": "b6d51afbe4b564d5f0932887651000289ba5a64c365a200aefbe4de68e9481aa",
+  "input_hashes": {
+    "results/pair_symbol_pilot_01/training.npz": "b6d51afbe4b564d5f0932887651000289ba5a64c365a200aefbe4de68e9481aa",
+    "results/pair_symbol_pilot_01/frozen_spaces.npz": "d510b8bab6f2c475a514675eaaae9553bf7b90b40c55664c4f3844d62a80acba",
+    "results/pair_contrast_01/frozen_spaces.npz": "7755b87c768a5db98358b3558a4ba95bd77d32736d7f76bc393fbae83197d9f5"
+  },
+  "labels": "36 disjoint two-pair-transfer monomials:18 forward configurations (upper-pair offset0/1,upper and lower separations1/2/3), plus adjoints. Full-Fock Gaussian eight-fermion symbols, with invariant output projection.",
+  "cross_copy": "Remove the two endpoint terms105[O C(u)+B_u(O^dagger u)]/D4 from the full symbol. This is a derived coherent coproduct contribution, not a positive atom bin or the physical connected-noise cumulant. It vanishes on paired occupation-basis Slater witnesses.",
+  "selection": "Leading8 or16 normalized residual training directions, shared9 endpoint-count/H-tangent space unchanged. Joint adds8 cross-copy directions to previous17-dimensional single-transfer contrast space. Same8 ordinary H directions provide a nested repair control.",
+  "same_initial_states": "Exact Fermi at0 or exact endpoint at1.35. Training-interval Fermi results are retrospective reconstruction, not forecasts.",
+  "observables": "Connected complex pair-transfer noise C_qp=<X_q X_p>-<X_q><X_p>, q,p0..3; eight Hermitian pair-pulse quadrature variances; counts and ordinary pair means. Var(X+Xdag)-Var(-i(X-Xdag))=4 Re C_qq.",
+  "primary_time": 2.0,
+  "last_time": 2.5,
+  "step": 0.05,
+  "gate": "Each canonical selection must improve countTV, connected-transfer-noise L2 and pulse-variance L2 against matched unoptimized, ordinary two-transfer history and H directions. Joint must additionally beat same-initial single-transfer deletion and single-transfer-plus-H repair. Both identical starts retained; no new conditions before the mechanism survives.",
+  "scope": "k2 synthesis; deterministic exponential paired-space contractions. No iid canonical sampling or new physics assumed.",
+  "frozen_sha256": "2384ccdf2a3146574eecd9f0af0987c2cdb2a5313da23650cc1900e8848ae8ec",
+  "dimensions": {
+    "shared": 9,
+    "canonical_full_q8": 17,
+    "canonical_full_q16": 25,
+    "canonical_cross_copy_q8": 17,
+    "canonical_cross_copy_q16": 25,
+    "canonical_joint_q16": 25,
+    "canonical_single_H_q16": 25,
+    "canonical_contrast_q8": 17,
+    "canonical_contrast_q16": 25,
+    "unoptimized_full_q8": 17,
+    "unoptimized_full_q16": 25,
+    "unoptimized_cross_copy_q8": 17,
+    "unoptimized_cross_copy_q16": 25,
+    "unoptimized_joint_q16": 25,
+    "unoptimized_single_H_q16": 25,
+    "unoptimized_contrast_q8": 17,
+    "unoptimized_contrast_q16": 25,
+    "ordinary2_q8": 17,
+    "Hamiltonian_q8": 17,
+    "ordinary2_q16": 25,
+    "Hamiltonian_q16": 25,
+    "exact_symmetry": 170
+  }
+}

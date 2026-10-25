@@ -1,0 +1,57 @@
+{
+  "L": 12,
+  "train_G": 2.0,
+  "train_time": 1.0,
+  "seeds": [
+    20261111,
+    20261112
+  ],
+  "weights": [
+    0.0,
+    1e-06,
+    1e-05,
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "kinds": [
+    "hamiltonian",
+    "generators"
+  ],
+  "initial_infidelity_budget_factor": 2.0,
+  "selection": "Minimize normalized early-state Hamiltonian normal-response squared norm subject to initial infidelity <= 2 times the direct fit infidelity for that seed. No future references or metrics are used.",
+  "prediction_family": "Same two-orbit-per-count MultiOrbitDynamics; state-averaged response extraction is a conventional control, not canonical synthesis.",
+  "known_grid": "Re-evaluate previous reversal confirmation only as a post-pilot comparison.",
+  "new_holdout": {
+    "G": [
+      -1.4,
+      -2.2
+    ],
+    "kicks": {
+      "none": 0.0,
+      "fifth": 0.6283185307179586
+    },
+    "spectra": {
+      "warped": "eps + .3*eps**3",
+      "asymmetric": "eps + .25*(eps**2-mean(eps**2))"
+    },
+    "elapsed": [
+      0.0,
+      0.1,
+      0.25,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "primary_time": 1.0,
+    "primary_metrics": [
+      "absolute negativity error",
+      "unnormalized filtered trace distance"
+    ],
+    "filter": "The prior training-only band-edge filter, unchanged"
+  },
+  "failure_rule": "A broad canonical advantage is not established if the same-complexity selected response control matches or improves both primary metrics; retain all outcomes, including state fidelity and count errors."
+}

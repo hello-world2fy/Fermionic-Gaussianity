@@ -1,0 +1,339 @@
+{
+  "L": 12,
+  "train_G": 2.0,
+  "train_time": 1.0,
+  "holdout_G": [
+    1.7,
+    2.3,
+    -2.0
+  ],
+  "kicks": {
+    "none": 0.0,
+    "spectral_plus": 0.4,
+    "spectral_minus": -0.4
+  },
+  "kick_definition": "exp[-i eta (H0-H0(F)-2m)]",
+  "elapsed": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "transport": "static",
+  "protocol": "Freeze all orbital profiles and density-tangent spaces using t=1 only; G=-2 is interaction sign reversal; spectral phase kicks are one-body unitaries",
+  "canonical_basis_scope": "witness-derived coordinates, not canonical measure sampling",
+  "records": [
+    {
+      "name": "target_conditioned_order0",
+      "file": "target_conditioned_order0.npz",
+      "sha256": "14cc7a92788c23b08739df7a83772eebda10345b50a862ca08725107c6430fbf",
+      "dimension": 7,
+      "initial_fidelity": 0.9995731968740205,
+      "hamiltonian_leakage_relative": 0.39094354617895555,
+      "density_polynomial_order": 0,
+      "sector_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "target_conditioned_order1",
+      "file": "target_conditioned_order1.npz",
+      "sha256": "ede032736ac0d69df67d94a43c6baada874939007b5161754e13a0324a216377",
+      "dimension": 57,
+      "initial_fidelity": 0.9995731968740205,
+      "hamiltonian_leakage_relative": 0.05927828275326274,
+      "density_polynomial_order": 1,
+      "sector_dimensions": [
+        1,
+        11,
+        11,
+        11,
+        11,
+        11,
+        1
+      ]
+    },
+    {
+      "name": "target_conditioned_order2",
+      "file": "target_conditioned_order2.npz",
+      "sha256": "f6347853701429edb9ee2585002a4b9b477289391ff2d4f6af5a7d504437a104",
+      "dimension": 236,
+      "initial_fidelity": 0.9999994392505238,
+      "hamiltonian_leakage_relative": 0.008196985937080792,
+      "density_polynomial_order": 2,
+      "sector_dimensions": [
+        1,
+        36,
+        54,
+        54,
+        54,
+        36,
+        1
+      ]
+    },
+    {
+      "name": "target_common_order0",
+      "file": "target_common_order0.npz",
+      "sha256": "67e96a4dd350485330ca26c000e7a454db846b9da2a33e71bf5b0347752e55c1",
+      "dimension": 7,
+      "initial_fidelity": 0.9990035066000841,
+      "hamiltonian_leakage_relative": 0.39940238075901574,
+      "density_polynomial_order": 0,
+      "sector_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "target_common_order1",
+      "file": "target_common_order1.npz",
+      "sha256": "d31ad3017bb2b11e186297904e4e0db77c0ed50400ac2a60756fdf673be48e4a",
+      "dimension": 57,
+      "initial_fidelity": 0.9995835471773594,
+      "hamiltonian_leakage_relative": 0.05897743892983185,
+      "density_polynomial_order": 1,
+      "sector_dimensions": [
+        1,
+        11,
+        11,
+        11,
+        11,
+        11,
+        1
+      ]
+    },
+    {
+      "name": "target_common_order2",
+      "file": "target_common_order2.npz",
+      "sha256": "3b05cf6a9ddb47ab56359728814b44868afee1d4d99b9a744a8414826dd59cae",
+      "dimension": 236,
+      "initial_fidelity": 0.9999996318782499,
+      "hamiltonian_leakage_relative": 0.007919112332480466,
+      "density_polynomial_order": 2,
+      "sector_dimensions": [
+        1,
+        36,
+        54,
+        54,
+        54,
+        36,
+        1
+      ]
+    },
+    {
+      "name": "witness_conditioned_order0",
+      "file": "witness_conditioned_order0.npz",
+      "sha256": "f86726239c916d399498a911ad22e3f49b591171281a547eebdd6e83b7154207",
+      "dimension": 7,
+      "initial_fidelity": 0.9995512771183078,
+      "hamiltonian_leakage_relative": 0.39302898440633866,
+      "density_polynomial_order": 0,
+      "sector_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "witness_conditioned_order1",
+      "file": "witness_conditioned_order1.npz",
+      "sha256": "37f3630b8b7eccc931ae3cc0340269bd26030704b695d3f8851250a2717e2a05",
+      "dimension": 57,
+      "initial_fidelity": 0.9995733877227088,
+      "hamiltonian_leakage_relative": 0.06094282152730317,
+      "density_polynomial_order": 1,
+      "sector_dimensions": [
+        1,
+        11,
+        11,
+        11,
+        11,
+        11,
+        1
+      ]
+    },
+    {
+      "name": "witness_conditioned_order2",
+      "file": "witness_conditioned_order2.npz",
+      "sha256": "6dfc82e7adb260f5d40cb643f7f9a76dd841fd7b886af915545e52756682ea56",
+      "dimension": 236,
+      "initial_fidelity": 0.9999994969826167,
+      "hamiltonian_leakage_relative": 0.00823723612765382,
+      "density_polynomial_order": 2,
+      "sector_dimensions": [
+        1,
+        36,
+        54,
+        54,
+        54,
+        36,
+        1
+      ]
+    },
+    {
+      "name": "witness_common_order0",
+      "file": "witness_common_order0.npz",
+      "sha256": "56fd96abdbecf87eb98ce228af5def37341526f708959f684b7f124c8063cde2",
+      "dimension": 7,
+      "initial_fidelity": 0.9989969765937592,
+      "hamiltonian_leakage_relative": 0.4002607548753752,
+      "density_polynomial_order": 0,
+      "sector_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "witness_common_order1",
+      "file": "witness_common_order1.npz",
+      "sha256": "ab7bbbefede576e51183e258810e14a19af1e39dabb7d6a527653b09b7396c15",
+      "dimension": 57,
+      "initial_fidelity": 0.9995840948883725,
+      "hamiltonian_leakage_relative": 0.059859532455109145,
+      "density_polynomial_order": 1,
+      "sector_dimensions": [
+        1,
+        11,
+        11,
+        11,
+        11,
+        11,
+        1
+      ]
+    },
+    {
+      "name": "witness_common_order2",
+      "file": "witness_common_order2.npz",
+      "sha256": "63d8fe28591a39deaac290b51dbad58cdfe2bb91ed00bdd42102edca63e3c1f4",
+      "dimension": 236,
+      "initial_fidelity": 0.9999996031261048,
+      "hamiltonian_leakage_relative": 0.008095991348149627,
+      "density_polynomial_order": 2,
+      "sector_dimensions": [
+        1,
+        36,
+        54,
+        54,
+        54,
+        36,
+        1
+      ]
+    },
+    {
+      "name": "linear_rpa_common_order0",
+      "file": "linear_rpa_common_order0.npz",
+      "sha256": "94d12d8ff8f975da2c4869da900ae26847c6a6c03801e0175af2b2b55ace8e46",
+      "dimension": 7,
+      "initial_fidelity": 0.9969427142549467,
+      "hamiltonian_leakage_relative": 0.4374820715846577,
+      "density_polynomial_order": 0,
+      "sector_dimensions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "linear_rpa_common_order1",
+      "file": "linear_rpa_common_order1.npz",
+      "sha256": "ae31de84cf64a045a1c88f3f96e7dc8a0fe815a737a4e70e8032f4d193d4e53d",
+      "dimension": 57,
+      "initial_fidelity": 0.9995406134484222,
+      "hamiltonian_leakage_relative": 0.08656310436609319,
+      "density_polynomial_order": 1,
+      "sector_dimensions": [
+        1,
+        11,
+        11,
+        11,
+        11,
+        11,
+        1
+      ]
+    },
+    {
+      "name": "linear_rpa_common_order2",
+      "file": "linear_rpa_common_order2.npz",
+      "sha256": "0b3bdf80e0d0f8b41281fbc9d8937d689926c4985c1b3f17c67b83547112e20d",
+      "dimension": 236,
+      "initial_fidelity": 0.9999992619916758,
+      "hamiltonian_leakage_relative": 0.010692657031508361,
+      "density_polynomial_order": 2,
+      "sector_dimensions": [
+        1,
+        36,
+        54,
+        54,
+        54,
+        36,
+        1
+      ]
+    },
+    {
+      "name": "linear_rpa_q2",
+      "file": "linear_rpa_q2.npz",
+      "sha256": "27cf240585cf607b900e36d422dc9f7cc6426012fd2b8d2fe0e1c5e7531fa4a4",
+      "dimension": 92,
+      "initial_fidelity": 0.9999662919465553,
+      "hamiltonian_leakage_relative": 0.05182772961247346
+    },
+    {
+      "name": "linear_rpa_q3",
+      "file": "linear_rpa_q3.npz",
+      "sha256": "503c446e8b510076f07c32f68de67d0ef43d1e2cbd32b0e1b352dc4285e3a93d",
+      "dimension": 408,
+      "initial_fidelity": 0.9999995170478447,
+      "hamiltonian_leakage_relative": 0.005663103933248753
+    },
+    {
+      "name": "hamiltonian_R32",
+      "file": "hamiltonian_R32.npz",
+      "sha256": "9be6e1c009e28589dcdaef7d288343e212fc1947ea8dacf5e3df53dc4d274f6a",
+      "dimension": 32,
+      "initial_fidelity": 0.9984065117823298,
+      "hamiltonian_leakage_relative": 0.04162238644692751
+    },
+    {
+      "name": "canonical_response_R32",
+      "file": "canonical_response_R32.npz",
+      "sha256": "42e793602c2fc776e5a556c30c91ab7d6f16277fcc4302c395cf2ed346197407",
+      "dimension": 32,
+      "initial_fidelity": 0.9980564412186561,
+      "hamiltonian_leakage_relative": 0.042548399310040765
+    },
+    {
+      "name": "state_only_R32",
+      "file": "state_only_R32.npz",
+      "sha256": "00a243ac4c3fb4476683839730e03f91c29924fd071ad2693769464adaf4bd59",
+      "dimension": 32,
+      "initial_fidelity": 0.999970623947671,
+      "hamiltonian_leakage_relative": 0.3744916569895897
+    }
+  ]
+}

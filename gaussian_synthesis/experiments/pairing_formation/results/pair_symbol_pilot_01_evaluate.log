@@ -1,0 +1,508 @@
+{
+  "gate": [
+    {
+      "method": "canonical_full_q8",
+      "start": "Fermi",
+      "controls": [
+        "unoptimized_full_q8",
+        "ordinary_q8",
+        "Hamiltonian_q8"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_full_q8",
+      "start": "restart",
+      "controls": [
+        "unoptimized_full_q8",
+        "ordinary_q8",
+        "Hamiltonian_q8"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_anomalous_q8",
+      "start": "Fermi",
+      "controls": [
+        "unoptimized_anomalous_q8",
+        "ordinary_q8",
+        "Hamiltonian_q8"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_anomalous_q8",
+      "start": "restart",
+      "controls": [
+        "unoptimized_anomalous_q8",
+        "ordinary_q8",
+        "Hamiltonian_q8"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_normal_exchange_q8",
+      "start": "Fermi",
+      "controls": [
+        "unoptimized_normal_exchange_q8",
+        "ordinary_q8",
+        "Hamiltonian_q8"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_normal_exchange_q8",
+      "start": "restart",
+      "controls": [
+        "unoptimized_normal_exchange_q8",
+        "ordinary_q8",
+        "Hamiltonian_q8"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_full_q16",
+      "start": "Fermi",
+      "controls": [
+        "unoptimized_full_q16",
+        "ordinary_q16",
+        "Hamiltonian_q16"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_full_q16",
+      "start": "restart",
+      "controls": [
+        "unoptimized_full_q16",
+        "ordinary_q16",
+        "Hamiltonian_q16"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_split_q16",
+      "start": "Fermi",
+      "controls": [
+        "unoptimized_split_q16",
+        "ordinary_q16",
+        "Hamiltonian_q16",
+        "canonical_full_q16",
+        "canonical_anomalous_q8",
+        "canonical_anomalous_H_q16"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_split_q16",
+      "start": "restart",
+      "controls": [
+        "unoptimized_split_q16",
+        "ordinary_q16",
+        "Hamiltonian_q16",
+        "canonical_full_q16",
+        "canonical_anomalous_q8",
+        "canonical_anomalous_H_q16"
+      ],
+      "passes": false
+    }
+  ],
+  "primary_restart": [
+    {
+      "method": "shared",
+      "time": 2.0,
+      "fidelity": 0.255428880724898,
+      "count_TV": 0.3818733076977182,
+      "pair_channel_L2_error": 0.33521869542898747,
+      "current_L1_error": 2.364513365238007,
+      "multiple_dark_probability": 0.025007281387212605,
+      "multiple_dark_error": -0.04443646397854471,
+      "channels_real": [
+        -0.03887843370146424,
+        0.22384586733643938,
+        -0.034395242470555115,
+        0.005375589240505317
+      ],
+      "channels_imag": [
+        0.025416742502004395,
+        0.19138647651876828,
+        -0.01594757724583542,
+        -0.028074875942932957
+      ]
+    },
+    {
+      "method": "canonical_full_q8",
+      "time": 2.0,
+      "fidelity": 0.45320196241567207,
+      "count_TV": 0.20703775488964146,
+      "pair_channel_L2_error": 0.22416591602362437,
+      "current_L1_error": 1.7636689092099265,
+      "multiple_dark_probability": 0.04164761731007574,
+      "multiple_dark_error": -0.027796128055681574,
+      "channels_real": [
+        0.0008946362363726301,
+        0.27821170259768674,
+        0.007071925717499871,
+        -0.022039742745060507
+      ],
+      "channels_imag": [
+        -0.02418953950277686,
+        0.09398426071346969,
+        -0.031120501462333895,
+        0.018490423145805436
+      ]
+    },
+    {
+      "method": "canonical_anomalous_q8",
+      "time": 2.0,
+      "fidelity": 0.432191003981077,
+      "count_TV": 0.23566892112229504,
+      "pair_channel_L2_error": 0.22535641236141496,
+      "current_L1_error": 1.5074776904030556,
+      "multiple_dark_probability": 0.029009314855642718,
+      "multiple_dark_error": -0.0404344305101146,
+      "channels_real": [
+        0.0020797148175208113,
+        0.26758433846489754,
+        0.004452050614833698,
+        -0.03727294959544343
+      ],
+      "channels_imag": [
+        0.005372038595414934,
+        0.07842088514982744,
+        -0.02368708449607904,
+        -0.00023168931115002858
+      ]
+    },
+    {
+      "method": "canonical_normal_exchange_q8",
+      "time": 2.0,
+      "fidelity": 0.4539459108286257,
+      "count_TV": 0.2056942917544987,
+      "pair_channel_L2_error": 0.22399641990152747,
+      "current_L1_error": 1.7644755137172932,
+      "multiple_dark_probability": 0.04266826691294634,
+      "multiple_dark_error": -0.026775478452810975,
+      "channels_real": [
+        -0.0007686345236416099,
+        0.27881587471218683,
+        0.007309453841045276,
+        -0.019816386015892494
+      ],
+      "channels_imag": [
+        -0.02695783894408326,
+        0.09540508062677047,
+        -0.031591677441734654,
+        0.020732788897431045
+      ]
+    },
+    {
+      "method": "canonical_full_q16",
+      "time": 2.0,
+      "fidelity": 0.5791118507372138,
+      "count_TV": 0.11245003161474972,
+      "pair_channel_L2_error": 0.17495039721622452,
+      "current_L1_error": 1.075050827806434,
+      "multiple_dark_probability": 0.10000617679075717,
+      "multiple_dark_error": 0.030562431424999856,
+      "channels_real": [
+        -0.033133817806605195,
+        0.2828530695534395,
+        -0.0040441355393907134,
+        -0.015990226224538415
+      ],
+      "channels_imag": [
+        -0.05510797412567527,
+        0.053452824758907606,
+        -0.030912848715922862,
+        -0.01553265006913064
+      ]
+    },
+    {
+      "method": "canonical_split_q16",
+      "time": 2.0,
+      "fidelity": 0.626587991885415,
+      "count_TV": 0.0931301641060947,
+      "pair_channel_L2_error": 0.1212976962262363,
+      "current_L1_error": 0.8047595175851344,
+      "multiple_dark_probability": 0.10425175628449787,
+      "multiple_dark_error": 0.034808010918740556,
+      "channels_real": [
+        -0.06277350228809991,
+        0.2830118376955086,
+        0.003710696565655717,
+        0.009802809682083451
+      ],
+      "channels_imag": [
+        -0.06860838299619595,
+        0.002649465854729507,
+        -0.031063102823447673,
+        0.011698649011363624
+      ]
+    },
+    {
+      "method": "canonical_anomalous_H_q16",
+      "time": 2.0,
+      "fidelity": 0.999996564293107,
+      "count_TV": 0.00018052910979521165,
+      "pair_channel_L2_error": 0.00019375654882275027,
+      "current_L1_error": 0.0040622137337683415,
+      "multiple_dark_probability": 0.06939258449766547,
+      "multiple_dark_error": -5.116086809184295e-05,
+      "channels_real": [
+        -0.07270116846572647,
+        0.3151225055348358,
+        -0.024905404333347918,
+        -0.017971541657584866
+      ],
+      "channels_imag": [
+        -0.07888791004147086,
+        -0.10354660948729118,
+        -0.04719009678861047,
+        0.02971919633563035
+      ]
+    },
+    {
+      "method": "unoptimized_full_q8",
+      "time": 2.0,
+      "fidelity": 0.4386183107402843,
+      "count_TV": 0.2248845921124423,
+      "pair_channel_L2_error": 0.2340400633322772,
+      "current_L1_error": 1.7280059189467092,
+      "multiple_dark_probability": 0.03722418713772245,
+      "multiple_dark_error": -0.032219558228034864,
+      "channels_real": [
+        -0.0001726821772524349,
+        0.2642718826989021,
+        0.011626992720744574,
+        -0.01134021289861503
+      ],
+      "channels_imag": [
+        -0.021268961030290648,
+        0.10060276094678,
+        -0.026752518900921573,
+        0.019933242784004428
+      ]
+    },
+    {
+      "method": "unoptimized_anomalous_q8",
+      "time": 2.0,
+      "fidelity": 0.4510740038367425,
+      "count_TV": 0.2311007674144339,
+      "pair_channel_L2_error": 0.20515452088598365,
+      "current_L1_error": 1.5500725851015744,
+      "multiple_dark_probability": 0.030432529049923305,
+      "multiple_dark_error": -0.03901121631583401,
+      "channels_real": [
+        -0.004794183461578222,
+        0.27342340287476374,
+        0.006391766562058098,
+        -0.0406671228662068
+      ],
+      "channels_imag": [
+        -0.012736876798004965,
+        0.0656759348033403,
+        -0.02166591620375893,
+        0.006353247013126919
+      ]
+    },
+    {
+      "method": "unoptimized_normal_exchange_q8",
+      "time": 2.0,
+      "fidelity": 0.4348660256241153,
+      "count_TV": 0.22900097101037267,
+      "pair_channel_L2_error": 0.23943595452618874,
+      "current_L1_error": 1.7589406483884082,
+      "multiple_dark_probability": 0.0381625345509624,
+      "multiple_dark_error": -0.031281210814794916,
+      "channels_real": [
+        -0.0012174445659122561,
+        0.2616905647591307,
+        0.012321538926009639,
+        -0.00857113632966876
+      ],
+      "channels_imag": [
+        -0.022198601586766877,
+        0.10660768411475953,
+        -0.027349482270117693,
+        0.020943928418766102
+      ]
+    },
+    {
+      "method": "unoptimized_full_q16",
+      "time": 2.0,
+      "fidelity": 0.626706104020642,
+      "count_TV": 0.09382121161292171,
+      "pair_channel_L2_error": 0.13898033916553285,
+      "current_L1_error": 0.6731272779918857,
+      "multiple_dark_probability": 0.09385520495540862,
+      "multiple_dark_error": 0.02441145958965131,
+      "channels_real": [
+        -0.0239843597412016,
+        0.29792942099092423,
+        0.004042695102629136,
+        0.006713990979241568
+      ],
+      "channels_imag": [
+        -0.05867786584319342,
+        0.01041695070735477,
+        -0.033481342548360764,
+        -0.010230580062600466
+      ]
+    },
+    {
+      "method": "unoptimized_split_q16",
+      "time": 2.0,
+      "fidelity": 0.6266910154222457,
+      "count_TV": 0.08859406174382854,
+      "pair_channel_L2_error": 0.09382813187261344,
+      "current_L1_error": 0.8173201402391529,
+      "multiple_dark_probability": 0.09829501089403012,
+      "multiple_dark_error": 0.0288512655282728,
+      "channels_real": [
+        -0.06893043155387739,
+        0.2838437548740728,
+        0.003193656810091748,
+        0.015131494028418008
+      ],
+      "channels_imag": [
+        -0.09509533448710522,
+        -0.028842695792615912,
+        -0.045278899527716326,
+        0.021829386841085673
+      ]
+    },
+    {
+      "method": "unoptimized_anomalous_H_q16",
+      "time": 2.0,
+      "fidelity": 0.9999968596260328,
+      "count_TV": 0.0001230986179145261,
+      "pair_channel_L2_error": 0.00015776849895002404,
+      "current_L1_error": 0.0037686438094440746,
+      "multiple_dark_probability": 0.06937779104030573,
+      "multiple_dark_error": -6.59543254515893e-05,
+      "channels_real": [
+        -0.07267636206271584,
+        0.31511003958024736,
+        -0.024914679778445428,
+        -0.017948004770879825
+      ],
+      "channels_imag": [
+        -0.07887971167311332,
+        -0.10357532590852127,
+        -0.04717728734101256,
+        0.029750963609338408
+      ]
+    },
+    {
+      "method": "ordinary_q8",
+      "time": 2.0,
+      "fidelity": 0.4103956546529821,
+      "count_TV": 0.2570614281928376,
+      "pair_channel_L2_error": 0.25740102475182275,
+      "current_L1_error": 1.6968184887317093,
+      "multiple_dark_probability": 0.04736855871414582,
+      "multiple_dark_error": -0.022075186651611498,
+      "channels_real": [
+        0.0021499252734847474,
+        0.2452740758709913,
+        0.002205413688917342,
+        -0.019468189372995597
+      ],
+      "channels_imag": [
+        -0.01878280876769131,
+        0.12071801590957076,
+        -0.01683283706735276,
+        0.01696125255149267
+      ]
+    },
+    {
+      "method": "Hamiltonian_q8",
+      "time": 2.0,
+      "fidelity": 0.9999958670706558,
+      "count_TV": 0.0003446284247747011,
+      "pair_channel_L2_error": 0.0003314969079032798,
+      "current_L1_error": 0.004317828829768986,
+      "multiple_dark_probability": 0.06943482667790446,
+      "multiple_dark_error": -8.918687852854656e-06,
+      "channels_real": [
+        -0.07272150161116529,
+        0.31512899166634806,
+        -0.024908891021873242,
+        -0.018032996942012464
+      ],
+      "channels_imag": [
+        -0.07890667608394407,
+        -0.10341893675745968,
+        -0.0472135499015459,
+        0.029641910991321713
+      ]
+    },
+    {
+      "method": "ordinary_q16",
+      "time": 2.0,
+      "fidelity": 0.5940044874064708,
+      "count_TV": 0.10230281001421608,
+      "pair_channel_L2_error": 0.1446715540869457,
+      "current_L1_error": 0.7119674417301569,
+      "multiple_dark_probability": 0.0931426585301188,
+      "multiple_dark_error": 0.023698913164361485,
+      "channels_real": [
+        -0.02992690781751245,
+        0.28469596165907657,
+        -0.004677350559645259,
+        -0.01266265870820209
+      ],
+      "channels_imag": [
+        -0.03987146686244104,
+        0.012958851132536161,
+        -0.022296365324865702,
+        -0.014977038918120236
+      ]
+    },
+    {
+      "method": "Hamiltonian_q16",
+      "time": 2.0,
+      "fidelity": 0.9999999999999905,
+      "count_TV": 1.541730243264767e-10,
+      "pair_channel_L2_error": 1.099479858611632e-10,
+      "current_L1_error": 2.2394958653775303e-09,
+      "multiple_dark_probability": 0.06944374544845758,
+      "multiple_dark_error": 8.270026330414737e-11,
+      "channels_real": [
+        -0.0725758237869497,
+        0.3151416142404961,
+        -0.024900158085135463,
+        -0.017948577350027067
+      ],
+      "channels_imag": [
+        -0.0789324595943907,
+        -0.10367525089884162,
+        -0.04714932203047317,
+        0.02974592508478646
+      ]
+    },
+    {
+      "method": "exact_symmetry",
+      "time": 2.0,
+      "fidelity": 0.9999999999999956,
+      "count_TV": 2.5326539232787756e-15,
+      "pair_channel_L2_error": 3.600473632946946e-15,
+      "current_L1_error": 3.0334011669706784e-14,
+      "multiple_dark_probability": 0.06944374536575784,
+      "multiple_dark_error": 5.273559366969494e-16,
+      "channels_real": [
+        -0.0725758238220649,
+        0.31514161420637626,
+        -0.024900158086490366,
+        -0.017948577282090532
+      ],
+      "channels_imag": [
+        -0.07893245956980009,
+        -0.10367525093584218,
+        -0.04714932201899487,
+        0.02974592513926893
+      ]
+    }
+  ]
+}

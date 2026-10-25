@@ -1,0 +1,96 @@
+{
+  "L": 12,
+  "train_time": 1.0,
+  "train_G": 2.0,
+  "holdout_G": [
+    1.5,
+    2.5,
+    -1.8
+  ],
+  "kicks": {
+    "none": 0.0,
+    "spectral_plus": 0.3,
+    "spectral_minus": -0.3
+  },
+  "kick_definition": "exp[-i eta (H0-H0(F)-2m)]",
+  "elapsed": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "protocol": "New parameter/kick holdouts after static-basis failure. Family and initial coordinates frozen at t=1; subsequent orbital motion comes only from Hamiltonian TDVP. All predictions saved before exact references.",
+  "records": [
+    {
+      "name": "target_conditioned",
+      "file": "target_conditioned.npz",
+      "type": "tdvp",
+      "conditioned": true,
+      "complex_manifold_dimension": 57,
+      "initial_fidelity": 0.9995731968740207,
+      "sha256": "9220fd9ad5bd9f5ec7475c5d6b37553ddf70a58bf1ad891e7bde5c28be08fefa"
+    },
+    {
+      "name": "target_common",
+      "file": "target_common.npz",
+      "type": "tdvp",
+      "conditioned": false,
+      "complex_manifold_dimension": 17,
+      "initial_fidelity": 0.9990035066000839,
+      "sha256": "585e3fc1d88bc08bb0f392be563d2656004e389d9f168b3c16347ebce666b15c"
+    },
+    {
+      "name": "witness_conditioned",
+      "file": "witness_conditioned.npz",
+      "type": "tdvp",
+      "conditioned": true,
+      "complex_manifold_dimension": 57,
+      "initial_fidelity": 0.9995512771183078,
+      "sha256": "0048ac910d4f209614b06a423e3494f4b7a6c45634a105b19ef58fb443f9d768"
+    },
+    {
+      "name": "witness_common",
+      "file": "witness_common.npz",
+      "type": "tdvp",
+      "conditioned": false,
+      "complex_manifold_dimension": 17,
+      "initial_fidelity": 0.9989969765937592,
+      "sha256": "02a58d9c84aa3f9695e2ca60e34c886db34a096afe0633f090bf444fb955c239"
+    },
+    {
+      "name": "linear_common",
+      "file": "linear_common.npz",
+      "type": "tdvp",
+      "conditioned": false,
+      "complex_manifold_dimension": 17,
+      "initial_fidelity": 0.9969427142549465,
+      "sha256": "ae026f33bb4df34db55b3ecd3ee90e59c58a767cf99e31a92c4a617938e51d1e"
+    },
+    {
+      "name": "linear_rpa_q2",
+      "file": "linear_rpa_q2.npz",
+      "type": "static",
+      "dimension": 92,
+      "initial_fidelity": 0.9999662919465553,
+      "sha256": "27cf240585cf607b900e36d422dc9f7cc6426012fd2b8d2fe0e1c5e7531fa4a4"
+    },
+    {
+      "name": "linear_rpa_q3",
+      "file": "linear_rpa_q3.npz",
+      "type": "static",
+      "dimension": 408,
+      "initial_fidelity": 0.9999995170478447,
+      "sha256": "503c446e8b510076f07c32f68de67d0ef43d1e2cbd32b0e1b352dc4285e3a93d"
+    },
+    {
+      "name": "hamiltonian_R32",
+      "file": "hamiltonian_R32.npz",
+      "type": "static",
+      "dimension": 32,
+      "initial_fidelity": 0.9984065117823298,
+      "sha256": "9be6e1c009e28589dcdaef7d288343e212fc1947ea8dacf5e3df53dc4d274f6a"
+    }
+  ]
+}

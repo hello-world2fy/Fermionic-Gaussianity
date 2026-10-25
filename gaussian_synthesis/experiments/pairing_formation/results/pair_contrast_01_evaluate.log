@@ -1,0 +1,134 @@
+{
+  "gate": [
+    {
+      "method": "canonical_contrast_q8",
+      "start": "Fermi",
+      "controls": [
+        "unoptimized_contrast_q8",
+        "ordinary_q8",
+        "Hamiltonian_q8"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_contrast_q8",
+      "start": "restart",
+      "controls": [
+        "unoptimized_contrast_q8",
+        "ordinary_q8",
+        "Hamiltonian_q8"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_contrast_q16",
+      "start": "Fermi",
+      "controls": [
+        "unoptimized_contrast_q16",
+        "ordinary_q16",
+        "Hamiltonian_q16"
+      ],
+      "passes": false
+    },
+    {
+      "method": "canonical_contrast_q16",
+      "start": "restart",
+      "controls": [
+        "unoptimized_contrast_q16",
+        "ordinary_q16",
+        "Hamiltonian_q16"
+      ],
+      "passes": false
+    }
+  ],
+  "primary_restart": [
+    {
+      "method": "canonical_contrast_q8",
+      "time": 2.0,
+      "fidelity": 0.5451117065485459,
+      "count_TV": 0.1042611452543851,
+      "pair_channel_L2_error": 0.17526943847708398,
+      "current_L1_error": 1.10148210124107,
+      "multiple_dark_probability": 0.08356194940542212,
+      "multiple_dark_error": 0.014118204039664808,
+      "channels_real": [
+        -0.022825628146045274,
+        0.27598143919944185,
+        -0.013947583322894678,
+        -0.028632721327994534
+      ],
+      "channels_imag": [
+        -0.07494206797506586,
+        0.05578223158695253,
+        -0.03959960075971446,
+        -0.0015119492457666024
+      ]
+    },
+    {
+      "method": "canonical_contrast_q16",
+      "time": 2.0,
+      "fidelity": 0.7242983887761393,
+      "count_TV": 0.05084221254264044,
+      "pair_channel_L2_error": 0.10332399812824747,
+      "current_L1_error": 0.7813488277261056,
+      "multiple_dark_probability": 0.066978709611464,
+      "multiple_dark_error": -0.0024650357542933127,
+      "channels_real": [
+        -0.0414286291551871,
+        0.30518836015848166,
+        -0.003478866905719455,
+        -0.017134459806282264
+      ],
+      "channels_imag": [
+        -0.10862914955502223,
+        -0.019874515839132342,
+        -0.05852497689514355,
+        0.0631111309927188
+      ]
+    },
+    {
+      "method": "unoptimized_contrast_q8",
+      "time": 2.0,
+      "fidelity": 0.5536699162040382,
+      "count_TV": 0.08808029684381033,
+      "pair_channel_L2_error": 0.15639998432492289,
+      "current_L1_error": 0.8405497789962059,
+      "multiple_dark_probability": 0.08800658300758588,
+      "multiple_dark_error": 0.01856283764182856,
+      "channels_real": [
+        -0.03295906256452856,
+        0.2831978249420867,
+        -0.010588173796813889,
+        -0.01565084288608872
+      ],
+      "channels_imag": [
+        -0.09048875640209647,
+        0.041744575624544256,
+        -0.0495104297869872,
+        0.010383580476131896
+      ]
+    },
+    {
+      "method": "unoptimized_contrast_q16",
+      "time": 2.0,
+      "fidelity": 0.7298413755582422,
+      "count_TV": 0.05102391919828896,
+      "pair_channel_L2_error": 0.10415578871297734,
+      "current_L1_error": 0.7643626296322091,
+      "multiple_dark_probability": 0.06583188985546676,
+      "multiple_dark_error": -0.003611855510290557,
+      "channels_real": [
+        -0.04439533029150667,
+        0.3081907019844524,
+        -0.001466078409350729,
+        -0.018375585560863987
+      ],
+      "channels_imag": [
+        -0.11317332151246667,
+        -0.020795922017837705,
+        -0.06057487701290541,
+        0.0648880534801164
+      ]
+    }
+  ]
+}

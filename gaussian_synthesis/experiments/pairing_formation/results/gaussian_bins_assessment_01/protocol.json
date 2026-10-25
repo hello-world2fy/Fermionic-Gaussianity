@@ -1,0 +1,8 @@
+{
+  "classification": "Training-only independent Gaussian-bin quadrature assessment; no future state access.",
+  "split": "Even-numbered GPU streams versus odd-numbered GPU streams, interleaved blocks for equal-size replicas.",
+  "common_removed_directions": "F, exact training psi, and deterministic C2(psi), shared across all methods.",
+  "fixed_control_variate": "Subtract equal share of sampled-total error from every bin; exact total is deterministic. No claim that this removes bin-dependent noise.",
+  "stability_gate": "For ranks 1,2,4,8: every independent-half principal cosine >=0.95 and smallest pooled singular value >=3 times the Frobenius standard error of the pooled residual-bin matrix.",
+  "restriction": "Passing stability alone is not a physical or predictive advantage. Full symmetry space has dimension 26. All errors here are empirical float64 Monte Carlo diagnostics."
+}

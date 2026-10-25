@@ -1,0 +1,50 @@
+{
+  "classification": "Retrospective physical-coordinate selection pilot at L14 G4 eta1. No new physical parameter holdouts.",
+  "training_times": [
+    0.3,
+    0.6,
+    0.9,
+    1.35
+  ],
+  "training_sha256": "b6d51afbe4b564d5f0932887651000289ba5a64c365a200aefbe4de68e9481aa",
+  "input_hashes": {
+    "results/temporal_cubic_01/early_states.npz": "8e9143c33771f609e46a59f0b0471d8ca1a705933ce4b02036f76baf9ebab919",
+    "results/temporal_cubic_01/synthesis_0.npz": "158fd1f52530469887a31b666ff94670cf06fc05ac14b3a4aaa756d0e8b4e7d4",
+    "results/temporal_cubic_01/synthesis_2.npz": "ace2dc8a3b1207cc02253451c7c60fc63e9f05014d32d66d2c6d747b0349d9e8",
+    "results/temporal_cubic_01/synthesis_4.npz": "aa410c2a5a510884b9863979d9edfb31c4b0f0b804ddca4715b34e5439a4c6f8",
+    "results/temporal_cubic_01/synthesis_7.npz": "0095f7c777774293e2211d140a88ea6453dfc8ed52fc5f4ba87a082f28118dad"
+  },
+  "physical_labels": "Full-Fock Gaussian pair correlator <s_i+ s_j-> = Delta_i* Delta_j + rho_iup,jup rho_idown,jdown - rho_iup,jdown rho_idown,jup. Integrate full, anomalous-field product and normal-exchange labels separately; subtract their Haar means. These are coordinate-weighted coherent vectors, not target observable marginals.",
+  "quadratic_intermediates": "Full Cartan contraction includes r-1/r+1 paired sectors and complementary two-unpaired-electron sectors. The normal-exchange physical label is derived by symbol decomposition, not identified with one intermediate block.",
+  "labels": "Four intershell angular separations and their conjugates; four separations in each shell, including double occupation. Exact invariant output projection corresponds to averaging the labels under the same Gaussian symmetry group.",
+  "shared_space": "All endpoint transfer-count profiles plus H psi_endpoint. Contains exactly the Fermi initial state and endpoint target, and the endpoint Hamiltonian tangent.",
+  "selection": "Normalize each nonzero residual coordinate column, then take leading SVD directions. Eight anomalous, normal or full directions. Sixteen full directions; nested split adds eight residual normal directions to the eight anomalous directions. Ordinary operator-history and ordinary H Krylov controls use the same dimensions.",
+  "deletion": "Nested split -> anomalous removes precisely the eight added normal-coordinate directions while preserving both initial states. Anomalous-plus-eight-H control tests whether ordinary dynamics repairs the same omission.",
+  "primary_time": 2.0,
+  "last_time": 2.5,
+  "step": 0.05,
+  "gate": "Each canonical candidate must improve count TV, four-point pair-channel L2 error and multiple-transfer dark-probability error over same-family unoptimized, equal-dimension ordinary operator-history and H Krylov at t2. Split must additionally beat full16, anomalous-only deletion and anomalous-plus-H16. Both identical Fermi and endpoint starts are reported. No new physical conditions until numerical and mechanism checks pass.",
+  "scope": "Float64 full-Gaussian integrals with exponential paired-space contractions; no iid canonical sampling, interval certificate or equal-compute advantage claim.",
+  "frozen_sha256": "d510b8bab6f2c475a514675eaaae9553bf7b90b40c55664c4f3844d62a80acba",
+  "base_dimension": 9,
+  "dimensions": {
+    "shared": 9,
+    "canonical_full_q8": 17,
+    "canonical_anomalous_q8": 17,
+    "canonical_normal_exchange_q8": 17,
+    "canonical_full_q16": 25,
+    "canonical_split_q16": 25,
+    "canonical_anomalous_H_q16": 25,
+    "unoptimized_full_q8": 17,
+    "unoptimized_anomalous_q8": 17,
+    "unoptimized_normal_exchange_q8": 17,
+    "unoptimized_full_q16": 25,
+    "unoptimized_split_q16": 25,
+    "unoptimized_anomalous_H_q16": 25,
+    "ordinary_q8": 17,
+    "Hamiltonian_q8": 17,
+    "ordinary_q16": 25,
+    "Hamiltonian_q16": 25,
+    "exact_symmetry": 170
+  }
+}

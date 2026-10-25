@@ -1,0 +1,143 @@
+{
+  "L": 8,
+  "train_time": 1.0,
+  "train_G": 2.0,
+  "holdout_G": [
+    1.35,
+    2.65,
+    -1.65
+  ],
+  "kicks": {
+    "none": 0.0
+  },
+  "elapsed": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "records": [
+    {
+      "name": "target_two_orbits",
+      "file": "target_two_orbits.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "initial_fidelity": 0.9999883170087861,
+      "sha256": "ef006a30147feec234a0684e945be6613ecc56a47d2d095bafc379916d61eae7"
+    },
+    {
+      "name": "witness_two_orbits",
+      "file": "witness_two_orbits.npz",
+      "type": "multiorbit",
+      "rank": 2,
+      "initial_fidelity": 0.9999476631836783,
+      "sha256": "e25f0a541a666c2d47b0c9ab0a73da96c7b22e4da57ffb4c2b77cba381b22e0e"
+    },
+    {
+      "name": "fit_conditioned",
+      "file": "fit_conditioned.npz",
+      "type": "conditional",
+      "conditioned": true,
+      "sha256": "3392060f24f2d139990e8652e80d2182a16419478fe348605c944fbc7e5fd2f5"
+    }
+  ],
+  "primary_time": 1.0,
+  "protocol": "Size replication of training-only orbital extraction and fixed energy filters; L16 has no canonical-witness comparison",
+  "filters": {
+    "target": {
+      "particle": [
+        0,
+        3
+      ],
+      "hole": [
+        0,
+        3
+      ],
+      "score": 0.004398667043500569,
+      "selection": "training-state success probability times conditional negativity",
+      "training_observables": {
+        "success_probability": 0.08801507089592131,
+        "negativity": 0.049976293817930756,
+        "weighted_negativity": 0.00439866704350057,
+        "PT_min_eigenvalue": -0.049976293817930756,
+        "tomographic_CHSH_max": 2.0099656910256996,
+        "pauli_moments": [
+          [
+            1.0,
+            0.7070106330149591,
+            0.6291559684265381,
+            -0.3070964220272637
+          ],
+          [
+            0.7070106330149594,
+            0.5496594367185007,
+            0.42186400723844214,
+            -0.17251034170258384
+          ],
+          [
+            -0.6291559684265378,
+            -0.4218640072384418,
+            -0.3953965615683878,
+            0.2674323669237873
+          ],
+          [
+            0.3070964220272636,
+            0.17251034170258384,
+            0.26743236692378736,
+            -0.054944001713111396
+          ]
+        ],
+        "CHSH_is_loophole_free_experiment": false
+      }
+    },
+    "witness": {
+      "particle": [
+        0,
+        3
+      ],
+      "hole": [
+        0,
+        3
+      ],
+      "score": 0.004817388270394775,
+      "selection": "training-state success probability times conditional negativity",
+      "training_observables": {
+        "success_probability": 0.08681914671940792,
+        "negativity": 0.0554876251659575,
+        "weighted_negativity": 0.004817388270394776,
+        "PT_min_eigenvalue": -0.0554876251659575,
+        "tomographic_CHSH_max": 2.012277819970425,
+        "pauli_moments": [
+          [
+            1.0,
+            0.7113799758110364,
+            0.6309399107724858,
+            -0.2890291556629981
+          ],
+          [
+            0.7113799758110366,
+            0.5602809697172514,
+            0.4247929021829697,
+            -0.15496193532222263
+          ],
+          [
+            -0.6309399107724856,
+            -0.4247929021829694,
+            -0.39964649153677423,
+            0.26501763950563834
+          ],
+          [
+            0.28902915566299825,
+            0.15496193532222258,
+            0.2650176395056385,
+            -0.040072538745974384
+          ]
+        ],
+        "CHSH_is_loophole_free_experiment": false
+      }
+    }
+  }
+}

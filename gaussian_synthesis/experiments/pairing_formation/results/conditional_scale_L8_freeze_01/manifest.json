@@ -1,0 +1,42 @@
+{
+  "L": 8,
+  "train_time": 1.0,
+  "train_G": 2.0,
+  "holdout_G": [
+    1.5,
+    2.5,
+    -1.8
+  ],
+  "kicks": {
+    "none": 0.0
+  },
+  "elapsed": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "protocol": "Size replication; training accesses only t=1, all nonlinear predictions precede exact references",
+  "records": [
+    {
+      "name": "target_conditioned",
+      "file": "target_conditioned.npz",
+      "type": "tdvp",
+      "conditioned": true,
+      "complex_manifold_dimension": 23,
+      "initial_fidelity": 0.9996474716090215,
+      "sha256": "3392060f24f2d139990e8652e80d2182a16419478fe348605c944fbc7e5fd2f5"
+    },
+    {
+      "name": "target_common",
+      "file": "target_common.npz",
+      "type": "tdvp",
+      "conditioned": false,
+      "complex_manifold_dimension": 11,
+      "initial_fidelity": 0.999102214910916,
+      "sha256": "0158edd8df92b7e5d0ad2f7bdcef6c19e6a316624f2a7573073ac260b3d79e64"
+    }
+  ]
+}

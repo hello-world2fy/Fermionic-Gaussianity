@@ -1,0 +1,905 @@
+{
+  "verified_forecast_files": 48,
+  "physical_conditions": 4,
+  "gpu_runs": 24,
+  "GPUs_used": 8,
+  "samples_per_run": 262144,
+  "independent_samples_per_condition_and_method": 524288,
+  "deterministic_methods": 4,
+  "same_initial_state": "Exact Fermi sea for all deterministic predictions.",
+  "numerical_refinements": [
+    {
+      "condition": "L10_eta1",
+      "method": "full_cc",
+      "max_normalized_ray_difference": 8.187145836055569e-10
+    },
+    {
+      "condition": "L10_eta1",
+      "method": "source_only_cc",
+      "max_normalized_ray_difference": 2.663783535205558e-11
+    },
+    {
+      "condition": "L14_eta1",
+      "method": "full_cc",
+      "max_normalized_ray_difference": 1.110364077498897e-10
+    },
+    {
+      "condition": "L14_eta1",
+      "method": "source_only_cc",
+      "max_normalized_ray_difference": 1.1090145174951934e-11
+    },
+    {
+      "condition": "L18_eta1",
+      "method": "full_cc",
+      "max_normalized_ray_difference": 2.645492628880797e-11
+    },
+    {
+      "condition": "L18_eta1",
+      "method": "source_only_cc",
+      "max_normalized_ray_difference": 2.576833027047104e-12
+    },
+    {
+      "condition": "L14_eta0.85",
+      "method": "full_cc",
+      "max_normalized_ray_difference": 7.314319464977963e-11
+    },
+    {
+      "condition": "L14_eta0.85",
+      "method": "source_only_cc",
+      "max_normalized_ray_difference": 7.0859878739330474e-12
+    }
+  ],
+  "stochastic_step_checks": [
+    {
+      "condition": "L10_eta1",
+      "method": "gaussian",
+      "max_paired_block_step_difference": 1.0600756716883097e-08,
+      "max_mean_step_difference": 1.0074708151064371e-08,
+      "independent_samples": 524288,
+      "error_blocks": 128
+    },
+    {
+      "condition": "L10_eta1",
+      "method": "discrete",
+      "max_paired_block_step_difference": 1.1459126980639667e-08,
+      "max_mean_step_difference": 1.091403485642406e-08,
+      "independent_samples": 524288,
+      "error_blocks": 128
+    },
+    {
+      "condition": "L14_eta1",
+      "method": "gaussian",
+      "max_paired_block_step_difference": 1.5190973812195807e-08,
+      "max_mean_step_difference": 1.430613269515213e-08,
+      "independent_samples": 524288,
+      "error_blocks": 128
+    },
+    {
+      "condition": "L14_eta1",
+      "method": "discrete",
+      "max_paired_block_step_difference": 1.5756135951505712e-08,
+      "max_mean_step_difference": 1.5233785982671222e-08,
+      "independent_samples": 524288,
+      "error_blocks": 128
+    },
+    {
+      "condition": "L18_eta1",
+      "method": "gaussian",
+      "max_paired_block_step_difference": 2.036901491919707e-08,
+      "max_mean_step_difference": 1.9430686393206997e-08,
+      "independent_samples": 524288,
+      "error_blocks": 128
+    },
+    {
+      "condition": "L18_eta1",
+      "method": "discrete",
+      "max_paired_block_step_difference": 2.112399144493793e-08,
+      "max_mean_step_difference": 2.0420410584698345e-08,
+      "independent_samples": 524288,
+      "error_blocks": 128
+    },
+    {
+      "condition": "L14_eta0.85",
+      "method": "gaussian",
+      "max_paired_block_step_difference": 1.14437455067673e-08,
+      "max_mean_step_difference": 1.0771054936853375e-08,
+      "independent_samples": 524288,
+      "error_blocks": 128
+    },
+    {
+      "condition": "L14_eta0.85",
+      "method": "discrete",
+      "max_paired_block_step_difference": 1.1813968470164582e-08,
+      "max_mean_step_difference": 1.138312522019902e-08,
+      "independent_samples": 524288,
+      "error_blocks": 128
+    }
+  ],
+  "short_time_CC_source_checks": [
+    {
+      "L": 10,
+      "rows": [
+        {
+          "time": 0.0025,
+          "cubic_probability_coefficient": 0.09102222222222224,
+          "DF_probability_over_leading": 0.9999927055402432,
+          "projective_T_probability_over_leading": 1.000016151054541
+        },
+        {
+          "time": 0.005,
+          "cubic_probability_coefficient": 0.09102222222222224,
+          "DF_probability_over_leading": 0.999970803581595,
+          "projective_T_probability_over_leading": 1.000064602902108
+        },
+        {
+          "time": 0.01,
+          "cubic_probability_coefficient": 0.09102222222222224,
+          "DF_probability_over_leading": 0.999883247719354,
+          "projective_T_probability_over_leading": 1.0002584445394769
+        },
+        {
+          "time": 0.02,
+          "cubic_probability_coefficient": 0.09102222222222224,
+          "DF_probability_over_leading": 0.9995335610609277,
+          "projective_T_probability_over_leading": 1.001034312845074
+        }
+      ]
+    },
+    {
+      "L": 14,
+      "rows": [
+        {
+          "time": 0.0025,
+          "cubic_probability_coefficient": 0.02369383127400622,
+          "DF_probability_over_leading": 1.0000056525767498,
+          "projective_T_probability_over_leading": 1.0000059964993346
+        },
+        {
+          "time": 0.005,
+          "cubic_probability_coefficient": 0.02369383127400622,
+          "DF_probability_over_leading": 1.0000226381953958,
+          "projective_T_probability_over_leading": 1.00002397987706
+        },
+        {
+          "time": 0.01,
+          "cubic_probability_coefficient": 0.02369383127400622,
+          "DF_probability_over_leading": 1.0000904093362635,
+          "projective_T_probability_over_leading": 1.000095924939247
+        },
+        {
+          "time": 0.02,
+          "cubic_probability_coefficient": 0.02369383127400622,
+          "DF_probability_over_leading": 1.0003592230915206,
+          "projective_T_probability_over_leading": 1.0003837793230583
+        }
+      ]
+    }
+  ],
+  "primary_time": 2.0,
+  "primary_results": [
+    {
+      "condition": "L10_eta1",
+      "exact": {
+        "mean": 1.4899055996144746,
+        "variance": 1.6328863444502413,
+        "m1_dark_probability": 0.08911898255176559,
+        "m1_dark_fraction": 0.5113222050321191,
+        "upper_third_harmonic_occupation": 0.4105902186918148,
+        "echo_witness_theta02": 0.003918262349344885
+      },
+      "deterministic": {
+        "full_cc": {
+          "fidelity": 0.29610985589417177,
+          "count_TV": 0.45948376243436806,
+          "m1_dark_probability": 0.26936477105521406,
+          "m1_dark_fraction": 0.8195951472412037,
+          "upper_third_harmonic_occupation": 0.256843419898035,
+          "mean": 0.43108003673605066,
+          "variance": 0.3545076929038302
+        },
+        "source_only_cc": {
+          "fidelity": 0.31018913756862143,
+          "count_TV": 0.6762696669624008,
+          "m1_dark_probability": 1.6382645148844893e-35,
+          "m1_dark_fraction": 2.164321631610834e-33,
+          "upper_third_harmonic_occupation": 6.489525092734468e-06,
+          "mean": 0.0076168507896070235,
+          "variance": 0.007606367019468514
+        },
+        "riccati": {
+          "fidelity": 0.03747024641265251,
+          "count_TV": 0.22625606150933986,
+          "m1_dark_probability": 5.532136823987435e-32,
+          "m1_dark_fraction": 1.4655803059707652e-31,
+          "upper_third_harmonic_occupation": 0.18491771756044095,
+          "mean": 1.3861007958340645,
+          "variance": 0.9346237022547956
+        },
+        "projective_cc": {
+          "fidelity": 0.019237012866006757,
+          "count_TV": 0.23988878043287648,
+          "m1_dark_probability": 0.037155980104411394,
+          "m1_dark_fraction": 0.10742655343279327,
+          "upper_third_harmonic_occupation": 0.26386741718923223,
+          "mean": 1.6085461870271767,
+          "variance": 0.9429503641423969
+        }
+      },
+      "stochastic": {
+        "gaussian": {
+          "time": 2.0,
+          "mean": 1.76304223311139,
+          "mean_se": 0.0011767436112219054,
+          "variance": 0.7756487199352824,
+          "variance_se": 0.0015107992465914185,
+          "upper_source_occupation": 1.0637954406566785,
+          "upper_source_occupation_se": 0.0009863443559882336,
+          "upper_third_harmonic_occupation": 0.463918697629176,
+          "upper_third_harmonic_occupation_se": 0.0007963306468660861,
+          "classical_variance": 0.6884688224642863
+        },
+        "discrete": {
+          "time": 2.0,
+          "mean": 1.7857242926034886,
+          "mean_se": 0.001176881989863625,
+          "variance": 0.77719247025271,
+          "variance_se": 0.001382665128471529,
+          "upper_source_occupation": 1.0797769729903786,
+          "upper_source_occupation_se": 0.0010610710018431322,
+          "upper_third_harmonic_occupation": 0.46979410870711474,
+          "upper_third_harmonic_occupation_se": 0.0007251921301467868,
+          "classical_variance": 0.7159610996792383
+        }
+      }
+    },
+    {
+      "condition": "L14_eta1",
+      "exact": {
+        "mean": 2.133185378910179,
+        "variance": 1.6585170378246188,
+        "m1_dark_probability": 0.015669250382063557,
+        "m1_dark_fraction": 0.5347779218006998,
+        "upper_third_harmonic_occupation": 0.4755378525759836,
+        "echo_witness_theta02": -0.0209485604137217
+      },
+      "deterministic": {
+        "full_cc": {
+          "fidelity": 0.14511566762333364,
+          "count_TV": 0.7052423542888494,
+          "m1_dark_probability": 0.21468371048780274,
+          "m1_dark_fraction": 0.6236998313207981,
+          "upper_third_harmonic_occupation": 0.20972577462676428,
+          "mean": 0.49566585669050395,
+          "variance": 0.41946025366648493
+        },
+        "source_only_cc": {
+          "fidelity": 0.1503758044326968,
+          "count_TV": 0.7593809117793253,
+          "m1_dark_probability": 1.5960710399327927e-33,
+          "m1_dark_fraction": 9.392241221230014e-33,
+          "upper_third_harmonic_occupation": 0.002686770971293957,
+          "mean": 0.20831818508801944,
+          "variance": 0.2065937714586283
+        },
+        "riccati": {
+          "fidelity": 0.019182764280652145,
+          "count_TV": 0.2816407252946216,
+          "m1_dark_probability": 2.0334880641398076e-31,
+          "m1_dark_fraction": 6.544843141001519e-31,
+          "upper_third_harmonic_occupation": 0.14741949218064818,
+          "mean": 1.6729453792773332,
+          "variance": 1.2770380275486217
+        },
+        "projective_cc": {
+          "fidelity": 1.3015340706081034e-05,
+          "count_TV": 0.9920502958985955,
+          "m1_dark_probability": 8.319140456066387e-11,
+          "m1_dark_fraction": 0.9800085613080515,
+          "upper_third_harmonic_occupation": 2.0410018265152483,
+          "mean": 6.876917389251802,
+          "variance": 0.1239882893451778
+        }
+      },
+      "stochastic": {
+        "gaussian": {
+          "time": 2.0,
+          "mean": 2.1949281191480408,
+          "mean_se": 0.0012396327199695235,
+          "variance": 1.0249095948186566,
+          "variance_se": 0.0018859868915569056,
+          "upper_source_occupation": 1.165586082175168,
+          "upper_source_occupation_se": 0.0011743159259487335,
+          "upper_third_harmonic_occupation": 0.4477755895007633,
+          "upper_third_harmonic_occupation_se": 0.0008264109980604393,
+          "classical_variance": 0.9805694130770686
+        },
+        "discrete": {
+          "time": 2.0,
+          "mean": 2.1878890811888683,
+          "mean_se": 0.001338882428549533,
+          "variance": 1.0380431157067322,
+          "variance_se": 0.0019515398476900824,
+          "upper_source_occupation": 1.1647270054177319,
+          "upper_source_occupation_se": 0.0010872713159717116,
+          "upper_third_harmonic_occupation": 0.45741186667743794,
+          "upper_third_harmonic_occupation_se": 0.0008182025066116121,
+          "classical_variance": 1.0102732923280415
+        }
+      }
+    },
+    {
+      "condition": "L18_eta1",
+      "exact": {
+        "mean": 2.494624136160681,
+        "variance": 1.975269438880952,
+        "m1_dark_probability": 0.007088739891633559,
+        "m1_dark_fraction": 0.16706208141663176,
+        "upper_third_harmonic_occupation": 0.49294086117964014,
+        "echo_witness_theta02": -0.023686848853428533
+      },
+      "deterministic": {
+        "full_cc": {
+          "fidelity": 0.12527559082670253,
+          "count_TV": 0.5753854138952909,
+          "m1_dark_probability": 0.11816440908485157,
+          "m1_dark_fraction": 0.3000426741111235,
+          "upper_third_harmonic_occupation": 0.17881968562102435,
+          "mean": 0.9165783167606087,
+          "variance": 0.7960274235853199
+        },
+        "source_only_cc": {
+          "fidelity": 0.14185604660326592,
+          "count_TV": 0.6289584788728545,
+          "m1_dark_probability": 4.447300607459196e-33,
+          "m1_dark_fraction": 1.284427410790784e-32,
+          "upper_third_harmonic_occupation": 0.020904802557351877,
+          "mean": 0.7488513737982306,
+          "variance": 0.7458934263039977
+        },
+        "riccati": {
+          "fidelity": 0.005941551987619487,
+          "count_TV": 0.24951677928939459,
+          "m1_dark_probability": 1.3145118619484352e-31,
+          "m1_dark_fraction": 4.951638915437746e-31,
+          "upper_third_harmonic_occupation": 0.1247272962099538,
+          "mean": 1.928355387586701,
+          "variance": 1.6249133401853637
+        },
+        "projective_cc": {
+          "fidelity": 0.00040479711651808384,
+          "count_TV": 0.594490870934105,
+          "m1_dark_probability": 0.0015574695164388684,
+          "m1_dark_fraction": 0.21993842286859433,
+          "upper_third_harmonic_occupation": 0.7364010436320232,
+          "mean": 4.822997601884298,
+          "variance": 1.9295737720755604
+        }
+      },
+      "stochastic": {
+        "gaussian": {
+          "time": 2.0,
+          "mean": 2.681352519004614,
+          "mean_se": 0.00151423796927291,
+          "variance": 1.363452917921359,
+          "variance_se": 0.0030693098529118007,
+          "upper_source_occupation": 1.3329502159133229,
+          "upper_source_occupation_se": 0.0011660396458866413,
+          "upper_third_harmonic_occupation": 0.4788776566272574,
+          "upper_third_harmonic_occupation_se": 0.0007909954588113247,
+          "classical_variance": 1.340139578989552
+        },
+        "discrete": {
+          "time": 2.0,
+          "mean": 2.652656794140548,
+          "mean_se": 0.001762791946098742,
+          "variance": 1.3635944350769726,
+          "variance_se": 0.00268476142289071,
+          "upper_source_occupation": 1.3204932206345605,
+          "upper_source_occupation_se": 0.0012474285014791601,
+          "upper_third_harmonic_occupation": 0.486307877507503,
+          "upper_third_harmonic_occupation_se": 0.0008243583507215521,
+          "classical_variance": 1.3567046820349624
+        }
+      }
+    },
+    {
+      "condition": "L14_eta0.85",
+      "exact": {
+        "mean": 2.070151326132565,
+        "variance": 1.3417718586124732,
+        "m1_dark_probability": 0.018881882635145803,
+        "m1_dark_fraction": 0.20401043278837047,
+        "upper_third_harmonic_occupation": 0.41641786698527194,
+        "echo_witness_theta02": -0.030525658700590944
+      },
+      "deterministic": {
+        "full_cc": {
+          "fidelity": 0.16123087752912818,
+          "count_TV": 0.5616486051368863,
+          "m1_dark_probability": 0.15144060720152763,
+          "m1_dark_fraction": 0.36374677525189625,
+          "upper_third_harmonic_occupation": 0.2734932184446104,
+          "mean": 0.8699795502844119,
+          "variance": 0.6917521529162965
+        },
+        "source_only_cc": {
+          "fidelity": 0.16079578928618274,
+          "count_TV": 0.6822379858587186,
+          "m1_dark_probability": 1.3504275722377016e-33,
+          "m1_dark_fraction": 4.434449013271518e-33,
+          "upper_third_harmonic_occupation": 0.01438783812274889,
+          "mean": 0.48969751242271864,
+          "variance": 0.47259766076529447
+        },
+        "riccati": {
+          "fidelity": 0.0022919436714781472,
+          "count_TV": 0.23615295533447703,
+          "m1_dark_probability": 1.657121845136499e-31,
+          "m1_dark_fraction": 5.3247639533458475e-31,
+          "upper_third_harmonic_occupation": 0.14716390900369597,
+          "mean": 1.669836760181717,
+          "variance": 1.274224162425162
+        },
+        "projective_cc": {
+          "fidelity": 1.9241055071179077e-05,
+          "count_TV": 0.984131879850624,
+          "m1_dark_probability": 1.9553579596196088e-09,
+          "m1_dark_fraction": 0.9268670675537455,
+          "upper_third_harmonic_occupation": 2.050403244727801,
+          "mean": 6.741388190077902,
+          "variance": 0.2611688251717794
+        }
+      },
+      "stochastic": {
+        "gaussian": {
+          "time": 2.0,
+          "mean": 2.0965526640773637,
+          "mean_se": 0.0013896465964863762,
+          "variance": 0.9303565682751476,
+          "variance_se": 0.0017867837230293778,
+          "upper_source_occupation": 1.1547604737471573,
+          "upper_source_occupation_se": 0.001173887194097624,
+          "upper_third_harmonic_occupation": 0.4098374077022376,
+          "upper_third_harmonic_occupation_se": 0.0007981559378014007,
+          "classical_variance": 0.8982789417334507
+        },
+        "discrete": {
+          "time": 2.0,
+          "mean": 2.075670106748624,
+          "mean_se": 0.0012629341743282203,
+          "variance": 0.9407771385543349,
+          "variance_se": 0.0016415378148868865,
+          "upper_source_occupation": 1.146511528798413,
+          "upper_source_occupation_se": 0.0010993321193556007,
+          "upper_third_harmonic_occupation": 0.4183224213075933,
+          "upper_third_harmonic_occupation_se": 0.0007544922689593492,
+          "classical_variance": 0.9276836280590235
+        }
+      }
+    }
+  ],
+  "new_important_canonical_specific_physics_established": false,
+  "scope": "Odd-grid robustness and strong nonlinear controls. The conventional projective CC equation contains the Pauli cubic source explicitly. This is not evidence of a canonical-only discovery.",
+  "stochastic_scope": "Gaussian-noise spin mean field and discrete TWA with exact onsite spin symbols. No pure-state echo or coherent postselection is assigned to these ensembles.",
+  "floating_point_not_interval_certified": true,
+  "canonical_pilot": {
+    "points": 3,
+    "max_residual": 1.0539278742559242e-09,
+    "max_direct_witness_span_projector_difference": 6.682467483554154e-14,
+    "measure_samples_used": false,
+    "classification": "Posthoc training-geometry pilot; no unique selected-space information at these points."
+  },
+  "projective_refinements": [
+    {
+      "condition": "L10_eta1",
+      "max_normalized_ray_difference": 6.109269431538363e-11,
+      "diagnostics": {
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "complete": true,
+        "calls": 3815,
+        "rtol": 2e-12,
+        "atol": 2e-14,
+        "max_step": 0.01,
+        "amplitude_limit_event": [],
+        "largest_saved_T_norm": 79.99197389148055,
+        "observables": "Normalized right-ket observables, not bivariational CC expectations"
+      }
+    },
+    {
+      "condition": "L14_eta1",
+      "max_normalized_ray_difference": 4.3735074429795197e-10,
+      "diagnostics": {
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "complete": true,
+        "calls": 3935,
+        "rtol": 2e-12,
+        "atol": 2e-14,
+        "max_step": 0.01,
+        "amplitude_limit_event": [],
+        "largest_saved_T_norm": 150.3949805630812,
+        "observables": "Normalized right-ket observables, not bivariational CC expectations"
+      }
+    },
+    {
+      "condition": "L18_eta1",
+      "max_normalized_ray_difference": 2.1523935428121775e-14,
+      "diagnostics": {
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "complete": true,
+        "calls": 3191,
+        "rtol": 2e-12,
+        "atol": 2e-14,
+        "max_step": 0.01,
+        "amplitude_limit_event": [],
+        "largest_saved_T_norm": 7.9236620007872665,
+        "observables": "Normalized right-ket observables, not bivariational CC expectations"
+      }
+    },
+    {
+      "condition": "L14_eta0.85",
+      "max_normalized_ray_difference": 3.126946056938115e-10,
+      "diagnostics": {
+        "success": true,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "complete": true,
+        "calls": 3251,
+        "rtol": 2e-12,
+        "atol": 2e-14,
+        "max_step": 0.01,
+        "amplitude_limit_event": [],
+        "largest_saved_T_norm": 25.085255952297533,
+        "observables": "Normalized right-ket observables, not bivariational CC expectations"
+      }
+    }
+  ],
+  "generated_span_diagnostics": [
+    {
+      "L": 10,
+      "eta": 1.0,
+      "q": 2,
+      "dimension": 56,
+      "full_dimension": 252,
+      "initial_state_error": 0.0,
+      "relative_H_closure_residual": 0.2411288716810605,
+      "time2": {
+        "time": 2.0,
+        "count": [
+          0.5765341152584765,
+          0.01848486773723541,
+          0.28015703074979753,
+          0.07745702625680603,
+          0.0431122552823139,
+          0.004254704715370255
+        ],
+        "mean": 1.0048925527133554,
+        "variance": 1.6225808869501948,
+        "m1_probability": 0.018484867737235414,
+        "m1_dark_probability": 9.65785929734286e-35,
+        "m1_dark_fraction": 5.224738112617562e-33,
+        "m1_outside_source_probability": 0.0,
+        "upper_source_occupation": 0.6388388223048753,
+        "upper_third_harmonic_occupation": 0.24872438402202746,
+        "echo_witness_theta02": 0.02280132696889533,
+        "norm_error": 1.5543122344752192e-15,
+        "energy": -8.99999999999998,
+        "fidelity": 0.47971821193635206,
+        "count_TV": 0.2603968984434523
+      }
+    },
+    {
+      "L": 14,
+      "eta": 0.85,
+      "q": 2,
+      "dimension": 141,
+      "full_dimension": 3432,
+      "initial_state_error": 0.0,
+      "relative_H_closure_residual": 0.25775260862976207,
+      "time2": {
+        "time": 2.0,
+        "count": [
+          0.23533175455432961,
+          0.2197599438902697,
+          0.3930223438986444,
+          0.04754256577105465,
+          0.08504817964455083,
+          0.018609491450733925,
+          0.0006833463405925965,
+          2.37444982382051e-06
+        ],
+        "mean": 1.5857892040249175,
+        "variance": 1.5557299887062195,
+        "m1_probability": 0.21975994389026973,
+        "m1_dark_probability": 1.0571931683682156e-33,
+        "m1_dark_fraction": 4.8106727261274326e-33,
+        "m1_outside_source_probability": -1.942890293094024e-16,
+        "upper_source_occupation": 1.1330702192626414,
+        "upper_third_harmonic_occupation": 0.19131392580648404,
+        "echo_witness_theta02": -0.0031188985120853413,
+        "norm_error": 9.992007221626409e-16,
+        "energy": -10.699999999999985,
+        "fidelity": 0.37036981463937346,
+        "count_TV": 0.22956084510652847
+      }
+    },
+    {
+      "L": 14,
+      "eta": 0.85,
+      "q": 4,
+      "dimension": 2233,
+      "full_dimension": 3432,
+      "initial_state_error": 0.0,
+      "relative_H_closure_residual": 0.21314723754614087,
+      "time2": {
+        "time": 2.0,
+        "count": [
+          0.13853584077938974,
+          0.07114105935452007,
+          0.3773616522844648,
+          0.27171086480533624,
+          0.11969382460752283,
+          0.02029638870481262,
+          0.0012435162899255667,
+          1.6853174028252695e-05
+        ],
+        "mean": 2.2288332702513642,
+        "variance": 1.5263910084663994,
+        "m1_probability": 0.07114105935452009,
+        "m1_dark_probability": 0.0021112024986564295,
+        "m1_dark_fraction": 0.029676287052960368,
+        "m1_outside_source_probability": 0.006692696011281599,
+        "upper_source_occupation": 1.1988260711336198,
+        "upper_third_harmonic_occupation": 0.5141518575532845,
+        "echo_witness_theta02": -0.02984030725198923,
+        "norm_error": 4.440892098500626e-15,
+        "energy": -10.699999999999962,
+        "fidelity": 0.6579381321483803,
+        "count_TV": 0.08703480968893307
+      }
+    },
+    {
+      "L": 14,
+      "eta": 1.0,
+      "q": 2,
+      "dimension": 141,
+      "full_dimension": 3432,
+      "initial_state_error": 0.0,
+      "relative_H_closure_residual": 0.2587980869167857,
+      "time2": {
+        "time": 2.0,
+        "count": [
+          0.4689601919129369,
+          0.03828156861013005,
+          0.27140326766813383,
+          0.07595196177892306,
+          0.12063951172350797,
+          0.023594541546080428,
+          0.0011228925537426463,
+          4.606420654487871e-05
+        ],
+        "mean": 1.4165345486758707,
+        "variance": 2.363669171984192,
+        "m1_probability": 0.03828156861013005,
+        "m1_dark_probability": 2.8268473489404723e-34,
+        "m1_dark_fraction": 7.384356105492587e-33,
+        "m1_outside_source_probability": -2.0816681711721685e-17,
+        "upper_source_occupation": 0.918792511218003,
+        "upper_third_harmonic_occupation": 0.21548131024719416,
+        "echo_witness_theta02": 0.03410805220474935,
+        "norm_error": 9.992007221626409e-16,
+        "energy": -10.999999999999988,
+        "fidelity": 0.37003503970442364,
+        "count_TV": 0.29913394977404073
+      }
+    },
+    {
+      "L": 14,
+      "eta": 1.0,
+      "q": 4,
+      "dimension": 2233,
+      "full_dimension": 3432,
+      "initial_state_error": 0.0,
+      "relative_H_closure_residual": 0.213036735380423,
+      "time2": {
+        "time": 2.0,
+        "count": [
+          0.1885649744419745,
+          0.016631920038333328,
+          0.33707284628635864,
+          0.31053166238660984,
+          0.12613155957653485,
+          0.019004673130534874,
+          0.001958034146782026,
+          0.00010432999287222424
+        ],
+        "mean": 2.2344007185604915,
+        "variance": 1.7359848759824361,
+        "m1_probability": 0.016631920038333328,
+        "m1_dark_probability": 1.3141052008287566e-06,
+        "m1_dark_fraction": 7.901103407183301e-05,
+        "m1_outside_source_probability": 1.3141052008121268e-06,
+        "upper_source_occupation": 1.1273964424926617,
+        "upper_third_harmonic_occupation": 0.589627426643009,
+        "echo_witness_theta02": -0.022118328777829252,
+        "norm_error": 2.9976021664879227e-15,
+        "energy": -11.00000000000003,
+        "fidelity": 0.6366634734550751,
+        "count_TV": 0.057621665740020325
+      }
+    },
+    {
+      "L": 18,
+      "eta": 1.0,
+      "q": 2,
+      "dimension": 286,
+      "full_dimension": 48620,
+      "initial_state_error": 0.0,
+      "relative_H_closure_residual": 0.2552102651254962,
+      "time2": {
+        "time": 2.0,
+        "count": [
+          0.4348002954334544,
+          0.10703733210955303,
+          0.13797282880582928,
+          0.009491314540085054,
+          0.2416824974086532,
+          0.050946539929644236,
+          0.012103936384186172,
+          0.005498062592457327,
+          0.000456884597438244,
+          1.0308198697520228e-05
+        ],
+        "mean": 1.7477775296444025,
+        "variance": 3.56542999703496,
+        "m1_probability": 0.10703733210955303,
+        "m1_dark_probability": 7.702366457352987e-34,
+        "m1_dark_fraction": 7.195962666062707e-33,
+        "m1_outside_source_probability": 2.7755575615628914e-17,
+        "upper_source_occupation": 1.0682416032657873,
+        "upper_third_harmonic_occupation": 0.22461437401347956,
+        "echo_witness_theta02": 0.06456058136436287,
+        "norm_error": 4.440892098500626e-16,
+        "energy": -12.999999999999961,
+        "fidelity": 0.28010903767897544,
+        "count_TV": 0.4234188898040715
+      }
+    }
+  ],
+  "angular_alias_first_orders": [
+    {
+      "L": 10,
+      "r": 5,
+      "first_orders": [
+        {
+          "discrete_index": 0,
+          "lowest_odd_representative_absolute_value": 5,
+          "first_resolved_order": 5
+        },
+        {
+          "discrete_index": 1,
+          "lowest_odd_representative_absolute_value": 1,
+          "first_resolved_order": 1
+        },
+        {
+          "discrete_index": 2,
+          "lowest_odd_representative_absolute_value": 3,
+          "first_resolved_order": 3
+        },
+        {
+          "discrete_index": 3,
+          "lowest_odd_representative_absolute_value": 3,
+          "first_resolved_order": 3
+        },
+        {
+          "discrete_index": 4,
+          "lowest_odd_representative_absolute_value": 1,
+          "first_resolved_order": 1
+        }
+      ]
+    },
+    {
+      "L": 14,
+      "r": 7,
+      "first_orders": [
+        {
+          "discrete_index": 0,
+          "lowest_odd_representative_absolute_value": 7,
+          "first_resolved_order": 7
+        },
+        {
+          "discrete_index": 1,
+          "lowest_odd_representative_absolute_value": 1,
+          "first_resolved_order": 1
+        },
+        {
+          "discrete_index": 2,
+          "lowest_odd_representative_absolute_value": 5,
+          "first_resolved_order": 5
+        },
+        {
+          "discrete_index": 3,
+          "lowest_odd_representative_absolute_value": 3,
+          "first_resolved_order": 3
+        },
+        {
+          "discrete_index": 4,
+          "lowest_odd_representative_absolute_value": 3,
+          "first_resolved_order": 3
+        },
+        {
+          "discrete_index": 5,
+          "lowest_odd_representative_absolute_value": 5,
+          "first_resolved_order": 5
+        },
+        {
+          "discrete_index": 6,
+          "lowest_odd_representative_absolute_value": 1,
+          "first_resolved_order": 1
+        }
+      ]
+    },
+    {
+      "L": 18,
+      "r": 9,
+      "first_orders": [
+        {
+          "discrete_index": 0,
+          "lowest_odd_representative_absolute_value": 9,
+          "first_resolved_order": 9
+        },
+        {
+          "discrete_index": 1,
+          "lowest_odd_representative_absolute_value": 1,
+          "first_resolved_order": 1
+        },
+        {
+          "discrete_index": 2,
+          "lowest_odd_representative_absolute_value": 7,
+          "first_resolved_order": 7
+        },
+        {
+          "discrete_index": 3,
+          "lowest_odd_representative_absolute_value": 3,
+          "first_resolved_order": 3
+        },
+        {
+          "discrete_index": 4,
+          "lowest_odd_representative_absolute_value": 5,
+          "first_resolved_order": 5
+        },
+        {
+          "discrete_index": 5,
+          "lowest_odd_representative_absolute_value": 5,
+          "first_resolved_order": 5
+        },
+        {
+          "discrete_index": 6,
+          "lowest_odd_representative_absolute_value": 3,
+          "first_resolved_order": 3
+        },
+        {
+          "discrete_index": 7,
+          "lowest_odd_representative_absolute_value": 7,
+          "first_resolved_order": 7
+        },
+        {
+          "discrete_index": 8,
+          "lowest_odd_representative_absolute_value": 1,
+          "first_resolved_order": 1
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "passed": 57,
+    "seconds": 4.901,
+    "log": "tests.log"
+  },
+  "remaining_gate": "Identify a physically robust nonlinear coherent observable and show an actual canonical-derived prediction beyond conventional nonlinear/Gaussian-span controls; not achieved here.",
+  "max_exact_norm_error": 7.66053886991358e-15,
+  "max_exact_energy_drift": 2.4513724383723456e-13,
+  "max_DF_normalized_energy_drift": 2.3394690629174875e-09,
+  "max_shared_initial_state_difference": 0.0
+}
