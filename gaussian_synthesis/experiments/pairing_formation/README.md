@@ -1,6 +1,7 @@
 # Normal-state pairing formation
 
-本实验实现用户说明“六”的三阶段研究流程。最新结论和未完成项见 [REPORT_MULTIPAIR_NOISE.md](REPORT_MULTIPAIR_NOISE.md)，
+本实验实现用户说明“六”的三阶段研究流程。最新结论见 [REPORT_LOW_COST_INTERFEROMETER.md](REPORT_LOW_COST_INTERFEROMETER.md)，
+第十七轮见 [REPORT_MULTIPAIR_NOISE.md](REPORT_MULTIPAIR_NOISE.md)，
 双转移 Gaussian 标签、相干噪声及相位循环读出见 [MULTIPAIR_SYMBOLS_AND_READOUT.md](MULTIPAIR_SYMBOLS_AND_READOUT.md)，
 第十六轮见 [REPORT_PAIR_SYMBOLS.md](REPORT_PAIR_SYMBOLS.md)，
 完整 Gaussian 配对场、正常交换项和 Slater 相干对比量见 [PAIR_SYMBOL_PHASES.md](PAIR_SYMBOL_PHASES.md)，
@@ -69,6 +70,13 @@ experiment=gaussian_synthesis/experiments/pairing_formation
 
 `run_stochastic.py` 和 Haar 采样默认使用全部 8 块 GPU；一般 projected Gaussian 拟合使用 6 块。
 目前大部分小矩阵任务在 CPU 上已很快，使用全部 174 个可用 CPU 不会自动提高吞吐。
+
+第十八轮在新的四次倾斜谱上比较低成本 Gaussian 分解，并在配对关闭后做多粒子干涉计数。输出目录必须事先不存在。
+
+```bash
+.venv/bin/python "$experiment/scripts/run_low_cost_interferometer.py" \
+  "$experiment/results/low_cost_interferometer_02"
+```
 
 第十七轮检查实际八费米 Gaussian 标签，并以两次转移噪声和相位循环后的计数为物理读出：
 

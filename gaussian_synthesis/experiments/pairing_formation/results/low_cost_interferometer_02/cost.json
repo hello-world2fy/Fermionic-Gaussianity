@@ -1,0 +1,398 @@
+{
+  "replica": {
+    "training": {
+      "k": 2,
+      "physical_modes": 12,
+      "q": 1.121918463910395,
+      "residual": 2.4647191860054183e-09,
+      "moment_dual_extent_lower": 1.188343357303684,
+      "optimizer_success": 1,
+      "iterations": 9,
+      "witness_alignment_with_state": 0.9970453402870797
+    },
+    "fermi": {
+      "k": 2,
+      "physical_modes": 12,
+      "q": 0.9999999999999999,
+      "residual": 1.1102230246251565e-16,
+      "moment_dual_extent_lower": 1.0000000000000002,
+      "optimizer_success": 1,
+      "iterations": 0,
+      "witness_alignment_with_state": 1.0
+    },
+    "sibling_L4": {
+      "k": 2,
+      "physical_modes": 8,
+      "q": 1.0791560055446046,
+      "residual": 1.8120567342781966e-10,
+      "moment_dual_extent_lower": 1.1210535231998744,
+      "optimizer_success": 1,
+      "iterations": 11,
+      "witness_alignment_with_state": 0.9987291936908599
+    },
+    "spectator": {
+      "k": 2,
+      "physical_modes": 16,
+      "q": 1.121918463910395,
+      "residual": 2.4647191624544795e-09,
+      "moment_dual_extent_lower": 1.188343357303684,
+      "optimizer_success": 1,
+      "iterations": 9,
+      "witness_alignment_with_state": 0.9970453402870797
+    }
+  },
+  "canonical_mass_monte_carlo": {
+    "fermi": {
+      "samples": 1048576,
+      "mass_mean": 22.966330522865498,
+      "mass_stderr": 0.05912446237606109,
+      "max_overlap": 0.18025132842217473,
+      "mean_abs_overlap_squared": 0.0004878662982182789,
+      "frame_d2": 1352077.9999999984
+    },
+    "training": {
+      "samples": 1048576,
+      "mass_mean": 28.522027982528265,
+      "mass_stderr": 0.049082513707206316,
+      "max_overlap": 0.11562306335883907,
+      "mean_abs_overlap_squared": 0.0006186336093536399,
+      "frame_d2": 1352077.9999999984
+    },
+    "sibling_L4": {
+      "samples": 1048576,
+      "mass_mean": 7.481369324239122,
+      "mass_stderr": 0.011453675607988042,
+      "max_overlap": 0.3534038245077839,
+      "mean_abs_overlap_squared": 0.009126213362753046,
+      "frame_d2": 6435.000000000008
+    },
+    "spectator": {
+      "samples": 1048576,
+      "mass_mean": 105.1114893368005,
+      "mass_stderr": 0.21949308329658843,
+      "max_overlap": 0.036655228556798314,
+      "mean_abs_overlap_squared": 3.8802886504149866e-05,
+      "frame_d2": 300540194.9999996
+    }
+  },
+  "fermi_blank_exact_B2": 23.037760209940565,
+  "fermi_monte_carlo_over_exact": 0.996899451751206,
+  "canonical_monte_carlo_is_not_an_interval_certificate": 1,
+  "best_training_adaptive": {
+    "spec": {
+      "kind": "quartic",
+      "L": 6,
+      "G": 4.8
+    },
+    "time": 2.0,
+    "seed": 1001,
+    "count": 12,
+    "full_starts": 2,
+    "device": "1",
+    "least_squares_fidelity": 0.999631333823419,
+    "least_squares_mass": 3.2759932907575444,
+    "repair": {
+      "mass": 3.1106384340169586,
+      "extent_upper_numerical": 9.676071467183476,
+      "gaussian_coefficient_mass": 2.017348379019854,
+      "fock_repair_mass": 1.0932900549971047,
+      "solver_status": "optimal",
+      "finite_dual_objective": 3.1106384218235306,
+      "finite_dual_max_fock_overlap": 0.9999999996502024,
+      "finite_dual_is_full_dictionary_certificate": 0,
+      "arithmetic": "float64, no interval enclosure"
+    },
+    "fock_support_above_1e-8": 19,
+    "gaussian_only_state_error": 0.41046790930880317,
+    "repaired_state_error": 2.781570276744966e-17,
+    "fock_columns": 3,
+    "mean_cross_level_fraction": 0.10653799001284157,
+    "max_cross_level_fraction": 0.9588419101155742,
+    "gaussian_only_gate": {
+      "worst_delta_count_tv": 0.022963264505775023,
+      "worst_abs_delta_parity_error": 0.04592652901155006,
+      "balanced_worst_delta_count_tv": 0.022963264505775023,
+      "balanced_worst_abs_delta_parity_error": 0.04592652901155006,
+      "passes_gate": 0,
+      "max_formula_count_error": 5.637851296924623e-17,
+      "signal_abs_delta_parity": 0.17784009322093683,
+      "signal_abs_raw_parity": 0.29783705888336415
+    },
+    "crossed_port_gate": {
+      "worst_delta_count_tv": 0.02235998671570364,
+      "worst_abs_delta_parity_error": 0.04471997343140727,
+      "balanced_worst_delta_count_tv": 0.02235998671570364,
+      "balanced_worst_abs_delta_parity_error": 0.04471997343140727,
+      "passes_gate": 0,
+      "max_formula_count_error": 7.28583859910259e-17,
+      "signal_abs_delta_parity": 0.13463804163834953,
+      "signal_abs_raw_parity": 0.378690360922636
+    },
+    "repaired_exact_reconstruction_gate": {
+      "worst_delta_count_tv": 8.326672684688674e-17,
+      "worst_abs_delta_parity_error": 1.1102230246251565e-16,
+      "balanced_worst_delta_count_tv": 8.326672684688674e-17,
+      "balanced_worst_abs_delta_parity_error": 1.1102230246251565e-16,
+      "passes_gate": 1,
+      "max_formula_count_error": 5.637851296924623e-17,
+      "signal_abs_delta_parity": 0.17784009322093683,
+      "signal_abs_raw_parity": 0.29783705888336415
+    },
+    "repaired_state_matches_target_by_construction": 1,
+    "seconds": 28.882992663420737,
+    "error": null
+  },
+  "training_adaptive_masses": [
+    3.110638478171043,
+    3.1106384340169586,
+    3.110638528290818,
+    3.110638501169242,
+    3.110638532113019,
+    3.110638464527185,
+    3.110638471514485,
+    3.1106384841034114
+  ],
+  "training_adaptive_cross_level": [
+    0.09518470160214425,
+    0.10653799001284157,
+    0.10669846930096455,
+    0.12231688352775562,
+    0.0991174333394865,
+    0.07387813850781809,
+    0.06528094295465325,
+    0.09511311074385481
+  ],
+  "onsite_only_masses": [
+    3.1106385587926795,
+    3.1106385655050963,
+    3.110638519319533,
+    3.1106384984544704,
+    3.1106384671399754,
+    3.1106385946750947,
+    3.1106384216167395,
+    3.110638384189678,
+    3.1106385393796403,
+    3.110638404801002,
+    3.110638525813595,
+    3.110638463160296,
+    3.110638462368571,
+    3.110638425460653,
+    3.110638475979691,
+    3.1106384851491597,
+    3.1106384739370974,
+    3.110638474437902,
+    3.110638538296423,
+    3.110638426979542,
+    3.1106384091915977,
+    3.1106384992780414,
+    3.1106384846395496,
+    3.110638480355445,
+    3.110638521283044,
+    3.1106384621756145,
+    3.110638453068023,
+    3.11063849597498,
+    3.1106384692047007,
+    3.1106386077838843,
+    3.1106385173430917,
+    3.110638485916028
+  ],
+  "onsite_only_best_mass": 3.110638384189678,
+  "onsite_only_best_gaussian_state_error": 0.41046737721830856,
+  "onsite_only_smallest_gaussian_state_error": 0.40931406948508703,
+  "onsite_only_best_gaussian_coefficient_mass": 2.0173487450931042,
+  "onsite_only_best_fock_repair_mass": 1.093289639096574,
+  "onsite_only_best_cross_level": 0.0,
+  "canonical_top_pool": {
+    "label": "canonical_top_weight",
+    "columns": 32,
+    "repair_mass": 3.883953577845649,
+    "gaussian_coefficient_mass": 3.555211664488799e-09,
+    "fock_repair_mass": 3.8839535742904374,
+    "least_squares_fidelity": 1.0283593794072775e-19,
+    "state_error_before_fock_repair": 0.9999999996794693,
+    "fock_support_above_1e-8": 20,
+    "finite_dictionary_dual_is_not_full_gaussian": 1
+  },
+  "canonical_weighted_reservoir_pool": {
+    "label": "canonical_weighted_reservoir",
+    "columns": 64,
+    "repair_mass": 3.883953576820608,
+    "gaussian_coefficient_mass": 1.69618976252727e-09,
+    "fock_repair_mass": 3.8839535751244183,
+    "least_squares_fidelity": 2.8914537002903867e-21,
+    "state_error_before_fock_repair": 0.9999999999462285,
+    "fock_support_above_1e-8": 20,
+    "finite_dictionary_dual_is_not_full_gaussian": 1
+  },
+  "magic_training": {
+    "extent_lower_numerical": 2.2499025997378386,
+    "hole_permutation": [
+      2,
+      1,
+      0
+    ],
+    "phases": [
+      -2.4258335655183942,
+      -2.6193038916761964,
+      0.02317621047217441
+    ],
+    "analytic_gaussian_support_bound": 1.0,
+    "support_reason": "tensor product of unnormalized four-mode magic states, up to a Gaussian mode permutation and phases; Gaussian fidelity multiplicativity",
+    "permutation_search_exhaustive": 0,
+    "arithmetic": "float64, no interval enclosure"
+  },
+  "magic_mass_lower": 1.4999675328945752,
+  "trivial_mass_lower": {
+    "mass_lower": 1.0,
+    "norm": 1.0,
+    "reason": "|<psi|g>| <= ||g|| = 1 and |<psi|psi>| = 1 imply atomic mass >= 1",
+    "arithmetic": "float64, no interval enclosure"
+  },
+  "mass_upper": 3.1106384340169586,
+  "mass_lower_used_for_ratio": 1.4999675328945752,
+  "certified_mass_ratio": 2.073803842949972,
+  "mass_ratio_target": 1.2,
+  "mass_ratio_target_met": 0,
+  "blank_B2_active_modes": 23.037760209940565,
+  "blank_B2_with_two_spectator_levels": 84.44481174662882,
+  "spectator_embedded_state_overlap": 1.0,
+  "certificates": {
+    "sibling_state": {
+      "overlap_lower": 0.6622838682874724,
+      "overlap_upper": 1.3135315076589018,
+      "gap": 0.6512476393714294,
+      "closed": 0,
+      "boxes_processed": 320000,
+      "workers": 128,
+      "global_upper_bound": 1,
+      "arithmetic": "float64 interval bounds, no directed rounding"
+    },
+    "sibling_magic": {
+      "overlap_lower": 1.0000000000000002,
+      "overlap_upper": 2.2736504961414776,
+      "gap": 1.2736504961414774,
+      "closed": 0,
+      "boxes_processed": 320000,
+      "workers": 128,
+      "global_upper_bound": 1,
+      "arithmetic": "float64 interval bounds, no directed rounding"
+    },
+    "dicke_magic": {
+      "overlap_lower": 1.0000000000000002,
+      "overlap_upper": 2.174775810906279,
+      "gap": 1.1747758109062787,
+      "closed": 0,
+      "boxes_processed": 320000,
+      "workers": 128,
+      "global_upper_bound": 1,
+      "arithmetic": "float64 interval bounds, no directed rounding"
+    }
+  },
+  "sibling_outside_onsite_fraction": null,
+  "dicke_one_atom_mass": 1.6329931618554527,
+  "dicke_outside_onsite_fraction": null,
+  "dicke_certificate_must_not_be_positive": 1,
+  "moment_dual_extent_lower_training": 1.188343357303684,
+  "moment_dual_extent_lower_spectator": 1.188343357303684,
+  "magic_witness_norms": {
+    "training": 2.8284271247461903,
+    "sibling": 2.0,
+    "dicke": 2.0
+  },
+  "sibling_adaptive": {
+    "repair_mass": 1.9950373392055778,
+    "gaussian_coefficient_mass": 1.7988857125853923,
+    "fock_repair_mass": 0.1961516266201854,
+    "gaussian_only_state_error": 0.12363549872650385,
+    "repaired_state_error": 0.0,
+    "mean_cross_level_fraction": 0.19338172325094036,
+    "least_squares_fidelity": 1.0,
+    "global_optimum_certified": 0
+  },
+  "interferometer_alpha_lower_bound": {
+    "operator": "U\u2020 (-1)^{N_I} U",
+    "atom_class": "onsite product sector projections with full-Fock normalization 1",
+    "alpha_lower": 0.7076653374401308,
+    "alpha_is_search_lower_bound_not_a_supremum": 1,
+    "pair_count_per_setting": 1176,
+    "samples": 48,
+    "best_location": {
+      "left": 34,
+      "phi": 0.39269908169872414,
+      "holes": [
+        0,
+        1
+      ],
+      "particles": [
+        4,
+        5
+      ]
+    },
+    "signals": [
+      {
+        "holes": [
+          0,
+          1
+        ],
+        "particles": [
+          4,
+          5
+        ],
+        "phi": 0.0,
+        "abs_raw_parity": 0.2236394812770694,
+        "abs_delta_parity": 0.17784009322093683,
+        "abs_T": 0.08896513318359975
+      },
+      {
+        "holes": [
+          0,
+          1
+        ],
+        "particles": [
+          4,
+          5
+        ],
+        "phi": 0.39269908169872414,
+        "abs_raw_parity": 0.29783705888336415,
+        "abs_delta_parity": 0.005664003237204618,
+        "abs_T": 0.08896513318359975
+      },
+      {
+        "holes": [
+          0,
+          2
+        ],
+        "particles": [
+          3,
+          5
+        ],
+        "phi": 0.0,
+        "abs_raw_parity": 0.30304718946253506,
+        "abs_delta_parity": 0.13463804163834953,
+        "abs_T": 0.06754427812820521
+      },
+      {
+        "holes": [
+          0,
+          2
+        ],
+        "particles": [
+          3,
+          5
+        ],
+        "phi": 0.39269908169872414,
+        "abs_raw_parity": 0.378690360922636,
+        "abs_delta_parity": 0.01102341939832692,
+        "abs_T": 0.06754427812820521
+      }
+    ],
+    "arithmetic": "float64, no interval enclosure",
+    "budget": 3.1106384340169586,
+    "budget_squared_times_alpha_lower": 6.847420379919217,
+    "max_abs_raw_parity": 0.378690360922636,
+    "max_abs_delta_parity": 0.17784009322093683,
+    "bound_already_exceeds_raw_parity": 1,
+    "bound_already_exceeds_delta_parity": 1,
+    "interpretation": "B^2 alpha_lower already exceeds the observed parity signals, so the onsite-class inequality does not force mass outside that class."
+  }
+}

@@ -2,7 +2,7 @@
   "goal_status": "active",
   "goal_scope": "Complete all three stages of section VI, seeking physically important, independently verified predictive structure from Gaussian distributions beyond strong baselines; do not redefine success as a benchmark",
   "previous_goal_turn_classification": "progress",
-  "evidence": "Seventeenth round: full-Gaussian two-transfer symbols, physical phase-cycled count readout, and strong stochastic controls. 288 label cases, 1048576 independent Haar checks, 44 evaluated trajectories (28 new), all 10 canonical gates fail. Angular SMF/DTWA:1572864 independent samples; original uniform model:524288 independent samples and36 saved-state controls. Existing conditioned-Jastrow fit captures original-pulse curvature with L2 error0.005357, versus pair-CC1.424565. No canonical-specific important discovery or new parameter forecasts.",
+  "evidence": "Eighteenth round: low-cost Gaussian decompositions and post-pairing interferometer counts on a predeclared quartic-tilt grid. 164 CPU workers and 8 H20 GPUs; 1048576 Haar samples on each of four states. Blank B2 Monte Carlo ratio 0.99690. Selected quartic L6 G4.8 t2. Feasible mass 3.11064 versus magic lower bound 1.49997, ratio 2.07380. No training family passed the readout gate; adaptive was frozen by the failure rule and lost to conditional orbitals and two-body Jastrow. Both-port holdouts: 16/17 adaptive failures. Onsite-exclusion intervals stayed above 1, Dicke gave no false positive, and B0^2 alpha_lower already exceeds the parity signal. Formula errors stay below 3e-16. Three uniqueness gates fail.",
   "running_processes_at_checkpoint": [],
   "phase1": {
     "physics_window": "verified on saved finite-size time grids",
@@ -88,18 +88,17 @@
     "multipair_readout": "Same counts and all four-fermion data before ideal pair-exchange pulse; surviving two-transfer coherence changes output counts. Known phase-cycling principle, not canonical-specific discovery."
   },
   "next_required_work": [
-    "Identify a physically important relation revealed by Gaussian distributions beyond the tested conventional controls. Static higher-degree moments alone have not supplied it.",
-    "Conditioned-orbital and higher-cluster propagation remain relevant controls for angular-model readout; original-model fitted capacity is not a predictive comparison.",
-    "Freeze a supported candidate before genuinely unseen spectra/couplings, preserving identical initial states for deletion and controls.",
-    "Do not treat estimated Monte Carlo errors, finite saved-space capacity, local fits, or existing phase-cycling identities as global certificates or new physics."
+    "A uniqueness claim needs a feasible Gaussian budget whose ratio to a full-dictionary lower bound is actually near 1.2, or an explicit budget that is stated as such. The current 3.111 versus 1.500 witness does not qualify, and the witness permutation search was not exhaustive.",
+    "Necessity requires a certified class overlap strictly below the Gaussian support bound. The L4 interval upper bounds remained above 1. Random or local overlap maxima cannot be substituted for that upper bound.",
+    "Readout advantage has to beat conditional orbitals and two-body Jastrow on the frozen rule. Those controls were closer on the selected point; do not loosen the 0.02 gate after seeing the 0.003 Jastrow margin.",
+    "The interferometer formula and the blank-mass calibration can be reused. k=2 coefficient mass remains a different quantity from the atomic mass, and it changes when spectator modes are added."
   ],
-  "scientific_conclusion": "Original goal remains incomplete. Two-transfer coherence has a concrete count readout and exposes pair-CC/SMF/DTWA errors. Canonical-derived coordinates do not beat ordinary Hamiltonian controls. Original-model conditioned orbital/Jastrow representations capture the signal well without canonical synthesis; saved fits are capacity controls, not forecasts.",
+  "scientific_conclusion": "Original goal remains incomplete. The eighteenth-round interferometer formula checks and the blank k=2 calibration both hold, including the spectator distinction between invariant embedded physics and mode-count-dependent finite-order mass. The low-cost decomposition is not near-optimal on the computed bounds, is not certified necessary beyond onsite products plus Fock repair, and does not outperform conditional-orbital or Jastrow readouts.",
   "tests": {
-    "passed": 123,
-    "seconds": 8.507,
-    "log": "results/assessment_multipair_noise_02/tests.log"
+    "passed": 129,
+    "seconds": 13.112
   },
-  "latest_report": "REPORT_MULTIPAIR_NOISE.md",
+  "latest_report": "REPORT_LOW_COST_INTERFEROMETER.md",
   "latest_audit": "results/assessment_multipair_noise_02/audit.json",
   "physical_phase_diagnostics": {
     "cases": 24,
@@ -752,5 +751,33 @@
     "uniform_snapshot_states": 36,
     "tests_passed": 123,
     "verified_file_count": 231
+  },
+  "eighteenth_round": {
+    "output": "results/low_cost_interferometer_02",
+    "earlier_default_port_only_holdout_record": "results/low_cost_interferometer_01",
+    "cpu_workers": 164,
+    "affinity": 174,
+    "gpus": 8,
+    "haar_samples_per_state": 1048576,
+    "states_sampled": 4,
+    "selected": {"kind": "quartic", "L": 6, "G": 4.8, "t": 2.0},
+    "frozen_family": "adaptive_gaussian",
+    "training_gate_passed": false,
+    "mass_upper": 3.1106384340169586,
+    "mass_lower": 1.4999675328945752,
+    "certified_mass_ratio": 2.073803842949972,
+    "mass_ratio_target_met": false,
+    "fermi_monte_carlo_over_exact": 0.996899451751206,
+    "holdout_count": 17,
+    "frozen_holdout_gate_failures_both_ports": 16,
+    "sibling_certificate_closed": false,
+    "dicke_outside_onsite_fraction": null,
+    "alpha_lower": 0.7076653374401308,
+    "budget_squared_times_alpha_lower": 6.847420379919217,
+    "alpha_bound_exceeds_signal": true,
+    "wall_seconds": 101.31778525840491,
+    "tests_passed": 129,
+    "tests_seconds": 13.112,
+    "report": "REPORT_LOW_COST_INTERFEROMETER.md"
   }
 }

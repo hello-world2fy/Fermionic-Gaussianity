@@ -31,11 +31,12 @@ def angular_invariant_basis(model):
     return Q,permutations
 
 
-def haar_atoms(model,count,device,torch,return_occupations=False,return_covariances=False):
+def haar_atoms(model,count,device,torch,return_occupations=False,return_covariances=False,generator=None):
     """Full SO(4L) Haar Gaussian, retaining full-Fock normalization."""
     from .projected_gaussian import torch_pfaffian
     n=2*model.L
-    normal=torch.randn((count,2*n,2*n),device=device,dtype=torch.float64)
+    kwargs={} if generator is None else {'generator': generator}
+    normal=torch.randn((count,2*n,2*n),device=device,dtype=torch.float64,**kwargs)
     O,R=torch.linalg.qr(normal)
     O=O*torch.where(torch.diagonal(R,dim1=1,dim2=2)>=0,1.,-1.)[:,None,:]
     sign,_=torch.linalg.slogdet(O);O[:,:,-1]*=sign[:,None]
