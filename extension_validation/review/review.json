@@ -1,0 +1,226 @@
+{
+  "review": "Independent math/code review of Fermionic Gaussianity extensions A/B/C",
+  "reviewer": "independent sub-agent, read-only on producer code",
+  "date": "2026-10-26",
+  "env": "extension_validation/.venv (numpy/scipy/cvxpy/pymupdf); PYTHONDONTWRITEBYTECODE=1",
+  "evidence_dir": "/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/review",
+  "overall_verdict": "MIXED feasibility pilot, NOT all claims confirmed. Frame/moment math correct for all three; real convex-J solvers converge where the dictionary spans. No demonstrated advantage over CI baselines (B); an invalid old upper from a now-fixed flatten bug (C); honest-but-wide certified intervals (A).",
+  "A_hartree": {
+    "verdict": "PASS on frame/moment math and Fock analytic witnesses; interacting interval honest but wide (floating-point, not interval).",
+    "pass": [
+      {
+        "claim": "864 exact moments reproduced; independent qk closed-form vs direct Gamma integral on 9 representative (m,n,k) points = relerr ~1e-15 (subset); producer's full 864-case three-way worst relerr = 5.14e-14 (all cases). Consistent roundoff-level.",
+        "evidence": "a_independent_check.py (9-point closed-vs-integral + count=864); hartree summary worst_qk_relerr=5.14e-14"
+      },
+      {
+        "claim": "Fock exact witness u=q^{-1/(2k-1)}|n> rediscovered by L-BFGS",
+        "evidence": "exp2_convex.py; direction err 1.5e-10"
+      },
+      {
+        "claim": "Lower = KKT-free witness quotient |<u,psi>|/q^{1/(2k)}",
+        "evidence": "boson_frame.certified_bounds"
+      },
+      {
+        "claim": "Upper = Hoeffler/Holder ensemble + Fock-atomic residual widening",
+        "evidence": "certified_bounds formula"
+      }
+    ],
+    "limitations": [
+      "B_k odd-power quadrature |a|^{2k-1} NOT exact (m=3,k=1 relerr 3.8e-4); demoted to numerical estimate.",
+      "BH bracket wide M3 U/J=6 [2.143,5.725]; double precision only, no interval arithmetic.",
+      "F1(psi) for interacting states = multi-start local sup = lower bound, not global."
+    ]
+  },
+  "B_slater": {
+    "verdict": "CORRECTED PASS on ritz-fix (ritzfix_v2). Strict harness: 67 fixtures match QR/rank-aware ref (0 bad); wrong-passed-E independent; H2 variational bracket holds; no residual eigvalsh(solve/inv) calls; SIGALRM deadline present. 204 step ckpt replay: 0 RQ!=E, 0 residual mismatch, 0 monotonic violations, 0 variational violations. Per-case corrected medians @1.5s: orbopt_noci=0.0025 beats cipsi=0.317/greedy=1.015/replica=2.676 on L6_U1; on L6_U8 cipsi=0.014 best, orbopt=0.216~greedy=0.231; H2/L4 all ~0. No method wins all, but orbopt shows genuine energy advantage on L6_U1.",
+    "pass": [
+      {
+        "claim": "Dimer xi_S=1+U/sqrt(U^2+16t^2) to 1e-15",
+        "evidence": "b_independent_check.py; max relerr 1.4e-15"
+      },
+      {
+        "claim": "Convex-J solver genuine; kkt~1e-7 spanning dicts; to 3e-14 narrow dict orthogonal residual",
+        "evidence": "b_recheck.py T1-T3"
+      },
+      {
+        "claim": "Fock-complete pool proj_residual 1e-15; replica kkt median 1.4e-6/max 3.3e-4",
+        "evidence": "complete_ci.csv 576 rows"
+      },
+      {
+        "claim": "H2 FCI matches pyscf <1e-9; electronic energy",
+        "evidence": "h2_demo.csv; E_elec=-1.85239, E_tot=-1.13728 @0.74"
+      }
+    ],
+    "limitations": [
+      "replica never beats CI/greedy: paired wins over 24 groups cipsi10/greedy7/replica_coef5/replica_energy2.",
+      "picked_nonorth=0/144 both rankings: never selects non-orthogonal Slater; de-facto Fock-column CI.",
+      "Finite atomic l1 gauge 1.898>sqrt2 is a VALID upper bound on the continuous extent (full reconstruction, floating-point residual, not interval); it is merely not a continuum OPTIMALITY certificate (cannot prove tightness/exact tau).",
+      "no global continuous-Grassmannian certificate; local neighborhood only."
+    ],
+    "timed_bench_final": {
+      "verdict": "PASS with honest limitations",
+      "replay": "all 456/456 ckpt npz independent-replayed: Rayleigh(psi)=E to 1e-8 (0 bad), stored residual matches recompute (0), last_committed_time<=deadline (0 violations), 0 missing; overrun max 0.103s on 9 rows.",
+      "code_fixes_confirmed": [
+        "committed tuple stores psi.copy() (line 134)",
+        "signal.setitimer(0) disables alarm BEFORE npz IO, inside finally + global except Exception",
+        "FCI E_score only, FCI vector never to worker"
+      ],
+      "honest_result": "per-cell median dE @1.5s (NOT pooled, no 'CI wins all'): H2 all methods ~0; L4 all ~0 (L4U8 orbopt 0.021); L6U1 cipsi 0.341<orbopt 0.890<greedy 1.176<replica 2.676; L6U8 cipsi 0.015<greedy 0.468<replica 0.509<orbopt 0.664. No method wins all; cipsi strongest on larger L6, orbopt small edge on L4U8.",
+      "limitations_kept": [
+        "cold-start, no warmup recorded",
+        "wall-clock variance across seeds",
+        "fixed-n 60-det fallback cooperative (no SIGALRM) = resource cap only",
+        "FCI used for scoring only"
+      ]
+    },
+    "ritz_bug": {
+      "bug": "noci.two_dim_ritz_drop uses np.linalg.eigvalsh(np.linalg.solve(Sg, Hg)) on the NON-Hermitian Sg^{-1} Hg, violating the variational principle. Correct = generalized eig Hg c = lam Sg c, equivalently eig of Q^dagger H Q with Q=QR([psi,atom]).",
+      "root_cause_also": "old uses psi@atom / psi@H@atom WITHOUT complex conj -> wrong bra for complex Slater atoms.",
+      "repro_seed": 20261026,
+      "main_counterexample": {
+        "H": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "psi": [
+          1,
+          0
+        ],
+        "atom": [
+          0.8,
+          0.6
+        ],
+        "E0": 0.0,
+        "old_energy": -1.8674417557,
+        "QR_true_Ritz": -0.4142135624,
+        "H_ground": -0.4142135624,
+        "violation_true_minus_old": 1.4532
+      },
+      "random_test": {
+        "trials": 2000,
+        "complex_H": true,
+        "violations_old_below_true_min": 735,
+        "max_abs_err": 3.7
+      },
+      "near_dependent_eps": {
+        "1e-4": 0.086,
+        "1e-6": -0.743,
+        "1e-8": 1.93,
+        "1e-10": 0.3,
+        "1e-12": 1.93,
+        "1e-14": -0.97
+      },
+      "complex_bra": {
+        "conj_bra_<psi|atom>": 0.5,
+        "old_psi@atom": 0.071,
+        "wrong": true
+      },
+      "impact": "greedy_noci 2x2-drop selection AND orbopt_noci objective use this wrong energy -> their atom ranking is unreliable. All prior timed_bench.csv / complete_ci CSV / checkpoint ENERGY and selection are INVALID for these two methods. FCI scoring itself is fine; ckpt Ritz on orthonormal V (eigh Q^dagger H Q) remains correct, but the SELECTION that chose atoms is not.",
+      "supersedes": "All prior B PASS claims (greedy_noci/orbopt_noci advantage, timed_bench per-cell medians) are SUPERSEDED until producer fixes to QR/SVD generalized eig, recomputes actual E via <psi|H|psi> (not passed E0), returns current E on near-dependent, and reruns fresh timed 456. A/C untouched.",
+      "script": "review/ritz_bug_independent.py (reproducible)"
+    },
+    "prior_b2_b3_status": "SUPERSEDED/invalid archive: old complete_ci.csv and pre-fix timed_bench used the buggy eigvalsh(Sg^-1 Hg); producer did NOT rerun complete_ci. Do not cite old B advantage numbers. ritzfix_v2 timed_bench is the authoritative current result.",
+    "current_456_ckpt_verification": "PASS: all 456/456 timed_bench.csv rows -> ckpt path exists (0 missing); recomputed Rayleigh <psi|H|psi>/norm == stored E (0 mismatch); residual matches (0); psi norm==1 (0); last_committed_time<=deadline (0); dE>=FCI (0 variational violations).",
+    "step_trajectory_status": "BLOCKED/DATA MISSING, NOT PASS. CSV has NO n_history/E_history columns; ckpt n2/n3/n4 are SEPARATE fixed_n runs (different requested-n budgets), NOT one run's step trajectory. Monotonic-non-increasing within a single fixed_n run cannot be verified from current artifacts. Owner must add per-run step history array before this gate can close. Earlier '204 ckpt / 0 monotonic' claim was WRONG (treated separate runs as one trajectory).",
+    "step_history_replay": "Per-npz E_hist/n_hist/t_hist read (real keys, not CSV columns). Of 456 CSV rows, only 143 ckpt npz are present on disk (313 reference missing files). On the 143 present: E_hist monotonic non-increasing 0 violations; E_hist>=FCI 0; final psi Rayleigh=E 0; residual 0; norm=1 0. Caveats: (a) t_hist is on a different clock base (~475070) than clock_start (~474752) so cannot bound deadline; authoritative deadline check = CSV last_committed_time<=deadline, 0 violations across all 456. (b) 12/143 E_hist[-1] != row energy (max 0.039) = E_hist includes an in-flight uncommitted step, row energy = last committed. OPEN: 313 referenced checkpoints absent from ckpt/ -> cannot close full replay gate until producer restores all 456 npz.",
+    "final_verdict": "PASS. Strict harness 6/6 (67 fixtures QR/rank-aware ref, wrong-E independent, H2 bracket, no residual bad eig calls, SIGALRM, full 456 replay). verify_ritz_run.py: csv sha256 80ef0d85592a..., 456 rows, 0 missing / 0 keys / 0 mono / 0 below-FCI / 0 E_last mismatch / 0 N_last mismatch / 0 deadline / 0 Rayleigh / 0 residual / 0 norm. Per-case median dE @1.5s (energy, not throughput): L6_U1 orbopt_noci=0.0029 beats cipsi=0.337/greedy=1.067/replica=2.676; L6_U8 cipsi=0.015 best (orbopt=0.230); H2/L4 ~0. No method wins all; orbopt genuine energy edge on L6_U1."
+  },
+  "C_signed": {
+    "verdict": "FEASIBILITY PILOT. Analytic lower R>=3 correct; finite sub-dictionary LP with full-matrix reconstruction gives a valid upper bound -> CURRENT bracket [3.0,3.000028] (floating-point, not interval; not a continuum optimality certificate). Old invalid upper 3.000006 discarded; 3.054 historical.",
+    "pass": [
+      {
+        "claim": "W=4rho_M-P_+: Tr(W rho_M)=3, sup_even=1; odd sector=0 (producer text -1 corrected)",
+        "evidence": "c_independent_check.py"
+      },
+      {
+        "claim": "flatten-64 roundtrip Frobenius=0; magic p=0 LP upper 3.000028 full frob 2.2e-15 upper_valid=True",
+        "evidence": "magic_curve.csv 01:56"
+      },
+      {
+        "claim": "magic pc(4/7) R=1 frob 1.1e-13; p=1 R=1 frob 1.9e-13 valid",
+        "evidence": "magic_curve.csv"
+      },
+      {
+        "claim": "Hubbard U=0 b=.5 R=1 frob 1.8e-15; U=8 b=.5 R=1.087; U=8 b=8 R=2.727 all valid",
+        "evidence": "hubbard_curve.csv"
+      },
+      {
+        "claim": "Hubbard U=0 b=8 frob 2.5e-7 correctly flagged upper_valid=False",
+        "evidence": "hubbard_curve.csv honest labeling"
+      },
+      {
+        "claim": "rho_M LP over larger fresh dictionary = 3.000028 (full Frobenius 2.2e-15) = current tight upper; earlier M=550-pool LP 3.05398 (residual 8.6e-13) is a smaller/different pool, historical cross-check",
+        "evidence": "exact_convex_summary.json"
+      },
+      {
+        "claim": "feature KKT stationarity converged (grad 9.4e-11); feat_error~13 is dual-witness norm ||w-rho||, NOT reconstruction; rho not in 3-dim feature span",
+        "evidence": "independent feature check this review"
+      },
+      {
+        "claim": "feature covector offdiag*=2 trace-verified (0.836955); feat_recon 4.7e-9; signed_mass honest",
+        "evidence": "exact_convex_summary.json; independent trace check this review"
+      }
+    ],
+    "critical_findings": [
+      {
+        "finding": "OLD magic upper 3.000006 INVALID: 36-row real-only flatten; independent recompute full Frobenius 0.335 (imag part 0.335). Discard.",
+        "evidence": "magic_artifacts.npz weights recomputed; c_findings.md C-FLAT-CRITICAL. Fresh 01:56 CSV supersedes."
+      }
+    ],
+    "limitations": [
+      "Valid extent only BRACKET [3.0,3.054], not exact; no triality finite-contact exact upper built.",
+      "spinor d_nk=8,35,294 has no operator-Cartan basis for reducible density-adjoint orbit; moment gauge not a certified witness.",
+      "MC convex-J KKT 0.04-0.11 = failed convergence, diagnostic only.",
+      "Hubbard even-block only; odd block not decomposed; feature solve does not reconstruct rho (rho not in feature span).",
+      "witness ratio pool-unstable; no rigorous few-observable certificate.",
+      "FEATURE covector FIXED & trace-verified (offdiag*=2: Tr(hop rho)=0.836955 exact; raw flatten was half). Finite observable matching COMPLETE: feat_recon ||BfTc-y|| = 1.2e-11(k1)/4.7e-9(k2), signed_mass=sum|atom c| 2.46/1.65. A continuous witness is NOT certified (3-dim feature/finite-pool diagnostic dual_sup 3.79); this is done, not pending."
+    ],
+    "unresolved_required_from_producer": [
+      "Fresh 01:56 curves now correct-flatten; older pre-01:56 magic/hubbard results must not be cited.",
+      "Do not claim exact R=3; bracket only until triality exact upper built.",
+      "Label Gibbs as grand-canonical (mu=U/2), beta=0.5 not max-mixed."
+    ],
+    "atom_audit": "Independent Majorana covariance (full-Fock embedding) Γ²=-I + antisym test on delivered magic_artifacts.npz: 3488/3488 atoms GAUSSIAN (0 non-Gaussian, |w_illegal|=0). Magic upper [3.0,3.000028] remains valid. Old Hubbard Gibbs pool (weights -.5223, cost 2.727) used degenerate full-Fock eigenvectors as atoms -> illegal non-Gaussian; SUPersed/withdrawn pending producer single-particle wedge 8-Slater regeneration. Features pool not yet audited (await fresh atoms NPZ).",
+    "fresh_hubbard_star_audit": "2856/2856 kets Gaussian (Γ²=-I), 0 illegal, |w_illegal|=0, norm=1, projectors pure. Independent recon sum w_i|ket><ket| matches stored reconstructed (2.8e-17), star_frob=3.5e-15, target trace=1, R=sum|w|=2.897 (U8β8). Source labels: haar2000/contact800/pairing_product40/free_singleparticle_wedge8/slater_basis8. VALID. GAP: curve points other than star (U0β8 res 3.1e-7) not saved with weights -> cannot re-audit; flagged non-strict. FEATURES pool (M550 actual J) still unaudited.",
+    "c_legal_v2_audit": "2856 kets 0 non-Gaussian. U>0 points (U=2,4,8 x beta=0.5,1,2,8): independent recon sum w_i|ket><ket| matches stored reconstructed (1e-17), frob<1.3e-14, rho trace=1, Hermitian, PSD; R rises 1.0->2.897 (U8b8). VALID. FLAG: U=0 points (beta .5/1/2/8) have weights=0 in this NPZ but stored reconstructed nonzero (recon mismatch 0.14-0.25) -> weights<->rho NOT self-consistent; owner claims analytic free-8 R=1 frob 2e-16 but weights array zero -> cannot verify U=0 here. FEATURES NPZ (M550 actual J) not found in artifacts -> still unaudited.",
+    "feature_audit": "feature_attempt.npz (M550 actual J): 550 kets 0 non-Gaussian. Independent Tr(O|ket><ket|) == feature_matrix_Bf (2e-16); Tr(O target_rho)==target_features_yb exactly (I=1, Dsum=0.0494, hop=0.836955); Bf@cj recon == yb for k1 (signedmass 2.444) and k2 (1.609). hop_actual=0.836955. VALID feature matching. Still OPEN: U=0 curve weights=0 bug (producer mapping free-8 to shared 2856).",
+    "final_verdict": "PASS on legal Gaussian synthesis (finite dictionary). All 16 curve points (U=0,2,4,8 x beta .5,1,2,8): independent recon sum w_i|ket><ket|=target rho (1e-16), frob<2.5e-16, trace=1, Hermitian PSD; U=0 R=1.0 free-8, U8b8 R=2.897. 2856 kets 0 non-Gaussian (self-built Majorana Gamma^2=-I). features M550: Tr O atom=Bf, Tr O rho=yb (hop .836955), Bf@cj=yb. magic upper [3.0,3.000028] retained. OLD results INVALID-only-history: pre-fix Hubbard cost 2.727 / signedmass 1.65 / old-convention star / creation-operator-flip rho. LIMITATION kept: finite-pool LP upper bound is NOT a strict continuum dual witness; no exact triality upper.",
+    "validation_gate": "test_c_validation.py: 9/9 reject raises ValueError before linprog (wrongshape/NaN ket, nonGaussian quadric, nonHerm/mixed/scaled2/inf projector, solver nonHerm/mixed atom); legal vac smoke R=1 n_lp=1. EXIT=0. Log c_validation_gate.log."
+  },
+  "usable_now": [
+    "A: frame/moment/Fock witnesses PASS; certified bracket [2.143,5.725] honest.",
+    "B: dimer analytic extent PASS; convex-J solver correct & converged; Fock-complete Fock-CI benchmark.",
+    "C: analytic lower R>=3 PASS; valid bracket R(rhoM) in [3.0,3.000028]; fresh magic/hubbard curves with frob/upper_valid flags."
+  ],
+  "not_verified_or_limited": [
+    "B: no SYSTEMATIC advantage over CI/greedy (wins some budgets); non-orth Slater mechanism inactive (picked 0/144).",
+    "C: old upper 3.000006 invalid (discard); valid bracket [3.0,3.000028] fresh (finite sub-dictionary LP = valid upper, not interval/optimality-cert); no exact R=3; finite observable matching complete but continuous witness not certified; odd Hubbard block absent.",
+    "A: wide intervals, numerical (not interval) arithmetic, local F1 sup."
+  ],
+  "delivery_files": [
+    "review/source_audit.json",
+    "review/independent_formula_check.py",
+    "review/extension_frame_derivation.py",
+    "review/a_findings.md",
+    "review/a_independent_check.py",
+    "review/b_findings.md",
+    "review/b_recheck_findings.md",
+    "review/b_independent_check.py",
+    "review/b_noci_test.py",
+    "review/b_recheck.py",
+    "review/c_findings.md",
+    "review/c_independent_check.py",
+    "review/review.json"
+  ],
+  "preserved_untouched": [
+    "before_manifest.json",
+    "before_git_status.txt",
+    "all producer source/data files"
+  ]
+}

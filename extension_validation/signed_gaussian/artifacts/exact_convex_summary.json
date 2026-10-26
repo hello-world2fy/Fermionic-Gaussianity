@@ -1,0 +1,56 @@
+{
+  "method": "fixed finite Gaussian pool (M=550), exact J_k L-BFGS/closed, p_j=1/M",
+  "pool_span_rank": 64,
+  "rho_M": {
+    "1": {
+      "k": 1,
+      "iters": 0,
+      "kkt_proj": 4.762316154154319e-11,
+      "recon_error_Q_minus_rho": 4.7623359491201807e-11,
+      "pool_sup": 10.575427003975946,
+      "witness_value": 19.28452368843401,
+      "finite_pool_lower": 1.823521989342254
+    },
+    "2": {
+      "k": 2,
+      "iters": 70,
+      "kkt_proj": 6.659987977688573e-08,
+      "recon_error_Q_minus_rho": 6.659987963264842e-08,
+      "pool_sup": 2.5296989809069834,
+      "witness_value": 5.80388835975784,
+      "finite_pool_lower": 2.2942999952021754
+    }
+  },
+  "rho_M_LP_finite_upper": 3.0539841298054102,
+  "rho_M_LP_residual": 8.597841436027845e-13,
+  "hubbard_feature": {
+    "1": {
+      "iters": 0,
+      "kkt": 1.1693908466236339e-11,
+      "coeff": [
+        2.336483015055003,
+        -2.2221193969948665,
+        11.240564552790131
+      ],
+      "signed_mass": 2.444214202603158,
+      "feat_recon_error": 1.1693908466236339e-11,
+      "dual_sup_diagnostic": 15.798616921870924
+    },
+    "2": {
+      "iters": 13,
+      "kkt": 1.2799570162449783e-08,
+      "coeff": [
+        1.2132550805747617,
+        -1.3170334748121848,
+        2.3857110851753713
+      ],
+      "signed_mass": 1.6092732582735354,
+      "feat_recon_error": 1.2799570162449783e-08,
+      "dual_sup_diagnostic": 3.8213169846839823
+    }
+  },
+  "hubbard_LP_finite_upper": 4.962009243270003,
+  "diagnostic_note": "finite_pool_lower is a lower bound on the FINITE-POOL extent, not a continuum certificate. Moment norm and sampling-sup normalization are diagnostic only. Old MC SGD attempt (convex_summary.json) is failed convergence, not a theorem.",
+  "walltime_s": 0.1678011417388916,
+  "seed": 20261026
+}

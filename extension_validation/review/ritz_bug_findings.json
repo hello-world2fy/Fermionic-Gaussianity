@@ -1,0 +1,18 @@
+{
+ "bug": "noci.two_dim_ritz_drop uses np.linalg.eigvalsh(np.linalg.solve(Sg, Hg)) on the NON-Hermitian Sg^{-1} Hg, violating the variational principle. Correct = generalized eig Hg c = lam Sg c, equivalently eig of Q^dagger H Q with Q=QR([psi,atom]).",
+ "root_cause_also": "old uses psi@atom / psi@H@atom WITHOUT complex conj -> wrong bra for complex Slater atoms.",
+ "repro_seed": 20261026,
+ "main_counterexample": {
+   "H": [[0,1],[1,2]], "psi": [1,0], "atom": [0.8,0.6], "E0": 0.0,
+   "old_energy": -1.8674417557, "QR_true_Ritz": -0.4142135624, "H_ground": -0.4142135624,
+   "violation_true_minus_old": 1.4532
+ },
+ "random_test": {"trials": 2000, "complex_H": true, "violations_old_below_true_min": 735,
+                 "max_abs_err": 3.7},
+ "near_dependent_eps": {"1e-4": 0.086, "1e-6": -0.743, "1e-8": 1.93, "1e-10": 0.30,
+                        "1e-12": 1.93, "1e-14": -0.97},
+ "complex_bra": {"conj_bra_<psi|atom>": 0.5, "old_psi@atom": 0.071, "wrong": true},
+ "impact": "greedy_noci 2x2-drop selection AND orbopt_noci objective use this wrong energy -> their atom ranking is unreliable. All prior timed_bench.csv / complete_ci CSV / checkpoint ENERGY and selection are INVALID for these two methods. FCI scoring itself is fine; ckpt Ritz on orthonormal V (eigh Q^dagger H Q) remains correct, but the SELECTION that chose atoms is not.",
+ "supersedes": "All prior B PASS claims (greedy_noci/orbopt_noci advantage, timed_bench per-cell medians) are SUPERSEDED until producer fixes to QR/SVD generalized eig, recomputes actual E via <psi|H|psi> (not passed E0), returns current E on near-dependent, and reruns fresh timed 456. A/C untouched.",
+ "script": "review/ritz_bug_independent.py (reproducible)"
+}

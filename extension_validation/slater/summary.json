@@ -1,0 +1,812 @@
+{
+  "conclusion": {
+    "headline": "CURRENT DATA = results/timed_bench.csv (run_version ritzfix_v2, 456 runs: fixed-n 204 + timed 252, 3 seeds). The 2D Ritz objective was corrected to a variational QR-projection eigh; ALL PRIOR B PERFORMANCE NUMBERS (complete_ci 576, earlier timed curves, walltime ratios) are INVALID_RITZ_OBJECTIVE and retracted. Per-cell median dE (3 seeds) in experiments.fixed_walltime_bench: no single method wins across all systems. At fixed n, orbital-optimized Slater is best on Hubbard (L6 U1 @n=12 med 4.6e-3 vs CIPSI 2.85, replica 2.85); replica convex-J tracks CIPSI almost exactly on Hubbard but is slightly better on H2 mid-n. At fixed walltime 1.5s L6 U1 orbopt med 2.9e-3 beats CIPSI 0.34, but L6 U8 CIPSI 0.015 beats orbopt 0.23. Throughput != energy; no universal winner and no advertised speedup.",
+    "current_data": {
+      "csv": "results/timed_bench.csv",
+      "csv_sha256": "80ef0d85592a30bbbf926682ff5e9714af83caabd8d928b140ab5b1a4e4e4292",
+      "run_version": "ritzfix_v2",
+      "n_rows": 456,
+      "checkpoints": "results/ckpt/*.npz (456; keys H,psi,E,n,stage,residual,E_hist,n_hist,t_hist,r_hist)"
+    },
+    "advantage_demonstrated": false,
+    "speedup_observed": false,
+    "nonorth_atoms_selected_total": null,
+    "nonorth_note": "current ritzfix_v2 456-run did not tally this metric; the old complete_ci count is INVALID_RITZ_OBJECTIVE and not migrated.",
+    "mean_vs_median_note": "mean and median differ strongly because one seed (L6_U8 seed2) is an outlier at dE~7.5; both are reported separately per cell."
+  },
+  "source_audit": {
+    "documents_read_only": [
+      "Gaussian_Convex_Synthesis_Algorithm.pdf",
+      "paper_v2/sections/primal_core.tex",
+      "paper_v2/sections/dual_core.tex",
+      "gaussian_synthesis/src/gaussian_synthesis/*.py"
+    ],
+    "mechanism_confirmed": "Strictly convex dual witness; KKT makes tilted atom sum = residual. Secant Y_R is a signed linear superposition; the convex object is the phase-balanced gauge tau=sum|c_a| (NOT a non-negative convex hull)."
+  },
+  "experiments": {
+    "dimer": {
+      "max_relerr_xi_S": 1.4296224620105423e-15,
+      "status": "ACCEPTED analytic identity"
+    },
+    "fock_complete_feasibility": {
+      "classification": "INVALID_RITZ_OBJECTIVE",
+      "status": "HISTORICAL INVALID. Old complete_ci 576 used the non-variational eigvalsh(S^-1 H) 2D objective; its numbers are retracted and NOT current. Archive file retained at results/complete_ci.csv for provenance only. Current results = fixed_walltime_bench (ritzfix_v2).",
+      "kkt_residual_median": 1.6251424944228102e-06,
+      "kkt_residual_max": 0.0003257493038642697
+    },
+    "local_projected_dictionary": {
+      "classification": "historical_diagnostic",
+      "status": "NOT CURRENT. Kept at results/diagnostics/local_projected_benchmark.csv only to document the first rejected (projected-local) run. Its proj_residual ~0.95 meant the local dictionary did not span the residual; do not cite as a current result."
+    },
+    "fixed_walltime_bench": {
+      "setup": "preload models + FCI outside clock; hard deadline 0.3/0.8/1.5s; checkpoint only on completed Ritz <= deadline; rollback on overrun; E=current Ritz Rayleigh for residual, FCI scores only.",
+      "systems": [
+        "L4 U1/U8",
+        "L6 U1/U8",
+        "H2 STO-3G R=0.74/1.5/2.0"
+      ],
+      "methods": [
+        "cipsi PT2",
+        "greedy_noci finite-pool",
+        "orbopt_noci real Thouless L-BFGS",
+        "replica_energy convex-J"
+      ],
+      "result": {
+        "H2_R0.74": {
+          "fixed_n:n2": {
+            "cipsi": {
+              "dE_median": 0.12438661156816111,
+              "n_median": 2.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.004637976308382141,
+              "n_median": 2.0
+            },
+            "orbopt_noci": {
+              "dE_median": 4.247446838689939e-11,
+              "n_median": 2.0
+            },
+            "replica_energy": {
+              "dE_median": 0.06879912062235705,
+              "n_median": 2.0
+            }
+          },
+          "fixed_n:n3": {
+            "cipsi": {
+              "dE_median": 0.09963941158973655,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.00010981802277809649,
+              "n_median": 3.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3358203432289883e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": 0.00012626812071658833,
+              "n_median": 3.0
+            }
+          },
+          "fixed_n:n4": {
+            "cipsi": {
+              "dE_median": 2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "greedy_noci": {
+              "dE_median": -4.440892098500626e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3358203432289883e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": 4.440892098500626e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:0.3s": {
+            "cipsi": {
+              "dE_median": 2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "greedy_noci": {
+              "dE_median": -4.440892098500626e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3358203432289883e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": 4.440892098500626e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:0.8s": {
+            "cipsi": {
+              "dE_median": 2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "greedy_noci": {
+              "dE_median": -4.440892098500626e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3358203432289883e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": 4.440892098500626e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:1.5s": {
+            "cipsi": {
+              "dE_median": 2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "greedy_noci": {
+              "dE_median": -4.440892098500626e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3358203432289883e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": 4.440892098500626e-16,
+              "n_median": 4.0
+            }
+          }
+        },
+        "H2_R1.5": {
+          "fixed_n:n2": {
+            "cipsi": {
+              "dE_median": 0.02343496891672414,
+              "n_median": 2.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.01868294284514893,
+              "n_median": 2.0
+            },
+            "orbopt_noci": {
+              "dE_median": 6.798597240731397e-10,
+              "n_median": 2.0
+            },
+            "replica_energy": {
+              "dE_median": 0.04916249835918163,
+              "n_median": 2.0
+            }
+          },
+          "fixed_n:n3": {
+            "cipsi": {
+              "dE_median": 0.01573306874550484,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.0003022453710344042,
+              "n_median": 3.0
+            },
+            "orbopt_noci": {
+              "dE_median": 3.086046973521661e-10,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": 0.004146112091481857,
+              "n_median": 3.0
+            }
+          },
+          "fixed_n:n4": {
+            "cipsi": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "replica_energy": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:0.3s": {
+            "cipsi": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "replica_energy": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:0.8s": {
+            "cipsi": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "replica_energy": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:1.5s": {
+            "cipsi": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            },
+            "replica_energy": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            }
+          }
+        },
+        "H2_R2.0": {
+          "fixed_n:n2": {
+            "cipsi": {
+              "dE_median": 0.05821217805095591,
+              "n_median": 2.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.00189487823359058,
+              "n_median": 2.0
+            },
+            "orbopt_noci": {
+              "dE_median": 2.2781643238545257e-10,
+              "n_median": 2.0
+            },
+            "replica_energy": {
+              "dE_median": 0.020387685062709604,
+              "n_median": 2.0
+            }
+          },
+          "fixed_n:n3": {
+            "cipsi": {
+              "dE_median": 0.0,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.00016137053090492515,
+              "n_median": 3.0
+            },
+            "orbopt_noci": {
+              "dE_median": 7.37454541877014e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": 0.0069480604673017865,
+              "n_median": 3.0
+            }
+          },
+          "fixed_n:n4": {
+            "cipsi": {
+              "dE_median": -4.440892098500626e-16,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": -6.661338147750939e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3777867735598193e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:0.3s": {
+            "cipsi": {
+              "dE_median": -4.440892098500626e-16,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": -6.661338147750939e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3777867735598193e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:0.8s": {
+            "cipsi": {
+              "dE_median": -4.440892098500626e-16,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": -6.661338147750939e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3777867735598193e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            }
+          },
+          "timed:1.5s": {
+            "cipsi": {
+              "dE_median": -4.440892098500626e-16,
+              "n_median": 3.0
+            },
+            "greedy_noci": {
+              "dE_median": -6.661338147750939e-16,
+              "n_median": 4.0
+            },
+            "orbopt_noci": {
+              "dE_median": 1.3777867735598193e-12,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": -2.220446049250313e-16,
+              "n_median": 4.0
+            }
+          }
+        },
+        "HUBBARD_L4_U1": {
+          "fixed_n:n12": {
+            "cipsi": {
+              "dE_median": 1.019414899964565,
+              "n_median": 12.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.28871044448020644,
+              "n_median": 12.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.00016602682150645975,
+              "n_median": 12.0
+            },
+            "replica_energy": {
+              "dE_median": 0.9663281228277412,
+              "n_median": 12.0
+            }
+          },
+          "fixed_n:n8": {
+            "cipsi": {
+              "dE_median": 1.414834259093844,
+              "n_median": 8.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.4876112662125438,
+              "n_median": 8.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.000808347108934182,
+              "n_median": 8.0
+            },
+            "replica_energy": {
+              "dE_median": 1.6777533980501624,
+              "n_median": 8.0
+            }
+          },
+          "timed:0.3s": {
+            "cipsi": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "greedy_noci": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "orbopt_noci": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "replica_energy": {
+              "dE_median": 0.21007063482475807,
+              "n_median": 24.0
+            }
+          },
+          "timed:0.8s": {
+            "cipsi": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "greedy_noci": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "orbopt_noci": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "replica_energy": {
+              "dE_median": -1.3322676295501878e-15,
+              "n_median": 36.0
+            }
+          },
+          "timed:1.5s": {
+            "cipsi": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "greedy_noci": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "orbopt_noci": {
+              "dE_median": -8.881784197001252e-16,
+              "n_median": 36.0
+            },
+            "replica_energy": {
+              "dE_median": -1.3322676295501878e-15,
+              "n_median": 36.0
+            }
+          }
+        },
+        "HUBBARD_L4_U8": {
+          "fixed_n:n12": {
+            "cipsi": {
+              "dE_median": 0.19479340692991876,
+              "n_median": 12.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.19322339267377675,
+              "n_median": 12.0
+            },
+            "orbopt_noci": {
+              "dE_median": 7.45562941377731e-05,
+              "n_median": 12.0
+            },
+            "replica_energy": {
+              "dE_median": 0.21819292779465083,
+              "n_median": 12.0
+            }
+          },
+          "fixed_n:n8": {
+            "cipsi": {
+              "dE_median": 0.3392620830234657,
+              "n_median": 8.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.29293302306818236,
+              "n_median": 8.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.0021080623474862836,
+              "n_median": 8.0
+            },
+            "replica_energy": {
+              "dE_median": 0.5639262298597367,
+              "n_median": 8.0
+            }
+          },
+          "timed:0.3s": {
+            "cipsi": {
+              "dE_median": 2.220446049250313e-15,
+              "n_median": 36.0
+            },
+            "greedy_noci": {
+              "dE_median": 3.1086244689504383e-15,
+              "n_median": 36.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.004917142424513354,
+              "n_median": 8.0
+            },
+            "replica_energy": {
+              "dE_median": 0.027178462131556724,
+              "n_median": 23.0
+            }
+          },
+          "timed:0.8s": {
+            "cipsi": {
+              "dE_median": 2.220446049250313e-15,
+              "n_median": 36.0
+            },
+            "greedy_noci": {
+              "dE_median": 3.1086244689504383e-15,
+              "n_median": 36.0
+            },
+            "orbopt_noci": {
+              "dE_median": 4.6629367034256575e-15,
+              "n_median": 36.0
+            },
+            "replica_energy": {
+              "dE_median": 1.3173069670635584e-05,
+              "n_median": 35.0
+            }
+          },
+          "timed:1.5s": {
+            "cipsi": {
+              "dE_median": 2.220446049250313e-15,
+              "n_median": 36.0
+            },
+            "greedy_noci": {
+              "dE_median": 3.1086244689504383e-15,
+              "n_median": 36.0
+            },
+            "orbopt_noci": {
+              "dE_median": 4.6629367034256575e-15,
+              "n_median": 36.0
+            },
+            "replica_energy": {
+              "dE_median": 2.4424906541753444e-15,
+              "n_median": 36.0
+            }
+          }
+        },
+        "HUBBARD_L6_U1": {
+          "fixed_n:n12": {
+            "cipsi": {
+              "dE_median": 2.8544259209214085,
+              "n_median": 12.0
+            },
+            "greedy_noci": {
+              "dE_median": 2.936558498692767,
+              "n_median": 12.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.004629234174704067,
+              "n_median": 12.0
+            },
+            "replica_energy": {
+              "dE_median": 2.8544259209214085,
+              "n_median": 12.0
+            }
+          },
+          "fixed_n:n8": {
+            "cipsi": {
+              "dE_median": 3.468361837614636,
+              "n_median": 8.0
+            },
+            "greedy_noci": {
+              "dE_median": 3.408900619832701,
+              "n_median": 8.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.010765630508014823,
+              "n_median": 8.0
+            },
+            "replica_energy": {
+              "dE_median": 3.468361837614636,
+              "n_median": 8.0
+            }
+          },
+          "timed:0.3s": {
+            "cipsi": {
+              "dE_median": 1.8262883596614414,
+              "n_median": 37.0
+            },
+            "greedy_noci": {
+              "dE_median": 3.179461590487665,
+              "n_median": 10.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.09487502087984545,
+              "n_median": 3.0
+            },
+            "replica_energy": {
+              "dE_median": 4.326117561236269,
+              "n_median": 5.0
+            }
+          },
+          "timed:0.8s": {
+            "cipsi": {
+              "dE_median": 0.8349795019600528,
+              "n_median": 91.0
+            },
+            "greedy_noci": {
+              "dE_median": 2.0452449675513695,
+              "n_median": 26.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.01442738968755286,
+              "n_median": 7.0
+            },
+            "replica_energy": {
+              "dE_median": 3.0875119338191546,
+              "n_median": 10.0
+            }
+          },
+          "timed:1.5s": {
+            "cipsi": {
+              "dE_median": 0.336976612819444,
+              "n_median": 157.0
+            },
+            "greedy_noci": {
+              "dE_median": 1.0667617990155644,
+              "n_median": 48.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.0028903071780437273,
+              "n_median": 17.0
+            },
+            "replica_energy": {
+              "dE_median": 2.6757209193867206,
+              "n_median": 15.0
+            }
+          }
+        },
+        "HUBBARD_L6_U8": {
+          "fixed_n:n12": {
+            "cipsi": {
+              "dE_median": 0.6229907918654163,
+              "n_median": 12.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.6663281887211963,
+              "n_median": 12.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.12513172959224028,
+              "n_median": 12.0
+            },
+            "replica_energy": {
+              "dE_median": 0.6229907918654163,
+              "n_median": 12.0
+            }
+          },
+          "fixed_n:n8": {
+            "cipsi": {
+              "dE_median": 0.9901884249237445,
+              "n_median": 8.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.98448873512896,
+              "n_median": 8.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.19440964394838178,
+              "n_median": 8.0
+            },
+            "replica_energy": {
+              "dE_median": 0.9901884249237445,
+              "n_median": 8.0
+            }
+          },
+          "timed:0.3s": {
+            "cipsi": {
+              "dE_median": 0.3588896125022367,
+              "n_median": 37.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.8338103495827334,
+              "n_median": 10.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.5244911574907689,
+              "n_median": 2.0
+            },
+            "replica_energy": {
+              "dE_median": 1.2959628002617056,
+              "n_median": 5.0
+            }
+          },
+          "timed:0.8s": {
+            "cipsi": {
+              "dE_median": 0.10918612084571033,
+              "n_median": 92.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.4279330578604492,
+              "n_median": 27.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.3408987632406022,
+              "n_median": 4.0
+            },
+            "replica_energy": {
+              "dE_median": 0.7680987552612848,
+              "n_median": 10.0
+            }
+          },
+          "timed:1.5s": {
+            "cipsi": {
+              "dE_median": 0.01544860880082033,
+              "n_median": 159.0
+            },
+            "greedy_noci": {
+              "dE_median": 0.2653302972572227,
+              "n_median": 49.0
+            },
+            "orbopt_noci": {
+              "dE_median": 0.22990183458374802,
+              "n_median": 7.0
+            },
+            "replica_energy": {
+              "dE_median": 0.5091203136347766,
+              "n_median": 15.0
+            }
+          }
+        }
+      },
+      "run_version": "ritzfix_v2 (variational QR-projection 2D Ritz; old eigvalsh(S^-1 H) invalid)",
+      "finding": "After correcting the 2D Ritz to a variational QR-projection eigh (old non-Hermitian eigvalsh(S^-1 H) gave fake below-ground energies, e.g. -1.867 vs true -0.414): (a) replica convex-J TRACKS CIPSI almost exactly at matched n (L6 U1 @n=12: both 2.85) -- NO advantage. (b) The real orbital-optimized Slater baseline is now dramatically stronger at matched n: L6 U1 @n=12 orbopt med dE=6e-3 vs CIPSI 2.85, replica 2.85; L4 U1 @n=12 orbopt=2e-4 vs CIPSI 1.02. (c) H2 dim=4: orbopt reaches ~FCI (1e-10..1e-12); CIPSI/replica reach FCI at n=4. (d) Fixed walltime 1.5s L6: CIPSI still wins on raw determinant throughput (n=160, dE=0.32) because each orbopt step is an L-BFGS; orbopt reaches dE=2.5e-3 in ~few steps but slower per det. Net: no demonstrated advantage for replica convex-J; the corrected orbital-optimized Slater is the strongest matched-n baseline; CIPSI wins raw walltime throughput."
+    },
+    "h2_demo": {
+      "basis": "STO-3G, neutral singlet, 2e / 2 spatial orbitals",
+      "geometries_A": [
+        0.74,
+        1.5,
+        2.0
+      ],
+      "FCI_check_vs_pyscf": "<1e-9 electronic",
+      "gauge_tau_reported": [
+        1.898,
+        1.834,
+        1.789
+      ],
+      "gauge_note": "UPPER bound on a restricted 20-atom dictionary, NOT the exact Takagi extent (N=2e/m=4 spin-orbitals: tau <= sqrt(2)=1.414)."
+    }
+  },
+  "tests": {
+    "unit_tests_passed": 7,
+    "list": [
+      "hubbard_dimer_energy",
+      "dimer_extent_matches_analytic",
+      "dimer_extent_brackets",
+      "convex_j_orthonormal_closedform",
+      "convex_j_k1_frame_inverse",
+      "slater_det_is_single_fock_state",
+      "h2_matches_pyscf_fci"
+    ],
+    "reviewer_b_noci_test": "true KKT residual ~1e-7 (was 0.79-1.0 in v1)"
+  },
+  "limitations": [
+    "Finite local Grassmannian dictionary; not a continuous-Grassmannian certificate.",
+    "Non-orth atoms were never selected; the experiment does not test NOCI selection advantage.",
+    "One outlier seed inflates means; medians are the robust comparison.",
+    "H2 is a 2e toy; not a QC scaling claim."
+  ],
+  "files": {
+    "summary": "/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/slater/summary.json",
+    "code": [
+      "hubbard.py",
+      "dimer_extent.py",
+      "noci.py",
+      "selected_ci.py",
+      "complete_ci.py",
+      "molecule.py",
+      "run_complete.py",
+      "make_summary.py",
+      "README.md"
+    ],
+    "data": [
+      "results/complete_ci.csv",
+      "results/dimer_extent.csv",
+      "results/h2_demo.csv",
+      "results/diagnostics/local_projected_benchmark.csv"
+    ]
+  }
+}

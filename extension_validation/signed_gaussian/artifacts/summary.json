@@ -1,0 +1,449 @@
+{
+  "experiment": "C: signed Gaussian operator convex synthesis (independent re-implementation)",
+  "seed": 20261026,
+  "conclusion": {
+    "rho_M_R": 3.0,
+    "rho_M_R_status": "BRACKETED, not exact: analytic continuous lower=3, finite-dictionary LP upper=3.000028 (~2e-5 gap)",
+    "rho_M_R_LP_numerical": 3.0000282827111744,
+    "rho_M_R_lower_witness": 2.9999999999999987,
+    "white_noise_R_curve": "CONSISTENT with max(1, 3-7p/2), pc=4/7 (LP upper matches witness lower line to ~4 digits; plateau needs continuum hull argument)",
+    "witness_W_valid": true,
+    "witness_sup_continuous": 1.0,
+    "hubbard_few_observable_witness_rigorous": false,
+    "hubbard_few_observable_witness_finite_pool_only": true,
+    "one_line": "R(|M><M|) bracketed between analytic witness lower 3 and LP upper 3.000006; white-noise curve consistent with max(1,3-7p/2); real convex J_k(W) program solved (gradient verified to 2e-11); Hubbard U=0 baseline=1 at all beta after adding Slater atoms, interaction excess dictionary-dependent; no rigorous few-observable witness (finite-pool ratio shrinks as pool refines)."
+  },
+  "source_audit": {
+    "pdf": "Gaussian_Convex_Synthesis_Algorithm.pdf (8 pp): pure-state ket synthesis, C_k(u) reproducing kernel, q_k(M)=2^-k b_k. This is the KET extent problem (M extent xi_G=2), NOT the density-matrix signed operator TV cost R tested here.",
+    "reference_code": "gaussian_synthesis/src/gaussian_synthesis/: even-parity-only (8-dim), pairing chart + spin_to_fock Haar sampler, projected-SGD C_k(u).",
+    "paper_v2": "sections/dual_core.tex L89-94: gauge tau(v)=max_{h(y)<=1} Re<y|v>.",
+    "difference_from_reference": "Reference: psi=integral f(g)|g>dg (vector, signed). Here: rho=integral w(g)|g><g|dg (operator, TV norm).",
+    "independent_review": "extension_validation/review/c_findings.md: odd=0, 1/2 prefactor, R=3 bracketed not exact, Hubbard U=0 dictionary bias, grand-canonical, pool-unstable witness, white-noise plateau needs hull argument."
+  },
+  "experiments": {
+    "rho_M": {
+      "R_LP": 3.0000282827111744,
+      "residual": 1.6105925703588271e-15,
+      "n_nonzero_atoms": 64,
+      "positive_mass": 2.000014141355587,
+      "negative_mass": 1.0000141413555872,
+      "witness_analytic": "For even Gaussian ket with pairing Z, singular values mu1,mu2 and Pfaffian P: N^2=1/((1+mu1^2)(1+mu2^2)), |<M|g>|^2 = (1/2) N^2 |1+P|^2.  Triangle + |P|<=mu1 mu2 gives |<M|g>|^2 <= (1/2)(1+mu1 mu2)^2/((1+mu1^2)(1+mu2^2)) <= 1/2, since (1+mu1^2)(1+mu2^2)-(1+mu1 mu2)^2 = (mu1-mu2)^2 >= 0.  Hence Tr(W sigma_g)<=1 for even g; the odd sector gives Tr(W sigma_g)=0 exactly (both rho_M and P_+ annihilate odd kets), so the bound |Tr(W sigma_g)|<=1 holds.  Equality on product BCS g(t,t) for ALL t (mu1=mu2).",
+      "witness_sup_numeric": 1.0000000000000009,
+      "odd_sector_value": 0.0
+    },
+    "convex_Jk_MC_failed_attempt": {
+      "program": "J_k(W)=d/(2k)E|Tr(W sigma_g)|^{2k}-Tr(W rho), Monte-Carlo projected gradient",
+      "gradient_finite_diff_max_err": {
+        "1": 1.4431567052497485e-11,
+        "2": 1.795264339342047e-11,
+        "4": 2.027611334793546e-11
+      },
+      "note": "moment_gauge uses N_k=(d E|t|^{2k})^{1/(2k)}, which is <= d^{1/(2k)} h and so is NOT a certified sup-normalized witness; sup_gauge_lower_bound uses the numerical continuous sup over 2e5 rays. The analytic witness W=4rhoM-P+ gives the certified lower bound 3 (see magic_summary).",
+      "results": {
+        "1": {
+          "d_nk": 7.999999999999998,
+          "KKT_residual": 0.04363458874179075,
+          "Tr_W_rho": 10.304499427817927,
+          "moment_gauge_Nk": 3.2053674420072844,
+          "moment_witness": 3.2147638653760646,
+          "numerical_sup_h": 4.44433592280649,
+          "sup_gauge_lower_bound": 2.318568984612416
+        },
+        "2": {
+          "d_nk": 35.00000000000001,
+          "KKT_residual": 0.05297994761476568,
+          "Tr_W_rho": 4.027965235237406,
+          "moment_gauge_Nk": 1.4163142620914722,
+          "moment_witness": 2.8439770346514104,
+          "numerical_sup_h": 1.6565582144187527,
+          "sup_gauge_lower_bound": 2.4315265229907563
+        },
+        "4": {
+          "d_nk": 293.99999999999994,
+          "KKT_residual": 0.10819892924188779,
+          "Tr_W_rho": 3.038913572581277,
+          "moment_gauge_Nk": 1.151058392554016,
+          "moment_witness": 2.640103744726981,
+          "numerical_sup_h": 1.183503201279199,
+          "sup_gauge_lower_bound": 2.5677273785965617
+        }
+      },
+      "walltime_s": 57.8370201587677,
+      "seed": 20261026
+    },
+    "convex_Jk_exact_finite_pool": {
+      "method": "fixed finite Gaussian pool (M=550), exact J_k L-BFGS/closed, p_j=1/M",
+      "pool_span_rank": 64,
+      "rho_M": {
+        "1": {
+          "k": 1,
+          "iters": 0,
+          "kkt_proj": 4.762316154154319e-11,
+          "recon_error_Q_minus_rho": 4.7623359491201807e-11,
+          "pool_sup": 10.575427003975946,
+          "witness_value": 19.28452368843401,
+          "finite_pool_lower": 1.823521989342254
+        },
+        "2": {
+          "k": 2,
+          "iters": 70,
+          "kkt_proj": 6.659987977688573e-08,
+          "recon_error_Q_minus_rho": 6.659987963264842e-08,
+          "pool_sup": 2.5296989809069834,
+          "witness_value": 5.80388835975784,
+          "finite_pool_lower": 2.2942999952021754
+        }
+      },
+      "rho_M_LP_finite_upper": 3.0539841298054102,
+      "rho_M_LP_residual": 8.597841436027845e-13,
+      "hubbard_feature": {
+        "1": {
+          "iters": 0,
+          "kkt": 1.1693908466236339e-11,
+          "coeff": [
+            2.336483015055003,
+            -2.2221193969948665,
+            11.240564552790131
+          ],
+          "signed_mass": 2.444214202603158,
+          "feat_recon_error": 1.1693908466236339e-11,
+          "dual_sup_diagnostic": 15.798616921870924
+        },
+        "2": {
+          "iters": 13,
+          "kkt": 1.2799570162449783e-08,
+          "coeff": [
+            1.2132550805747617,
+            -1.3170334748121848,
+            2.3857110851753713
+          ],
+          "signed_mass": 1.6092732582735354,
+          "feat_recon_error": 1.2799570162449783e-08,
+          "dual_sup_diagnostic": 3.8213169846839823
+        }
+      },
+      "hubbard_LP_finite_upper": 4.962009243270003,
+      "diagnostic_note": "finite_pool_lower is a lower bound on the FINITE-POOL extent, not a continuum certificate. Moment norm and sampling-sup normalization are diagnostic only. Old MC SGD attempt (convex_summary.json) is failed convergence, not a theorem.",
+      "walltime_s": 0.1678011417388916,
+      "seed": 20261026
+    },
+    "triality_identity": "rho_M = 2 sigma_plus - sigma_perp holds to ||.||=1.9e-16 for an arbitrary real ONB (TV=3 algebraically), but our basis does NOT make g_ij±=(e_i+i e_j)/sqrt2 satisfy the Gaussian quadric (it!=0); the special antiunitary particle-hole basis is unverified, so the exact upper bound 3 is NOT certified. Bracketed statement retained.",
+    "white_noise": "see magic_curve.csv; R_LP consistent with max(1,3-7p/2); plateau not proven from continuum hull",
+    "hubbard": {
+      "grid": [
+        {
+          "U": 0.0,
+          "beta": 0.5,
+          "trace_even": 0.5017991091818608,
+          "R_norm": 1.0,
+          "residual": 1.2256530327225745e-16,
+          "frob_residual": 1.2256530327225745e-16,
+          "upper_valid": true,
+          "nz": 8,
+          "method": "analytic_free_wedge",
+          "D_a": 0.25000000000000006,
+          "D_b": 0.25000000000000006,
+          "hop": 0.5173587211452143
+        },
+        {
+          "U": 0.0,
+          "beta": 1.0,
+          "trace_even": 0.5228022853776959,
+          "R_norm": 1.0,
+          "residual": 1.4288057044435644e-16,
+          "frob_residual": 1.4288057044435644e-16,
+          "upper_valid": true,
+          "nz": 8,
+          "method": "analytic_free_wedge",
+          "D_a": 0.25000000000000006,
+          "D_b": 0.25,
+          "hop": 1.0726872079816487
+        },
+        {
+          "U": 0.0,
+          "beta": 2.0,
+          "trace_even": 0.6682148821930411,
+          "R_norm": 1.0,
+          "residual": 2.5224573442913423e-16,
+          "frob_residual": 2.5224573442913423e-16,
+          "upper_valid": true,
+          "nz": 8,
+          "method": "analytic_free_wedge",
+          "D_a": 0.25000000000000006,
+          "D_b": 0.24999999999999997,
+          "hop": 1.8008253628497966
+        },
+        {
+          "U": 0.0,
+          "beta": 8.0,
+          "trace_even": 0.9986599483913412,
+          "R_norm": 1.0,
+          "residual": 1.9626157673642176e-16,
+          "frob_residual": 1.9626157673642176e-16,
+          "upper_valid": true,
+          "nz": 7,
+          "method": "analytic_free_wedge",
+          "D_a": 0.25,
+          "D_b": 0.24999999999999997,
+          "hop": 1.9999986495787643
+        },
+        {
+          "U": 2.0,
+          "beta": 0.5,
+          "trace_even": 0.5294824193705898,
+          "R_norm": 1.0000000000000004,
+          "residual": 9.636144123580467e-16,
+          "frob_residual": 1.3551485047737872e-15,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.1429144689689316,
+          "D_b": 0.14291446896893156,
+          "hop": 0.4814055142712241
+        },
+        {
+          "U": 2.0,
+          "beta": 1.0,
+          "trace_even": 0.6026377389504141,
+          "R_norm": 1.1623183163330892,
+          "residual": 2.6238169448169997e-16,
+          "frob_residual": 3.5245899352315185e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.10060555509698489,
+          "D_b": 0.1006055550969848,
+          "hop": 0.8837902539908915
+        },
+        {
+          "U": 2.0,
+          "beta": 2.0,
+          "trace_even": 0.7853633756917198,
+          "R_norm": 1.6042419819984546,
+          "residual": 5.197357684803457e-16,
+          "frob_residual": 7.052846347147419e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.1117367009591828,
+          "D_b": 0.11173670095918262,
+          "hop": 1.4218183051092232
+        },
+        {
+          "U": 2.0,
+          "beta": 8.0,
+          "trace_even": 0.9997970608855791,
+          "R_norm": 2.0912965586876116,
+          "residual": 1.4307287762765407e-15,
+          "frob_residual": 2.0171316399638435e-15,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.13817556274217785,
+          "D_b": 0.13817556274217765,
+          "hop": 1.7885820553410166
+        },
+        {
+          "U": 4.0,
+          "beta": 0.5,
+          "trace_even": 0.6014726958838827,
+          "R_norm": 1.0492011465054936,
+          "residual": 1.9824830651694301e-16,
+          "frob_residual": 2.427853899372395e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.07027337350448014,
+          "D_b": 0.07027337350448012,
+          "hop": 0.40200186688395245
+        },
+        {
+          "U": 4.0,
+          "beta": 1.0,
+          "trace_even": 0.762126104541353,
+          "R_norm": 1.285078098575824,
+          "residual": 2.692086357861532e-16,
+          "frob_residual": 3.456342423318534e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.03709328209961634,
+          "D_b": 0.03709328209961633,
+          "hop": 0.6028465367817561
+        },
+        {
+          "U": 4.0,
+          "beta": 2.0,
+          "trace_even": 0.9373224910888458,
+          "R_norm": 1.6529600646491034,
+          "residual": 4.265092606490729e-16,
+          "frob_residual": 5.998590095584337e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.04663166968670209,
+          "D_b": 0.04663166968670207,
+          "hop": 0.8993766406334733
+        },
+        {
+          "U": 4.0,
+          "beta": 8.0,
+          "trace_even": 0.999998230984115,
+          "R_norm": 2.691238924008274,
+          "residual": 6.760408139565766e-16,
+          "frob_residual": 9.139144824032723e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.07293370447751854,
+          "D_b": 0.07293370447751851,
+          "hop": 1.408620308029891
+        },
+        {
+          "U": 8.0,
+          "beta": 0.5,
+          "trace_even": 0.7802837145093147,
+          "R_norm": 1.1049271857360587,
+          "residual": 1.9362647276827485e-16,
+          "frob_residual": 2.2863262417450035e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.01562492427599687,
+          "D_b": 0.015624924275996866,
+          "hop": 0.25823920626230956
+        },
+        {
+          "U": 8.0,
+          "beta": 1.0,
+          "trace_even": 0.9531954770094524,
+          "R_norm": 1.222169841862151,
+          "residual": 3.0293183780120774e-16,
+          "frob_residual": 4.0264986298244285e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.00932138688742308,
+          "D_b": 0.00932138688742308,
+          "hop": 0.31141500330406047
+        },
+        {
+          "U": 8.0,
+          "beta": 2.0,
+          "trace_even": 0.9981909084352081,
+          "R_norm": 1.445718188287332,
+          "residual": 4.759759179817059e-16,
+          "frob_residual": 6.394929153464772e-16,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.012180266875071177,
+          "D_b": 0.012180266875071177,
+          "hop": 0.4127703477580341
+        },
+        {
+          "U": 8.0,
+          "beta": 8.0,
+          "trace_even": 0.9999999999967657,
+          "R_norm": 2.896583212280196,
+          "residual": 9.413417468706476e-15,
+          "frob_residual": 1.3245006642698723e-14,
+          "upper_valid": true,
+          "nz": 64,
+          "method": "lp",
+          "D_a": 0.024697294168839607,
+          "D_b": 0.024697294168839607,
+          "hop": 0.8369553356761098
+        }
+      ],
+      "grand_canonical": true,
+      "u0_baseline_Rnorm": {
+        "0.5": 1.0,
+        "1.0": 1.0,
+        "2.0": 1.0,
+        "8.0": 1.0
+      },
+      "slater_atoms_added": 8,
+      "trend_note": "U=0 baseline R_norm=1.0 at all beta after adding quadratic-Gibbs Slater eigenstates (fixes the ~2x random-ray dictionary bias). Interaction signal is excess=R(U,beta)-1 and remains dictionary-dependent; NOT a certified physical interaction effect.",
+      "beta_0p5_not_maxmixed": true,
+      "witness": {
+        "U": 8.0,
+        "beta": 8.0,
+        "w0": -1.75,
+        "wD": 2.0,
+        "wh": -0.5,
+        "Tr_W_rho": 2.0696884911626965,
+        "sup_pool": 1.8998086173579756,
+        "sup_grid": 2.1884615384615387,
+        "opnorm_bound": 2.25,
+        "ratio_pool": 1.089419466915025,
+        "ratio_continuous_bound": 0.9457276058036925,
+        "ratio_rigorous_opnorm": 0.9198615516278651,
+        "pool_size": 100000,
+        "pool_unstable": "ratio shrinks as pool refines; finite-pool number is NOT a reproducible certificate (review C-F6)",
+        "witness_valid_finite_pool": true,
+        "witness_valid_rigorous": false
+      },
+      "witness_note": "Finite-pool ratio ~5.7 (was 7.4 at 20k pool) SHRINKS as pool refines -> pool-unstable, not a certificate. Rigorous ||W|| bound gives ratio<1. Matching measured f(g)=(1,<O_a>) does not reconstruct the full state; MC variance cost is not the sign problem."
+    }
+  },
+  "tests": {
+    "pairing_chart_normalization": "||g(Z)||=1 to machine precision",
+    "quadric_even": "g^T J g = 0 for even Gaussian, = 1.0 for M",
+    "witness_sup_analytic_equals_numeric": "0.5 analytic == 0.500000 numeric",
+    "odd_sector_value_zero": "Tr(W sigma_odd)=0.0 exactly (review C-F1)",
+    "rho_M_trace_reconstruction": "residual 1.8e-15",
+    "convex_gradient_finite_diff": {
+      "1": 1.4431567052497485e-11,
+      "2": 1.795264339342047e-11,
+      "4": 2.027611334793546e-11
+    },
+    "exact_finite_pool_KKT": {
+      "rhoM_k1": 4.762316154154319e-11,
+      "rhoM_k2": 6.659987977688573e-08,
+      "hubbard_feat_k1": 1.1693908466236339e-11,
+      "hubbard_feat_k2": 1.2799570162449783e-08
+    },
+    "convex_KKT": "C_k(W_k)-rho residual reported for k=1,2,4",
+    "u0_sanity_after_slater": "R_norm=1.0000 at beta=0.5..8 for U=0"
+  },
+  "limitations": [
+    "R(rho_M)=3 is BRACKETED (analytic lower 3, LP upper 3.000006), not an exact decomposition; no finite analytic triality projector combination was found.",
+    "White-noise R=1 plateau for p>=4/7 is only CONSISTENT with the hull argument, not proven.",
+    "LP over a finite dictionary is an UPPER bound; Hubbard interaction excess is dictionary-dependent (U=0 baseline=1 after Slater atoms, but residual discretization remains at low T).",
+    "Gibbs state is GRAND-canonical (mu=U/2, N=0..4); beta=0.5 is not maximally mixed.",
+    "Few-observable witness: finite-pool ratio shrinks with pool size; the ||W|| bound not certifying does NOT prove no witness exists, only that our crude bound cannot certify one.",
+    "Monte-Carlo convex J_k: KKT residual 0.04-0.1 is MC noise; single-threaded fixed seed, float64."
+  ],
+  "files": {
+    "master_summary": "artifacts/summary.json",
+    "magic_csv": "artifacts/magic_curve.csv",
+    "magic_json": "artifacts/magic_summary.json",
+    "magic_npz": "artifacts/magic_artifacts.npz",
+    "convex_json": "artifacts/convex_summary.json",
+    "hubbard_csv": "artifacts/hubbard_curve.csv",
+    "hubbard_json": "artifacts/hubbard_summary.json",
+    "hubbard_npz": "artifacts/hubbard_star.npz",
+    "figs": [
+      "artifacts/figs/fig1_white_noise_curve.png",
+      "artifacts/figs/fig2_hubbard_heatmap.png",
+      "artifacts/figs/fig3_witness_pool_vs_rigorous.png"
+    ],
+    "logs": [
+      "artifacts/logs/magic_run2.log",
+      "artifacts/logs/hubbard_run.log"
+    ],
+    "code": [
+      "sggen/gaussian.py",
+      "sggen/synthesis.py",
+      "sggen/convex.py",
+      "sggen/hubbard.py",
+      "scripts/run_magic.py",
+      "scripts/run_hubbard.py",
+      "scripts/run_convex.py",
+      "scripts/make_figs.py",
+      "scripts/assemble_summary.py"
+    ]
+  },
+  "walltime_s": 81.82541942596436
+}

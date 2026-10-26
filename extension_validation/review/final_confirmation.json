@@ -1,0 +1,329 @@
+{
+  "purpose": "Final test-state and validation record. Commands below are recorded AS ACTUALLY INVOKED (absolute interpreter paths; venv lives at extension_validation/, not inside slater/ or signed_gaussian/).",
+  "generated_utc": "2026-10-25T18:11:13Z",
+  "this_agent_ran": {
+    "commands": [
+      "cd '/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/slater' && '/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/.venv/bin/python' tests/test_slater.py",
+      "cd '/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/signed_gaussian' && '/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/.venv/bin/python' scripts/selftest_core.py",
+      "cd '/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/signed_gaussian' && '/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/.venv/bin/python' scripts/selftest_contact.py",
+      "'/Users/bytedance/Library/Application Support/Doubao/Profile 1/.doubao/agent_mode/workspace/.skills/verifier-hub/bin/verifier' rubric check-file-format '/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/report/推广验证报告.html' --expected-ext .html",
+      "'/Users/bytedance/Library/Application Support/Doubao/Profile 1/.doubao/agent_mode/workspace/.skills/verifier-hub/bin/verifier' text must-contain --file '.../推广验证报告.html' --terms 3.000028 覆盖范围与未完成项 '无严格连续 witness'",
+      "python3 '/Users/bytedance/Library/Application Support/Doubao/Profile 1/.doubao/agent_mode/workspace/.skills/html/scripts/shot.py' '/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/report/推广验证报告.html' --only desktop"
+    ],
+    "results": {
+      "B_slater_unit_tests": "7/7 PASS (exit 0): convex_j k1/k2 closed-form, dimer extent matches analytic & brackets, H2 matches pyscf FCI, hubbard dimer energy, slater det single Fock",
+      "C_selftest_core": "exit 0: pairing norm~1, quadric~5e-17, M quadric violation=1.0, witness sup over product family=0.5, random even rays<=0.475, Tr(W rho_M)=3.0; (small 349-atom LP R=4.653 is sanity, NOT production bracket)",
+      "C_selftest_contact": "RESOLVED: producer fixed the print-line KeyError; current selftest_contact.py exit 0 (0.17s), Frobenius residual 1.01e-15, R=3.001074, upper_valid=True, contact atoms |<M|g>|^2=0.5. Earlier KeyError was a historical code-harness bug, now superseded (see artifacts/logs/selftest_contact.log).",
+      "A_unit_tests": "NOT re-run: hartree/code/run_tests.py OVERWRITES hartree/tests/test_log.json; cited committed record status=PASS (qk formula-vs-integral max abs 7.66e-15, quadrature relerr 1.19e-16, F1_hartree~1.0)",
+      "verifier": "format OK; must-contain 3/3 (3.000028 x11, 覆盖范围与未完成项 x2, 无严格连续 witness x2)",
+      "shot_py": "status=pass, blocker=0 error=0 warning=0 (favicon fixed via inline SVG data-URI)"
+    }
+  },
+  "main_confirmed_cited_by_value_not_reexecuted": [
+    "Slater 7 unit tests pass (Main independent run)",
+    "A independent check: count=864 pairs + representative / odd-power checks",
+    "magic NPZ full 8x8 einsum frobenius residual = 2.2366930530298427e-15, TV = 3.0000282827111744, trace ~ 1",
+    "before 1463 SHA: no changed / no missing"
+  ],
+  "final_bracket_note": "C R(rho_M) = numeric bracketing [3.0, 3.000028], NOT interval arithmetic and NOT exact R=3. finite-dictionary LP is a valid numerical upper bound on continuous R, not a continuous optimality certificate.",
+  "no_numerics_rerun": true,
+  "review_json_untouched": true,
+  "c_dictionary_pools": {
+    "note": "C 用了多个不同大小的有限字典，勿混淆：",
+    "magic_LP_white_noise": 3488,
+    "hubbard_LP": 5076,
+    "exact_convex_deterministic_Jk_pool_M": 550,
+    "which_produces_what": "R(ρ_M)∈[3.0,3.000028] 夹逼来自 magic LP（3488 原子）；M=550 是 run_exact_convex 的确定性 J_k 有限池（p_j=1/M），二者不是同一字典。",
+    "source": "signed_gaussian/artifacts/logs/magic_run2.log ([build] dictionary 3488)、hubbard_run.log (5076)、exact_convex_summary.json (M=550)"
+  },
+  "test_vs_scientific": {
+    "code_test_failure": "RESOLVED: selftest_contact KeyError fixed by producer; all C selftests now pass. The old KeyError was a code-harness print bug, never a scientific failure.",
+    "scientific_status": "A/B/C 数值结论不变；B summary headline（旧 'COLLAPSES CIPSI'）由 producer 从 final complete_ci.csv 刷新，不重跑实验。",
+    "final_tree_status": "REBUILT now: producer B summary refresh + C contact fix are in; final_tree.json hashes refreshed.",
+    "B_picked_nonorth_audit": "Read-only CSV audit of final complete_ci.csv (576 rows): picked_nonorth=False for ALL methods, 144/144 each (cipsi/greedy_noci/replica_coef/replica_energy). New summary 'all nonorth=0' matches the final CSV; greedy's earlier 90/132 came from an old local-dictionary run, not this Fock-complete data."
+  },
+  "A_exp4_rdm_main_confirmed": {
+    "note": "Main independently recomputed true condensate fraction from bh_states NPZ (Gram C†C, NOT exp4.rdm), 8 points; cited as Main-verified, not self-run.",
+    "method": "from states, C_j=a_j ψ, γ_1 = C†C; trace=N, PSD, lam_max/N = true fraction",
+    "values_confirmed": {
+      "M3_UJ6": {
+        "condensate_fraction": 0.6699491236550233,
+        "F1_hartree": 0.58056957
+      },
+      "M2_UJ6": {
+        "condensate_fraction": 0.7773500981126147
+      },
+      "U0_points": {
+        "condensate_fraction": 1.0
+      }
+    },
+    "json_fix_pending": "producer rewriting exp4_rdm.json: UoverJ inf -> null Mott endpoint, allow_nan=False, re-symmetrize raw gamma; does NOT re-optimize. My report chart uses hardcoded numeric values with Mott as separate categorical label (no infinity on axis), so no rework needed.",
+    "m2_missing_extent": "M2,U/J=6 has no exp3 xi-cert bracket (5-case set excludes it); not borrowed from M3. Fraction/F1/entropy curve still valid from exp4.",
+    "fresh_strict_json_verified": true,
+    "joined_xi_bounds": "fresh exp4_rdm.csv carries xi bounds joined per (m,U): M2U0[1,1] analytic, M2U0.5[1.026,1.658], M2U2[1.186,1.916], M2U6 none (not borrowed), M3U0[1,1], M3U0.5[1.048,2.801], M3U2[1.417,3.785], M3U6[2.143,5.725], M2_Mott xi=2.0, M3_Mott xi=4.5 analytic. Report A1+A3/A4 match."
+  },
+  "B_timed_status": {
+    "fresh_csv": "slater/results/timed_bench.csv 456 rows (mode timed=252 + fixed_n=204); 7 systems x 3 starts x 4 methods x budgets. supersedes old 252-row cooperative run.",
+    "flags": "overrun=0 everywhere; rollback (rb)>0 only on timed early budgets for orbopt/replica (checkpoint rollback, not scientific fail); initialization_not_completed=0. No NaN scientific failures in fresh run.",
+    "fixed_n_median_dE_key": {
+      "L6_U1_n12": {
+        "cipsi": 2.85,
+        "greedy": 3.3,
+        "orbopt": 0.529,
+        "replica": 2.85
+      },
+      "L4_U1_n12": {
+        "cipsi": 1.02,
+        "greedy": 0.509,
+        "orbopt": 0.0714,
+        "replica": 0.966
+      },
+      "L6_U8_n12": {
+        "cipsi": 0.623,
+        "greedy": 1.06,
+        "orbopt": 0.533,
+        "replica": 0.623
+      },
+      "H2_all_n4": "all methods ~1e-16 (FCI); n2/n3 method-dependent, H2_R0.74 n3 orbopt/replica ~4e-4"
+    },
+    "timed_1.5s_L6_U1": {
+      "cipsi_medE": 0.325,
+      "cipsi_n": 159,
+      "orbopt_medE": 0.89,
+      "orbopt_n": 5.3,
+      "replica_medE": 2.68,
+      "replica_n": 15.0
+    },
+    "story": "At FIXED n (n=8/12) orbital-optimized greedy NOCI is best on Hubbard (L6U1 n12: 0.53 vs CIPSI 2.85). At FIXED 1.5s walltime CIPSI wins on L6 (cheap determinants, n~160) vs orbopt n~5. Two-budget story, not a single winner.",
+    "held_for_review": "HTML two-budget charts + H2 intermediate curve NOT baked yet; independent review verifying SIGALRM/checkpoint/FCI. run_all B stage now lists timed_bench.py before make_summary."
+  },
+  "final_pass_review": {
+    "review_json": "review/review.json 9399 bytes, A/B supplement passed, C current exact limits.",
+    "B_456_checkpoint_verify": "independent review: all 456 checkpoint E/residual consistent, 0 missing, commit<=deadline 0 violations; overrun max 0.103s on 9 rows recorded but not counted in budget; psi.copy + alarm-disabled-before-IO + FCI-only scoring fixes confirmed.",
+    "per_cell_1.5s_ordering": {
+      "L6_U1": "CI .341 < orbopt .890 < greedy 1.176 < replica 2.676",
+      "L6_U8": "CI .015 < greedy .468 < replica .509 < orbopt .664",
+      "note": "no method wins all cells; cold-start no warmup; time variance; fixed_n 60 cooperative runs = resource cap only"
+    },
+    "tests_actually_run_by_me": {
+      "B_test_slater": "7/7 PASS",
+      "C_selftest_core": "exit 0",
+      "C_selftest_contact": "exit 0 (post-fix)",
+      "A_run_tests": "NOT re-run (would overwrite committed test_log.json); cited committed PASS"
+    },
+    "tests_NOT_claimed": "deadline/orbopt checkpoint tests verified by producer/reviewer via review.json, not re-executed by me"
+  },
+  "Main_independent_final_456": {
+    "source": "Main re-verified (cited, not self-run)",
+    "coverage": "7 systems: H2 n2/3/4 (R=0.74/1.5/2.0) + Hubbard n8/12, timed 0.3/0.8/1.5s, 3 starts, 4 methods",
+    "checkpoint": "all commit <= deadline; Emax err 1.954e-14; residual max err 2.360e-15",
+    "0.3s_equal_budget": {
+      "H2": "all 3 bond lengths x 4 methods = machine FCI",
+      "L6_U1_median": {
+        "cipsi": 1.8734,
+        "replica": 4.3261
+      },
+      "L6_U8_median": {
+        "cipsi": 0.37247,
+        "replica": 1.29596
+      }
+    },
+    "note": "equal-budget conclusions per-cell, not pooled. No new figures or numerics added."
+  },
+  "B_RITZ_OBJECTIVE_BUG": {
+    "status": "WITHDRAWN pending rerun",
+    "bug": "two_dim_ritz_drop used eigvalsh on non-Hermitian S^-1H -> wrong selection objective",
+    "counterexample": {
+      "H": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "psi": [
+        1,
+        0
+      ],
+      "a": [
+        0.8,
+        0.6
+      ],
+      "old_Ritz_E": -1.86744,
+      "ground": -0.414214,
+      "note": "old Ritz below ground -> non-variational, wrong direction"
+    },
+    "withdrawn": "all old B greedy/orbopt performance + H2 n3 improvement + fixed-n/fixed-time orderings",
+    "kept": "B1 dimer extent vs analytic identity (relerr 1.4e-15) is independently correct",
+    "pending": "B owner QR/SVD complex near-dep rerun timed 456; reviewer random-Hermitian/H2 counter-evidence. Report HTML marked INVALID; no final shot/package until fresh data + independent PASS.",
+    "A_C_unaffected": true
+  },
+  "B_ritzfix_v2_rebuild": {
+    "source": "slater/results/timed_bench.csv run_version=ritzfix_v2 (456 rows) + 456 ckpt histories",
+    "fixed_n_n12_med_dE": {
+      "L4U1": [
+        1.019,
+        0.289,
+        0.0002,
+        0.966
+      ],
+      "L4U8": [
+        0.195,
+        0.193,
+        0.0001,
+        0.218
+      ],
+      "L6U1": [
+        2.854,
+        2.937,
+        0.0061,
+        2.854
+      ],
+      "L6U8": [
+        0.623,
+        0.666,
+        0.138,
+        0.623
+      ],
+      "order": "cipsi,greedy,orbopt,replica"
+    },
+    "timed_L6U1_1.5s_med_dE": {
+      "cipsi": [
+        1.83,
+        0.773,
+        0.317
+      ],
+      "greedy": [
+        3.03,
+        1.81,
+        1.01
+      ],
+      "orbopt": [
+        0.095,
+        0.016,
+        0.0025
+      ],
+      "replica": [
+        4.33,
+        3.09,
+        2.68
+      ]
+    },
+    "timed_L6U8_1.5s_med_dE": {
+      "cipsi": 0.0144,
+      "greedy": 0.231,
+      "orbopt": 0.216,
+      "replica": 0.509
+    },
+    "note": "corrected QR selection; CIPSI throughput(n~162) != better energy. Pending reviewer fixture/variational/deadline PASS before final package.",
+    "old_complete_576": "permanently invalid diagnostic, not B2/B3 current",
+    "B1_dimer": "kept, independently correct"
+  },
+  "B_FINAL_PASS": {
+    "review_json": "review/review.json 14317 bytes current PASS",
+    "strict_tests": "6/6 exit 0: 67 wrong-E fixtures / H2 bracket / bad calls 0 / SIGALRM + full replay",
+    "verify_log": "slater/results/logs/verify_ritz_run.log: keys/mono/below-FCI/E_last/N_last/deadline/Rayleigh/res/norm all 0",
+    "csv_sha256": "80ef0d85592a30bbbf926682ff5e9714af83caabd8d928b140ab5b1a4e4e4292",
+    "frozen_median_1.5s_L6U1": {
+      "cipsi": 0.3369766,
+      "greedy": 1.0667618,
+      "orbopt": 0.0028903,
+      "replica": 2.6757209
+    },
+    "frozen_median_1.5s_L6U8": {
+      "cipsi": 0.0154486,
+      "greedy": 0.2653303,
+      "orbopt": 0.2299018,
+      "replica": 0.5091203
+    },
+    "B2_B3_complete_576": "permanently invalid diagnostic, not current",
+    "A_C": "unchanged"
+  },
+  "C_POOL_LEGALITY_WITHDRAW": {
+    "status": "WITHDRAWN pending legal Gaussian pool rerun",
+    "bug": "Hubbard Gibbs U8/beta8 decomposition has weight -0.522 atom that is NOT a legal Gaussian (non quadric-1); R~2.727 LP cost invalid; affected feature cost withdrawn",
+    "magic": "also under legality audit, not assumed valid",
+    "prior_pass": "matrix reconstruction PASS is NOT atom-legality proof",
+    "pipeline": "C owner full-pool legal audit (magic/Gibbs/features/contact) + fail-closed solver; rerun legal pool over U beta / U0 / R1 / full rho / weights / kets / finite J; independent reviewer quadric/covariance/Wick cross-check",
+    "report_state": "C1-C3 and summary/meta/README/run_all to be redrawn from new legal pool after fresh data + independent PASS; zip NOT redelivered now",
+    "A_B_frozen": "CSV sha80ef0d85 unchanged, no rerun",
+    "scope_precision": "magic 3488 atoms all legal (q=0), R=3.000028 KEPT valid. Withdraw ONLY old Hubbard Gibbs pool (H0 full-Fock degenerate 8 eigen-columns non-Gaussian, U8b8 weight -0.522) and same-pool feature costs. C owner fresh legal-pool rerun. A/B frozen."
+  },
+  "C_operator_convention_fix": {
+    "status": "DRAFT pending c_legal_v2",
+    "issue": "annihilator was actually creation; n/hop/observable operators need correction",
+    "pool": "legal 2856 atoms reusable; old rho/observables version NOT current",
+    "draft_value": "hubbard_star U8b8 R~2.897 (draft only)",
+    "c_legal_v2": "vac/CAR/n tests + physical H/feature fresh rerun; U0b8 use free-8 exact positive weights to drop residual <1e-8; every (U,b) weights/rho share pool NPZ, features J saved",
+    "magic_3488": "retained confirmed legal",
+    "A_B_frozen": "CSV sha80ef unchanged"
+  },
+  "C_c_legal_v2_finalizing": {
+    "feature_attempt_npz": "550 legal pool full c/Tr target; mass 2.444/1.609",
+    "curve_12_Ugt0": "PASS: 2856 legal, frob <=1.3e-14",
+    "U0_pending": "NPZ weights=0 import error (non-physical); owner mapping analytic free-8 weights into shared 2856; waiting U0 feature trace PASS to finalize",
+    "report": "C3 16-point chart in place as draft; no old 2.727/1.65 as current; magic 3488 retained; A/B frozen"
+  },
+  "C_FINAL_PASS": {
+    "status": "C c_legal_v2 FINAL, no pending",
+    "review": "review/review.json 16959 bytes, PASS",
+    "pool": "2856 kets independent Gamma2/Wick legal=0",
+    "records": "hubbard_curve_records.npz 16 (U,beta) all legal, full-matrix weights sum matches; U0 frob~2.5e-16, U>0 max frob 1.3e-14",
+    "U0": "free wedge analytic positive weights sum=1, R=1",
+    "features": "feature_attempt.npz 550 legal pool physical Tr + c reconstruction PASS, mass 2.444/1.609",
+    "magic": "3488 legal, R 3.000028 kept",
+    "replaced": "old invalid C R~2.727 (non-quadric-1 atom) + creation-flip operator convention WITHDRAWN, superseded",
+    "limitation": "only continuous-optimum not certified; no pending numerics",
+    "records_sha": "be5d52e5ec94c7e113b94b3beb6fe55fcd7dfcf64ece5d46d5e0a126aee04042",
+    "feature_sha": "6101fac99c00d62ba41cb40716bac64ab187ba8b0d7991144798836a41f66cee",
+    "B_csv_sha": "80ef0d85592a30bbbf926682ff5e9714af83caabd8d928b140ab5b1a4e4e4292",
+    "max_frob_all16": "1.3248002722203211e-14 (U8b8; saved 1.3245e-14); U0 rows ~2.5e-16 only, not all-16",
+    "npz_keys": "params, weights(16,2856), target_rhos, reconstructed, frobs, kets(2856,8), projectors, source_labels, occ_basis; feature keys: actual c/rhos/obs complete"
+  },
+  "C_MAIN_INDEPENDENT_VERIFY": {
+    "by": "Main independent (NOT executed by report agent)",
+    "kets": "2856 kets explicit q max 6.2063e-16, norm err 6.66e-16; projectors = ket outer all",
+    "records": "16 saved weights full 8x8 recon; max Frobenius 1.3248e-14",
+    "U8b8": "legal cost exact float 2.896583212280196 (displayed 2.897)",
+    "U0": "four cost 1, frob <=2.52e-16",
+    "majorana": "independent hand-written JW c, NOT sggen.annihilator; all 2856 Majorana Gamma2 + Imax 3.1086e-15; 70 four-Majorana Wick max 1.33228e-15 => all Gaussian",
+    "magic": "3488 independently legal, R 3.000028 retained",
+    "records_sha": "be5d52e5ec94c7e113b94b3beb6fe55fcd7dfcf64ece5d46d5e0a126aee04042",
+    "feature_sha": "6101fac99c00d62ba41cb40716bac64ab187ba8b0d7991144798836a41f66cee",
+    "A_B": "CSV 80ef unchanged"
+  },
+  "C_MAIN_PHYSICAL_H_VERIFY": {
+    "by": "Main independent hand-written JW (NOT self-executed)",
+    "H": "H=-hop+U n_up n_down - mu N, mu=U/2; normalized even-block thermal Gibbs",
+    "result": "16 target rho match saved rho, max Frobenius 1.82005e-16",
+    "feature": "c_legal_v2 correct-operator rerun; 550 legal pool physical Tr/c weights match PASS (NPZ sha 6101fac9...f66cee)",
+    "freeze": "records be5d52e5...ee04042 unchanged; no Gibbs rerun/search; waiting C owner provenance metrics path for metadata"
+  },
+  "C_FEATURE_PROVENANCE": {
+    "target": "rho/obs from fixed annihilator matprod (U8b8 mu=4 normalized even, trace=1)",
+    "pool": "550 seed 20261026 contact+pairing product+Haar, fail-closed audit + independent Gamma2",
+    "mass": "k1=2.4442, k2=1.6093",
+    "residual": "||Bf^T c - y|| k1=1.17e-11, k2=1.28e-8",
+    "coeff": "I,D,sum,hop k1[2.34,-2.22,11.24] k2[1.21,-1.32,2.39]",
+    "hop": "actual Tr hop 0.836955 matches covector",
+    "npz_sha": "6101fac99c00d62ba41cb40716bac64ab187ba8b0d7991144798836a41f66cee unchanged",
+    "no_strict_witness": "no continuous witness, no search",
+    "physical_H_Main": "16 target rho max Frob 1.82005e-16"
+  },
+  "C_VALIDATION_GATE_PASS": {
+    "independent": "review/test_c_validation.py + c_validation_gate.log 9/9 exit0; ValueError on illegal BEFORE linprog; legal vac tiny R=1",
+    "owner": "selftest_validation.py 10 reject PASS",
+    "review_json": "review/review.json 17221 bytes, all C pass (legal 16 / 550 features / audit_projector enhanced)",
+    "note": "pure code validation, NOT science rerun; records be5d52e5 / feature 6101fac9 / B 80ef unchanged"
+  },
+  "C_MAIN_FEATURE_SOLVER_VERIFY": {
+    "by": "Main independent (NOT self-executed, no new tests)",
+    "550": "kets q max 3.66187e-16; Bf independent Tr O projection err 2.22e-16; target y trace err 0",
+    "k1": "mass 2.4442142, residual 1.16939e-11",
+    "k2": "mass 1.6092733, residual 1.27996e-8",
+    "solve_inject": "2sigma/mixed I8/mixed 2-kets/nonHermitian/NaN rejected 5/5; selftest_audit PASS"
+  }
+}

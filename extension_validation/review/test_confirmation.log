@@ -1,0 +1,46 @@
+=== test_confirmation.log generated 2026-10-25T18:07:42Z ===
+=== venv: /Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/.venv/bin/python ===
+
+### [B] python slater/tests/test_slater.py (read-only assertions; no file writes) ###
+PASS test_convex_j_k1_frame_inverse
+PASS test_convex_j_orthonormal_closedform
+PASS test_dimer_extent_brackets
+PASS test_dimer_extent_matches_analytic
+PASS test_h2_matches_pyscf_fci
+PASS test_hubbard_dimer_energy
+PASS test_slater_det_is_single_fock_state
+
+7 tests passed
+B exit=0
+
+### [C] python signed_gaussian/scripts/selftest_core.py (in-memory numeric checks, seed 20261026) ###
+norm of pairing Gaussian: 0.9999999999999999
+quadric g^T J g (should be ~0): (5.551115123125783e-17+0j)
+M quadric violation (should be nonzero): (0.9999999999999998+0j)
+max |<M|g(t,t)>|^2 on product family (expect 0.5): 0.5000000000000002
+max |<M|g>|^2 over 20000 random even rays (expect <=0.5): 0.4751269968141235
+dictionary size: 349
+LP R(rho_M) = 4.653124  residual=1.51e-14  nonzero=64  time=0.02s  status=ok
+Tr(W rho_M) (expect 3): 2.9999999999999987
+C-core exit=0
+
+### [C] python signed_gaussian/scripts/selftest_contact.py (contact-dictionary witness checks) ###
+dictionary size: 2068
+sample |<M|g>|^2 of contact atoms (expect 0.5): [0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5]
+Traceback (most recent call last):
+  File "/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/signed_gaussian/scripts/selftest_contact.py", line 51, in <module>
+    print(f"LP R(rho_M) = {res['value']:.6f}  residual={res['residual']:.2e}  "
+                                                        ~~~^^^^^^^^^^^^
+KeyError: 'residual'
+C-contact exit=1
+
+### [A] NOTE: hartree/code/run_tests.py OVERWRITES hartree/tests/test_log.json -> NOT re-run; committed record cited below ###
+{
+  "qk_formula_vs_integral_max_abs": 7.66053886991358e-15,
+  "q1_equals_one": true,
+  "sandwich_111": true,
+  "quadrature_relerr": 1.1873218457796813e-16,
+  "F1_hartree": 0.9999999999999483,
+  "walltime_s": 0.16094279289245605,
+  "status": "PASS"
+}

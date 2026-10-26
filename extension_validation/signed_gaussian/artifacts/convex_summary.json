@@ -1,0 +1,40 @@
+{
+  "program": "J_k(W)=d/(2k)E|Tr(W sigma_g)|^{2k}-Tr(W rho), Monte-Carlo projected gradient",
+  "gradient_finite_diff_max_err": {
+    "1": 1.4431567052497485e-11,
+    "2": 1.795264339342047e-11,
+    "4": 2.027611334793546e-11
+  },
+  "note": "moment_gauge uses N_k=(d E|t|^{2k})^{1/(2k)}, which is <= d^{1/(2k)} h and so is NOT a certified sup-normalized witness; sup_gauge_lower_bound uses the numerical continuous sup over 2e5 rays. The analytic witness W=4rhoM-P+ gives the certified lower bound 3 (see magic_summary).",
+  "results": {
+    "1": {
+      "d_nk": 7.999999999999998,
+      "KKT_residual": 0.04363458874179075,
+      "Tr_W_rho": 10.304499427817927,
+      "moment_gauge_Nk": 3.2053674420072844,
+      "moment_witness": 3.2147638653760646,
+      "numerical_sup_h": 4.44433592280649,
+      "sup_gauge_lower_bound": 2.318568984612416
+    },
+    "2": {
+      "d_nk": 35.00000000000001,
+      "KKT_residual": 0.05297994761476568,
+      "Tr_W_rho": 4.027965235237406,
+      "moment_gauge_Nk": 1.4163142620914722,
+      "moment_witness": 2.8439770346514104,
+      "numerical_sup_h": 1.6565582144187527,
+      "sup_gauge_lower_bound": 2.4315265229907563
+    },
+    "4": {
+      "d_nk": 293.99999999999994,
+      "KKT_residual": 0.10819892924188779,
+      "Tr_W_rho": 3.038913572581277,
+      "moment_gauge_Nk": 1.151058392554016,
+      "moment_witness": 2.640103744726981,
+      "numerical_sup_h": 1.183503201279199,
+      "sup_gauge_lower_bound": 2.5677273785965617
+    }
+  },
+  "walltime_s": 57.8370201587677,
+  "seed": 20261026
+}

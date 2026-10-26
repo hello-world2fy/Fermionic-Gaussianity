@@ -1,0 +1,64 @@
+{
+  "audit_meta": {
+    "stage": "source_audit_corrected",
+    "producer_result_paths_received": false,
+    "date": "2026-10-26",
+    "review_dir": "/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/review",
+    "venv": "/Users/bytedance/Desktop/Fermionic Gaussianity/extension_validation/.venv (read-only, PYTHONDONTWRITEBYTECODE=1)",
+    "read_only_files_preserved": ["before_manifest.json", "before_git_status.txt"],
+    "corrections_applied": [
+      "Hartree (Sym^N Veronese) and Slater (Lambda^N Grassmannian) ARE irreducible SU(m) highest-weight orbits with Schur-scalar frames; earlier claim that they cannot use Schur projection was WRONG.",
+      "Dimer is 2 sites x 2 spins = 4 spin-orbitals, N=2 electrons => Lambda^2(C^4), dim 6; NOT an n<=3 Gaussian-trivial case. U>0 correlated dimer ground state is not a single Slater determinant, so a >0 Slater residual is physics, not a bug. Removed the false 'n<=3 => Ritz residual 0' statement.",
+      "4-mode signed R=3 is the real l1 norm of a projector, explicitly NOT pure extent xi; rho_p = even-sector white noise; pc4/7 is explicitly not a pure extent."
+    ]
+  },
+  "v1_gaussian_engine_independently_reproduced": [
+    {"id": "V1-FRAME-DIM", "fact": "Weyl d_{n,k}=prod_{i<j}(1+k/(2n-i-j)); n=4 => 8,35,294 for k=1,2,4; closed (k+1)(k+2)(k+3)^2(k+4)(k+5)/360.", "evidence": "independent_formula_check.py; dual_core.tex L8-13; theory.py:13", "status": "pass"},
+    {"id": "V1-FRAME-NORM", "fact": "q=d E|<g|w>|^{2k}; N_k=q^{1/(2k)} norm; first moment I/D; c=sqrt(D)d^{-1/(2k)}; Gamma=d^{1/k}. Re-derived real grad: dJ=q/(2k)-Re<u,psi>, grad=C-psi, t_k=q^{(2k-1)/(2k)}.", "evidence": "moments.py:50; certificates.py:77-78", "status": "pass"},
+    {"id": "V1-BETA", "fact": "M=(|0000>+|1111>)/sqrt2: m_s=2^{-s}6/((s+1)(s+2)(s+3)); B_k^2->2=xi_G(M); E||X||^2=2(k+3)/k.", "evidence": "MC 4e6 <8e-4; dual_core.tex L180-189", "status": "pass"}
+  ],
+  "extension_frames_independently_derived": [
+    {"id": "EXT-FRAME-HARTREE", "fact": "Dictionary A Hartree = Veronese orbit u^{xN} in Sym^N(C^m), highest weight N*omega_1. k-th Cartan = Sym^{Nk}(C^m), dimension d^H_{N,k}=binom(Nk+m-1,m-1). Schur => frame scalar; first moment E|g><g|=I/d^H_{N,1} on Sym^N. Verified MC: Sym^2(C^4) (m=4,N=2) E|g><g| ~ I/10 (diag 0.1024 vs 0.1000, offdiag<5e-4).", "evidence": "extension_frame_derivation.py (hartree_first_moment); closed values k=1,2,4 = 10,35,165 for m=4,N=2", "status": "pass"},
+    {"id": "EXT-FRAME-SLATER", "fact": "Dictionary B Slater = Grassmannian orbit wedge of ON N-frame in Lambda^N(C^m), rectangular k*(omega_N) diagram. Weyl d^S_{N,k}=prod_{1<=i<=N<j<=m}(k+j-i)/(j-i). First moment = I/binom(m,N). Verified MC: Lambda^2(C^4) (m=4,N=2) E|g><g| = I/6 (diag 0.1667, offdiag<7e-4). Dimer closed form d_k=(k+1)(k+2)^2(k+3)/12 = 6,20,105 for k=1,2,4.", "evidence": "extension_frame_derivation.py (slater_first_moment); k=1 = binom(4,2)=6", "status": "pass"},
+    {"id": "EXT-FRAME-DENSITY-REDUCIBLE", "fact": "Dictionary C density adjoint orbit is REDUCIBLE: the k-th moment/frame operator is block-diagonal by Cartan label and is NOT a scalar projection. The scalar certificate [t^2, Gamma t^2] with a single Gamma=d^{1/k} does NOT transfer; producers must state the per-block frame eigenvalues or use the correct operator-valued inequality.", "evidence": "user correction; consistent with primal_core.tex L16-20 (Riesz dual space is W_perp, multiplicity-resolving)", "status": "pending_confirm_with_producer"}
+  ],
+  "pending_claims_to_recheck_on_result_paths": [
+    {"id": "EXT-LP-CONVERGENCE", "topic": "General L^p synthesis / Bk convergence", "expected": "For Hartree and Slater the SAME Schur frame machinery applies (scalar N_k norm, moment map C_k, budget B_k<=t_k*sqrt(d)), but d MUST be the orbit-specific Weyl dimension above. Jackson/Maurey d_R^2<=(xi-1)/R and xi>=1+R C_{R,k}/k carry over.", "traps": [
+       "Producers must plug d^H=binom(Nk+m-1,m-1) (Hartree) or d^S=prod_{i<=N<j}(k+j-i)/(j-i) (Slater), NOT the four-mode spinor d_{4,k}=8,35,294. Check the reported Gamma=d^{1/k} and c=sqrt(D)d^{-1/(2k)} use the orbit d.",
+       "'Converged' must mean ||psi-C_k(u)|| within the held-out sampling bound, not a fixed iteration count.",
+       "For density (reducible) the moment map is not a single norm gradient; an optimizer of one scalar functional is not justified unless the block structure is handled."
+    ], "producer_evidence": "TBD", "status": "pending"},
+    {"id": "EXT-FRAME-FACTOR", "topic": "Frame factor generalization", "expected": "Each extension must state: measure, analysis map, d (or block eigenvalues), first moment. Numerically verify E|g><g|=I/d (Hartree/Slater) on a test state.", "traps": [
+       "Coordinate dimension D must equal the actual orbit space dimension: Hartree Sym^N => binom(N+m-1,m-1); Slater Lambda^N => binom(m,N).",
+       "Parity/particle-number restrictions inside a dictionary shrink D and can change d; verify by direct MC frame check, not assumption.",
+       "Residual_bound must come from a held-out validation batch with union-bound failure prob, not the training diagnostic."
+    ], "producer_evidence": "TBD", "status": "pending"},
+    {"id": "EXT-FOCK-MOMENT-EXTENT", "topic": "Fock moment & extent", "expected": "Reported cost w.r.t. the ACTUAL dictionary; finite-order bracketing [t^2, Gamma t^2]; baseline ||psi||^2<=cost<=||psi||_1^2.", "traps": [
+       "LABELING: a finite dictionary / finite-atom / l1-of-projector optimization yields an UPPER bound on dictionary cost; never report as exact extent. signed R=3 is explicitly a real-projector l1 norm, NOT pure xi.",
+       "GLOBAL DUAL: h(w)=max_g|<g,w>|. A finite-sample max is <= true sup and CANNOT certify a lower bound on tau/cost. Reject any 'dual certificate' built on sampled sup as a global guarantee.",
+       "Check q interval lies in the orbit-legal range d||u||^{2k}/D^k <= q <= ||u||^{2k} with the correct d."
+    ], "producer_evidence": "TBD", "status": "pending"},
+    {"id": "EXT-DIMER", "topic": "Hubbard dimer", "expected": "2 sites x 2 spins = 4 spin-orbitals, N=2 electrons => physical space Lambda^2(C^4), dim 6. Slater dictionary = pure determinant cone. At U>0 the Hubbard dimer ground state is correlated (not a single Slater determinant), so its distance to the Slater cone / Slater l1 cost is NONTRIVIAL and a >0 residual is expected physics.", "traps": [
+       "Do NOT demand residual 0 on dimer: n=4 spin-orbitals is outside the n<=3 Gaussian-trivial regime, and Gaussian-triviality would not imply Hamiltonian-Ritz residual zero anyway.",
+       "Check producers report (a) distance to Slater cone d_2^2, (b) Slater l1 cost, and (c) treat the correlated U>0 ground state as a non-Slater reference rather than declaring failure.",
+       "Verify N=2 even-electron parity and that the 6-dim Lambda^2 basis matches the vector length everywhere."
+    ], "producer_evidence": "TBD", "status": "pending"},
+    {"id": "EXT-SIGNED-R3-NOISE47", "topic": "4-mode signed R=3 and rho_p / pc4-7", "expected": "signed R=3 test quantity = real l1 norm of a projector (finite-coefficient dictionary cost), explicitly NOT pure extent xi. rho_p = white noise in the even sector; pc4/7 is explicitly not a pure extent. NOTE: signed R=3 may be an EXACT continuous value, not only a finite upper bound.", "traps": [
+       "EXACT-CERTIFICATE TEST (do NOT pre-cut as upper-bound-only; judge independently on producer results): a claim signed R=3 = 3 exactly requires BOTH directions verified independently -- (i) DUAL: witness W = 4 rho_M - P + [correction] is feasible/positive on the WHOLE Gaussian dictionary and evaluates >=3; (ii) PRIMAL: an explicit finite-atom reconstruction by REAL Gaussians attains cost <=3. Dual>=3 together with primal<=3 pins the continuous value to 3. A one-sided finite-LP or sampled bound alone cannot.",
+       "pc4/7 and rho_p are reference/upper-bound quantities, never presented as an exact certified extent.",
+       "White noise rho_p in even sector: expected l1 cost scales with dimension; check producers did not normalize it as if it were a low-extent state.",
+       "Confirm signed dictionary still spans the target sector and report the projection residual floor if it does not."
+    ], "producer_evidence": "TBD", "status": "pending"},
+    {"id": "EXT-PARITY-SPAN", "topic": "parity & projection-dictionary spanning", "expected": "sectors.py embed maps sector coords via mask>>1; dictionary must span the target sector for zero residual floor.", "traps": [
+       "If the dictionary does not span psi's sector, residual floor >0; producers must report the projection residual, not call it optimization failure.",
+       "Verify embed/restrict round-trip and that number sectors respect particle-number parity (sectors.py:119).",
+       "No hidden renormalization that fakes fidelity (sectors.py 'never renormalizes a ket')."
+    ], "producer_evidence": "TBD", "status": "pending"},
+    {"id": "EXT-B-TIMING", "topic": "fair timing of method B (Slater)", "expected": "Reported wall-clock must INCLUDE the SGD/optimization loop, not only sampling or post-processing.", "traps": ["Compare against ResourceBudget.elapsed which wraps projected_sgd (solver.py).", "Reject timing measured only around final reconstruction/plotting."], "producer_evidence": "TBD", "status": "pending"}
+  ],
+  "open_questions_for_producers": [
+    "Exact manifold/measure/parity for A=Hartree (m,N), B=Slater (m,N), C=density (which adjoint orbit, which blocks).",
+    "Which d each number used: verify Gamma and c orbit-specific, not spinor d_{4,k}.",
+    "Definition/sign convention of the signed projector-l1 R=3 quantity and of pc4/7; confirm both are upper bounds, not extent."
+  ]
+}

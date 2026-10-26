@@ -1,0 +1,14 @@
+# Experiment B (Slater / NOCI) environment
+# Shared venv (READ-ONLY reuse, no reinstall):
+#   extension_validation/.venv/bin/python  (CPython 3.14)
+numpy>=2.0
+scipy>=1.10
+matplotlib>=3.8
+pymupdf>=1.24        # source-audit PDF extraction (not needed at runtime)
+pyscf>=2.14          # H2/STO-3G integrals + FCI reference; installed as wheel
+#
+# Molecule demo (self-declared standard, authorized):
+#   H2 / STO-3G, neutral singlet, 2e in 2 spatial orbitals (full active space),
+#   R = 0.74 / 1.5 / 2.0 Angstrom.  Electronic energies reported; E_nuc added
+#   separately to recover pyscf e_tot.  This is a feasibility demo, not a QC
+#   competition claim.
