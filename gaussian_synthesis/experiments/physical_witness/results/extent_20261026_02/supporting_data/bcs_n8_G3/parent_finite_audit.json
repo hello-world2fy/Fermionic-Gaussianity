@@ -1,0 +1,98 @@
+{
+  "id": "bcs_n8_G3",
+  "k": 512,
+  "constructive": {
+    "upper": 2.6253282038645933,
+    "gaussian_mass": 1.6202864573477649,
+    "fock_repair_mass": 6.827871601444713e-15,
+    "unpatched_residual_l2": 2.942091015256665e-15,
+    "repaired_reconstruction_l2": 0.0,
+    "atom_count": 6,
+    "maximum_atom_purity_error": 2.1767228683917693e-15,
+    "maximum_atom_norm_error": 2.220446049250313e-16,
+    "orbit": {
+      "pair_parity_rotations": 16,
+      "number_phases": 9,
+      "conjugation_copies": 2,
+      "expanded_terms_before_fock_repair": 1728,
+      "convention": "each local even-pair projector is (I+exp(i*pi*(n_up+n_down)))/2; total-number Fourier projector; then complex-conjugate average",
+      "projected_atoms_are_not_renormalized": true
+    },
+    "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+    "gaussian_roundoff_interval_certified": true,
+    "floating_upper": 2.6253282038645924,
+    "interval_upper_certificate": {
+      "interval_kind": "Arb_128_bit_outward_enclosure",
+      "arithmetic_precision_bits": 128,
+      "U_enclosure": "[2.625328203864592873525173720150027245 +/- 9.05e-37]",
+      "fock_repair_l1_enclosure": "[6.808084514777469259464e-15 +/- 5.90e-37]",
+      "gaussian_mass_enclosure": "[1.6202864573477650379169816305448262555 +/- 6.93e-38]",
+      "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+    }
+  },
+  "independent_moment_estimates": [
+    {
+      "seed": 427101,
+      "count": 262144,
+      "log_q": -485.99322527666004,
+      "t2": 2.5836561756764262,
+      "upper_over_t2": 1.016129092013281,
+      "q_relative_se": 0.0008358074033174075
+    },
+    {
+      "seed": 427102,
+      "count": 262144,
+      "log_q": -485.9922469942967,
+      "t2": 2.5836512390692876,
+      "upper_over_t2": 1.016131033540858,
+      "q_relative_se": 0.0008230801101142502
+    },
+    {
+      "seed": 427103,
+      "count": 262144,
+      "log_q": -485.9925966819245,
+      "t2": 2.5836530036614387,
+      "upper_over_t2": 1.0161303395402148,
+      "q_relative_se": 0.0008258784256980872
+    }
+  ],
+  "lower_estimate_range": [
+    2.5836512390692876,
+    2.5836561756764262
+  ],
+  "worst_estimated_ratio": 1.016131033540858,
+  "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+  "certificate_kind": "numerical_estimate",
+  "confidence_guarantee": false,
+  "source_snapshot": "887df1a6e579ea45970cae4c1e787f05ef30b44aa8886535d4059349a1e307a2",
+  "sources": {
+    "decomposition": {
+      "path": "runs/extent_20261026_02/finite_refinements/bcs_n8_G3/attempt_0001/decomposition.npz",
+      "sha256": "bae360419c499f38afa2b6da06af5b3eb6792d0045172c623c295a536a6ce936"
+    },
+    "moment_job": {
+      "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_moments/bcs_n8_G3/job.json",
+      "sha256": "7eb672235d4af53a3de245e39580ae24cd941bf4ae5c403ec5edaaa9743dfd8d"
+    },
+    "moment_summary": {
+      "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_moments/bcs_n8_G3/summary.json",
+      "sha256": "4217f9830c2cc47d767ee0f5add11bb7d00eef26441ffcbc4505ea2a1c09fdf9"
+    },
+    "direction": {
+      "path": "runs/extent_20261026_02/states/bcs_n8_G3/k_512/attempt_0003/candidate.npz",
+      "sha256": "3caa39c0818fbfb90b6d7fce67c753b142e513bcaad0bf4897c10ba1d2a8c412"
+    },
+    "target": {
+      "path": "data/targets/bcs_n8_G3/target.npz",
+      "sha256": "6a9bddce7808f4a3afeae9ca61eb63cda378db3217bd517fb182d09c5f423321"
+    },
+    "metadata": {
+      "path": "data/targets/bcs_n8_G3/target.json",
+      "sha256": "aa830325340f55e4439a01c379eac2b4fb00a046ebc05c65b4613009c6ec89ae"
+    }
+  },
+  "fock_repair_source": "runs/extent_20261026_02/finite_bounds/bcs_n8_G3/887df1a6e579_7eb672235d4a_arb/fock_repair.npz",
+  "fock_repair_sha256": "a8280bf4a6bcdb82a3268fddf9ffb55e09deee5681730870ae32091c412fda3a",
+  "interval_charts_source": "runs/extent_20261026_02/finite_bounds/bcs_n8_G3/887df1a6e579_7eb672235d4a_arb/gaussian_charts.npz",
+  "interval_charts_sha256": "a4f9167a327fe4c9eda05823a8fb5b0713ecec5a27cc2927f08c3c3a9f2d7705"
+}

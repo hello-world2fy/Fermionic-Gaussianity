@@ -1,0 +1,1529 @@
+[
+  {
+    "id": "bcs_n12_G1.5",
+    "k": 512,
+    "constructive": {
+      "upper": 3.0373591251901675,
+      "gaussian_mass": 1.742802090080845,
+      "fock_repair_mass": 2.1649348980190553e-15,
+      "unpatched_residual_l2": 5.768888059150692e-16,
+      "repaired_reconstruction_l2": 0.0,
+      "atom_count": 20,
+      "maximum_atom_purity_error": 3.2502117288952773e-15,
+      "maximum_atom_norm_error": 4.440892098500626e-16,
+      "orbit": {
+        "pair_parity_rotations": 64,
+        "number_phases": 13,
+        "conjugation_copies": 2,
+        "expanded_terms_before_fock_repair": 33280,
+        "convention": "each local even-pair projector is (I+exp(i*pi*(n_up+n_down)))/2; total-number Fourier projector; then complex-conjugate average",
+        "projected_atoms_are_not_renormalized": true
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true,
+      "floating_upper": 3.0373591251901693,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[3.03735912519016715289865731227634485 +/- 6.77e-36]",
+        "fock_repair_l1_enclosure": "[2.152598728270426083328e-15 +/- 8.20e-37]",
+        "gaussian_mass_enclosure": "[1.742802090080844391741863250365738084 +/- 2.15e-37]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      }
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 417101,
+        "count": 262144,
+        "log_q": -558.867175398987,
+        "t2": 2.978850393074178,
+        "upper_over_t2": 1.0196413798598352,
+        "q_relative_se": 0.005558938314001863
+      },
+      {
+        "seed": 417102,
+        "count": 262144,
+        "log_q": -558.8709065967175,
+        "t2": 2.9788721015123136,
+        "upper_over_t2": 1.0196339492548745,
+        "q_relative_se": 0.002426310017168291
+      },
+      {
+        "seed": 417103,
+        "count": 262144,
+        "log_q": -558.8703453671627,
+        "t2": 2.978868836219058,
+        "upper_over_t2": 1.0196350669287435,
+        "q_relative_se": 0.002373945023906497
+      },
+      {
+        "seed": 442101,
+        "count": 1048576,
+        "log_q": -558.8682431143762,
+        "t2": 2.9788566051205128,
+        "upper_over_t2": 1.0196392535206602,
+        "q_relative_se": 0.0017291161305615609
+      },
+      {
+        "seed": 442102,
+        "count": 1048576,
+        "log_q": -558.8691855739517,
+        "t2": 2.978862088430113,
+        "upper_over_t2": 1.0196373766302431,
+        "q_relative_se": 0.0013566566614981771
+      },
+      {
+        "seed": 442103,
+        "count": 1048576,
+        "log_q": -558.867762929245,
+        "t2": 2.9788538113666476,
+        "upper_over_t2": 1.0196402098015944,
+        "q_relative_se": 0.0014378625846474323
+      }
+    ],
+    "lower_estimate_range": [
+      2.978850393074178,
+      2.9788721015123136
+    ],
+    "worst_estimated_ratio": 1.0196413798598352,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "d10109d8de346b5b0806e73b87e2b6ce7d66557d3bd6e58be64dbd1f3eb16cbd",
+    "sources": {
+      "decomposition": {
+        "path": "runs/extent_20261026_02/finite_refinements/bcs_n12_G1.5/attempt_0001/decomposition.npz",
+        "sha256": "dfdf09dca297293466b0a7ec13719a729d97f4d4573925cc95dd1da1e15a43ee"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_fock_centers/bcs_n12_G1.5/job.json",
+        "sha256": "a129fff51bf28a0d234e13f26b81f56c40da5e85884d71e0f38981a60b5f2704"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_fock_centers/bcs_n12_G1.5/summary.json",
+        "sha256": "795be52481450ff542dee37858888446837a088ab0fc222ae69b158d20bc3f00"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/states/bcs_n12_G1.5/k_512/attempt_0003/trained_direction.npz",
+        "sha256": "212bc2ddfaa2a294a4f1adc824575ab296c19386e41ce5c704a23bbcebefc6ec"
+      },
+      "target": {
+        "path": "data/targets/bcs_n12_G1.5/target.npz",
+        "sha256": "6f5d1ec37e6c39960894262a73f2d52060d90472e4812061ada90a0688f41791"
+      },
+      "metadata": {
+        "path": "data/targets/bcs_n12_G1.5/target.json",
+        "sha256": "4327bce0244803350f524d55b4b1186af8cd42e623ff6864afad0f21a6fb4e6d"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/bcs_n12_G1.5/0e0548930721_a129fff51bf2_arb/audit.json",
+        "sha256": "d6b4f429342f4c3a61702ec41c22fd42f5219a29de9c2f370a4e0a1c4ded78f2"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n12_G1.5/job.json",
+        "sha256": "019dc0aefaa330060e6cafa106f728245fe8ee5b6230cc1e527e00335183a34c"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n12_G1.5/summary.json",
+        "sha256": "d776a4d446956bd0075f6ea22f5d283a5b1ea4fe638e6df19e24c6dc16c6f6ea"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/states/bcs_n12_G1.5/k_512/attempt_0003/trained_direction.npz",
+        "sha256": "212bc2ddfaa2a294a4f1adc824575ab296c19386e41ce5c704a23bbcebefc6ec"
+      }
+    },
+    "fock_repair_source": "runs/extent_20261026_02/finite_bounds/bcs_n12_G1.5/0e0548930721_a129fff51bf2_arb/fock_repair.npz",
+    "fock_repair_sha256": "2f2ca8fc0c3e937980a7e0fdc1917aa5040306fdfdfc34639cb6d176aeeae368",
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/bcs_n12_G1.5/0e0548930721_a129fff51bf2_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "0413c47775a204d294c3273b50c2ddbbab2445bda7547c42c6b42274d45cb4e1",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        2.1263391749570815e-06,
+        3.4273753686253627e-06,
+        5.142872850916191e-06
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        6.212046334663768e-06,
+        1.0013082200721612e-05,
+        1.5024852410228107e-05
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/bcs_n12_G1.5/0e0548930721_a129fff51bf2_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/bcs_n12_G1.5/d6b4f429342f_019dc0aefaa3_4N/audit.json"
+  },
+  {
+    "id": "bcs_n8_G3",
+    "k": 512,
+    "constructive": {
+      "upper": 2.6253282038645933,
+      "gaussian_mass": 1.6202864573477649,
+      "fock_repair_mass": 6.827871601444713e-15,
+      "unpatched_residual_l2": 2.942091015256665e-15,
+      "repaired_reconstruction_l2": 0.0,
+      "atom_count": 6,
+      "maximum_atom_purity_error": 2.1767228683917693e-15,
+      "maximum_atom_norm_error": 2.220446049250313e-16,
+      "orbit": {
+        "pair_parity_rotations": 16,
+        "number_phases": 9,
+        "conjugation_copies": 2,
+        "expanded_terms_before_fock_repair": 1728,
+        "convention": "each local even-pair projector is (I+exp(i*pi*(n_up+n_down)))/2; total-number Fourier projector; then complex-conjugate average",
+        "projected_atoms_are_not_renormalized": true
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true,
+      "floating_upper": 2.6253282038645924,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[2.625328203864592873525173720150027245 +/- 9.05e-37]",
+        "fock_repair_l1_enclosure": "[6.808084514777469259464e-15 +/- 5.90e-37]",
+        "gaussian_mass_enclosure": "[1.6202864573477650379169816305448262555 +/- 6.93e-38]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      }
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 427101,
+        "count": 262144,
+        "log_q": -485.99322527666004,
+        "t2": 2.5836561756764262,
+        "upper_over_t2": 1.016129092013281,
+        "q_relative_se": 0.0008358074033174075
+      },
+      {
+        "seed": 427102,
+        "count": 262144,
+        "log_q": -485.9922469942967,
+        "t2": 2.5836512390692876,
+        "upper_over_t2": 1.016131033540858,
+        "q_relative_se": 0.0008230801101142502
+      },
+      {
+        "seed": 427103,
+        "count": 262144,
+        "log_q": -485.9925966819245,
+        "t2": 2.5836530036614387,
+        "upper_over_t2": 1.0161303395402148,
+        "q_relative_se": 0.0008258784256980872
+      },
+      {
+        "seed": 441101,
+        "count": 1048576,
+        "log_q": -485.9936477728686,
+        "t2": 2.5836583076791384,
+        "upper_over_t2": 1.0161282535161882,
+        "q_relative_se": 0.0004124712400894636
+      },
+      {
+        "seed": 441102,
+        "count": 1048576,
+        "log_q": -485.99363856468517,
+        "t2": 2.5836582612127335,
+        "upper_over_t2": 1.0161282717909839,
+        "q_relative_se": 0.0004139571081140634
+      },
+      {
+        "seed": 441103,
+        "count": 1048576,
+        "log_q": -485.99395342505386,
+        "t2": 2.583659850063989,
+        "upper_over_t2": 1.0161276469112497,
+        "q_relative_se": 0.00041317309232383534
+      }
+    ],
+    "lower_estimate_range": [
+      2.5836512390692876,
+      2.583659850063989
+    ],
+    "worst_estimated_ratio": 1.016131033540858,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "d10109d8de346b5b0806e73b87e2b6ce7d66557d3bd6e58be64dbd1f3eb16cbd",
+    "sources": {
+      "decomposition": {
+        "path": "runs/extent_20261026_02/finite_refinements/bcs_n8_G3/attempt_0001/decomposition.npz",
+        "sha256": "bae360419c499f38afa2b6da06af5b3eb6792d0045172c623c295a536a6ce936"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_moments/bcs_n8_G3/job.json",
+        "sha256": "7eb672235d4af53a3de245e39580ae24cd941bf4ae5c403ec5edaaa9743dfd8d"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_moments/bcs_n8_G3/summary.json",
+        "sha256": "4217f9830c2cc47d767ee0f5add11bb7d00eef26441ffcbc4505ea2a1c09fdf9"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/states/bcs_n8_G3/k_512/attempt_0003/candidate.npz",
+        "sha256": "3caa39c0818fbfb90b6d7fce67c753b142e513bcaad0bf4897c10ba1d2a8c412"
+      },
+      "target": {
+        "path": "data/targets/bcs_n8_G3/target.npz",
+        "sha256": "6a9bddce7808f4a3afeae9ca61eb63cda378db3217bd517fb182d09c5f423321"
+      },
+      "metadata": {
+        "path": "data/targets/bcs_n8_G3/target.json",
+        "sha256": "aa830325340f55e4439a01c379eac2b4fb00a046ebc05c65b4613009c6ec89ae"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/bcs_n8_G3/887df1a6e579_7eb672235d4a_arb/audit.json",
+        "sha256": "1f633044fb2435763faf1c933a37b2d832f8fd34de252f6e6832129034a6e60f"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n8_G3/job.json",
+        "sha256": "db7da30221244e0fc8762e94f3df7a3fc0a448acc2aaf11448e7014a3b4b8d40"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n8_G3/summary.json",
+        "sha256": "b13fb7ccd96a6d3e15fb08cfc96762516c9ed70f930eb2d639bd0c0482e0a171"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/states/bcs_n8_G3/k_512/attempt_0003/candidate.npz",
+        "sha256": "3caa39c0818fbfb90b6d7fce67c753b142e513bcaad0bf4897c10ba1d2a8c412"
+      }
+    },
+    "fock_repair_source": "runs/extent_20261026_02/finite_bounds/bcs_n8_G3/887df1a6e579_7eb672235d4a_arb/fock_repair.npz",
+    "fock_repair_sha256": "a8280bf4a6bcdb82a3268fddf9ffb55e09deee5681730870ae32091c412fda3a",
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/bcs_n8_G3/887df1a6e579_7eb672235d4a_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "a4f9167a327fe4c9eda05823a8fb5b0713ecec5a27cc2927f08c3c3a9f2d7705",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        8.384970928698721e-07,
+        2.76174987412503e-06,
+        2.692628965128563e-06
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        2.1320027121518592e-06,
+        7.0221434458339616e-06,
+        6.846402550220176e-06
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/bcs_n8_G3/887df1a6e579_7eb672235d4a_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/bcs_n8_G3/1f633044fb24_db7da3022124_4N/audit.json"
+  },
+  {
+    "id": "hubbard_n8_U4_holes0",
+    "k": 256,
+    "constructive": {
+      "upper": 2.60830667922969,
+      "archived_certificate": true,
+      "parity_identification": "even parity chart",
+      "orbit_convention": "archived Gaussian number/spin sector projection and optional conjugate average",
+      "floating_upper": 2.60830667922969,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[2.60830667922968960190161856040471906 +/- 5.15e-36]",
+        "fock_repair_l1_enclosure": "[7.63624866223869288839e-15 +/- 1.28e-36]",
+        "gaussian_mass_enclosure": "[1.615025287489228428778431864348708138 +/- 2.35e-37]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 454101,
+        "count": 1048576,
+        "log_q": -222.54071362251796,
+        "t2": 2.3852397957747815,
+        "upper_over_t2": 1.093519688817053,
+        "q_relative_se": 0.0006827078604302099
+      },
+      {
+        "seed": 454102,
+        "count": 1048576,
+        "log_q": -222.53810242925343,
+        "t2": 2.3852154665157004,
+        "upper_over_t2": 1.0935308427459927,
+        "q_relative_se": 0.0006704415636580902
+      },
+      {
+        "seed": 454103,
+        "count": 1048576,
+        "log_q": -222.5393191116544,
+        "t2": 2.385226802674204,
+        "upper_over_t2": 1.0935256455718927,
+        "q_relative_se": 0.0006676729620481424
+      },
+      {
+        "seed": 464101,
+        "count": 4194304,
+        "log_q": -222.53971622314617,
+        "t2": 2.3852305026808778,
+        "upper_over_t2": 1.093523949277894,
+        "q_relative_se": 0.00033290110936113064
+      },
+      {
+        "seed": 464102,
+        "count": 4194304,
+        "log_q": -222.53932596471967,
+        "t2": 2.3852268665262164,
+        "upper_over_t2": 1.0935256162984452,
+        "q_relative_se": 0.0003374362650817275
+      },
+      {
+        "seed": 464103,
+        "count": 4194304,
+        "log_q": -222.53929574322078,
+        "t2": 2.3852265849436898,
+        "upper_over_t2": 1.0935257453921372,
+        "q_relative_se": 0.0003454449234866814
+      }
+    ],
+    "lower_estimate_range": [
+      2.3852154665157004,
+      2.3852397957747815
+    ],
+    "worst_estimated_ratio": 1.0935308427459927,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "13874508f064543158c0e2de91d87de745b47b7da081d508946d33b2a2a84076",
+    "sources": {
+      "archived_upper_summary": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_02/hubbard_n8_U4_holes0/summary.json",
+        "sha256": "7fe37fff62c2a7ba506f9f8149b41a067542d0b7e34372fbaeb3fc177dede419"
+      },
+      "archived_upper_vectors": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_02/hubbard_n8_U4_holes0/vectors.npz",
+        "sha256": "74f3602212eb416adf283ce893622230c8c48eca64af0137b3e2663345bb33a0"
+      },
+      "archived_upper_charts": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_02/hubbard_n8_U4_holes0/gaussian_charts.npz",
+        "sha256": "d53153bdc7ac68fcaa0f4f7156cbbe92035eb506d403113610e036aeacd08ba2"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/hubbard_n8_U4_holes0/job.json",
+        "sha256": "1aa62f9862f43c16362d0533c8a58f8fd944d5974fc6fc562138bcf915a928ae"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/hubbard_n8_U4_holes0/summary.json",
+        "sha256": "4cc280f76520d7e5f5631211a14304c98855e35112db42f18b9c16821c3cb6fe"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/states/hubbard_n8_U4_holes0/k_256/attempt_0007/candidate.npz",
+        "sha256": "ee28f2eada31eb2b45a102baeb7ec5a367dd0adb28da8d38a30559e8595824fe"
+      },
+      "target": {
+        "path": "data/targets/hubbard_n8_U4_holes0/target.npz",
+        "sha256": "becd41b33904faac7e74ed6c17c1d1aeef807c302fb1ea31e534f8044dcf368f"
+      },
+      "metadata": {
+        "path": "data/targets/hubbard_n8_U4_holes0/target.json",
+        "sha256": "addc1cb1c362d997755cd9425a88394d00f1ced2f45a7b01f0a913dea5a98bff"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/hubbard_n8_U4_holes0/f3165663b4c9_1aa62f9862f4_arb/audit.json",
+        "sha256": "c25893b4d183d07c3df981ff67a92024c54e30551f5e9f9ca5345481f1676307"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/hubbard_n8_U4_holes0/job.json",
+        "sha256": "7a392bb54c0e894ce4acf6fd45ae141cd4462402a5ea90127567fffa3c43fca2"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/hubbard_n8_U4_holes0/summary.json",
+        "sha256": "3aeca1e65b705b97dfea5e4a1767f5d17bc16ae9bff5e986b81a928879b87871"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/states/hubbard_n8_U4_holes0/k_256/attempt_0007/candidate.npz",
+        "sha256": "ee28f2eada31eb2b45a102baeb7ec5a367dd0adb28da8d38a30559e8595824fe"
+      }
+    },
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/hubbard_n8_U4_holes0/f3165663b4c9_1aa62f9862f4_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "d53153bdc7ac68fcaa0f4f7156cbbe92035eb506d403113610e036aeacd08ba2",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        4.260460841010172e-06,
+        5.22644754741286e-06,
+        9.982024451460347e-08
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        9.293093903739447e-06,
+        1.1400010516027237e-05,
+        2.1773051406270838e-07
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/hubbard_n8_U4_holes0/f3165663b4c9_1aa62f9862f4_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/hubbard_n8_U4_holes0/c25893b4d183_7a392bb54c0e_4N/audit.json"
+  },
+  {
+    "id": "bcs_n16_G1.5",
+    "k": 128,
+    "constructive": {
+      "upper": 3.6722763281173365,
+      "gaussian_mass": 1.9163139130834868,
+      "fock_repair_mass": 4.5176887423503675e-06,
+      "unpatched_residual_l2": 4.517688736757619e-06,
+      "repaired_reconstruction_l2": 0.0,
+      "atom_count": 69,
+      "maximum_atom_purity_error": 4.957055516935984e-15,
+      "maximum_atom_norm_error": 6.661338147750939e-16,
+      "orbit": {
+        "pair_parity_rotations": 256,
+        "number_phases": 17,
+        "conjugation_copies": 2,
+        "expanded_terms_before_fock_repair": 600576,
+        "convention": "each local even-pair projector is (I+exp(i*pi*(n_up+n_down)))/2; total-number Fourier projector; then complex-conjugate average",
+        "projected_atoms_are_not_renormalized": true
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true,
+      "floating_upper": 3.6722763281173387,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[3.6722763281173358845587288315857147 +/- 6.76e-35]",
+        "fock_repair_l1_enclosure": "[4.51768874164688710010739320693e-6 +/- 6.24e-36]",
+        "gaussian_mass_enclosure": "[1.916313913083486741054248488947125912 +/- 6.58e-37]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      }
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 426101,
+        "count": 262144,
+        "log_q": -153.03336191636296,
+        "t2": 3.3054517142039646,
+        "upper_over_t2": 1.1109756383180787,
+        "q_relative_se": 0.012774841665996049
+      },
+      {
+        "seed": 426102,
+        "count": 262144,
+        "log_q": -153.03078015714198,
+        "t2": 3.305385043935378,
+        "upper_over_t2": 1.110998046915932,
+        "q_relative_se": 0.011409551405877428
+      },
+      {
+        "seed": 426103,
+        "count": 262144,
+        "log_q": -153.03340491794495,
+        "t2": 3.3054528246701893,
+        "upper_over_t2": 1.1109752650860318,
+        "q_relative_se": 0.009835403598953237
+      },
+      {
+        "seed": 444101,
+        "count": 1048576,
+        "log_q": -153.02909204469697,
+        "t2": 3.3053414515538644,
+        "upper_over_t2": 1.1110126992752816,
+        "q_relative_se": 0.008145364305296839
+      },
+      {
+        "seed": 444102,
+        "count": 1048576,
+        "log_q": -153.00954532583876,
+        "t2": 3.3048367355602117,
+        "upper_over_t2": 1.1111823735809567,
+        "q_relative_se": 0.0176387152600009
+      },
+      {
+        "seed": 444103,
+        "count": 1048576,
+        "log_q": -153.02640561184867,
+        "t2": 3.3052720805798823,
+        "upper_over_t2": 1.1110360171841183,
+        "q_relative_se": 0.008557499196257473
+      }
+    ],
+    "lower_estimate_range": [
+      3.3048367355602117,
+      3.3054528246701893
+    ],
+    "worst_estimated_ratio": 1.1111823735809567,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "89aca7fd397005f1346fd5bc1c7fa70d5364c5159523ac4d525b643c7cef5538",
+    "sources": {
+      "decomposition": {
+        "path": "runs/extent_20261026_02/finite_refinements/bcs_n16_G1.5/attempt_0001/decomposition.npz",
+        "sha256": "d17fb858b9c427f6cf2f204085e7bb05dc07a14f25a915f477b8e2e5162286a4"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_moments/bcs_n16_G1.5/job.json",
+        "sha256": "542376a6ee6a7593d6dd62fb0c65a7229c388cd6265c922228626a2e86421177"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_moments/bcs_n16_G1.5/summary.json",
+        "sha256": "ab15da83e40bf50d85c03cc73b400b642aa7d41c8d47f93e9536a5cb7cb0a68c"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/states/bcs_n16_G1.5/k_128/attempt_0003/candidate.npz",
+        "sha256": "7cab1275547391c1edc05aee0266fbde17dd63e53208ed462f7acc02d69c31a2"
+      },
+      "target": {
+        "path": "data/targets/bcs_n16_G1.5/target.npz",
+        "sha256": "2152b55aa7294a86d1ebcc739b9e132bf324025a7181fb9e61a622fa0859e693"
+      },
+      "metadata": {
+        "path": "data/targets/bcs_n16_G1.5/target.json",
+        "sha256": "a6f212685c9bec46876e306ff62dbb8df200c35fdafe07d9dd7824801af592bd"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/bcs_n16_G1.5/0e0548930721_542376a6ee6a_arb/audit.json",
+        "sha256": "7037ccdf132436c20ee4cc141c754313dbe84b72ce1fbbd1ae9c68e1f6593197"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n16_G1.5/job.json",
+        "sha256": "450d7a33d502f6d825db2c78d930b857952420c90eab9802c340a40168692eef"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n16_G1.5/summary.json",
+        "sha256": "9915319a3901f599c8bb50cc386a7324486c24162f3f7516e393da2b0ffc4afa"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/states/bcs_n16_G1.5/k_128/attempt_0003/candidate.npz",
+        "sha256": "7cab1275547391c1edc05aee0266fbde17dd63e53208ed462f7acc02d69c31a2"
+      }
+    },
+    "fock_repair_source": "runs/extent_20261026_02/finite_bounds/bcs_n16_G1.5/0e0548930721_542376a6ee6a_arb/fock_repair.npz",
+    "fock_repair_sha256": "c9992f86a0d4c009910d3dc1eca09ef9823ff9faba4d839f7c2fbc6dbf1d294a",
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/bcs_n16_G1.5/0e0548930721_542376a6ee6a_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "ad321dc6f888bef2392eb18e0eaee1d4a5ee270fbe69f9b79de18beffdc8dade",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        3.70609572029057e-05,
+        0.0001843266650247699,
+        6.075209808642512e-05
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        0.000110262650100168,
+        0.0005483083751660622,
+        0.00018074409030699456
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/bcs_n16_G1.5/0e0548930721_542376a6ee6a_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/bcs_n16_G1.5/7037ccdf1324_450d7a33d502_4N/audit.json"
+  },
+  {
+    "id": "hubbard_n8_U8_holes1",
+    "k": 256,
+    "constructive": {
+      "upper": 2.374053247407093,
+      "archived_certificate": true,
+      "parity_identification": "gamma_0 maps odd Fock masks to the even chart coordinates; it preserves Gaussian decomposition cost",
+      "orbit_convention": "archived Gaussian number/spin sector projection and optional conjugate average",
+      "floating_upper": 2.374053247407093,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[2.37405324740709247974392912482254205 +/- 6.53e-36]",
+        "fock_repair_l1_enclosure": "[7.24888492842462116622e-15 +/- 3.21e-36]",
+        "gaussian_mass_enclosure": "[1.540796303022261973402864540884553495 +/- 9.49e-38]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 451101,
+        "count": 1048576,
+        "log_q": -195.97250772143622,
+        "t2": 2.1501069998791347,
+        "upper_over_t2": 1.1041558617968998,
+        "q_relative_se": 0.026905011256655564
+      },
+      {
+        "seed": 451102,
+        "count": 1048576,
+        "log_q": -195.98803656719852,
+        "t2": 2.1502374283661085,
+        "upper_over_t2": 1.1040888862264175,
+        "q_relative_se": 0.025145403415544318
+      },
+      {
+        "seed": 451103,
+        "count": 1048576,
+        "log_q": -196.0169499301699,
+        "t2": 2.1504802959685865,
+        "upper_over_t2": 1.103964194351201,
+        "q_relative_se": 0.026671510594170493
+      },
+      {
+        "seed": 461101,
+        "count": 4194304,
+        "log_q": -195.9758310813104,
+        "t2": 2.1501349124795657,
+        "upper_over_t2": 1.104141527877105,
+        "q_relative_se": 0.020848633194996084
+      },
+      {
+        "seed": 461102,
+        "count": 4194304,
+        "log_q": -195.931810022114,
+        "t2": 2.1497652129532105,
+        "upper_over_t2": 1.1043314093569176,
+        "q_relative_se": 0.05303147890022643
+      },
+      {
+        "seed": 461103,
+        "count": 4194304,
+        "log_q": -195.97180900988377,
+        "t2": 2.1501011315098,
+        "upper_over_t2": 1.1041588754199825,
+        "q_relative_se": 0.028346852043646446
+      }
+    ],
+    "lower_estimate_range": [
+      2.1497652129532105,
+      2.1504802959685865
+    ],
+    "worst_estimated_ratio": 1.1043314093569176,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "f3165663b4c9dbe7fdf089a8bd076882dd8656b0e13cd6d8eee3768ba7f459f9",
+    "sources": {
+      "archived_upper_summary": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/hubbard_n8_U8_holes1/summary.json",
+        "sha256": "0ef3901752d9afe143379657158c2f876a2da4737a794babbe0de826a802a009"
+      },
+      "archived_upper_vectors": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/hubbard_n8_U8_holes1/vectors.npz",
+        "sha256": "03d2aa864e67fa9ffa1d0f9663e201a55295d77e9800b0f5067c68bb520037e4"
+      },
+      "archived_upper_charts": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/hubbard_n8_U8_holes1/gaussian_charts.npz",
+        "sha256": "fd14fbe6438e3ec5cb754e96ba1c71a7c55e53158b8a0ec1c47833dfce161555"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/hubbard_n8_U8_holes1/job.json",
+        "sha256": "9fe7f4c69ee5a449a2564adfebc7bc679429055255e73cbdf0ce1aeed604c85a"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/hubbard_n8_U8_holes1/summary.json",
+        "sha256": "2db77a2b6412d08f98a343abe8d46317c77c39cf166b0fb3801deaf0113062d4"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/hubbard_n8_U8_holes1/projected_direction.npz",
+        "sha256": "769a14b6a65366abfe3032ddf8f7c92f2eed8f08da5335e072f0711bda3acab1"
+      },
+      "target": {
+        "path": "data/targets/hubbard_n8_U8_holes1/target.npz",
+        "sha256": "ef08fa807a28d14835744d0080808699b863f3cc829791f51894812acf36cfd9"
+      },
+      "metadata": {
+        "path": "data/targets/hubbard_n8_U8_holes1/target.json",
+        "sha256": "9ff28c567b2547e4b5e78d502980280fdfbbc828fdfcbcd8941b3db1341ea370"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/hubbard_n8_U8_holes1/89aca7fd3970_9fe7f4c69ee5_arb/audit.json",
+        "sha256": "13ea3ca2988d7ffc4cf2de857991f1ccbdbca93629dfe8b4ef9009146fa73e52"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/hubbard_n8_U8_holes1/job.json",
+        "sha256": "6c4a1a664ecb3fed8f767b571f288ed98b2efcb7b87e1fd0b541af8748dd5298"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/hubbard_n8_U8_holes1/summary.json",
+        "sha256": "c92cb8e188ed06d1a01c59642ed984af6d93122586551726857b7c2b4f09593e"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/hubbard_n8_U8_holes1/projected_direction.npz",
+        "sha256": "769a14b6a65366abfe3032ddf8f7c92f2eed8f08da5335e072f0711bda3acab1"
+      }
+    },
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/hubbard_n8_U8_holes1/89aca7fd3970_9fe7f4c69ee5_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "fd14fbe6438e3ec5cb754e96ba1c71a7c55e53158b8a0ec1c47833dfce161555",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        1.4333919794884409e-05,
+        0.0002425231305001052,
+        0.00019468106878139935
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        2.7912600431001522e-05,
+        0.0004722154128979916,
+        0.00037916445878627414
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/hubbard_n8_U8_holes1/89aca7fd3970_9fe7f4c69ee5_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/hubbard_n8_U8_holes1/13ea3ca2988d_6c4a1a664ecb_4N/audit.json"
+  },
+  {
+    "id": "bcs_n16_G0.5",
+    "k": 512,
+    "constructive": {
+      "upper": 2.5142051257345046,
+      "gaussian_mass": 1.4143824582244464,
+      "fock_repair_mass": 0.17124206408040987,
+      "unpatched_residual_l2": 0.17115392970988233,
+      "repaired_reconstruction_l2": 0.0,
+      "atom_count": 67,
+      "maximum_atom_purity_error": 2.6231919584954536e-14,
+      "maximum_atom_norm_error": 1.5543122344752192e-15,
+      "orbit": {
+        "pair_parity_rotations": 256,
+        "number_phases": 17,
+        "conjugation_copies": 2,
+        "expanded_terms_before_fock_repair": 583168,
+        "convention": "each local even-pair projector is (I+exp(i*pi*(n_up+n_down)))/2; total-number Fourier projector; then complex-conjugate average",
+        "projected_atoms_are_not_renormalized": true
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true,
+      "floating_upper": 2.514205125734504,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[2.5142051257345042529219351434824724 +/- 3.49e-35]",
+        "fock_repair_l1_enclosure": "[0.17124206408041047016293104903232983 +/- 7.89e-36]",
+        "gaussian_mass_enclosure": "[1.414382458224445993462382914189897637 +/- 8.58e-37]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      }
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 425101,
+        "count": 262144,
+        "log_q": -439.88894030273434,
+        "t2": 2.3611719541738743,
+        "upper_over_t2": 1.0648123789926065,
+        "q_relative_se": 0.0017033272012958209
+      },
+      {
+        "seed": 425102,
+        "count": 262144,
+        "log_q": -439.8870378490854,
+        "t2": 2.361163180713221,
+        "upper_over_t2": 1.064816335555027,
+        "q_relative_se": 0.001701803538506959
+      },
+      {
+        "seed": 425103,
+        "count": 262144,
+        "log_q": -439.8882817367437,
+        "t2": 2.3611689170907746,
+        "upper_over_t2": 1.0648137486208686,
+        "q_relative_se": 0.0016985524857568307
+      },
+      {
+        "seed": 443101,
+        "count": 1048576,
+        "log_q": -439.88726630759567,
+        "t2": 2.3611642342834225,
+        "upper_over_t2": 1.064815860425536,
+        "q_relative_se": 0.0008504175475138328
+      },
+      {
+        "seed": 443102,
+        "count": 1048576,
+        "log_q": -439.88531991856075,
+        "t2": 2.3611552582376416,
+        "upper_over_t2": 1.0648199083744705,
+        "q_relative_se": 0.0008499042372041691
+      },
+      {
+        "seed": 443103,
+        "count": 1048576,
+        "log_q": -439.8857275595921,
+        "t2": 2.361157138128555,
+        "upper_over_t2": 1.0648190605930001,
+        "q_relative_se": 0.000850449109813293
+      }
+    ],
+    "lower_estimate_range": [
+      2.3611552582376416,
+      2.3611719541738743
+    ],
+    "worst_estimated_ratio": 1.0648199083744705,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "d10109d8de346b5b0806e73b87e2b6ce7d66557d3bd6e58be64dbd1f3eb16cbd",
+    "sources": {
+      "decomposition": {
+        "path": "runs/extent_20261026_02/finite_refinements/bcs_n16_G0.5/attempt_0001/decomposition.npz",
+        "sha256": "6c8e24b36f5da6afa56c62c2de1a2c8b41969ee034a78d8abbdbde71cd11c68e"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_moments/bcs_n16_G0.5/job.json",
+        "sha256": "9a12192c7d4f6cbe3f3fcd7d0556056a2084c61350c460c75173166948352322"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_moments/bcs_n16_G0.5/summary.json",
+        "sha256": "c44527cdf065f0ff9a1eede67d1f57ed1de1e114f30b3fdcc4069ea5d9f038a4"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/states/bcs_n16_G0.5/k_512/attempt_0004/candidate.npz",
+        "sha256": "e65e1369b7e0be9c9219574f66ac67a81ae526c6845ef8447808578ffcd4f15c"
+      },
+      "target": {
+        "path": "data/targets/bcs_n16_G0.5/target.npz",
+        "sha256": "349610e8fa4a6e93908de0c19612b0a82eaebc63a59c8d23009236fc3fcd362c"
+      },
+      "metadata": {
+        "path": "data/targets/bcs_n16_G0.5/target.json",
+        "sha256": "adf58fb66d5de79e8e13783cd558c78aa734e3b455386f92004f3c0829d83c43"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/bcs_n16_G0.5/0e0548930721_9a12192c7d4f_arb/audit.json",
+        "sha256": "11a2e2566a7a3513dde02e736dc959d1ca50911e3f6a88f0f291a3f0ac242f8c"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n16_G0.5/job.json",
+        "sha256": "f6537ebabad298556008679f3237b4be19001a1d3f2734b923e0b85c8c4fdae5"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n16_G0.5/summary.json",
+        "sha256": "76271b5601afdcaa170d6bddde8b56bd076f8f1973890d3fee530adf146b7728"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/states/bcs_n16_G0.5/k_512/attempt_0004/candidate.npz",
+        "sha256": "e65e1369b7e0be9c9219574f66ac67a81ae526c6845ef8447808578ffcd4f15c"
+      }
+    },
+    "fock_repair_source": "runs/extent_20261026_02/finite_bounds/bcs_n16_G0.5/0e0548930721_9a12192c7d4f_arb/fock_repair.npz",
+    "fock_repair_sha256": "7d9f447f3003ecd369f85cd2817b82e3c3ede3fe3eb0afd7b26e55303d3cc6f9",
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/bcs_n16_G0.5/0e0548930721_9a12192c7d4f_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "448b6990391b3bf2c9df4181d574071926acbbed7f1fee9eaa5bc5c12c624bfd",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        3.48143292949743e-06,
+        3.5728194434092586e-06,
+        5.311972131494258e-06
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        7.719890451785005e-06,
+        7.922475579569266e-06,
+        1.1778962219377576e-05
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/bcs_n16_G0.5/0e0548930721_9a12192c7d4f_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/bcs_n16_G0.5/11a2e2566a7a_f6537ebabad2_4N/audit.json"
+  },
+  {
+    "id": "anderson_n8_U2",
+    "k": 256,
+    "constructive": {
+      "upper": 1.2490698567867484,
+      "archived_certificate": true,
+      "parity_identification": "even parity chart",
+      "orbit_convention": "archived Gaussian number/spin sector projection and optional conjugate average",
+      "floating_upper": 1.2490698567867484,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[1.24906985678674809660429644855239174 +/- 4.20e-36]",
+        "fock_repair_l1_enclosure": "[1.530527048496692787849604855904e-5 +/- 2.09e-36]",
+        "gaussian_mass_enclosure": "[1.117602633377042333311733819478176316 +/- 1.39e-37]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 452101,
+        "count": 1048576,
+        "log_q": -35.2192890043186,
+        "t2": 1.1474881632778882,
+        "upper_over_t2": 1.0885252647998427,
+        "q_relative_se": 0.005194006491230006
+      },
+      {
+        "seed": 452102,
+        "count": 1048576,
+        "log_q": -35.21361811458452,
+        "t2": 1.1474627445014376,
+        "upper_over_t2": 1.0885493779839086,
+        "q_relative_se": 0.005211713865207169
+      },
+      {
+        "seed": 452103,
+        "count": 1048576,
+        "log_q": -35.21867424793304,
+        "t2": 1.1474854077121508,
+        "upper_over_t2": 1.088527878778987,
+        "q_relative_se": 0.005748274733620954
+      },
+      {
+        "seed": 462101,
+        "count": 4194304,
+        "log_q": -35.20231934921108,
+        "t2": 1.1474121014302632,
+        "upper_over_t2": 1.0885974230442295,
+        "q_relative_se": 0.00890640934513234
+      },
+      {
+        "seed": 462102,
+        "count": 4194304,
+        "log_q": -35.206336542218864,
+        "t2": 1.147430106946031,
+        "upper_over_t2": 1.0885803407331178,
+        "q_relative_se": 0.005056851309131926
+      },
+      {
+        "seed": 462103,
+        "count": 4194304,
+        "log_q": -35.21533045748159,
+        "t2": 1.14747041972117,
+        "upper_over_t2": 1.0885420968762458,
+        "q_relative_se": 0.004339831910924366
+      }
+    ],
+    "lower_estimate_range": [
+      1.1474121014302632,
+      1.1474881632778882
+    ],
+    "worst_estimated_ratio": 1.0885974230442295,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "f3165663b4c9dbe7fdf089a8bd076882dd8656b0e13cd6d8eee3768ba7f459f9",
+    "sources": {
+      "archived_upper_summary": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/anderson_n8_U2/summary.json",
+        "sha256": "ee44bd6060daccda0f95c0c333e77f270b0633155d48f041b61c9d8646be2365"
+      },
+      "archived_upper_vectors": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/anderson_n8_U2/vectors.npz",
+        "sha256": "758ba95ed696725e683dca220af4609508ffe27103f514f7a2ee61e46d6932c1"
+      },
+      "archived_upper_charts": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/anderson_n8_U2/gaussian_charts.npz",
+        "sha256": "50ade0c1e90ffd82cecd4d0c4627607c7cea7d1cf7214359f176ca11b25ad1fd"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/anderson_n8_U2/job.json",
+        "sha256": "717c77f7d0199f6c386d34d6762a6c647db608384dc9cdb0ca9e52ebb8fd66e5"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/anderson_n8_U2/summary.json",
+        "sha256": "57791ffacd0b36ebb112ded22da15675f4fb68b0ca31f8d0eee339edff58125e"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/states/anderson_n8_U2/k_256/attempt_0002/candidate.npz",
+        "sha256": "8625a82b8ef0a473c46f7bdd96d5d027c637cef09c0d90d6c0d1f129cd802279"
+      },
+      "target": {
+        "path": "data/targets/anderson_n8_U2/target.npz",
+        "sha256": "5973f7d18a78d4ce7ac180f82dbc06e20e528b6a947f2e6d7adbf65f5c91cc39"
+      },
+      "metadata": {
+        "path": "data/targets/anderson_n8_U2/target.json",
+        "sha256": "93bebaf176b6e7c5bcc017cbe62b29da9cc051ccd8366131546eb8f5c78ef732"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/anderson_n8_U2/89aca7fd3970_717c77f7d019_arb/audit.json",
+        "sha256": "5ff80f082223da7dd3e1350f28bd021b69caf521439f0b1e324c0572b426a3cf"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/anderson_n8_U2/job.json",
+        "sha256": "f97fe3f019f6ec1f26e7f80cebeed9b76e0908ebaf1d180fc2727f5894dd6f7f"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/anderson_n8_U2/summary.json",
+        "sha256": "53c7f31b91bd47a942f2bea8f60afcef08cb43996881e4a796546a6029acf549"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/states/anderson_n8_U2/k_256/attempt_0002/candidate.npz",
+        "sha256": "8625a82b8ef0a473c46f7bdd96d5d027c637cef09c0d90d6c0d1f129cd802279"
+      }
+    },
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/anderson_n8_U2/89aca7fd3970_717c77f7d019_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "50ade0c1e90ffd82cecd4d0c4627607c7cea7d1cf7214359f176ca11b25ad1fd",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        7.215824438677743e-05,
+        3.096274920921793e-05,
+        1.4218097258877904e-05
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        7.606184762498636e-05,
+        3.2637555406500596e-05,
+        1.4987990980763755e-05
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/anderson_n8_U2/89aca7fd3970_717c77f7d019_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/anderson_n8_U2/5ff80f082223_f97fe3f019f6_4N/audit.json"
+  },
+  {
+    "id": "hubbard_n12_U4_holes0",
+    "k": 2048,
+    "constructive": {
+      "upper": 5.336088971699616,
+      "gaussian_mass": 2.3011210130872617,
+      "fock_repair_mass": 0.008876599833507106,
+      "unpatched_residual_l2": 0.0056897233263369885,
+      "repaired_reconstruction_l2": 0.0,
+      "atom_count": 395,
+      "maximum_atom_purity_error": 7.267954293099336e-15,
+      "maximum_atom_norm_error": 1.7319479184152442e-14,
+      "orbit": {
+        "pair_parity_rotations": 1,
+        "number_phases": 13,
+        "spin_number_phases": 49,
+        "conjugation_copies": 2,
+        "expanded_terms_before_fock_repair": 503230,
+        "convention": "optional local even-pair projectors; total-number and spin-number Fourier projectors; then complex-conjugate average",
+        "projected_atoms_are_not_renormalized": true
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true,
+      "floating_upper": 5.336088971699651,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[5.336088971699615589756951896263824 +/- 3.54e-34]",
+        "fock_repair_l1_enclosure": "[0.0088765998335021939509736188432967 +/- 6.51e-35]",
+        "gaussian_mass_enclosure": "[2.30112101308725915723200553274543632 +/- 5.66e-36]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      }
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 474101,
+        "count": 131072,
+        "log_q": -2679.2328153148555,
+        "t2": 3.6995794391786303,
+        "upper_over_t2": 1.4423501534229304,
+        "q_relative_se": 0.13279500757386098
+      },
+      {
+        "seed": 474102,
+        "count": 131072,
+        "log_q": -2679.2834255156336,
+        "t2": 3.6996708643601366,
+        "upper_over_t2": 1.4423145104888946,
+        "q_relative_se": 0.14116852634387952
+      },
+      {
+        "seed": 474103,
+        "count": 131072,
+        "log_q": -2679.272205426722,
+        "t2": 3.6996505955504038,
+        "upper_over_t2": 1.4423224123157383,
+        "q_relative_se": 0.14535207250488624
+      },
+      {
+        "seed": 484101,
+        "count": 524288,
+        "log_q": -2678.909576102808,
+        "t2": 3.69899557454173,
+        "upper_over_t2": 1.4425778198884995,
+        "q_relative_se": 0.25458457211131275
+      },
+      {
+        "seed": 484102,
+        "count": 524288,
+        "log_q": -2679.235014839125,
+        "t2": 3.6995834124789884,
+        "upper_over_t2": 1.4423486043592273,
+        "q_relative_se": 0.06845380907518998
+      },
+      {
+        "seed": 484103,
+        "count": 524288,
+        "log_q": -2679.2398256714114,
+        "t2": 3.6995921029556635,
+        "upper_over_t2": 1.4423452162297916,
+        "q_relative_se": 0.07200724161265053
+      }
+    ],
+    "lower_estimate_range": [
+      3.69899557454173,
+      3.6996708643601366
+    ],
+    "worst_estimated_ratio": 1.4425778198884995,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "6781cdb402831c3877af0b4b062c15c616fe60aa986a2c5c5237242c79f68bed",
+    "sources": {
+      "decomposition": {
+        "path": "runs/extent_20261026_02/finite_refinements/hubbard_n12_U4_holes0/attempt_0002/decomposition.npz",
+        "sha256": "509f37335379d7d92e0be09e8c10be1dbcd33a6d53cd7ba24abb800b9cb975b6"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048/job.json",
+        "sha256": "87b76162d3a3cf57e684945b39585615cd153e56189095688557616154c6d45d"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048/summary.json",
+        "sha256": "86211e649134736b142d21f302f957d68e715ada35bc762525b5fa69f11afc13"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048/projected_direction.npz",
+        "sha256": "ab0b72ff0e6071e8f0de11c73b230639c63118a96ec6b1d893faf909d3ebc6b4"
+      },
+      "target": {
+        "path": "data/targets/hubbard_n12_U4_holes0/target.npz",
+        "sha256": "72ffc6af51a1f29b9a68e1b2137d1354346dea703ef356c4bd8bcd97e0c71f65"
+      },
+      "metadata": {
+        "path": "data/targets/hubbard_n12_U4_holes0/target.json",
+        "sha256": "3d678eb6251d2db5ffb507f998ed2c763f07c22a1cb37fe9b229524c4962e394"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/hubbard_n12_U4_holes0/6781cdb40283_87b76162d3a3_arb/audit.json",
+        "sha256": "7ebf0ee6127a47f6e48317ecbdde865da5424af0dba4649529874f58d228698e"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048_4N/job.json",
+        "sha256": "52264fb6210896f111784f734b181d83ed17c2bea70e3e79215dccaa69140ebd"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048_4N/summary.json",
+        "sha256": "a2e374d4c080cd735cbd36f9c6756fb1e9f34e271f89a42b65307aef5c7639d2"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048_4N/projected_direction.npz",
+        "sha256": "ab0b72ff0e6071e8f0de11c73b230639c63118a96ec6b1d893faf909d3ebc6b4"
+      }
+    },
+    "fock_repair_source": "runs/extent_20261026_02/finite_bounds/hubbard_n12_U4_holes0/6781cdb40283_87b76162d3a3_arb/fock_repair.npz",
+    "fock_repair_sha256": "53622a2e4cb4b6192bb4fe146739bbcec19425db40df2c9b0332e1db50155ab1",
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/hubbard_n12_U4_holes0/6781cdb40283_87b76162d3a3_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "c050908cab9bb552023d4b1909b794a91910f7a9b170d2e5fb487a0707316798",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        0.00022766646556915404,
+        3.409387033270761e-05,
+        2.2803914053293184e-05
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        0.0005838646369005218,
+        8.745188114822611e-05,
+        5.8492594740222614e-05
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/hubbard_n12_U4_holes0/6781cdb40283_87b76162d3a3_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/hubbard_n12_U4_holes0/7ebf0ee6127a_52264fb62108_4N/audit.json"
+  },
+  {
+    "id": "bcs_n8_G0.5",
+    "k": 256,
+    "constructive": {
+      "upper": 1.8042929584608793,
+      "gaussian_mass": 1.1454414550693743,
+      "fock_repair_mass": 0.1977982697976649,
+      "unpatched_residual_l2": 0.1977982693244087,
+      "repaired_reconstruction_l2": 0.0,
+      "atom_count": 4,
+      "maximum_atom_purity_error": 4.237018703490859e-15,
+      "maximum_atom_norm_error": 2.220446049250313e-16,
+      "orbit": {
+        "pair_parity_rotations": 16,
+        "number_phases": 9,
+        "conjugation_copies": 2,
+        "expanded_terms_before_fock_repair": 1152,
+        "convention": "each local even-pair projector is (I+exp(i*pi*(n_up+n_down)))/2; total-number Fourier projector; then complex-conjugate average",
+        "projected_atoms_are_not_renormalized": true
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true,
+      "floating_upper": 1.8042929584608796,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[1.804292958460879176671443517665869422 +/- 5.67e-37]",
+        "fock_repair_l1_enclosure": "[0.197798269797665081557594938495527178 +/- 2.02e-37]",
+        "gaussian_mass_enclosure": "[1.1454414550693741216098683168707203877 +/- 4.26e-38]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      }
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 416201,
+        "count": 131072,
+        "log_q": -140.2122602866518,
+        "t2": 1.7292782790821775,
+        "upper_over_t2": 1.043379183261653,
+        "q_relative_se": 0.0035559513267922373
+      },
+      {
+        "seed": 416202,
+        "count": 131072,
+        "log_q": -140.21282973022136,
+        "t2": 1.7292821256739401,
+        "upper_over_t2": 1.043376862383115,
+        "q_relative_se": 0.0031697751698197244
+      },
+      {
+        "seed": 416203,
+        "count": 131072,
+        "log_q": -140.22035591433857,
+        "t2": 1.7293329658574705,
+        "upper_over_t2": 1.0433461884341289,
+        "q_relative_se": 0.002937916214207274
+      },
+      {
+        "seed": 440101,
+        "count": 524288,
+        "log_q": -140.21310005707764,
+        "t2": 1.729283951735063,
+        "upper_over_t2": 1.0433757606149971,
+        "q_relative_se": 0.0027246970373052026
+      },
+      {
+        "seed": 440102,
+        "count": 524288,
+        "log_q": -140.21280332006285,
+        "t2": 1.7292819472731094,
+        "upper_over_t2": 1.0433769700227624,
+        "q_relative_se": 0.0016538027203610417
+      },
+      {
+        "seed": 440103,
+        "count": 524288,
+        "log_q": -140.2100547666951,
+        "t2": 1.7292633808738727,
+        "upper_over_t2": 1.0433881723379181,
+        "q_relative_se": 0.001726282498325151
+      }
+    ],
+    "lower_estimate_range": [
+      1.7292633808738727,
+      1.7293329658574705
+    ],
+    "worst_estimated_ratio": 1.0433881723379181,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "d10109d8de346b5b0806e73b87e2b6ce7d66557d3bd6e58be64dbd1f3eb16cbd",
+    "sources": {
+      "decomposition": {
+        "path": "runs/extent_20261026_02/finite_refinements/bcs_n8_G0.5/attempt_0001/decomposition.npz",
+        "sha256": "0abde142c283f7cf63271de85e43c6dbbb1f850e86d874a15f9a2a58fbae7ccc"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_bcs8_weights/bcs_n8_G0.5/job.json",
+        "sha256": "95baf4e4421a785819c84f53f5f02b773bacd0cf6923096a0085411cef6bcfc7"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_bcs8_weights/bcs_n8_G0.5/summary.json",
+        "sha256": "d1c4dc087fdda6e22a688a388a944d39a508d7595e71b853065a18cd5c4b776d"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_bcs8/bcs_n8_G0.5/trained_direction.npz",
+        "sha256": "229ad3e0dea9173545ba4208c5ac05589c6b9522b1aac6e3b966b03d0000a0e1"
+      },
+      "target": {
+        "path": "data/targets/bcs_n8_G0.5/target.npz",
+        "sha256": "223b1cec30636fb756130897b8972530ba424e91b0d81767a516e264d5794978"
+      },
+      "metadata": {
+        "path": "data/targets/bcs_n8_G0.5/target.json",
+        "sha256": "bbc17399ccb185012a9c4cfb8919538cee117fd28beffba0957887b60c2b7cab"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/bcs_n8_G0.5/0e0548930721_95baf4e4421a_arb/audit.json",
+        "sha256": "0e26eda7036c23e6c65cf3eaa422e0f9f3f6d234f4aad48b3a7bf4a43370c741"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n8_G0.5/job.json",
+        "sha256": "fb46d8c6f28c7e9cf6728da63f9c4d4c1de460c0b55d1ec8aef654999acbed26"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_finite_4N/bcs_n8_G0.5/summary.json",
+        "sha256": "3eb0d6bf497a113cd26ad308c113c86c0434397e56c1a3e6dacb84fec6f7bf20"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_bcs8/bcs_n8_G0.5/trained_direction.npz",
+        "sha256": "229ad3e0dea9173545ba4208c5ac05589c6b9522b1aac6e3b966b03d0000a0e1"
+      }
+    },
+    "fock_repair_source": "runs/extent_20261026_02/finite_bounds/bcs_n8_G0.5/0e0548930721_95baf4e4421a_arb/fock_repair.npz",
+    "fock_repair_sha256": "e26db381c9a3f3a61f3bfac6f74c9a28ca66392ab07c35fe3f194d3229ac1c83",
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/bcs_n8_G0.5/0e0548930721_95baf4e4421a_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "964e9ac8b5f10afabb36b674c5ce705197333779595d812cd74374ee7e78007f",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        3.4226466558706647e-06,
+        1.0763964741755672e-07,
+        4.1983903789288846e-05
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        5.672652885646556e-06,
+        1.7840083077480529e-07,
+        6.958498359788123e-05
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/bcs_n8_G0.5/0e0548930721_95baf4e4421a_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/bcs_n8_G0.5/0e26eda7036c_fb46d8c6f28c_4N/audit.json"
+  },
+  {
+    "id": "kitaev_n8_V3",
+    "k": 256,
+    "constructive": {
+      "upper": 1.709601875703848,
+      "archived_certificate": true,
+      "parity_identification": "even parity chart",
+      "orbit_convention": "archived Gaussian number/spin sector projection and optional conjugate average",
+      "floating_upper": 1.709601875703848,
+      "interval_upper_certificate": {
+        "interval_kind": "Arb_128_bit_outward_enclosure",
+        "arithmetic_precision_bits": 128,
+        "U_enclosure": "[1.7096018757038477993941068705675789 +/- 2.12e-35]",
+        "fock_repair_l1_enclosure": "[9.58388648885814272867e-15 +/- 4.90e-36]",
+        "gaussian_mass_enclosure": "[1.307517447571474182351742139433300554 +/- 4.42e-37]",
+        "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+      },
+      "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+      "gaussian_roundoff_interval_certified": true
+    },
+    "independent_moment_estimates": [
+      {
+        "seed": 453101,
+        "count": 1048576,
+        "log_q": -107.41603523440244,
+        "t2": 1.521343593700387,
+        "upper_over_t2": 1.1237447495641386,
+        "q_relative_se": 0.6322488417216299
+      },
+      {
+        "seed": 453102,
+        "count": 1048576,
+        "log_q": -108.47696510312691,
+        "t2": 1.5276615154982502,
+        "upper_over_t2": 1.1190972989499297,
+        "q_relative_se": 0.03456323293780998
+      },
+      {
+        "seed": 453103,
+        "count": 1048576,
+        "log_q": -108.23493081095177,
+        "t2": 1.5262178758853133,
+        "upper_over_t2": 1.1201558458435426,
+        "q_relative_se": 0.20595716956284846
+      },
+      {
+        "seed": 463101,
+        "count": 4194304,
+        "log_q": -108.41917422635272,
+        "t2": 1.5273166915366079,
+        "upper_over_t2": 1.1193499587723656,
+        "q_relative_se": 0.029645185180936763
+      },
+      {
+        "seed": 463102,
+        "count": 4194304,
+        "log_q": -108.3339463213644,
+        "t2": 1.52680829959879,
+        "upper_over_t2": 1.1197226764834145,
+        "q_relative_se": 0.06415103054281843
+      },
+      {
+        "seed": 463103,
+        "count": 4194304,
+        "log_q": -108.40575757636762,
+        "t2": 1.5272366488158677,
+        "upper_over_t2": 1.1194086240854526,
+        "q_relative_se": 0.049107939071127295
+      }
+    ],
+    "lower_estimate_range": [
+      1.521343593700387,
+      1.5276615154982502
+    ],
+    "worst_estimated_ratio": 1.1237447495641386,
+    "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+    "certificate_kind": "numerical_estimate",
+    "confidence_guarantee": false,
+    "source_snapshot": "f3165663b4c9dbe7fdf089a8bd076882dd8656b0e13cd6d8eee3768ba7f459f9",
+    "sources": {
+      "archived_upper_summary": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/kitaev_n8_V3/summary.json",
+        "sha256": "d9dc80623749c5f6f3e0ef1078efcfbdd0c04154509e846fa9c58fbe0bc9753a"
+      },
+      "archived_upper_vectors": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/kitaev_n8_V3/vectors.npz",
+        "sha256": "851a5379ad76ad727c769e7c00e81a6056bcb004919fc53778a75f4fd2c86d11"
+      },
+      "archived_upper_charts": {
+        "path": "archive/20261026_v1/results/arb_certificates_20261026_01/kitaev_n8_V3/gaussian_charts.npz",
+        "sha256": "03f3a8ffca5bd596b7a78415e4601d4dcfaca6445f77f296cac946e46168e1f4"
+      },
+      "moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/kitaev_n8_V3/job.json",
+        "sha256": "a8b816c656a41f92707f4be144b1576cee1579713f08c4a7d162b6d12a927762"
+      },
+      "moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper/kitaev_n8_V3/summary.json",
+        "sha256": "5d5a9498751fb2aab7eb868ae67d80819fe8ee1732e79f60bbf313375d41c3c0"
+      },
+      "direction": {
+        "path": "runs/extent_20261026_02/states/kitaev_n8_V3/k_256/attempt_0002/candidate.npz",
+        "sha256": "c7e3b8579bca27e9001dd786aaa799353d9dde73d226cd259eb3bfadb2066d8f"
+      },
+      "target": {
+        "path": "data/targets/kitaev_n8_V3/target.npz",
+        "sha256": "b092c2b79db39a0ba22be52edf72f2cdd1bce114e86682fc1b9ff6fe243b2dd3"
+      },
+      "metadata": {
+        "path": "data/targets/kitaev_n8_V3/target.json",
+        "sha256": "5979389f333f279edbb831aba283f62ad309ba79642cbe1567ecc293a51be897"
+      },
+      "parent_finite_audit": {
+        "path": "runs/extent_20261026_02/finite_bounds/kitaev_n8_V3/89aca7fd3970_a8b816c656a4_arb/audit.json",
+        "sha256": "1262055ea222d096d5660f639df215df181b09e2afbf8ea58d61d4667d56dc8b"
+      },
+      "fourfold_moment_job": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/kitaev_n8_V3/job.json",
+        "sha256": "6fb7e98f5124c739d2af38ebaefe3dafb5bdceaf93b906a554445b119ca222f6"
+      },
+      "fourfold_moment_summary": {
+        "path": "runs/extent_20261026_02/diagnostics/stage_3h_archived_upper_4N/kitaev_n8_V3/summary.json",
+        "sha256": "5b349278967d46d95040d2b2f716e29612433c2d4b126b7a18174655a89897d0"
+      },
+      "fourfold_direction": {
+        "path": "runs/extent_20261026_02/states/kitaev_n8_V3/k_256/attempt_0002/candidate.npz",
+        "sha256": "c7e3b8579bca27e9001dd786aaa799353d9dde73d226cd259eb3bfadb2066d8f"
+      }
+    },
+    "interval_charts_source": "runs/extent_20261026_02/finite_bounds/kitaev_n8_V3/89aca7fd3970_a8b816c656a4_arb/gaussian_charts.npz",
+    "interval_charts_sha256": "03f3a8ffca5bd596b7a78415e4601d4dcfaca6445f77f296cac946e46168e1f4",
+    "fourfold_stability": {
+      "passed": true,
+      "ratio_difference": [
+        0.004394790791772962,
+        0.0006253775334847944,
+        0.0007472217580899443
+      ],
+      "ratio_limit": 0.01,
+      "t2_difference": [
+        0.005973097836220909,
+        0.0008532158994603023,
+        0.0010187729305544124
+      ],
+      "interpretation": "numerical q-bound stability only; no continuous reconstruction gate or confidence coverage"
+    },
+    "parent_finite_audit": "runs/extent_20261026_02/finite_bounds/kitaev_n8_V3/89aca7fd3970_a8b816c656a4_arb/audit.json",
+    "audit_source": "runs/extent_20261026_02/finite_bounds/kitaev_n8_V3/1262055ea222_6fb7e98f5124_4N/audit.json"
+  }
+]

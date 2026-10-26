@@ -1,0 +1,56 @@
+{
+  "time_unix": 1793028147.9344144,
+  "scientific_goal_complete": false,
+  "source_snapshot": "7deb5358e386ea0db696fe0bef448593fccf6852cb35e6568d01da41b1cdb9a5",
+  "requirements": [
+    {
+      "requirement": "66 states and unchanged target definitions",
+      "status": "verified",
+      "evidence": "data/targets/catalog.json; verification.json; all 66 finite normalized vectors checked"
+    },
+    {
+      "requirement": "25 core states plus 2 sixteen-mode BCS states prioritized",
+      "status": "verified",
+      "evidence": "configs/extent_20261026_02.json"
+    },
+    {
+      "requirement": "paired frozen-vector metrics and separate execution/quality fields",
+      "status": "verified",
+      "evidence": "dataset.json; states/*/metrics.json; verify_stage_all_bounds.log"
+    },
+    {
+      "requirement": "three untouched final streams and fourfold stability for accepted continuous results",
+      "status": "verified_for_accepted_states",
+      "evidence": "verification.json; 4 stage accepted; 2 original A and 1 original B"
+    },
+    {
+      "requirement": "core states all reach numerical targets",
+      "status": "incomplete",
+      "evidence": "23 of 27 evaluated states do not meet the relaxed continuous gate; 39 catalogue states deferred"
+    },
+    {
+      "requirement": "original archive and source provenance preserved",
+      "status": "verified",
+      "evidence": "verification.json: 2336 archived files and 195 original target files unchanged"
+    },
+    {
+      "requirement": "analytic controls, resume, parity and numerical checks",
+      "status": "verified",
+      "evidence": "runs/extent_20261026_02/tests_stage_close.log: 106 tests; original_tests.log: 40 original tests"
+    },
+    {
+      "requirement": "organized selected-state delivery and reproducible reports",
+      "status": "verified",
+      "evidence": "27 selected states contain psi/u/w/k/basis/metadata/source hashes; README.md and REPRODUCE.md"
+    },
+    {
+      "requirement": "stop at three-hour limit and preserve unfinished tasks",
+      "status": "verified",
+      "evidence": "stage_3h/closure.json; no exact job PID live; all 8 GPU memory readings zero"
+    }
+  ],
+  "stage_closure": {
+    "path": "runs/extent_20261026_02/stage_3h/closure.json",
+    "sha256": "d10802cbc1f485fd4c915dbb5126f0bb14539bd0e62090b4a88f7ab2cf230161"
+  }
+}

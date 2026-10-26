@@ -1,0 +1,72 @@
+{
+  "parameters": {
+    "id": "hubbard_n12_U8_holes1",
+    "model": "hubbard",
+    "n": 12,
+    "boundary": "open",
+    "U": 8,
+    "particles": 5,
+    "spin": [
+      3,
+      2
+    ],
+    "parity": 1,
+    "core": true,
+    "priority": 3,
+    "target_k": 128
+  },
+  "hamiltonian_definition": {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ]
+  },
+  "energy": -3.4589944136761965,
+  "low_energies": [
+    -3.4589944136761965,
+    -3.3497124637385696,
+    -3.296108692634262,
+    -3.1346268009439577,
+    -3.0080016670255714,
+    -2.954680806747302,
+    -2.875598639741854,
+    -2.80336792015856
+  ],
+  "ground_degeneracy_in_sector": 1,
+  "eigen_residual": 2.0301816616200663e-14,
+  "degeneracy_selection": "project maximal-weight Fock ket into ground eigenspace; positive largest amplitude",
+  "norm_error": 2.220446049250313e-16,
+  "dimension": 2048,
+  "sector_dimension": 300,
+  "fock_L": 1.0,
+  "fock_U": 113.692425699182,
+  "sha256": "95a4166a2e70aa259b81ddcce4a28d21186b06833e8fa1026cc4b4f7048fa3ad",
+  "elapsed_seconds": 0.04036972764879465,
+  "status": "generated"
+}

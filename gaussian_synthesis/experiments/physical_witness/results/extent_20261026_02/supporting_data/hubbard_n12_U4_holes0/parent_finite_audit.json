@@ -1,0 +1,99 @@
+{
+  "id": "hubbard_n12_U4_holes0",
+  "k": 2048,
+  "constructive": {
+    "upper": 5.336088971699616,
+    "gaussian_mass": 2.3011210130872617,
+    "fock_repair_mass": 0.008876599833507106,
+    "unpatched_residual_l2": 0.0056897233263369885,
+    "repaired_reconstruction_l2": 0.0,
+    "atom_count": 395,
+    "maximum_atom_purity_error": 7.267954293099336e-15,
+    "maximum_atom_norm_error": 1.7319479184152442e-14,
+    "orbit": {
+      "pair_parity_rotations": 1,
+      "number_phases": 13,
+      "spin_number_phases": 49,
+      "conjugation_copies": 2,
+      "expanded_terms_before_fock_repair": 503230,
+      "convention": "optional local even-pair projectors; total-number and spin-number Fourier projectors; then complex-conjugate average",
+      "projected_atoms_are_not_renormalized": true
+    },
+    "certificate_kind": "deterministic_upper_for_stored_binary64_target",
+    "gaussian_roundoff_interval_certified": true,
+    "floating_upper": 5.336088971699651,
+    "interval_upper_certificate": {
+      "interval_kind": "Arb_128_bit_outward_enclosure",
+      "arithmetic_precision_bits": 128,
+      "U_enclosure": "[5.336088971699615589756951896263824 +/- 3.54e-34]",
+      "fock_repair_l1_enclosure": "[0.0088765998335021939509736188432967 +/- 6.51e-35]",
+      "gaussian_mass_enclosure": "[2.30112101308725915723200553274543632 +/- 5.66e-36]",
+      "target_definition": "exact stored binary64 Fock coefficients; not an enclosure of the exact Hamiltonian eigenstate"
+    }
+  },
+  "independent_moment_estimates": [
+    {
+      "seed": 474101,
+      "count": 131072,
+      "log_q": -2679.2328153148555,
+      "t2": 3.6995794391786303,
+      "upper_over_t2": 1.4423501534229304,
+      "q_relative_se": 0.13279500757386098
+    },
+    {
+      "seed": 474102,
+      "count": 131072,
+      "log_q": -2679.2834255156336,
+      "t2": 3.6996708643601366,
+      "upper_over_t2": 1.4423145104888946,
+      "q_relative_se": 0.14116852634387952
+    },
+    {
+      "seed": 474103,
+      "count": 131072,
+      "log_q": -2679.272205426722,
+      "t2": 3.6996505955504038,
+      "upper_over_t2": 1.4423224123157383,
+      "q_relative_se": 0.14535207250488624
+    }
+  ],
+  "lower_estimate_range": [
+    3.6995794391786303,
+    3.6996708643601366
+  ],
+  "worst_estimated_ratio": 1.4423501534229304,
+  "scope": "supplementary finite decomposition upper cost / independently estimated q witness lower bound; not the continuous residual or its A/B gate",
+  "certificate_kind": "numerical_estimate",
+  "confidence_guarantee": false,
+  "source_snapshot": "6781cdb402831c3877af0b4b062c15c616fe60aa986a2c5c5237242c79f68bed",
+  "sources": {
+    "decomposition": {
+      "path": "runs/extent_20261026_02/finite_refinements/hubbard_n12_U4_holes0/attempt_0002/decomposition.npz",
+      "sha256": "509f37335379d7d92e0be09e8c10be1dbcd33a6d53cd7ba24abb800b9cb975b6"
+    },
+    "moment_job": {
+      "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048/job.json",
+      "sha256": "87b76162d3a3cf57e684945b39585615cd153e56189095688557616154c6d45d"
+    },
+    "moment_summary": {
+      "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048/summary.json",
+      "sha256": "86211e649134736b142d21f302f957d68e715ada35bc762525b5fa69f11afc13"
+    },
+    "direction": {
+      "path": "runs/extent_20261026_02/diagnostics/stage_3h_hubbard12_orders/k_2048/projected_direction.npz",
+      "sha256": "ab0b72ff0e6071e8f0de11c73b230639c63118a96ec6b1d893faf909d3ebc6b4"
+    },
+    "target": {
+      "path": "data/targets/hubbard_n12_U4_holes0/target.npz",
+      "sha256": "72ffc6af51a1f29b9a68e1b2137d1354346dea703ef356c4bd8bcd97e0c71f65"
+    },
+    "metadata": {
+      "path": "data/targets/hubbard_n12_U4_holes0/target.json",
+      "sha256": "3d678eb6251d2db5ffb507f998ed2c763f07c22a1cb37fe9b229524c4962e394"
+    }
+  },
+  "fock_repair_source": "runs/extent_20261026_02/finite_bounds/hubbard_n12_U4_holes0/6781cdb40283_87b76162d3a3_arb/fock_repair.npz",
+  "fock_repair_sha256": "53622a2e4cb4b6192bb4fe146739bbcec19425db40df2c9b0332e1db50155ab1",
+  "interval_charts_source": "runs/extent_20261026_02/finite_bounds/hubbard_n12_U4_holes0/6781cdb40283_87b76162d3a3_arb/gaussian_charts.npz",
+  "interval_charts_sha256": "c050908cab9bb552023d4b1909b794a91910f7a9b170d2e5fb487a0707316798"
+}
